@@ -1,0 +1,20 @@
+# gdlint (gdtoolkit 4): default rules, except for what follows (absent keys
+# take their default value). Run by rewrite/scripts/lint.sh.
+excluded_directories: !!set
+  .git: null
+  addons/gdUnit4: null
+max-line-length: 120
+# Static variables in uppercase (paths computed at startup, treated
+# as constants) and enum aliases in PascalCase (const Kind).
+class-variable-name: (_?[a-z][a-z0-9]*(_[a-z0-9]+)*|[A-Z][A-Z0-9]*(_[A-Z0-9]+)*)
+constant-name: (_?[A-Z][A-Z0-9]*(_[A-Z0-9]+)*|([A-Z][a-z0-9]*)+)
+# TyrianText.L: translation, short name intended (called everywhere).
+function-name: (_on_([A-Z][a-z0-9]*)+(_[a-z0-9]+)*|_?[a-z][a-z0-9]*(_[a-z0-9]+)*|L)
+# Size and order of declarations: reported in the cleanup report,
+# not enforced. Reordering a script's members changes the order of their
+# initialization; splitting the big files is a separate project.
+disable:
+- class-definitions-order
+- max-returns
+- max-file-lines
+- max-public-methods

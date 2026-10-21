@@ -1,0 +1,30 @@
+// Alien Ships -- 12 biomechanical ships, in the rewrite's single format
+// (MODDING.md). Each ship cites its image by name: the mod's PNG
+// sprites/ships/<name>.png.
+//
+// Shop: a category shows at most 10 items, level ships
+// included; 8 of the 12 ships are therefore marked "always_available".
+// The other 4 load all the same (selectable through "starter").
+{
+  "$schema": "../../mod.schema.json",
+  "format_version": 1,
+  "name": "Alien Ships",
+  "author": "pixellab + OpenTyrian2000 Team",
+  "version": "2.0",
+  "description": "12 biomech alien ship variants; 8 sold in every shop (10-slot cap).",
+  "enabled": false,
+  "ships": [
+    {"name": "Xeno Interceptor", "ship_sprite": "xeno_interceptor", "damage_resistance": 15, "cost": 18000, "always_available": true},
+    {"name": "Xeno Gunship",     "ship_sprite": "xeno_gunship",     "damage_resistance": 28, "cost": 32000, "always_available": true},
+    {"name": "Xeno Scout",       "ship_sprite": "xeno_scout",       "damage_resistance": 10, "cost": 8000,  "always_available": true},
+    {"name": "Xeno Stealth",     "ship_sprite": "xeno_stealth",     "damage_resistance": 14, "cost": 28000, "always_available": true},
+    {"name": "Xeno Battleship",  "ship_sprite": "xeno_battleship",  "damage_resistance": 35, "cost": 45000, "always_available": true},
+    {"name": "Xeno Hornet",      "ship_sprite": "xeno_hornet",      "damage_resistance": 18, "cost": 22000, "always_available": true},
+    {"name": "Xeno Crystal",     "ship_sprite": "xeno_crystal",     "damage_resistance": 22, "cost": 35000, "always_available": true},
+    {"name": "Xeno Spider",      "ship_sprite": "xeno_spider",      "damage_resistance": 30, "cost": 38000, "always_available": true},
+    {"name": "Xeno X-Wing",      "ship_sprite": "xeno_xwing",       "damage_resistance": 20, "cost": 26000},
+    {"name": "Xeno Drone",       "ship_sprite": "xeno_drone",       "damage_resistance": 8,  "cost": 6000},
+    {"name": "Xeno Delta",       "ship_sprite": "xeno_delta",       "damage_resistance": 25, "cost": 30000},
+    {"name": "Xeno Prototype",   "ship_sprite": "xeno_prototype",   "damage_resistance": 12, "cost": 15000}
+  ]
+}

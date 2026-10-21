@@ -1,0 +1,306 @@
+anomalies seed 1 registry 11
+pick 0 3 1 3 7 rng 9dcca8c5 deck 1 mult 3fe66666
+pick 1 3 3 6 7 rng 2c6f5bd0 deck 2 mult 40066666
+pick 2 3 7 3 9 rng 77877125 deck 3 mult 40180000
+pick 3 3 7 4 2 rng 591c9737 deck 4 mult 40280000
+pick 4 3 4 3 2 rng 0536aff5 deck 5 mult 40400000
+pick 5 3 4 2 0 rng c613db08 deck 6 mult 40b00000
+pick 6 3 2 5 4 rng 8e123a33 deck 6 mult 40b00000
+pick 7 3 4 2 5 rng d9b3224f deck 6 mult 40b00000
+pick 8 3 2 4 5 rng 917797a5 deck 6 mult 40b00000
+pick 9 3 2 4 5 rng a534213e deck 6 mult 40b00000
+pick 10 3 2 4 5 rng 03332b01 deck 6 mult 40b00000
+pick 11 3 4 5 2 rng 3a2335f4 deck 6 mult 40b00000
+mutators 00 3f800000
+mutators 01 3f800000
+mutators 02 3f800000
+mutators 03 3f800000
+mutators 04 3f800000
+mutators 05 3f800000
+mutators 06 3f800000
+mutators 07 3f800000
+mutators 08 3f800000
+mutators 09 3f800000
+mutators 0a 3f800000
+mutators 0b 3f800000
+mutators 0c 3f800000
+mutators 0d 3f800000
+mutators 0e 3f800000
+mutators 0f 3f800000
+mutators 10 3f800000
+mutators 11 3f800000
+mutators 12 3f800000
+mutators 13 3f800000
+mutators 14 3f800000
+mutators 15 3f800000
+mutators 16 3f800000
+mutators 17 3f800000
+mutators 18 3f800000
+mutators 19 3f800000
+mutators 1a 3f800000
+mutators 1b 3f800000
+mutators 1c 3f800000
+mutators 1d 3f800000
+mutators 1e 3f800000
+mutators 1f 3f800000
+mutators 20 3f800000
+mutators 21 3f800000
+mutators 22 3f800000
+mutators 23 3f800000
+mutators 24 3f800000
+mutators 25 3f800000
+mutators 26 3f800000
+mutators 27 3f800000
+mutators 28 3f800000
+mutators 29 3f800000
+mutators 2a 3f800000
+mutators 2b 3f800000
+mutators 2c 3f800000
+mutators 2d 3f800000
+mutators 2e 3f800000
+mutators 2f 3f800000
+mutators 30 3f800000
+mutators 31 3f800000
+mutators 32 3f800000
+mutators 33 3f800000
+mutators 34 3f800000
+mutators 35 3f800000
+mutators 36 3f800000
+mutators 37 3f800000
+mutators 38 3f800000
+mutators 39 3f800000
+mutators 3a 3f800000
+mutators 3b 3f800000
+mutators 3c 3f800000
+mutators 3d 3f800000
+mutators 3e 3f800000
+mutators 3f 3f800000
+mutators 40 3f800000
+mutators 41 3f800000
+mutators 42 3f800000
+mutators 43 3f800000
+mutators 44 3f800000
+mutators 45 3f800000
+mutators 46 3f800000
+mutators 47 3f800000
+mutators 48 3f800000
+mutators 49 3f800000
+mutators 4a 3f800000
+mutators 4b 3f800000
+mutators 4c 3f800000
+mutators 4d 3f800000
+mutators 4e 3f800000
+mutators 4f 3f800000
+mutators 50 3f800000
+mutators 51 3f800000
+mutators 52 3f800000
+mutators 53 3f800000
+mutators 54 3f800000
+mutators 55 3f800000
+mutators 56 3f800000
+mutators 57 3f800000
+mutators 58 3f800000
+mutators 59 3f800000
+mutators 5a 3f800000
+mutators 5b 3f800000
+mutators 5c 3f800000
+mutators 5d 3f800000
+mutators 5e 3f800000
+mutators 5f 3f800000
+mutators 60 3f800000
+mutators 61 3f800000
+mutators 62 3f800000
+mutators 63 3f800000
+mutators 64 3f800000
+mutators 65 3f800000
+mutators 66 3f800000
+mutators 67 3f800000
+mutators 68 3f800000
+mutators 69 3f800000
+mutators 6a 3f800000
+mutators 6b 3f800000
+mutators 6c 3f800000
+mutators 6d 3f800000
+mutators 6e 3f800000
+mutators 6f 3f800000
+mutators 70 3f800000
+mutators 71 3f800000
+mutators 72 3f800000
+mutators 73 3f800000
+mutators 74 3f800000
+mutators 75 3f800000
+mutators 76 3f800000
+mutators 77 3f800000
+mutators 78 3f800000
+mutators 79 3f800000
+mutators 7a 3f800000
+mutators 7b 3f800000
+mutators 7c 3f800000
+mutators 7d 3f800000
+mutators 7e 3f800000
+mutators 7f 3f800000
+mutators 80 3f800000
+mutators 81 3fa00000
+mutators 82 3fa00000
+mutators 83 3fc00000
+mutators 84 3fa00000
+mutators 85 3fc00000
+mutators 86 3fc00000
+mutators 87 3fe00000
+mutators 88 3fa00000
+mutators 89 3fc00000
+mutators 8a 3fc00000
+mutators 8b 3fe00000
+mutators 8c 3fc00000
+mutators 8d 3fe00000
+mutators 8e 3fe00000
+mutators 8f 40000000
+mutators 90 3fa00000
+mutators 91 3fc00000
+mutators 92 3fc00000
+mutators 93 3fe00000
+mutators 94 3fc00000
+mutators 95 3fe00000
+mutators 96 3fe00000
+mutators 97 40000000
+mutators 98 3fc00000
+mutators 99 3fe00000
+mutators 9a 3fe00000
+mutators 9b 40000000
+mutators 9c 3fe00000
+mutators 9d 40000000
+mutators 9e 40000000
+mutators 9f 40100000
+mutators a0 3fa00000
+mutators a1 3fc00000
+mutators a2 3fc00000
+mutators a3 3fe00000
+mutators a4 3fc00000
+mutators a5 3fe00000
+mutators a6 3fe00000
+mutators a7 40000000
+mutators a8 3fc00000
+mutators a9 3fe00000
+mutators aa 3fe00000
+mutators ab 40000000
+mutators ac 3fe00000
+mutators ad 40000000
+mutators ae 40000000
+mutators af 40100000
+mutators b0 3fc00000
+mutators b1 3fe00000
+mutators b2 3fe00000
+mutators b3 40000000
+mutators b4 3fe00000
+mutators b5 40000000
+mutators b6 40000000
+mutators b7 40100000
+mutators b8 3fe00000
+mutators b9 40000000
+mutators ba 40000000
+mutators bb 40100000
+mutators bc 40000000
+mutators bd 40100000
+mutators be 40100000
+mutators bf 40200000
+mutators c0 3fa00000
+mutators c1 3fc00000
+mutators c2 3fc00000
+mutators c3 3fe00000
+mutators c4 3fc00000
+mutators c5 3fe00000
+mutators c6 3fe00000
+mutators c7 40000000
+mutators c8 3fc00000
+mutators c9 3fe00000
+mutators ca 3fe00000
+mutators cb 40000000
+mutators cc 3fe00000
+mutators cd 40000000
+mutators ce 40000000
+mutators cf 40100000
+mutators d0 3fc00000
+mutators d1 3fe00000
+mutators d2 3fe00000
+mutators d3 40000000
+mutators d4 3fe00000
+mutators d5 40000000
+mutators d6 40000000
+mutators d7 40100000
+mutators d8 3fe00000
+mutators d9 40000000
+mutators da 40000000
+mutators db 40100000
+mutators dc 40000000
+mutators dd 40100000
+mutators de 40100000
+mutators df 40200000
+mutators e0 3fc00000
+mutators e1 3fe00000
+mutators e2 3fe00000
+mutators e3 40000000
+mutators e4 3fe00000
+mutators e5 40000000
+mutators e6 40000000
+mutators e7 40100000
+mutators e8 3fe00000
+mutators e9 40000000
+mutators ea 40000000
+mutators eb 40100000
+mutators ec 40000000
+mutators ed 40100000
+mutators ee 40100000
+mutators ef 40200000
+mutators f0 3fe00000
+mutators f1 40000000
+mutators f2 40000000
+mutators f3 40100000
+mutators f4 40000000
+mutators f5 40100000
+mutators f6 40100000
+mutators f7 40200000
+mutators f8 40000000
+mutators f9 40100000
+mutators fa 40100000
+mutators fb 40200000
+mutators fc 40100000
+mutators fd 40200000
+mutators fe 40200000
+mutators ff 40300000
+final 0 3f800000 0
+final 0 3fa66666 0
+final 0 3fe66666 0
+final 0 40100000 0
+final 0 40400000 0
+final 0 40300000 0
+final 1 3f800000 1
+final 1 3fa66666 1
+final 1 3fe66666 1
+final 1 40100000 2
+final 1 40400000 3
+final 1 40300000 2
+final 632 3f800000 632
+final 632 3fa66666 821
+final 632 3fe66666 1137
+final 632 40100000 1422
+final 632 40400000 1896
+final 632 40300000 1738
+final 1400 3f800000 1400
+final 1400 3fa66666 1819
+final 1400 3fe66666 2519
+final 1400 40100000 3150
+final 1400 40400000 4200
+final 1400 40300000 3850
+final 99999 3f800000 99999
+final 99999 3fa66666 129998
+final 99999 3fe66666 179998
+final 99999 40100000 224997
+final 99999 40400000 299997
+final 99999 40300000 274997
+final 1234567 3f800000 1234567
+final 1234567 3fa66666 1604937
+final 1234567 3fe66666 2222220
+final 1234567 40100000 2777775
+final 1234567 40400000 3703701
+final 1234567 40300000 3395059
+end

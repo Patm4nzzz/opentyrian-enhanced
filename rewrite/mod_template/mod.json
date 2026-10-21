@@ -1,0 +1,37 @@
+// Mod template -- to be copied as is (or via the "Export to mod" button
+// of the Godot level editor, which copies it into user://mods/<name>/).
+//
+// Everything is optional except "format_version" and "name". Remove the sections
+// you do not need. Full reference: MODDING.md.
+//   * Everything the mod creates (weapon, ship, enemy weapon, enemy) is cited
+//     by its NAME; the engine assigns the slots.
+//   * PNGs go in sprites/<category>/<name>.png and are cited by their
+//     name without extension.
+//   * Check:  cd rewrite && cargo run --release -p tyrian-mods -- check --mods <parent folder>
+{
+  "$schema": "https://raw.githubusercontent.com/Patm4nzzz/opentyrian-enhanced/rewrite/godot-rust/rewrite/mods/mod.schema.json",
+  "format_version": 1,
+  "name": "My First Level",
+  "author": "Me",
+  "version": "1.0",
+  "description": "My first modified level.",
+  "enabled": true,
+
+  // A weapon: uncomment to try it.
+  // "weapons": [
+  //   { "name": "My Pulse", "base": "Pulse-Cannon", "always_available": true }
+  // ],
+
+  // A brand-new enemy, usable in levels/*.json by its name.
+  "enemies": [
+    {
+      "name": "my_drone",
+      "base": "tech_corridor_32",   // original enemy copied (names: rewrite/mods/original-names.json)
+      "armor": 8,
+      "behavior": {
+        "path": [ { "ticks": 30, "vx": 2, "vy": 2 }, { "ticks": 30, "vx": -2, "vy": 2 } ],
+        "loop": true
+      }
+    }
+  ]
+}

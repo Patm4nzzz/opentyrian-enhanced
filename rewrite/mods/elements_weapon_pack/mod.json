@@ -1,0 +1,390 @@
+// Elements Weapon Pack: six elemental weapons, three front (fire, ice, lightning), three rear
+// (earth, acid, wind), eleven power levels each like the original weapons (front[] / rear[], MODDING.md 5.3).
+//
+// Shop icons: 24x28 gun housings built from the original shop icons and repainted per element
+// by utils/elements_weapons_icons.py (game palette, near-black rim, two-step drop shadow).
+// Shots: 12x14, four frames each, drawn by utils/elements_weapons_shots.py (shapes registered at run time
+// in utils/mod_shot_draw.py). The frames <name>_1..4 get consecutive sprite slots, so "animation": 3
+// cycles all four.
+//
+// Balance (README, utils/mod_weapon_balance.py): damage per second = salvo damage x 35 / (fire_delay + 1),
+// compared at every level with the original weapons of the same price. POSITIVE speed_y = upward;
+// sub_delay 255 = the shot lives until it leaves the screen (MODDING.md 5.4). This file is generated:
+// keep the level tables and the README tables in step.
+{
+  "$schema": "../mod.schema.json",
+  "format_version": 1,
+  "name": "Elements Weapon Pack",
+  "author": "OpenTyrian2000 Team",
+  "version": "1.0",
+  "description": "6 elemental weapons: fire, ice, lightning (front), earth, acid, wind (rear), 11 power levels, original Tyrian style.",
+  "enabled": false,
+
+  "weapons": [
+    // 1) Flame Lance (front) - SHORT RANGE: fire jets that burn out after 12 to 16 ticks (sub_delay), fast and hard-hitting up close.
+    {
+      "name": "Flame Lance", "cost": 1000, "power_use": 45, "icon_sprite": "flame_lance_icon",
+      "always_available": true,
+      "front": [
+        {"fire_delay": 4, "projectile_count": 1, "max_on_screen": 1, "animation": 3, "sound": 1, "projectiles": [
+          {"sub_delay": 12, "damage": 3, "speed_y": 8, "sprite": "flame_jet_1"}]},
+        {"fire_delay": 3, "projectile_count": 1, "max_on_screen": 1, "animation": 3, "sound": 1, "projectiles": [
+          {"sub_delay": 12, "damage": 3, "speed_y": 8, "sprite": "flame_jet_1"}]},
+        {"fire_delay": 3, "projectile_count": 2, "max_on_screen": 2, "animation": 3, "sound": 1, "projectiles": [
+          {"sub_delay": 12, "damage": 2, "speed_x": -1, "speed_y": 8, "spawn_x": -3, "sprite": "flame_jet_1"},
+          {"sub_delay": 12, "damage": 2, "speed_x": 1, "speed_y": 8, "spawn_x": 3, "sprite": "flame_jet_1"}]},
+        {"fire_delay": 4, "projectile_count": 2, "max_on_screen": 2, "animation": 3, "sound": 1, "projectiles": [
+          {"sub_delay": 13, "damage": 3, "speed_x": -1, "speed_y": 8, "spawn_x": -3, "sprite": "flame_jet_1"},
+          {"sub_delay": 13, "damage": 3, "speed_x": 1, "speed_y": 8, "spawn_x": 3, "sprite": "flame_jet_1"}]},
+        {"fire_delay": 3, "projectile_count": 2, "max_on_screen": 2, "animation": 3, "sound": 1, "projectiles": [
+          {"sub_delay": 13, "damage": 3, "speed_x": -1, "speed_y": 8, "spawn_x": -3, "sprite": "flame_jet_1"},
+          {"sub_delay": 13, "damage": 2, "speed_x": 1, "speed_y": 8, "spawn_x": 3, "sprite": "flame_jet_1"}]},
+        {"fire_delay": 4, "projectile_count": 3, "max_on_screen": 3, "animation": 3, "sound": 1, "projectiles": [
+          {"sub_delay": 14, "damage": 3, "speed_y": 8, "sprite": "flame_jet_large_1"},
+          {"sub_delay": 13, "damage": 3, "speed_x": -1, "speed_y": 8, "spawn_x": -5, "sprite": "flame_jet_1"},
+          {"sub_delay": 13, "damage": 2, "speed_x": 1, "speed_y": 8, "spawn_x": 5, "sprite": "flame_jet_1"}]},
+        {"fire_delay": 3, "projectile_count": 3, "max_on_screen": 3, "animation": 3, "sound": 1, "projectiles": [
+          {"sub_delay": 14, "damage": 3, "speed_y": 8, "sprite": "flame_jet_large_1"},
+          {"sub_delay": 13, "damage": 2, "speed_x": -1, "speed_y": 8, "spawn_x": -5, "sprite": "flame_jet_1"},
+          {"sub_delay": 13, "damage": 2, "speed_x": 1, "speed_y": 8, "spawn_x": 5, "sprite": "flame_jet_1"}]},
+        {"fire_delay": 4, "projectile_count": 3, "max_on_screen": 3, "animation": 3, "sound": 1, "projectiles": [
+          {"sub_delay": 15, "damage": 4, "speed_y": 8, "sprite": "flame_jet_large_1"},
+          {"sub_delay": 14, "damage": 3, "speed_x": -1, "speed_y": 8, "spawn_x": -5, "sprite": "flame_jet_large_1"},
+          {"sub_delay": 14, "damage": 3, "speed_x": 1, "speed_y": 8, "spawn_x": 5, "sprite": "flame_jet_large_1"}]},
+        {"fire_delay": 3, "projectile_count": 3, "max_on_screen": 3, "animation": 3, "sound": 1, "projectiles": [
+          {"sub_delay": 15, "damage": 3, "speed_y": 8, "sprite": "flame_jet_large_1"},
+          {"sub_delay": 14, "damage": 3, "speed_x": -1, "speed_y": 8, "spawn_x": -5, "sprite": "flame_jet_large_1"},
+          {"sub_delay": 14, "damage": 3, "speed_x": 1, "speed_y": 8, "spawn_x": 5, "sprite": "flame_jet_large_1"}]},
+        {"fire_delay": 4, "projectile_count": 5, "max_on_screen": 5, "animation": 3, "sound": 1, "projectiles": [
+          {"sub_delay": 16, "damage": 3, "speed_y": 8, "sprite": "flame_jet_large_1"},
+          {"sub_delay": 15, "damage": 3, "speed_x": -1, "speed_y": 8, "spawn_x": -5, "sprite": "flame_jet_large_1"},
+          {"sub_delay": 15, "damage": 2, "speed_x": 1, "speed_y": 8, "spawn_x": 5, "sprite": "flame_jet_large_1"},
+          {"sub_delay": 13, "damage": 2, "speed_x": -2, "speed_y": 8, "spawn_x": -8, "sprite": "flame_jet_1"},
+          {"sub_delay": 13, "damage": 2, "speed_x": 2, "speed_y": 8, "spawn_x": 8, "sprite": "flame_jet_1"}]},
+        {"fire_delay": 4, "projectile_count": 5, "max_on_screen": 5, "animation": 3, "sound": 1, "projectiles": [
+          {"sub_delay": 16, "damage": 3, "speed_y": 8, "sprite": "flame_jet_large_1"},
+          {"sub_delay": 15, "damage": 3, "speed_x": -1, "speed_y": 8, "spawn_x": -5, "sprite": "flame_jet_large_1"},
+          {"sub_delay": 15, "damage": 3, "speed_x": 1, "speed_y": 8, "spawn_x": 5, "sprite": "flame_jet_large_1"},
+          {"sub_delay": 14, "damage": 2, "speed_x": -2, "speed_y": 8, "spawn_x": -8, "sprite": "flame_jet_1"},
+          {"sub_delay": 14, "damage": 2, "speed_x": 2, "speed_y": 8, "spawn_x": 8, "sprite": "flame_jet_1"}]},
+      ],
+    },
+
+    // 2) Frost Shard (front) - CONTROL: ice shards plus frost flakes that freeze ("freeze": no damage, the enemy stops firing for 40 ticks).
+    {
+      "name": "Frost Shard", "cost": 1050, "power_use": 60, "icon_sprite": "frost_shard_icon",
+      "always_available": true,
+      "front": [
+        {"fire_delay": 6, "projectile_count": 2, "max_on_screen": 2, "animation": 3, "sound": 31, "projectiles": [
+          {"sub_delay": 255, "damage": 3, "speed_y": 11, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": "freeze", "speed_y": 8, "sprite": "frost_flake_1"}]},
+        {"fire_delay": 6, "projectile_count": 2, "max_on_screen": 2, "animation": 3, "sound": 31, "projectiles": [
+          {"sub_delay": 255, "damage": 4, "speed_y": 11, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": "freeze", "speed_y": 8, "sprite": "frost_flake_1"}]},
+        {"fire_delay": 7, "projectile_count": 3, "max_on_screen": 3, "animation": 3, "sound": 31, "projectiles": [
+          {"sub_delay": 255, "damage": 3, "speed_y": 11, "spawn_x": -4, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 11, "spawn_x": 4, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": "freeze", "speed_y": 8, "sprite": "frost_flake_1"}]},
+        {"fire_delay": 6, "projectile_count": 3, "max_on_screen": 3, "animation": 3, "sound": 31, "projectiles": [
+          {"sub_delay": 255, "damage": 3, "speed_y": 11, "spawn_x": -4, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 11, "spawn_x": 4, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": "freeze", "speed_y": 8, "sprite": "frost_flake_1"}]},
+        {"fire_delay": 7, "projectile_count": 4, "max_on_screen": 4, "animation": 3, "sound": 31, "projectiles": [
+          {"sub_delay": 255, "damage": 3, "speed_y": 11, "spawn_x": -5, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 11, "spawn_x": 5, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 12, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": "freeze", "speed_y": 8, "sprite": "frost_flake_1"}]},
+        {"fire_delay": 6, "projectile_count": 4, "max_on_screen": 4, "animation": 3, "sound": 31, "projectiles": [
+          {"sub_delay": 255, "damage": 3, "speed_y": 11, "spawn_x": -5, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 11, "spawn_x": 5, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": 4, "speed_y": 12, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": "freeze", "speed_y": 8, "sprite": "frost_flake_1"}]},
+        {"fire_delay": 7, "projectile_count": 5, "max_on_screen": 5, "animation": 3, "sound": 31, "projectiles": [
+          {"sub_delay": 255, "damage": 4, "speed_x": -1, "speed_y": 11, "spawn_x": -5, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": 4, "speed_x": 1, "speed_y": 11, "spawn_x": 5, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": 4, "speed_y": 12, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": "freeze", "speed_x": -1, "speed_y": 8, "spawn_x": -3, "sprite": "frost_flake_1"},
+          {"sub_delay": 255, "damage": "freeze", "speed_x": 1, "speed_y": 8, "spawn_x": 3, "sprite": "frost_flake_1"}]},
+        {"fire_delay": 7, "projectile_count": 6, "max_on_screen": 6, "animation": 3, "sound": 31, "projectiles": [
+          {"sub_delay": 255, "damage": 4, "speed_x": -1, "speed_y": 11, "spawn_x": -5, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": 4, "speed_x": 1, "speed_y": 11, "spawn_x": 5, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 12, "spawn_x": -2, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 12, "spawn_x": 2, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": "freeze", "speed_x": -1, "speed_y": 8, "spawn_x": -3, "sprite": "frost_flake_1"},
+          {"sub_delay": 255, "damage": "freeze", "speed_x": 1, "speed_y": 8, "spawn_x": 3, "sprite": "frost_flake_1"}]},
+        {"fire_delay": 6, "projectile_count": 6, "max_on_screen": 6, "animation": 3, "sound": 31, "projectiles": [
+          {"sub_delay": 255, "damage": 4, "speed_x": -1, "speed_y": 11, "spawn_x": -5, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": 3, "speed_x": 1, "speed_y": 11, "spawn_x": 5, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 12, "spawn_x": -2, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 12, "spawn_x": 2, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": "freeze", "speed_x": -1, "speed_y": 8, "spawn_x": -3, "sprite": "frost_flake_1"},
+          {"sub_delay": 255, "damage": "freeze", "speed_x": 1, "speed_y": 8, "spawn_x": 3, "sprite": "frost_flake_1"}]},
+        {"fire_delay": 6, "projectile_count": 6, "max_on_screen": 6, "animation": 3, "sound": 31, "projectiles": [
+          {"sub_delay": 255, "damage": 4, "speed_x": -1, "speed_y": 11, "spawn_x": -5, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": 4, "speed_x": 1, "speed_y": 11, "spawn_x": 5, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 12, "spawn_x": -2, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 12, "spawn_x": 2, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": "freeze", "speed_x": -2, "speed_y": 8, "spawn_x": -6, "sprite": "frost_flake_1"},
+          {"sub_delay": 255, "damage": "freeze", "speed_x": 2, "speed_y": 8, "spawn_x": 6, "sprite": "frost_flake_1"}]},
+        {"fire_delay": 5, "projectile_count": 6, "max_on_screen": 6, "animation": 3, "sound": 31, "projectiles": [
+          {"sub_delay": 255, "damage": 4, "speed_x": -1, "speed_y": 11, "spawn_x": -5, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": 4, "speed_x": 1, "speed_y": 11, "spawn_x": 5, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 12, "spawn_x": -2, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 12, "spawn_x": 2, "sprite": "frost_shard_1"},
+          {"sub_delay": 255, "damage": "freeze", "speed_x": -2, "speed_y": 8, "spawn_x": -6, "sprite": "frost_flake_1"},
+          {"sub_delay": 255, "damage": "freeze", "speed_x": 2, "speed_y": 8, "spawn_x": 6, "sprite": "frost_flake_1"}]},
+      ],
+    },
+
+    // 3) Arc Caster (front) - ZIG-ZAG: lightning bolts weaving left and right (circle_radius 23); a piercing main bolt from level 6.
+    {
+      "name": "Arc Caster", "cost": 1000, "power_use": 50, "icon_sprite": "arc_caster_icon",
+      "always_available": true,
+      "front": [
+        {"fire_delay": 5, "projectile_count": 1, "max_on_screen": 1, "animation": 3, "sound": 15, "circle_radius": 23, "projectiles": [
+          {"sub_delay": 255, "damage": 3, "speed_y": 15, "spawn_x": -3, "sprite": "arc_bolt_1"}]},
+        {"fire_delay": 4, "projectile_count": 1, "max_on_screen": 1, "animation": 3, "sound": 15, "circle_radius": 23, "projectiles": [
+          {"sub_delay": 255, "damage": 3, "speed_y": 15, "spawn_x": -3, "sprite": "arc_bolt_1"}]},
+        {"fire_delay": 5, "projectile_count": 2, "max_on_screen": 2, "animation": 3, "sound": 15, "circle_radius": 23, "projectiles": [
+          {"sub_delay": 255, "damage": 3, "speed_y": 15, "spawn_x": -7, "sprite": "arc_bolt_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 15, "spawn_x": 1, "sprite": "arc_bolt_1"}]},
+        {"fire_delay": 5, "projectile_count": 2, "max_on_screen": 2, "animation": 3, "sound": 15, "circle_radius": 23, "projectiles": [
+          {"sub_delay": 255, "damage": 3, "speed_y": 15, "spawn_x": -7, "sprite": "arc_bolt_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 15, "spawn_x": 1, "sprite": "arc_bolt_1"}]},
+        {"fire_delay": 4, "projectile_count": 2, "max_on_screen": 2, "animation": 3, "sound": 15, "circle_radius": 23, "projectiles": [
+          {"sub_delay": 255, "damage": 3, "speed_y": 15, "spawn_x": -7, "sprite": "arc_bolt_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 15, "spawn_x": 1, "sprite": "arc_bolt_1"}]},
+        {"fire_delay": 5, "projectile_count": 3, "max_on_screen": 3, "animation": 3, "sound": 15, "circle_radius": 23, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_y": 15, "spawn_x": -3, "sprite": "arc_bolt_large_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 15, "spawn_x": -9, "sprite": "arc_bolt_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 15, "spawn_x": 3, "sprite": "arc_bolt_1"}]},
+        {"fire_delay": 5, "projectile_count": 3, "max_on_screen": 3, "animation": 3, "sound": 15, "circle_radius": 23, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 4}, "speed_y": 15, "spawn_x": -3, "sprite": "arc_bolt_large_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 15, "spawn_x": -9, "sprite": "arc_bolt_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 15, "spawn_x": 3, "sprite": "arc_bolt_1"}]},
+        {"fire_delay": 4, "projectile_count": 3, "max_on_screen": 3, "animation": 3, "sound": 15, "circle_radius": 23, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_y": 15, "spawn_x": -3, "sprite": "arc_bolt_large_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 15, "spawn_x": -9, "sprite": "arc_bolt_1"},
+          {"sub_delay": 255, "damage": 3, "speed_y": 15, "spawn_x": 3, "sprite": "arc_bolt_1"}]},
+        {"fire_delay": 5, "projectile_count": 5, "max_on_screen": 5, "animation": 3, "sound": 15, "circle_radius": 23, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_y": 15, "spawn_x": -3, "sprite": "arc_bolt_large_1"},
+          {"sub_delay": 255, "damage": 2, "speed_y": 15, "spawn_x": -9, "sprite": "arc_bolt_1"},
+          {"sub_delay": 255, "damage": 2, "speed_y": 15, "spawn_x": 3, "sprite": "arc_bolt_1"},
+          {"sub_delay": 255, "damage": 2, "speed_x": -1, "speed_y": 15, "spawn_x": -13, "sprite": "arc_bolt_1"},
+          {"sub_delay": 255, "damage": 2, "speed_x": 1, "speed_y": 15, "spawn_x": 7, "sprite": "arc_bolt_1"}]},
+        {"fire_delay": 5, "projectile_count": 5, "max_on_screen": 5, "animation": 3, "sound": 15, "circle_radius": 23, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 4}, "speed_y": 15, "spawn_x": -3, "sprite": "arc_bolt_large_1"},
+          {"sub_delay": 255, "damage": 2, "speed_y": 15, "spawn_x": -9, "sprite": "arc_bolt_1"},
+          {"sub_delay": 255, "damage": 2, "speed_y": 15, "spawn_x": 3, "sprite": "arc_bolt_1"},
+          {"sub_delay": 255, "damage": 2, "speed_x": -1, "speed_y": 15, "spawn_x": -13, "sprite": "arc_bolt_1"},
+          {"sub_delay": 255, "damage": 2, "speed_x": 1, "speed_y": 15, "spawn_x": 7, "sprite": "arc_bolt_1"}]},
+        {"fire_delay": 4, "projectile_count": 5, "max_on_screen": 5, "animation": 3, "sound": 15, "circle_radius": 23, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 4}, "speed_y": 15, "spawn_x": -3, "sprite": "arc_bolt_large_1"},
+          {"sub_delay": 255, "damage": 2, "speed_y": 15, "spawn_x": -9, "sprite": "arc_bolt_large_1"},
+          {"sub_delay": 255, "damage": 2, "speed_y": 15, "spawn_x": 3, "sprite": "arc_bolt_large_1"},
+          {"sub_delay": 255, "damage": 2, "speed_x": -1, "speed_y": 15, "spawn_x": -13, "sprite": "arc_bolt_1"},
+          {"sub_delay": 255, "damage": 2, "speed_x": 1, "speed_y": 15, "spawn_x": 7, "sprite": "arc_bolt_1"}]},
+      ],
+    },
+
+    // 4) Boulder Mortar (rear) - HEAVY: boulders that sag back, then accelerate forward (speed_y -2, accel_y 1); highest damage per hit and energy use.
+    {
+      "name": "Boulder Mortar", "cost": 1100, "power_use": 110, "icon_sprite": "boulder_mortar_icon",
+      "always_available": true,
+      "rear": [
+        {"fire_delay": 13, "projectile_count": 1, "max_on_screen": 1, "animation": 3, "sound": 28, "accel_y": 1, "projectiles": [
+          {"sub_delay": 255, "damage": 8, "speed_y": -2, "sprite": "boulder_large_1"}]},
+        {"fire_delay": 12, "projectile_count": 1, "max_on_screen": 1, "animation": 3, "sound": 28, "accel_y": 1, "projectiles": [
+          {"sub_delay": 255, "damage": 9, "speed_y": -2, "sprite": "boulder_large_1"}]},
+        {"fire_delay": 11, "projectile_count": 1, "max_on_screen": 1, "animation": 3, "sound": 28, "accel_y": 1, "projectiles": [
+          {"sub_delay": 255, "damage": 11, "speed_y": -2, "sprite": "boulder_large_1"}]},
+        {"fire_delay": 13, "projectile_count": 2, "max_on_screen": 2, "animation": 3, "sound": 28, "accel_y": 1, "projectiles": [
+          {"sub_delay": 255, "damage": 7, "speed_x": -1, "speed_y": -2, "spawn_x": -5, "sprite": "boulder_large_1"},
+          {"sub_delay": 255, "damage": 7, "speed_x": 1, "speed_y": -2, "spawn_x": 5, "sprite": "boulder_large_1"}]},
+        {"fire_delay": 11, "projectile_count": 2, "max_on_screen": 2, "animation": 3, "sound": 28, "accel_y": 1, "projectiles": [
+          {"sub_delay": 255, "damage": 8, "speed_x": -1, "speed_y": -2, "spawn_x": -5, "sprite": "boulder_large_1"},
+          {"sub_delay": 255, "damage": 8, "speed_x": 1, "speed_y": -2, "spawn_x": 5, "sprite": "boulder_large_1"}]},
+        {"fire_delay": 12, "projectile_count": 2, "max_on_screen": 2, "animation": 3, "sound": 28, "accel_y": 1, "projectiles": [
+          {"sub_delay": 255, "damage": 10, "speed_x": -1, "speed_y": -2, "spawn_x": -5, "sprite": "boulder_large_1"},
+          {"sub_delay": 255, "damage": 10, "speed_x": 1, "speed_y": -2, "spawn_x": 5, "sprite": "boulder_large_1"}]},
+        {"fire_delay": 12, "projectile_count": 3, "max_on_screen": 3, "animation": 3, "sound": 28, "accel_y": 1, "projectiles": [
+          {"sub_delay": 255, "damage": 12, "speed_y": -2, "sprite": "boulder_large_1"},
+          {"sub_delay": 255, "damage": 7, "speed_x": -2, "speed_y": -2, "spawn_x": -6, "sprite": "boulder_1"},
+          {"sub_delay": 255, "damage": 7, "speed_x": 2, "speed_y": -2, "spawn_x": 6, "sprite": "boulder_1"}]},
+        {"fire_delay": 12, "projectile_count": 3, "max_on_screen": 3, "animation": 3, "sound": 28, "accel_y": 1, "projectiles": [
+          {"sub_delay": 255, "damage": 12, "speed_y": -2, "sprite": "boulder_large_1"},
+          {"sub_delay": 255, "damage": 8, "speed_x": -2, "speed_y": -2, "spawn_x": -6, "sprite": "boulder_1"},
+          {"sub_delay": 255, "damage": 8, "speed_x": 2, "speed_y": -2, "spawn_x": 6, "sprite": "boulder_1"}]},
+        {"fire_delay": 11, "projectile_count": 3, "max_on_screen": 3, "animation": 3, "sound": 28, "accel_y": 1, "projectiles": [
+          {"sub_delay": 255, "damage": 12, "speed_y": -2, "sprite": "boulder_large_1"},
+          {"sub_delay": 255, "damage": 8, "speed_x": -2, "speed_y": -2, "spawn_x": -6, "sprite": "boulder_1"},
+          {"sub_delay": 255, "damage": 8, "speed_x": 2, "speed_y": -2, "spawn_x": 6, "sprite": "boulder_1"}]},
+        {"fire_delay": 12, "projectile_count": 4, "max_on_screen": 4, "animation": 3, "sound": 28, "accel_y": 1, "projectiles": [
+          {"sub_delay": 255, "damage": 10, "speed_x": -1, "speed_y": -2, "spawn_x": -4, "sprite": "boulder_large_1"},
+          {"sub_delay": 255, "damage": 10, "speed_x": 1, "speed_y": -2, "spawn_x": 4, "sprite": "boulder_large_1"},
+          {"sub_delay": 255, "damage": 6, "speed_x": -3, "speed_y": -2, "spawn_x": -8, "sprite": "boulder_1"},
+          {"sub_delay": 255, "damage": 6, "speed_x": 3, "speed_y": -2, "spawn_x": 8, "sprite": "boulder_1"}]},
+        {"fire_delay": 11, "projectile_count": 4, "max_on_screen": 4, "animation": 3, "sound": 28, "accel_y": 1, "projectiles": [
+          {"sub_delay": 255, "damage": 10, "speed_x": -1, "speed_y": -2, "spawn_x": -4, "sprite": "boulder_large_1"},
+          {"sub_delay": 255, "damage": 10, "speed_x": 1, "speed_y": -2, "spawn_x": 4, "sprite": "boulder_large_1"},
+          {"sub_delay": 255, "damage": 6, "speed_x": -3, "speed_y": -2, "spawn_x": -8, "sprite": "boulder_1"},
+          {"sub_delay": 255, "damage": 6, "speed_x": 3, "speed_y": -2, "spawn_x": 8, "sprite": "boulder_1"}]},
+      ],
+    },
+
+    // 5) Acid Rain (rear) - AREA: acid drops thrown up in a fan that slow down and rain back down (accel_y -1), eating through every enemy they cross (pierce).
+    {
+      "name": "Acid Rain", "cost": 950, "power_use": 50, "icon_sprite": "acid_rain_icon",
+      "always_available": true,
+      "rear": [
+        {"fire_delay": 8, "projectile_count": 3, "max_on_screen": 3, "animation": 3, "sound": 10, "accel_y": -1, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": -1, "speed_y": 12, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_y": 13, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": 1, "speed_y": 12, "sprite": "acid_drop_1"}]},
+        {"fire_delay": 8, "projectile_count": 4, "max_on_screen": 4, "animation": 3, "sound": 10, "accel_y": -1, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": -2, "speed_y": 12, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": -1, "speed_y": 12, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": 1, "speed_y": 12, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": 2, "speed_y": 12, "sprite": "acid_drop_1"}]},
+        {"fire_delay": 7, "projectile_count": 5, "max_on_screen": 5, "animation": 3, "sound": 10, "accel_y": -1, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": -2, "speed_y": 12, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": -1, "speed_y": 12, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_y": 13, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": 1, "speed_y": 12, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": 2, "speed_y": 12, "sprite": "acid_drop_1"}]},
+        {"fire_delay": 7, "projectile_count": 5, "max_on_screen": 5, "animation": 3, "sound": 10, "accel_y": -1, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": -3, "speed_y": 12, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": -2, "speed_y": 12, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_y": 13, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": 2, "speed_y": 12, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": 3, "speed_y": 12, "sprite": "acid_drop_1"}]},
+        {"fire_delay": 7, "projectile_count": 6, "max_on_screen": 6, "animation": 3, "sound": 10, "accel_y": -1, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": -3, "speed_y": 12, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": -2, "speed_y": 12, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -1, "speed_y": 13, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 1, "speed_y": 13, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": 2, "speed_y": 12, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": 3, "speed_y": 12, "sprite": "acid_drop_1"}]},
+        {"fire_delay": 7, "projectile_count": 7, "max_on_screen": 7, "animation": 3, "sound": 10, "accel_y": -1, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": -4, "speed_y": 12, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": -3, "speed_y": 12, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -1, "speed_y": 13, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_y": 14, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 1, "speed_y": 13, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": 3, "speed_y": 12, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": 4, "speed_y": 12, "sprite": "acid_drop_1"}]},
+        {"fire_delay": 7, "projectile_count": 7, "max_on_screen": 7, "animation": 3, "sound": 10, "accel_y": -1, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": -4, "speed_y": 12, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -3, "speed_y": 12, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -1, "speed_y": 13, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_y": 14, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 1, "speed_y": 13, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 3, "speed_y": 12, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": 4, "speed_y": 12, "sprite": "acid_drop_1"}]},
+        {"fire_delay": 6, "projectile_count": 8, "max_on_screen": 8, "animation": 3, "sound": 10, "accel_y": -1, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": -5, "speed_y": 12, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -4, "speed_y": 12, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -3, "speed_y": 12, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -1, "speed_y": 13, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 1, "speed_y": 13, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 3, "speed_y": 12, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 4, "speed_y": 12, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": 5, "speed_y": 12, "sprite": "acid_drop_1"}]},
+        {"fire_delay": 5, "projectile_count": 8, "max_on_screen": 8, "animation": 3, "sound": 10, "accel_y": -1, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": -5, "speed_y": 12, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -4, "speed_y": 12, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -3, "speed_y": 12, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -1, "speed_y": 13, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 1, "speed_y": 13, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 3, "speed_y": 12, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 4, "speed_y": 12, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": 5, "speed_y": 12, "sprite": "acid_drop_1"}]},
+        {"fire_delay": 5, "projectile_count": 8, "max_on_screen": 8, "animation": 3, "sound": 10, "accel_y": -1, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": -6, "speed_y": 12, "sprite": "acid_drop_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -4, "speed_y": 12, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -3, "speed_y": 12, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -1, "speed_y": 13, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 1, "speed_y": 13, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 3, "speed_y": 12, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 4, "speed_y": 12, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 1}, "speed_x": 6, "speed_y": 12, "sprite": "acid_drop_1"}]},
+        {"fire_delay": 5, "projectile_count": 8, "max_on_screen": 8, "animation": 3, "sound": 10, "accel_y": -1, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -5, "speed_y": 11, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -4, "speed_y": 12, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -3, "speed_y": 12, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -1, "speed_y": 13, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 1, "speed_y": 13, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 3, "speed_y": 12, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 4, "speed_y": 12, "sprite": "acid_drop_large_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 5, "speed_y": 11, "sprite": "acid_drop_large_1"}]},
+      ],
+    },
+
+    // 6) Gale Blades (rear) - FLANKS: wind blades cutting sideways through every enemy in their row (pierce), then also on the diagonals.
+    {
+      "name": "Gale Blades", "cost": 1000, "power_use": 55, "icon_sprite": "gale_blades_icon",
+      "always_available": true,
+      "rear": [
+        {"fire_delay": 8, "projectile_count": 2, "max_on_screen": 2, "animation": 3, "sound": 13, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -7, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 7, "sprite": "gale_blade_1"}]},
+        {"fire_delay": 6, "projectile_count": 2, "max_on_screen": 2, "animation": 3, "sound": 13, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -7, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 7, "sprite": "gale_blade_1"}]},
+        {"fire_delay": 7, "projectile_count": 2, "max_on_screen": 2, "animation": 3, "sound": 13, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": -7, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": 7, "sprite": "gale_blade_1"}]},
+        {"fire_delay": 6, "projectile_count": 2, "max_on_screen": 2, "animation": 3, "sound": 13, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": -7, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": 7, "sprite": "gale_blade_1"}]},
+        {"fire_delay": 8, "projectile_count": 4, "max_on_screen": 4, "animation": 3, "sound": 13, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": -7, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": 7, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -5, "speed_y": 5, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 5, "speed_y": 5, "sprite": "gale_blade_1"}]},
+        {"fire_delay": 7, "projectile_count": 4, "max_on_screen": 4, "animation": 3, "sound": 13, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": -7, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": 7, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -5, "speed_y": 5, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 5, "speed_y": 5, "sprite": "gale_blade_1"}]},
+        {"fire_delay": 8, "projectile_count": 6, "max_on_screen": 6, "animation": 3, "sound": 13, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": -8, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": 8, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": -5, "speed_y": 5, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": 5, "speed_y": 5, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -5, "speed_y": -5, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 5, "speed_y": -5, "sprite": "gale_blade_1"}]},
+        {"fire_delay": 7, "projectile_count": 6, "max_on_screen": 6, "animation": 3, "sound": 13, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": -8, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": 8, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": -5, "speed_y": 5, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": 5, "speed_y": 5, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -5, "speed_y": -5, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 5, "speed_y": -5, "sprite": "gale_blade_1"}]},
+        {"fire_delay": 7, "projectile_count": 6, "max_on_screen": 6, "animation": 3, "sound": 13, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 4}, "speed_x": -8, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 4}, "speed_x": 8, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": -5, "speed_y": 5, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": 5, "speed_y": 5, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -5, "speed_y": -5, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 5, "speed_y": -5, "sprite": "gale_blade_1"}]},
+        {"fire_delay": 7, "projectile_count": 6, "max_on_screen": 6, "animation": 3, "sound": 13, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 4}, "speed_x": -8, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 4}, "speed_x": 8, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": -6, "speed_y": 4, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": 6, "speed_y": 4, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": -6, "speed_y": -4, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": 6, "speed_y": -4, "sprite": "gale_blade_1"}]},
+        {"fire_delay": 8, "projectile_count": 8, "max_on_screen": 8, "animation": 3, "sound": 13, "projectiles": [
+          {"sub_delay": 255, "damage": {"pierce": 4}, "speed_x": -8, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 4}, "speed_x": 8, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": -6, "speed_y": 4, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": 6, "speed_y": 4, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": -6, "speed_y": -4, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 3}, "speed_x": 6, "speed_y": -4, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": -3, "speed_y": 7, "sprite": "gale_blade_1"},
+          {"sub_delay": 255, "damage": {"pierce": 2}, "speed_x": 3, "speed_y": 7, "sprite": "gale_blade_1"}]},
+      ],
+    },
+  ],
+}

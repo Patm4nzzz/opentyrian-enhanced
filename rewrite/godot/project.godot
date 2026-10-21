@@ -1,0 +1,61 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="OpenTyrian2000 Enhanced"
+config/version="v1.0-rc1"
+config/icon="res://icon/tyrian2000-128.png"
+config/use_custom_user_dir.macos=true
+config/custom_user_dir_name="OpenTyrian2000 Enhanced"
+boot_splash/show_image=false
+boot_splash/bg_color=Color(0, 0, 0, 1)
+run/main_scene="res://scenes/title.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+
+[autoload]
+
+Game="*res://scripts/game.gd"
+Mods="*res://scripts/mods.gd"
+Sfx="*res://scripts/sfx.gd"
+Music="*res://scripts/music.gd"
+Effects="*res://effects/effects.gd"
+Capture="*res://tools/capture.gd"
+Bench="*res://tools/bench.gd"
+CampaignBot="*res://tools/campaign_bot.gd"
+JourneyState="*res://tools/journey_state.gd"
+
+[display]
+
+window/size/viewport_width=320
+window/size/viewport_height=200
+window/size/window_width_override=960
+window/size/window_height_override=600
+window/stretch/mode="canvas_items"
+window/stretch/scale_mode="integer"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/tyrian_level_editor/plugin.cfg")
+
+[physics]
+
+common/physics_ticks_per_second=35
+common/max_physics_steps_per_frame=4
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+textures/vram_compression/import_etc2_astc=true
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true

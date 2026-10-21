@@ -1,0 +1,16 @@
+# Fire while standing still only, movements without fire (bits: golden_master.c).
+# Used by the "replay" batch: replay.c replays POSITIONS recorded at the head of the
+# frame, not keys; this script isolates the case where the one-frame gap between
+# recorded position and fire position cannot matter (ADR 0090).
+40 00
+300 10
+24 04
+300 10
+48 08
+300 10
+24 04
+300 10
+30 01
+300 10
+30 02
+400 10

@@ -1,0 +1,10 @@
+[package]
+name = "tyrian-formats"
+description = "Byte-exact reading and writing of the Tyrian 2000 data formats"
+edition.workspace = true
+license.workspace = true
+version.workspace = true
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true

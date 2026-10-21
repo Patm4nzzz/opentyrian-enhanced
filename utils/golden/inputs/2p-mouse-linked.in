@@ -1,0 +1,19 @@
+# Player 2 (mouse) of the mode-2p-linked scenario: join player 1 (still
+# at 100,160 until tick 195: 2p-keyboard.in) and stop within 8 px to
+# trigger the Dragonwing link (player_movement.c, "Linking Routines":
+# x == mouseX and gap < 8 px), then move with the fire button held (rotation of
+# linkGunDirec) and release while moving (unlinking).
+60 00 00 0 0
+14 00 00 -4 0
+17 00 00 -1 0
+60 00 00 0 0
+40 00 10 0 -3
+40 00 10 3 0
+40 00 10 0 3
+40 00 10 -3 0
+60 00 10 2 -2
+60 00 10 -2 2
+40 00 10 4 4
+60 00 00 0 0
+10 00 00 5 0
+200 00 00 0 0

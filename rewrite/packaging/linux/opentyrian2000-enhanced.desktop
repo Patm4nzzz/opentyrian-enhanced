@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=OpenTyrian2000 Enhanced
+Comment=An arcade-style shoot 'em up
+Icon=opentyrian2000-enhanced
+Categories=Game;ArcadeGame;
+Exec=@INSTALL_DIR@/OpenTyrian2000-Enhanced.x86_64
+Path=@INSTALL_DIR@
+Terminal=false

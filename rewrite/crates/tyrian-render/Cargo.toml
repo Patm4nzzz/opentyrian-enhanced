@@ -1,0 +1,9 @@
+[package]
+name = "tyrian-render"
+description = "Palettized 8-bit rendering identical to the C version (sprite.c, font.c, fonthand.c, palette.c, backgrnd.c)"
+edition.workspace = true
+license.workspace = true
+version.workspace = true
+
+[dependencies]
+tyrian-formats = { path = "../tyrian-formats" }

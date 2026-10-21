@@ -1,0 +1,270 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/Patm4nzzz/opentyrian-enhanced/blob/rewrite/godot-rust/rewrite/mods/mod.schema.json",
+  "title": "OpenTyrian2000 Enhanced (Godot + Rust) mod.json",
+  "description": "Single mod format, \"format_version\": 1 (MODDING.md). Every key the game does not read is refused, as by the game's loader. Names of original enemies and enemy weapons: rewrite/mods/original-names.json. Checked against the shipped mods in CI (.github/workflows/rewrite.yml).",
+  "type": "object",
+  "required": ["format_version", "name"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string", "description": "Path or URL of this schema, for editors; ignored by the game." },
+    "format_version": { "const": 1 },
+    "name": { "type": "string", "minLength": 1, "description": "Shown in Setup > Mods." },
+    "author": { "type": "string" },
+    "version": { "type": "string" },
+    "description": { "type": "string" },
+    "enabled": { "type": "boolean", "description": "Initial state; Setup > Mods overrides it." },
+    "tint": { "$ref": "#/definitions/tint" },
+    "weapons": { "type": "array", "items": { "$ref": "#/definitions/weapon" } },
+    "ships": { "type": "array", "items": { "$ref": "#/definitions/ship" } },
+    "sidekicks": { "type": "array", "items": { "$ref": "#/definitions/sidekick" } },
+    "shields": { "type": "array", "items": { "$ref": "#/definitions/shield" } },
+    "specials": { "type": "array", "items": { "$ref": "#/definitions/special" } },
+    "enemy_weapons": { "type": "array", "items": { "$ref": "#/definitions/enemy_weapon" } },
+    "enemies": { "type": "array", "items": { "$ref": "#/definitions/enemy" } },
+    "starter": { "$ref": "#/definitions/starter" }
+  },
+  "definitions": {
+    "name": { "type": "string", "minLength": 1 },
+    "int": { "type": "number" },
+    "byte": { "type": "integer", "minimum": 0, "maximum": 255 },
+    "signed_byte": { "type": "integer", "minimum": -128, "maximum": 127 },
+    "word": { "type": "integer", "minimum": 0, "maximum": 65535 },
+    "tint": {
+      "description": "Hue applied to the mod's PNG files.",
+      "oneOf": [
+        { "enum": ["red", "orange", "yellow", "green", "cyan", "blue", "purple", "magenta", "pink"] },
+        { "type": "number", "minimum": 0, "exclusiveMaximum": 1 }
+      ]
+    },
+    "damage": {
+      "description": "Hit points 0..98, or a named effect (MODDING.md section 5.3).",
+      "oneOf": [
+        { "type": "integer", "minimum": 0, "maximum": 98 },
+        { "const": "freeze" },
+        { "type": "object", "additionalProperties": false, "required": ["pierce"], "properties": { "pierce": { "type": "integer", "minimum": 0, "maximum": 5 } } },
+        { "type": "object", "additionalProperties": false, "required": ["chain"], "properties": { "chain": { "$ref": "#/definitions/name" } } }
+      ]
+    },
+    "projectile": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "damage": { "$ref": "#/definitions/damage" },
+        "sub_delay": { "$ref": "#/definitions/int" },
+        "speed_x": { "$ref": "#/definitions/int" },
+        "speed_y": { "$ref": "#/definitions/int" },
+        "spawn_x": { "$ref": "#/definitions/int" },
+        "spawn_y": { "$ref": "#/definitions/int" },
+        "sprite": { "$ref": "#/definitions/name" }
+      }
+    },
+    "firing": {
+      "description": "A weapon power level, or an enemy weapon.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": { "$ref": "#/definitions/name" },
+        "fire_delay": { "$ref": "#/definitions/int" },
+        "projectile_count": { "$ref": "#/definitions/int" },
+        "animation": { "$ref": "#/definitions/int" },
+        "max_on_screen": { "$ref": "#/definitions/int" },
+        "offset_x": { "$ref": "#/definitions/int" },
+        "offset_y": { "$ref": "#/definitions/int" },
+        "homing": { "type": ["number", "boolean"] },
+        "accel_x": { "$ref": "#/definitions/int" },
+        "accel_y": { "$ref": "#/definitions/int" },
+        "circle_radius": { "$ref": "#/definitions/int" },
+        "sound": { "$ref": "#/definitions/int" },
+        "trail": { "$ref": "#/definitions/int" },
+        "ship_blast_filter": { "$ref": "#/definitions/int" },
+        "projectiles": { "type": "array", "maxItems": 8, "items": { "$ref": "#/definitions/projectile" } }
+      }
+    },
+    "enemy_weapon": {
+      "allOf": [{ "$ref": "#/definitions/firing" }],
+      "required": ["name"]
+    },
+    "weapon": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": { "$ref": "#/definitions/name" },
+        "base": { "$ref": "#/definitions/name" },
+        "cost": { "$ref": "#/definitions/int" },
+        "power_use": { "$ref": "#/definitions/int" },
+        "icon_sprite": { "$ref": "#/definitions/name" },
+        "always_available": { "type": "boolean" },
+        "tint": { "$ref": "#/definitions/tint" },
+        "front": { "type": "array", "maxItems": 11, "items": { "$ref": "#/definitions/firing" } },
+        "rear": { "type": "array", "maxItems": 11, "items": { "$ref": "#/definitions/firing" } }
+      }
+    },
+    "ship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": { "$ref": "#/definitions/name" },
+        "base": { "$ref": "#/definitions/name" },
+        "cost": { "$ref": "#/definitions/int" },
+        "damage_resistance": { "$ref": "#/definitions/int" },
+        "ship_sprite": { "$ref": "#/definitions/name" },
+        "ship_poses": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "neutral": { "$ref": "#/definitions/name" },
+            "left_full": { "$ref": "#/definitions/name" },
+            "left": { "$ref": "#/definitions/name" },
+            "right": { "$ref": "#/definitions/name" },
+            "right_full": { "$ref": "#/definitions/name" }
+          }
+        },
+        "icon_sprite": { "$ref": "#/definitions/name" },
+        "always_available": { "type": "boolean" }
+      }
+    },
+    "sidekick": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": { "$ref": "#/definitions/name" },
+        "base": { "$ref": "#/definitions/name" },
+        "cost": { "$ref": "#/definitions/int" },
+        "trail": { "$ref": "#/definitions/int" },
+        "ammo": { "$ref": "#/definitions/int" },
+        "icon_sprite": { "$ref": "#/definitions/name" },
+        "always_available": { "type": "boolean" }
+      }
+    },
+    "shield": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": { "$ref": "#/definitions/name" },
+        "base": { "$ref": "#/definitions/name" },
+        "cost": { "$ref": "#/definitions/int" },
+        "shield_power": { "type": "integer", "minimum": 0, "maximum": 28 },
+        "max_power": { "type": "integer", "minimum": 0, "maximum": 18 },
+        "icon_sprite": { "$ref": "#/definitions/name" },
+        "always_available": { "type": "boolean" }
+      }
+    },
+    "special": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": { "$ref": "#/definitions/name" },
+        "base": { "$ref": "#/definitions/name" },
+        "power": { "$ref": "#/definitions/int" },
+        "subtype": { "$ref": "#/definitions/int" },
+        "icon_sprite": { "$ref": "#/definitions/name" },
+        "always_available": { "type": "boolean" }
+      }
+    },
+    "starter": {
+      "description": "Item NAMES (original or from a loaded mod).",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ship": { "$ref": "#/definitions/name" },
+        "front_weapon": { "$ref": "#/definitions/name" },
+        "rear_weapon": { "$ref": "#/definitions/name" },
+        "shield": { "$ref": "#/definitions/name" },
+        "generator": { "$ref": "#/definitions/name" },
+        "sidekick_left": { "$ref": "#/definitions/name" },
+        "sidekick_right": { "$ref": "#/definitions/name" }
+      }
+    },
+    "enemy": {
+      "description": "\"name\": a NEW enemy (optionally copied from \"base\"); \"original\": changes an original enemy. Exactly one of them.",
+      "type": "object",
+      "additionalProperties": false,
+      "oneOf": [{ "required": ["name"] }, { "required": ["original"] }],
+      "properties": {
+        "name": { "$ref": "#/definitions/name" },
+        "original": { "$ref": "#/definitions/name" },
+        "base": { "$ref": "#/definitions/name" },
+        "behavior": { "$ref": "#/definitions/behavior" },
+        "ani": { "$ref": "#/definitions/int" },
+        "xmove": { "$ref": "#/definitions/int" },
+        "ymove": { "$ref": "#/definitions/int" },
+        "xaccel": { "$ref": "#/definitions/int" },
+        "yaccel": { "$ref": "#/definitions/int" },
+        "xcaccel": { "$ref": "#/definitions/int" },
+        "ycaccel": { "$ref": "#/definitions/int" },
+        "startx": { "$ref": "#/definitions/int" },
+        "starty": { "$ref": "#/definitions/int" },
+        "startxc": { "$ref": "#/definitions/int" },
+        "startyc": { "$ref": "#/definitions/int" },
+        "armor": { "$ref": "#/definitions/int" },
+        "esize": { "$ref": "#/definitions/int" },
+        "explosiontype": { "$ref": "#/definitions/int" },
+        "animate": { "$ref": "#/definitions/int" },
+        "shapebank": { "$ref": "#/definitions/int" },
+        "xrev": { "$ref": "#/definitions/int" },
+        "yrev": { "$ref": "#/definitions/int" },
+        "dgr": { "$ref": "#/definitions/int" },
+        "dlevel": { "$ref": "#/definitions/int" },
+        "dani": { "$ref": "#/definitions/int" },
+        "elaunchfreq": { "$ref": "#/definitions/int" },
+        "elaunchtype": { "$ref": "#/definitions/name" },
+        "value": { "$ref": "#/definitions/int" },
+        "eenemydie": { "$ref": "#/definitions/name" },
+        "tur": { "type": "array", "maxItems": 3, "items": { "type": ["string", "null"] } },
+        "freq": { "type": "array", "maxItems": 3, "items": { "$ref": "#/definitions/int" } },
+        "egraphic": { "type": "array", "maxItems": 20, "items": { "$ref": "#/definitions/int" } }
+      }
+    },
+    "behavior": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "array",
+          "maxItems": 32,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["ticks"],
+            "properties": {
+              "ticks": { "type": "integer", "minimum": 1, "maximum": 10000 },
+              "vx": { "$ref": "#/definitions/signed_byte" },
+              "vy": { "$ref": "#/definitions/signed_byte" }
+            }
+          }
+        },
+        "loop": { "type": "boolean" },
+        "track": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "axis": { "enum": ["x", "y", "xy"] },
+            "max_speed": { "type": "integer", "minimum": 0, "maximum": 127 },
+            "every": { "type": "integer", "minimum": 1, "maximum": 255 }
+          }
+        },
+        "turrets": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["weapon", "every"],
+            "properties": {
+              "weapon": { "$ref": "#/definitions/name" },
+              "every": { "type": "integer", "minimum": 1, "maximum": 255 },
+              "start": { "type": "integer", "minimum": 1, "maximum": 255 },
+              "direction": { "enum": ["down", "side", "side_reverse"] }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+// Alien Ship Pack: eight ships of Tyrian's two alien races:
+// the Hazudra (Trent's allies, episodes 2 and 5) and the Zica (builders of the
+// tunnel worlds, masters of thermal energy, see the Zica Laser data cube).
+//
+// The images are drawn in the style of the original ships: 24x28 canvas,
+// the game's VGA palette (indices measured on 12 original ships), one-pixel
+// dark outline, one body ramp + one accent ramp. Each ship
+// provides its five poses (ship_poses): neutral, half and full bank to each
+// side, drawn as a roll (the cockpit slides toward the turn, the lowered wing
+// shortens and darkens). 40 PNGs: the ship image table has 44 free places
+// for all enabled mods.
+//
+// Price and armor matched to the original ships of the same tier (see the
+// README table). All eight are sold everywhere (always_available); a
+// shop shows at most 10 ships, the level's own included (MODDING.md §5.9).
+{
+  "$schema": "../mod.schema.json",
+  "format_version": 1,
+  "name": "Alien Ship Pack",
+  "author": "OpenTyrian2000 Team (PixelLab draft, hand-cleaned)",
+  "version": "1.0",
+  "description": "8 Hazudra and Zica ships drawn in the original Tyrian style.",
+  "enabled": false,
+
+  "ships": [
+    {"name": "Zica Ember", "cost": 7000, "damage_resistance": 12, "always_available": true,
+     "ship_poses": {"neutral": "zica_ember", "left_full": "zica_ember_left_full", "left": "zica_ember_left",
+                    "right": "zica_ember_right", "right_full": "zica_ember_right_full"}},
+    {"name": "Hazudra Stinger", "cost": 9000, "damage_resistance": 14, "always_available": true,
+     "ship_poses": {"neutral": "hazudra_stinger", "left_full": "hazudra_stinger_left_full", "left": "hazudra_stinger_left",
+                    "right": "hazudra_stinger_right", "right_full": "hazudra_stinger_right_full"}},
+    {"name": "Hazudra Mandible", "cost": 11000, "damage_resistance": 16, "always_available": true,
+     "ship_poses": {"neutral": "hazudra_mandible", "left_full": "hazudra_mandible_left_full", "left": "hazudra_mandible_left",
+                    "right": "hazudra_mandible_right", "right_full": "hazudra_mandible_right_full"}},
+    {"name": "Zica Halo", "cost": 14000, "damage_resistance": 19, "always_available": true,
+     "ship_poses": {"neutral": "zica_halo", "left_full": "zica_halo_left_full", "left": "zica_halo_left",
+                    "right": "zica_halo_right", "right_full": "zica_halo_right_full"}},
+    {"name": "Hazudra Crescent", "cost": 16000, "damage_resistance": 21, "always_available": true,
+     "ship_poses": {"neutral": "hazudra_crescent", "left_full": "hazudra_crescent_left_full", "left": "hazudra_crescent_left",
+                    "right": "hazudra_crescent_right", "right_full": "hazudra_crescent_right_full"}},
+    {"name": "Zica Twin Furnace", "cost": 22000, "damage_resistance": 26, "always_available": true,
+     "ship_poses": {"neutral": "zica_twin_furnace", "left_full": "zica_twin_furnace_left_full", "left": "zica_twin_furnace_left",
+                    "right": "zica_twin_furnace_right", "right_full": "zica_twin_furnace_right_full"}},
+    {"name": "Hazudra Reaver", "cost": 28000, "damage_resistance": 27, "always_available": true,
+     "ship_poses": {"neutral": "hazudra_reaver", "left_full": "hazudra_reaver_left_full", "left": "hazudra_reaver_left",
+                    "right": "hazudra_reaver_right", "right_full": "hazudra_reaver_right_full"}},
+    {"name": "Hazudra Swarmlord", "cost": 52000, "damage_resistance": 29, "always_available": true,
+     "ship_poses": {"neutral": "hazudra_swarmlord", "left_full": "hazudra_swarmlord_left_full", "left": "hazudra_swarmlord_left",
+                    "right": "hazudra_swarmlord_right", "right_full": "hazudra_swarmlord_right_full"}},
+  ],
+}

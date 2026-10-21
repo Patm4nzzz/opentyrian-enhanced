@@ -1,0 +1,545 @@
+# OpenTyrian2000 Enhanced (Godot + Rust): workspace tests, strict parity
+# with the FROZEN golden masters of the former C version, locale checks,
+# interface regression, Windows and Linux packages, and publication of the
+# release at tag v*. The C version is removed from the repository (tag c-final, ADR 0132).
+#
+# The original game data (data/tyrian*.lvl, tyrian.hdt...) is tracked
+# in the repository: its absence makes CI fail, never a success without parity.
+#
+# Actions quota (maintainer's decision of 2026-10-06): no automatic launch
+# on push or pull_request. Current proof is made locally
+# (cargo test, strict parity, gdUnit4, interface regression, native Windows
+# exe); CI only runs on demand (workflow_dispatch). Release tags no longer
+# start it: releases are built and tested locally, then published by hand
+# with the release notes and all five archives. The windows-native job and
+# the experimental macos job run with the others on each dispatch: the
+# repository is public since 2026-10-20, so standard GitHub-hosted runners
+# (Windows and macOS included) no longer consume a minutes quota.
+name: OpenTyrian Godot
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CARGO_TERM_COLOR: always
+  CARGO_INCREMENTAL: 0
+
+jobs:
+  # Text and locale checks (6 languages): keys, formats, fonts,
+  # menu widths, datacubes; then tests of the Python tools in utils/.
+  lints:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Locale keys identical in the six languages
+        run: python3 utils/locale_check.py --strict
+      - name: No hard-coded displayed text in the Godot menus
+        run: python3 utils/godot_hardcoded_text.py
+      - name: Every locale character can be displayed
+        run: python3 utils/locale_glyphs.py
+      - name: Menu labels fit in their column
+        run: python3 utils/locale_widths.py
+      - name: Text can be drawn in the font used
+        run: python3 utils/font_glyph_lint.py
+      - name: Datacubes fit in their frame
+        run: python3 utils/locale_cubes.py check
+      - name: Tests of the Python tools in utils/
+        # The art tools (asset_encode_shp.py, mod icon scripts) import Pillow at load time.
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends python3-pil
+          python3 -m unittest discover -s utils/tests -v
+      - name: Python, GDScript and shell linters (lint.sh, without Rust or Godot)
+        run: |
+          pipx install ruff==0.17.0 && pipx install "gdtoolkit==4.5.0"
+          bash rewrite/scripts/lint.sh --no-rust
+
+  rust:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: rewrite
+    steps:
+      - uses: actions/checkout@v4
+
+      # workspace rust-version: 1.94; we follow the current stable.
+      - name: Rust toolchain
+        run: |
+          rustup toolchain install stable --profile minimal --component clippy,rustfmt
+          rustup default stable
+          cargo --version
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            rewrite/target
+          key: rewrite-${{ runner.os }}-${{ hashFiles('rewrite/Cargo.lock') }}
+          restore-keys: rewrite-${{ runner.os }}-
+
+      - name: Game data present?
+        id: data
+        run: |
+          if [ -f ../data/tyrian.hdt ] && [ -f ../data/tyrian1.lvl ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::error::data/ incomplete: parity impossible"
+            exit 1
+          fi
+
+      - name: cargo fmt and clippy without warnings
+        run: |
+          cargo fmt --all --check
+          cargo clippy --workspace --all-targets --release --locked -- -D warnings
+
+      - name: cargo test --workspace --release
+        run: cargo test --workspace --release --locked
+
+      # Fails as soon as a single tick of a single golden master diverges. The golden
+      # masters are frozen files, recorded long ago by the C
+      # version; new ones are only recorded from the c-final tag (ADR 0132).
+      - name: Strict parity with the frozen golden masters of the C version
+        if: steps.data.outputs.present == 'true'
+        run: |
+          shopt -s globstar nullglob
+          masters=()
+          for file in golden/**/*.gm; do
+            [[ "$file" == *.play.gm ]] || masters+=("$file")
+          done
+          test "${#masters[@]}" -ge 66
+          cargo run --release --locked -p tyrian-golden -- \
+            --strict --data ../data --json "$RUNNER_TEMP/parity.json" "${masters[@]}"
+          # The .play.gm files use compare_replay, not the ordinary comparator.
+          cargo test --release --locked -p tyrian-golden --test replays
+
+      # The references (golden masters, readbacks, replays) rewritten by
+      # tyrian-sim must be byte-for-byte identical to the tracked
+      # files (ADR 0127): the writing tool stays proven without the C.
+      - name: References rewritten by tyrian-sim
+        if: steps.data.outputs.present == 'true'
+        run: |
+          shopt -s globstar nullglob
+          refs=(golden/**/*.gm)
+          test "${#refs[@]}" -ge 71
+          in=../utils/golden/inputs
+          cargo run --release --locked -p tyrian-golden --bin tyrian-write-references -- \
+            --check --data ../data \
+            --record "golden/replays/e1-tyrian-sweep.rep=$in/sweep.in" \
+            --record "golden/replays/e1-tyrian-still.rep=$in/still_fire.in" \
+            --record "golden/replays/e2-first-sweep.rep=$in/sweep.in" \
+            --record "golden/replays/e1-mutators-sweep.rep=$in/sweep.in" \
+            --record "golden/replays/e1-2p-sweep.rep=$in/sweep.in" \
+            "${refs[@]}"
+
+      # Short version; the long version is documented in
+      # docs/robustness.md (20,000 games, ~1 min on 32 cores).
+      - name: Robustness bot (short version)
+        if: steps.data.outputs.present == 'true'
+        run: |
+          cargo run --profile robustness --locked -p tyrian-robustness -- \
+            --data ../data --games 300 --max-ticks 3000 --json "$RUNNER_TEMP/robustness.json"
+          cargo run --profile robustness --locked -p tyrian-robustness -- \
+            --data ../data --games 300 --max-ticks 1000 --wild-loadout --first 1000000
+
+      - name: Godot tools and delivery tests
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libsdl2-dev ffmpeg python3-pil
+          curl -fL --retry 3 -o "$RUNNER_TEMP/godot.zip" https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip
+          unzip -q "$RUNNER_TEMP/godot.zip" -d "$RUNNER_TEMP/godot"
+          chmod +x "$RUNNER_TEMP/godot/Godot_v4.7.2-stable_linux.x86_64"
+          echo "GODOT=$RUNNER_TEMP/godot/Godot_v4.7.2-stable_linux.x86_64" >> "$GITHUB_ENV"
+          python3 scripts/test_delivery.py
+
+      # Published schema of the mod.json files (rewrite/mods/mod.schema.json), validated by
+      # an existing tool (check-jsonschema, JSON5 reading for the comments)
+      # on the shipped mods and the template; negative check: an
+      # unknown key must be refused, as by the loader.
+      - name: Shipped mods against the JSON schema
+        run: |
+          pipx install check-jsonschema==0.38.2
+          pipx inject check-jsonschema json5==0.15.0
+          check-jsonschema --force-filetype json5 --schemafile mods/mod.schema.json \
+            mods/*/mod.json mod_template/mod.json
+          printf '{"format_version": 1, "name": "x", "enemies": [{"original": "a", "id": 3}]}' > "$RUNNER_TEMP/unknown_key.json"
+          if check-jsonschema --schemafile mods/mod.schema.json "$RUNNER_TEMP/unknown_key.json"; then
+            echo "::error::the schema accepts an unknown key"
+            exit 1
+          fi
+
+      - name: Godot build
+        run: |
+          bash scripts/build-linux.sh
+
+      # "HD sprites" mode PNGs (ADR 0100): release archive verified by
+      # SHA-256, and check that it derives from the imported images of this commit.
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/opentyrian-hd
+          key: hd-assets-${{ hashFiles('rewrite/scripts/hd_assets.sh') }}
+
+      - name: HD PNGs (versioned archive)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/hd_assets.sh fetch
+
+      # gdUnit4 suites (rewrite/godot/test, ADR 0084): failure on a failed test, an
+      # orphan node, a Godot SCRIPT ERROR / ERROR or zero tests.
+      - name: Godot tests (gdUnit4)
+        run: bash scripts/godot-tests.sh "$RUNNER_TEMP/gdunit"
+
+      # Interface regression (screen sequences, scripts/ui_regression.sh):
+      # each Godot image sequence is compared rank by rank with the fingerprints
+      # versioned in golden/ui: frozen C fingerprints (tag c-final) for the
+      # screens identical to the C, validated Godot captures (godot-ref) for the
+      # deliberately different screens. Failure on a single differing rank, a missing
+      # capture, or an ERROR / SCRIPT ERROR / resource retained at
+      # shutdown.
+      - name: Interface regression (frozen C and Godot references)
+        run: |
+          sudo apt-get install -y xvfb xauth libgl1-mesa-dri
+          JOBS=4 bash scripts/ui_regression.sh godot "$RUNNER_TEMP/ui" golden/ui
+
+      - name: Interface regression logs
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui-regression-logs
+          path: ${{ runner.temp }}/ui/*.log
+          if-no-files-found: ignore
+
+      - name: gdUnit4 report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gdunit-report
+          path: ${{ runner.temp }}/gdunit
+          if-no-files-found: ignore
+
+      - name: Reports
+        if: always() && steps.data.outputs.present == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: rewrite-reports
+          path: |
+            ${{ runner.temp }}/parity.json
+            ${{ runner.temp }}/robustness.json
+          if-no-files-found: error
+
+  # Windows package (scripts/package.sh --only=windows): mingw cross-compiled
+  # GDExtension, Godot "Windows Desktop" export, data/ and HD PNGs. Built on
+  # Linux like the published package, then verified under Windows by the next job.
+  package-windows:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    defaults:
+      run:
+        working-directory: rewrite
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rust toolchain (Linux + Windows cross-compilation)
+        run: |
+          rustup toolchain install stable --profile minimal
+          rustup default stable
+          rustup target add x86_64-pc-windows-gnu
+          sudo apt-get update
+          # wine: runs rcedit.exe (icon and version fields of the exe), see package.sh.
+          sudo apt-get install -y gcc-mingw-w64-x86-64 libsdl2-dev ffmpeg python3-pil zip
+          sudo apt-get install -y --no-install-recommends wine wine64
+          wine --version
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            rewrite/target
+          key: rewrite-package-${{ runner.os }}-${{ hashFiles('rewrite/Cargo.lock') }}
+          restore-keys: rewrite-package-${{ runner.os }}-
+
+      # 4.7.2 export templates: the official archive is 1.3 GB, only the
+      # Linux/Windows files extracted by package.sh are cached.
+      - uses: actions/cache@v4
+        with:
+          path: ~/.local/share/godot/export_templates/4.7.2.stable
+          key: godot-export-templates-4.7.2-linux-windows
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/opentyrian-hd
+          key: hd-assets-${{ hashFiles('rewrite/scripts/hd_assets.sh') }}
+
+      - name: Godot 4.7.2
+        run: |
+          curl -fL --retry 3 -o "$RUNNER_TEMP/godot.zip" https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip
+          unzip -q "$RUNNER_TEMP/godot.zip" -d "$RUNNER_TEMP/godot"
+          chmod +x "$RUNNER_TEMP/godot/Godot_v4.7.2-stable_linux.x86_64"
+          echo "GODOT=$RUNNER_TEMP/godot/Godot_v4.7.2-stable_linux.x86_64" >> "$GITHUB_ENV"
+
+      - name: Windows package
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OUT: ${{ runner.temp }}/package
+          # Headless wine: no Mono/Gecko install prompts, no debug noise.
+          WINEDLLOVERRIDES: "mscoree,mshtml="
+          WINEDEBUG: "-all"
+        run: bash scripts/package.sh --only=windows
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: OpenTyrian2000-Enhanced-windows-x86_64
+          path: ${{ runner.temp }}/package/windows/OpenTyrian2000-Enhanced-v*-windows-x86_64.zip
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 0
+
+  # Exported executable run under native Windows (not WSL nor Wine): startup
+  # --headless --quit-after, then strict replay of a golden master INSIDE the exe
+  # (each tick identical to the frozen golden master on its 18 columns, state fingerprints
+  # included). Failure on non-zero return code, "SCRIPT ERROR:" or
+  # "ERROR:" in the output (scripts/test-package-windows.ps1 -HeadlessOnly).
+  windows-native:
+    needs: package-windows
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            rewrite/scripts
+            rewrite/golden
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: OpenTyrian2000-Enhanced-windows-x86_64
+          path: ${{ runner.temp }}/package
+
+      - name: Windows executable (headless, strict replay)
+        shell: powershell
+        run: |
+          # The archive name carries the version (package.sh): OpenTyrian2000-Enhanced-v<version>-windows-x86_64.zip.
+          $zip = Get-ChildItem "$env:RUNNER_TEMP/package" -Filter "OpenTyrian2000-Enhanced-v*-windows-x86_64.zip" | Select-Object -First 1
+          if (-not $zip) { throw "Windows package missing" }
+          powershell -NoProfile -ExecutionPolicy Bypass -File rewrite/scripts/test-package-windows.ps1 `
+            -Zip $zip.FullName `
+            -Out "$env:RUNNER_TEMP/windows-native" -HeadlessOnly
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Windows logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-native-logs
+          path: ${{ runner.temp }}/windows-native
+          if-no-files-found: ignore
+
+  # Linux package (scripts/package.sh --only=linux): Linux GDExtension, Godot
+  # "Linux" export, data/ and HD PNGs. .tar.gz archive for Linux / Steam Deck.
+  package-linux:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    defaults:
+      run:
+        working-directory: rewrite
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rust toolchain
+        run: |
+          rustup toolchain install stable --profile minimal
+          rustup default stable
+          sudo apt-get update
+          sudo apt-get install -y libsdl2-dev ffmpeg python3-pil
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            rewrite/target
+          key: rewrite-package-linux-${{ runner.os }}-${{ hashFiles('rewrite/Cargo.lock') }}
+          restore-keys: rewrite-package-linux-${{ runner.os }}-
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.local/share/godot/export_templates/4.7.2.stable
+          key: godot-export-templates-4.7.2-linux-windows
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/opentyrian-hd
+          key: hd-assets-${{ hashFiles('rewrite/scripts/hd_assets.sh') }}
+
+      - name: Godot 4.7.2
+        run: |
+          curl -fL --retry 3 -o "$RUNNER_TEMP/godot.zip" https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip
+          unzip -q "$RUNNER_TEMP/godot.zip" -d "$RUNNER_TEMP/godot"
+          chmod +x "$RUNNER_TEMP/godot/Godot_v4.7.2-stable_linux.x86_64"
+          echo "GODOT=$RUNNER_TEMP/godot/Godot_v4.7.2-stable_linux.x86_64" >> "$GITHUB_ENV"
+
+      - name: Linux package
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OUT: ${{ runner.temp }}/package
+        run: bash scripts/package.sh --only=linux
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: OpenTyrian2000-Enhanced-linux-x86_64
+          path: ${{ runner.temp }}/package/linux/OpenTyrian2000-Enhanced-v*-linux-x86_64.tar.gz
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 0
+
+  # EXPERIMENTAL macOS package, unsigned (no Apple Developer identity, not
+  # notarized): universal app (x86_64 + arm64) built natively on a macOS runner
+  # by scripts/package.sh --only=macos (build-macos.sh: two Rust targets merged by
+  # lipo; Godot 4.7.2 macOS editor and templates, official SHA-512 checked;
+  # HD (AI) images included as in every default package: the hd-assets-5
+  # release asset of THIS repository, read with the default token; a failed
+  # download fails the job, never a silent lite build), ad-hoc signature, then
+  # headless checks of the extracted app (scripts/test-package-macos.sh).
+  # On demand only; not published by the release job.
+  macos:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: macos-14
+    timeout-minutes: 75
+    defaults:
+      run:
+        working-directory: rewrite
+    steps:
+      - uses: actions/checkout@v4
+
+      # sdl2 + ffmpeg: offline music rendering (tools/music-render/render.sh,
+      # OGG through libvorbis). The Homebrew "ffmpeg" formula no longer links
+      # libvorbis; "ffmpeg-full" does (keg-only, put first in PATH).
+      # coreutils: sha256sum and realpath of the shared scripts (hd_assets.sh).
+      - name: Tools (Homebrew)
+        run: |
+          brew install sdl2 ffmpeg-full coreutils
+          echo "$(brew --prefix ffmpeg-full)/bin" >> "$GITHUB_PATH"
+          echo "$(brew --prefix coreutils)/libexec/gnubin" >> "$GITHUB_PATH"
+          "$(brew --prefix ffmpeg-full)/bin/ffmpeg" -hide_banner -encoders | grep -w libvorbis
+
+      - name: Rust toolchain (aarch64 + x86_64 Apple targets)
+        run: |
+          rustup toolchain install stable --profile minimal --target aarch64-apple-darwin,x86_64-apple-darwin
+          rustup default stable
+          cargo --version
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            rewrite/target
+          key: rewrite-macos-${{ runner.os }}-${{ hashFiles('rewrite/Cargo.lock') }}
+          restore-keys: rewrite-macos-${{ runner.os }}-
+
+      # Only templates/macos.zip (about 120 MB) is extracted from the 1.3 GB
+      # official archive by package.sh, after its SHA-512 check.
+      - uses: actions/cache@v4
+        with:
+          path: ~/Library/Application Support/Godot/export_templates/4.7.2.stable
+          key: godot-export-templates-4.7.2-macos
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/opentyrian-hd
+          key: hd-assets-macos-${{ hashFiles('rewrite/scripts/hd_assets.sh') }}
+
+      - name: Godot 4.7.2 (macOS editor, official SHA-512)
+        run: |
+          zip="$RUNNER_TEMP/Godot_v4.7.2-stable_macos.universal.zip"
+          curl -fL --retry 3 -o "$zip" https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_macos.universal.zip
+          echo "38aa16e5bba2083941fc5b3e54be0089bd4cc35e32415f5b9fd9a8a6a7b9818255d44532ea8ef94b5aef56c4b407c2d634fa4f657e4ebe681ebbf59b7bac69ca  $zip" | shasum -a 512 -c
+          ditto -x -k "$zip" "$RUNNER_TEMP/godot"
+          echo "GODOT=$RUNNER_TEMP/godot/Godot.app/Contents/MacOS/Godot" >> "$GITHUB_ENV"
+          "$RUNNER_TEMP/godot/Godot.app/Contents/MacOS/Godot" --version
+
+      - name: macOS package (universal, HD included, ad-hoc signature)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OUT: ${{ runner.temp }}/package
+        run: bash scripts/package.sh --only=macos
+
+      - name: macOS app (headless, HD images, strict replay)
+        run: |
+          zip="$(ls "$RUNNER_TEMP"/package/macos/OpenTyrian2000-Enhanced-v*-macos-universal.zip)"
+          du -h "$zip"
+          bash scripts/test-package-macos.sh "$zip" "$RUNNER_TEMP/macos-test"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: OpenTyrian2000-Enhanced-macos-universal
+          path: ${{ runner.temp }}/package/macos/OpenTyrian2000-Enhanced-v*-macos-universal.zip
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 0
+
+      - name: macOS logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-test-logs
+          path: ${{ runner.temp }}/macos-test
+          if-no-files-found: ignore
+
+  # Publication at tag v*: only the Godot packages (Windows .zip, Linux
+  # .tar.gz) are published. Hand-written notes if docs/release-notes-<tag>.md
+  # exists, otherwise generated notes. A dashed version (v1.0-rc1) is a
+  # pre-release.
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [lints, rust, package-windows, package-linux]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          path: ${{ runner.temp }}/artifacts
+          merge-multiple: true
+
+      - name: Release notes
+        id: notes
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          SHORT=$(echo "$TAG" | sed -E 's/^(v[0-9]+\.[0-9]+).*/\1/')
+          echo "file=" >> "$GITHUB_OUTPUT"
+          for f in "docs/release-notes-${TAG}.md" "docs/release-notes-${SHORT}.md"; do
+            if [ -f "$f" ]; then
+              echo "file=$f" >> "$GITHUB_OUTPUT"
+              break
+            fi
+          done
+          if echo "$TAG" | grep -q -- '-'; then
+            echo "prerelease=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "prerelease=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Publish the release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: ${{ steps.notes.outputs.file == '' }}
+          body_path: ${{ steps.notes.outputs.file }}
+          prerelease: ${{ steps.notes.outputs.prerelease == 'true' }}
+          files: |
+            ${{ runner.temp }}/artifacts/OpenTyrian2000-Enhanced-v*-windows-x86_64.zip
+            ${{ runner.temp }}/artifacts/OpenTyrian2000-Enhanced-v*-linux-x86_64.tar.gz

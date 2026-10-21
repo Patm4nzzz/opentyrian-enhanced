@@ -1,0 +1,85 @@
+// Example Behaviors -- example mod of the Godot + Rust rewrite (MODDING.md).
+//
+// Shows what a mod can create WITHOUT recompiling Rust (ADR 0081, 0083):
+//   * a brand-new player weapon ("Helix Driver");
+//   * a named enemy weapon ("drone_spread");
+//   * a brand-new enemy ("zigzag_drone") with a data-driven behavior:
+//     looping zigzag trajectory, horizontal pursuit of the player and
+//     a turret that fires the enemy weapon above;
+//   * the addition of this enemy to the first level of episode 1 (levels/ep1_09.json).
+//
+// Everything the mod creates is designated by its name; the engine assigns the
+// slots; the copied original content ("base") is also cited by its
+// name (mods/original-names.json). No number to choose.
+{
+  "$schema": "../../mod.schema.json",
+  "format_version": 1,
+  "name": "Example Behaviors",
+  "author": "OpenTyrian2000 rewrite",
+  "version": "2.0",
+  "description": "New weapon and enemy described in data.",
+  "enabled": false, // like the other shipped mods: to be enabled in Setup → Mods
+
+  "weapons": [
+    {
+      "name": "Helix Driver",
+      "cost": 900,
+      "power_use": 20,
+      "always_available": true,
+      "front": [
+        { // Level 1: two golden orbs that spread apart
+          "fire_delay": 6, "projectile_count": 2, "max_on_screen": 2, "sound": 20, "trail": 255,
+          "projectiles": [
+            { "damage": 3, "sub_delay": 255, "speed_x": -2, "speed_y": 12, "sprite": "orb_gold_1" },
+            { "damage": 3, "sub_delay": 255, "speed_x":  2, "speed_y": 12, "sprite": "orb_gold_1" }
+          ]
+        },
+        { // Level 2: three orbs, the central one pierces (4 damage to each enemy)
+          "fire_delay": 5, "projectile_count": 3, "max_on_screen": 3, "sound": 20, "trail": 255,
+          "projectiles": [
+            { "damage": 3,   "sub_delay": 255, "speed_x": -3, "speed_y": 12, "sprite": "orb_gold_1" },
+            { "damage": { "pierce": 4 }, "sub_delay": 255, "speed_x":  0, "speed_y": 14, "sprite": "orb_teal_1" },
+            { "damage": 3,   "sub_delay": 255, "speed_x":  3, "speed_y": 12, "sprite": "orb_gold_1" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "starter": { "front_weapon": "Helix Driver" },
+
+  // Enemy weapons: same fields as a weapon level. For an enemy, the
+  // vertical speed is NOT inverted: positive speed_y = downwards.
+  "enemy_weapons": [
+    {
+      "name": "drone_spread",
+      "projectile_count": 3, "max_on_screen": 3, "sound": 0,
+      "projectiles": [
+        { "damage": 2, "sub_delay": 255, "speed_x": -2, "speed_y": 3, "sprite": "orb_red_eye_down" },
+        { "damage": 2, "sub_delay": 255, "speed_x":  0, "speed_y": 4, "sprite": "orb_red_eye_down" },
+        { "damage": 2, "sub_delay": 255, "speed_x":  2, "speed_y": 3, "sprite": "orb_red_eye_down" }
+      ]
+    }
+  ],
+
+  "enemies": [
+    {
+      "name": "zigzag_drone",
+      "base": "tech_corridor_32", // copies an original enemy, cited by name (mods/original-names.json)
+      "armor": 12,
+      "value": 150,
+      "ymove": 0,          // the trajectory sets the speed
+      "behavior": {
+        "path": [
+          { "ticks": 24, "vx":  3, "vy": 2 },
+          { "ticks": 24, "vx": -3, "vy": 2 }
+        ],
+        "loop": true,
+        "track": { "axis": "x", "max_speed": 4, "every": 6 },
+        "turrets": [
+          { "weapon": "drone_spread", "every": 40, "start": 20, "direction": "down" }
+        ]
+      }
+    }
+  ]
+}

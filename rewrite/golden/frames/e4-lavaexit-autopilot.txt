@@ -1,0 +1,8 @@
+# Playfield (x 24..287, y 0..183, score corner x<32 y>=172 set to 0) presented by the c-final C at the tick: FNV-1a 64 hash of the 8-bit indices.
+# C images: GOLDEN_FRAMES, replay of the inputs of e4-lavaexit-autopilot.gm (seed 31, assists, GOLDEN_LEVEL=31, --goto=game:4:2), RGBA layer excluded. Test: tyrian-godot playfield.rs golden_image_tests.
+clock_offset 7948
+3000 504e87a4defefc69
+3345 6ce31fae0085d2e1
+3360 7f0320ec859a518f
+3385 5767f989d42a00a4
+3500 0af810940c89a363

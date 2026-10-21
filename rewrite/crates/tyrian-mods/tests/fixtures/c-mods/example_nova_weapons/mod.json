@@ -1,0 +1,134 @@
+// Nova Weapons — an official example mod.
+//
+// Three futuristic weapons written FROM SCRATCH with explicit front[]/rear[]
+// projectile arrays. This is the "full authoring" path; for the easier
+// "clone a stock item" path (base + tint), see the Alien Pack example.
+//
+// Things this mod demonstrates:
+//   * Weapon levels  — each entry in front[]/rear[] is one power level
+//   * Stock sprites  — reference any sprite by manifest name, no PNG needed
+//   * Bundled PNGs   — sprites/shots/ion_beam.png auto-registers by filename
+//   * Shop icons     — icon_sprite -> sprites/pickups/weapons/<name>.png
+//   * Damage codes   — 250+ = piercing shot (damage = value - 250)
+//   * Homing         — values > 5 = guided mode targeting the nearest enemy
+//   * Auto IDs       — no "id" and no "_weapon_id" anywhere: the engine
+//                      assigns free slots, so mods never conflict
+//
+// Conventions to remember (see MODDING.md section 4.6):
+//   * speed_y is POSITIVE for upward motion (the engine negates it)
+//   * sub_delay 255 = shot lives until it leaves the screen
+//   * trail 255 = no trail, 98 = smoke trail
+//   * max_on_screen = how many sg[] slots the fire cycle rotates through;
+//     keep it equal to the number of projectile entries
+{
+  "$schema": "../../mod.schema.json",
+  "name": "Nova Weapons",
+  "author": "OpenTyrian2000 Team",
+  "version": "1.0",
+  "description": "3 futuristic weapons built from scratch — a worked example.",
+  "enabled": false, // flip in Setup > Mods (or set true here)
+
+  "weapons": [
+    // ------------------------------------------------------------------
+    // 1) Nova Pulse Array — rapid teal bolts, widening spread per level.
+    //    Uses the STOCK sprite "orb_teal_1" straight from the manifest.
+    // ------------------------------------------------------------------
+    {
+      "name": "Nova Pulse Array",
+      "cost": 1200,
+      "power_use": 22,
+      "icon_sprite": "nova_pulse", // sprites/pickups/weapons/nova_pulse.png
+      "always_available": true,
+      "front": [
+        { // Level 1: one straight bolt
+          "fire_delay": 4, "projectile_count": 1, "max_on_screen": 1,
+          "sound": 20, "trail": 255, "level": 1,
+          "projectiles": [
+            { "damage": 4, "sub_delay": 255, "speed_y": 16, "sprite": "orb_teal_1" },
+          ],
+        },
+        { // Level 2: twin bolts, slight outward drift
+          "fire_delay": 4, "projectile_count": 2, "max_on_screen": 2,
+          "sound": 20, "trail": 255, "level": 2,
+          "projectiles": [
+            { "damage": 4, "sub_delay": 255, "speed_x": -1, "speed_y": 16, "sprite": "orb_teal_1" },
+            { "damage": 4, "sub_delay": 255, "speed_x":  1, "speed_y": 16, "sprite": "orb_teal_2" },
+          ],
+        },
+        { // Level 3: triple spread
+          "fire_delay": 4, "projectile_count": 3, "max_on_screen": 3,
+          "sound": 20, "trail": 255, "level": 3,
+          "projectiles": [
+            { "damage": 5, "sub_delay": 255, "speed_x": -2, "speed_y": 15, "sprite": "orb_teal_1" },
+            { "damage": 5, "sub_delay": 255,                "speed_y": 17, "sprite": "orb_teal_3" },
+            { "damage": 5, "sub_delay": 255, "speed_x":  2, "speed_y": 15, "sprite": "orb_teal_2" },
+          ],
+        },
+      ],
+    },
+
+    // ------------------------------------------------------------------
+    // 2) Ion Piercer — a slow lance that passes THROUGH enemies.
+    //    damage 255 means: 250+ = piercing, dealing (255-250)=5 per hit
+    //    to everything in its path. (damage is a byte — 255 is the max,
+    //    so piercing shots deal at most 5 per hit.) The bullet sprite is
+    //    BUNDLED: sprites/shots/ion_beam.png registers itself as "ion_beam".
+    // ------------------------------------------------------------------
+    {
+      "name": "Ion Piercer",
+      "cost": 3000,
+      "power_use": 45,
+      "icon_sprite": "ion_piercer",
+      "always_available": true,
+      "front": [
+        { // Level 1: one piercing lance
+          "fire_delay": 12, "projectile_count": 1, "max_on_screen": 1,
+          "sound": 18, "trail": 255, "level": 1,
+          "projectiles": [
+            { "damage": 255, "sub_delay": 255, "speed_y": 12, "sprite": "ion_beam" },
+          ],
+        },
+        { // Level 2: twin diverging lances (spread comes from speed_x —
+          // there is no per-projectile spawn offset, only velocity)
+          "fire_delay": 12, "projectile_count": 2, "max_on_screen": 2,
+          "sound": 18, "trail": 255, "level": 2,
+          "projectiles": [
+            { "damage": 255, "sub_delay": 255, "speed_x": -1, "speed_y": 12, "sprite": "ion_beam" },
+            { "damage": 255, "sub_delay": 255, "speed_x":  1, "speed_y": 12, "sprite": "ion_beam" },
+          ],
+        },
+      ],
+    },
+
+    // ------------------------------------------------------------------
+    // 3) Quark Seeker — rear-only guided missiles with a smoke trail.
+    //    rear[] without front[] is fine: the engine fires it from the
+    //    rear bay automatically. homing 11 = guided toward the nearest
+    //    enemy; trail 98 = smoke puffs.
+    // ------------------------------------------------------------------
+    {
+      "name": "Quark Seeker",
+      "cost": 2200,
+      "power_use": 35,
+      "icon_sprite": "quark_seeker",
+      "always_available": true,
+      "rear": [
+        { // Level 1: one seeker
+          "fire_delay": 16, "projectile_count": 1, "max_on_screen": 1,
+          "homing": 11, "trail": 98, "sound": 26, "level": 1,
+          "projectiles": [
+            { "damage": 10, "sub_delay": 255, "speed_y": 8, "sprite": "missile_blue_tiny" },
+          ],
+        },
+        { // Level 2: twin seekers
+          "fire_delay": 16, "projectile_count": 2, "max_on_screen": 2,
+          "homing": 11, "trail": 98, "sound": 26, "level": 2,
+          "projectiles": [
+            { "damage": 10, "sub_delay": 255, "speed_x": -2, "speed_y": 8, "sprite": "missile_blue_tiny_left" },
+            { "damage": 10, "sub_delay": 255, "speed_x":  2, "speed_y": 8, "sprite": "missile_blue_tiny_right" },
+          ],
+        },
+      ],
+    },
+  ],
+}

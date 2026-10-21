@@ -1,0 +1,6 @@
+# Playfield (x 24..287, y 0..183, score corner x<32 y>=172 set to 0) presented by the c-final C at the tick: FNV-1a 64 hash of the 8-bit indices.
+# C images: GOLDEN_FRAMES, replay of the inputs of e2-gryphon-autopilot.gm, RGBA layer excluded. Test: tyrian-godot playfield.rs golden_image_tests.
+clock_offset 7948
+2000 7e7a06b5dc896dc0
+4000 a7ac172f02ff2ecb
+6900 911e79c62ea4839e

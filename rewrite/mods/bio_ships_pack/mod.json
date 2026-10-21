@@ -1,0 +1,45 @@
+// Bio Ships Pack: six living ships of a bio-organic alien faction: carapaces,
+// membranes, eyes, tendrils and glowing spore sacs.
+//
+// Drawn like the Alien Ship Pack: 24x28 canvas, the game's VGA palette only
+// (olive-green ramp 2, bone ramp 10, flesh ramp 4, neon-green glow ramp 12),
+// one-pixel dark outline, light from the upper left. Each ship provides its
+// five poses (ship_poses): neutral, half and full bank to each side, drawn as
+// a roll (the hull slides toward the turn, the lowered wing shortens and
+// darkens). Sprites made by utils/bio_ships_art.py from PixelLab drafts.
+//
+// Six ships: mods share 14 ship slots and the Alien Ship Pack takes 8, so both
+// packs fill every slot together. The ship image table holds five poses for
+// each of the 14 slots (ADR 0134): see the README, "Limits".
+// Price and armor matched to the original ships of the same price (see the
+// README table). All six are sold everywhere (always_available).
+{
+  "$schema": "../mod.schema.json",
+  "format_version": 1,
+  "name": "Bio Ships Pack",
+  "author": "OpenTyrian2000 Team",
+  "version": "1.0",
+  "description": "6 green bio-organic alien ships drawn in the original Tyrian style.",
+  "enabled": false,
+
+  "ships": [
+    {"name": "Spore Wisp", "cost": 8500, "damage_resistance": 13, "always_available": true,
+     "ship_poses": {"neutral": "bio_spore_wisp", "left_full": "bio_spore_wisp_left_full", "left": "bio_spore_wisp_left",
+                    "right": "bio_spore_wisp_right", "right_full": "bio_spore_wisp_right_full"}},
+    {"name": "Thornwing", "cost": 11000, "damage_resistance": 16, "always_available": true,
+     "ship_poses": {"neutral": "bio_thornwing", "left_full": "bio_thornwing_left_full", "left": "bio_thornwing_left",
+                    "right": "bio_thornwing_right", "right_full": "bio_thornwing_right_full"}},
+    {"name": "Membrane Ray", "cost": 13500, "damage_resistance": 18, "always_available": true,
+     "ship_poses": {"neutral": "bio_membrane_ray", "left_full": "bio_membrane_ray_left_full", "left": "bio_membrane_ray_left",
+                    "right": "bio_membrane_ray_right", "right_full": "bio_membrane_ray_right_full"}},
+    {"name": "Leech Lancer", "cost": 18500, "damage_resistance": 23, "always_available": true,
+     "ship_poses": {"neutral": "bio_leech_lancer", "left_full": "bio_leech_lancer_left_full", "left": "bio_leech_lancer_left",
+                    "right": "bio_leech_lancer_right", "right_full": "bio_leech_lancer_right_full"}},
+    {"name": "Carapace Beetle", "cost": 26000, "damage_resistance": 28, "always_available": true,
+     "ship_poses": {"neutral": "bio_carapace_beetle", "left_full": "bio_carapace_beetle_left_full", "left": "bio_carapace_beetle_left",
+                    "right": "bio_carapace_beetle_right", "right_full": "bio_carapace_beetle_right_full"}},
+    {"name": "Hive Mother", "cost": 55000, "damage_resistance": 29, "always_available": true,
+     "ship_poses": {"neutral": "bio_hive_mother", "left_full": "bio_hive_mother_left_full", "left": "bio_hive_mother_left",
+                    "right": "bio_hive_mother_right", "right_full": "bio_hive_mother_right_full"}},
+  ],
+}

@@ -1,0 +1,30 @@
+// Alien Pack v2.0 — rewritten using the preset + tint system.
+// Every item clones a stock Tyrian entry and the engine tints all the
+// mod's sprite PNGs green at load. Zero manual sprite editing required.
+{
+  "$schema":     "../../mod.schema.json",
+  "name":        "Alien Pack",
+  "author":      "OpenTyrian2000 Team",
+  "version":     "2.0",
+  "description": "Green alien fleet — 4 stock weapons re-skinned via engine tint.",
+  "tint":        "green",
+
+  "ships": [
+    { "base": "Gencore II", "name": "Xeno Vanguard", "ship_sprite": "xeno_vanguard", "always_available": true }
+  ],
+
+  "weapons": [
+    { "base": "Vulcan Cannon",          "name": "Alien Vulcan Cannon",  "always_available": true },
+    { "base": "Mega Cannon",            "name": "Alien Mega Cannon",    "always_available": true },
+    { "base": "Sonic Wave",             "name": "Alien Bio Spreader",   "always_available": true },
+    { "base": "Heavy Missile Launcher", "name": "Alien Guided Orbs",    "always_available": true }
+  ],
+
+  "starter": {
+    "ship":         "Xeno Vanguard",
+    "front_weapon": "Alien Vulcan Cannon",
+    "rear_weapon":  "Alien Guided Orbs"
+  },
+
+  "enabled": false
+}

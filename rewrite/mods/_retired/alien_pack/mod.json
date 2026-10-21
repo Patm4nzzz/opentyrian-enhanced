@@ -1,0 +1,31 @@
+// Alien Pack -- example mod in the rewrite's single format (MODDING.md).
+// Each object clones an original object ("base", designated by its name) and the
+// engine tints all the mod's PNGs green at load time ("tint").
+{
+  "$schema": "../../mod.schema.json",
+  "format_version": 1,
+  "name":        "Alien Pack",
+  "author":      "OpenTyrian2000 Team",
+  "version":     "3.0",
+  "description": "Green alien fleet — 4 stock weapons re-skinned via engine tint.",
+  "tint":        "green",
+  "enabled":     false,
+
+  "ships": [
+    { "name": "Xeno Vanguard", "base": "Gencore II", "ship_sprite": "xeno_vanguard", "always_available": true }
+  ],
+
+  "weapons": [
+    { "name": "Alien Vulcan Cannon", "base": "Vulcan Cannon",          "always_available": true },
+    { "name": "Alien Mega Cannon",   "base": "Mega Cannon",            "always_available": true },
+    { "name": "Alien Bio Spreader",  "base": "Sonic Wave",             "always_available": true },
+    { "name": "Alien Guided Orbs",   "base": "Heavy Missile Launcher", "always_available": true }
+  ],
+
+  // Equipment of a new game, by name.
+  "starter": {
+    "ship":         "Xeno Vanguard",
+    "front_weapon": "Alien Vulcan Cannon",
+    "rear_weapon":  "Alien Guided Orbs"
+  }
+}

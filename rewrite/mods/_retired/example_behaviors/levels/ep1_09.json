@@ -1,0 +1,15 @@
+// Adds "zigzag_drone" enemies to the first level of episode 1 (TYRIAN).
+// add_events: inserted into the original list (after the events with the same
+// time). "spawn" = sky enemy, cited by name; "x" = abscissa in
+// the map. Event types: MODDING.md §8.
+{
+  "episode": 1,
+  "lvl_file_num": 9,
+  "add_events": [
+    { "time": 70,  "spawn": "zigzag_drone", "x": 90 },
+    { "time": 90,  "spawn": "zigzag_drone", "x": 170 },
+    { "time": 150, "spawn": "zigzag_drone", "x": 130 },
+    { "time": 260, "spawn": "zigzag_drone", "x": 60 },
+    { "time": 260, "spawn": "zigzag_drone", "x": 200 }
+  ]
+}

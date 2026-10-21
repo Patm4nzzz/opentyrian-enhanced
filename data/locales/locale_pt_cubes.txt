@@ -1,0 +1,3271 @@
+# OpenTyrian2000 Enhanced Edition - Portuguese Datacubes
+# Format: dc_{episode}_{cube}_{field}=value
+# Multiline body uses backtick syntax
+#
+# Controler : python3 utils/locale_cubes.py check
+
+dc_1_1_title=~TYRIAN~ DATAFLUX 040-54-871
+dc_1_1_header=Dados
+dc_1_1_body=`Depois de reunir todos os dados disponíveis, acho que encontrei a rota mais segura para a órbita de Tyrian a partir da minha plataforma de pouso...
+
+Depois de seguir para oeste saindo das minas de Fauchi, você deve entrar em
+contato com as plataformas de batalha flutuantes. Cuidado com as torretas
+de plasma de mira automática e especialmente com as ~garras~ ~de~
+~construção~.
+
+Quem projetou essas plataformas certamente contava com espiões e
+infiltradores, pois elas estão carregadas com pequenos esquadrões de
+~drones~ ~de~ ~ataque~ de superfície.
+
+Acho que essas plataformas estão cheias de ~Minério~ ~Gravítico~, o que
+explicaria por que elas flutuam. Não é de admirar que a ~Microsol~ queira
+explorá-las tão desesperadamente. Só espero não ser interceptado antes de
+alcançar a órbita.
+`
+
+dc_1_2_title=LANÇAMENTO HOLOVID ALPHA
+dc_1_2_header=Histórico
+dc_1_2_body=`Nota: classificado como nada engraçado
+
+O Primeiro Presidente disse em uma convenção em Midway, ~Savara~: "Acreditamos
+que os benefícios econômicos da coleta de minerais em ~Tyrian~ são imensos,
+tanto científica quanto economicamente. Embora até agora não tenhamos
+encontrado nada além de estratos de granito sem valor, conseguimos formar
+plataformas de teste estáveis para implantação militar que evitam 80% da
+atração gravitacional do corpo principal do planeta, reduzindo
+significativamente o tempo de implantação e o consumo de energia. Além
+disso, há um aumento de 260% na coleta solar nesse nível da atmosfera e
+acreditamos que ela pode ser transmitida à superfície para fornecer energia
+mais barata e abundante, evitando a necessidade de implantar plataformas
+espaciais.
+
+Se pudermos manter a perturbação gravitacional ativa na rocha e ainda
+manter pelo menos uma força G moderada no solo, isso aumentará o valor de
+~Tyrian~ e nos fornecerá uma capacidade ampliada para colonização rápida."
+
+Cientistas acreditam que as composições minerais nas camadas de rocha
+pesada na superfície do planeta podem ser facilmente coletadas enquanto a
+gravidade do planeta estiver perturbada. ~Tyrian~ é o único planeta cuja
+gravidade muda o suficiente para permitir que as camadas superiores se
+desprendam do planeta em grandes seções.
+
+Até agora, ninguém conseguiu descobrir os resultados estranhos da força,
+mas a ~Gencore~ declarou que acredita que os componentes minerais do mundo
+da ~Microsol~ estão apenas na superfície do planeta. Eles acreditam que o núcleo
+do mundo é principalmente pressão gasosa com bolsões de material fundido
+situados em vários locais ao redor do núcleo, sem qualquer matéria no
+centro do planeta. Eles distribuíram holomodelos dos diagramas de força que
+indicam que a atração gravitacional é muito desigual ao redor do planeta, o
+que conflita perto de vários locais na superfície e produziria uma quase
+anulação da força G.
+`
+
+dc_1_3_title=Sem título
+dc_1_3_header=Nenhum
+dc_1_3_body=`Sem mensagem
+`
+
+dc_1_4_title=DATAFLUX EMPÓRIO LOCAL
+dc_1_4_header=Anúncio
+dc_1_4_body=`Venha e pegue uma nave USP no Empório de Naves Usadas e Holo-Tratores do
+Hank!
+
+Estas novas naves do Pessoal de Sistemas Não Incorporados oferecem
+velocidade e versatilidade incomparáveis, permitindo que os pilotos mais
+perigosos e inexperientes manobrem com facilidade. Você também pode montar
+armas convencionais para desencorajar asteroides de atingir seu casco.
+
+O ~USP Talon~ oferece 1 polegada completa de blindagem e um generoso espaço
+de gerador e motor em tamanho real. Com sistemas de montagem dianteiro e
+traseiro e 2 compartimentos de carga, é como um verdadeiro caça ~Microsol~!
+Especialmente projetado para velocidade e manobrabilidade, oferece uma
+adição de impulso base de 3G incomparável! Tudo isso por apenas 6000 cr!!
+
+O USP Perren tem todas as especificações do ~Talon~ mas com ar-condicionado
+Mark VII e um estabilizador P-3 para conforto adicional na escuridão do
+espaço. Fique atento também ao seu elegante porta-copos/bar de holosnacks.
+`
+
+dc_1_5_title=MENSAGEM RECEBIDA DE MIDWAY, ~SAVARA~ : 21717 mark
+dc_1_5_header=Mãe
+dc_1_5_body=`Querido ~Trent~,
+
+     Que bom saber que você está indo tão bem em ~Tyrian~, filho. O papai está tão orgulhoso de você. Ah sim, como está seu amigo Hazudra? Ele
+parece legal. Você tem que trazê-lo para casa neste Fokar-Ciclo para
+jantar e um holo-snack. Você vai voltar neste Fokar-Ciclo, não vai, filho?
+Ainda temos seu quarto arrumado como quando você saiu.
+
+     O papai quer que eu te diga que finalmente conseguiu um emprego na
+~Microsol~! Parece que eles estão interessados em cartografar o setor Sti-5
+onde você está trabalhando. Eu sempre disse que o papai era o melhor
+implantador de holo-cartas de ~Savara~! Finalmente, acho que vamos sair
+desta casa velha. O papai recebeu um pagamento enorme do novo trabalho de
+P-Scouting e podemos nos dar ao luxo de fazer coisas que sempre quisemos.
+
+     Ah, o papai diz que temos que ir à entrevista final agora. Parece
+que querem que visitemos a filial local para uma festa de boas-vindas.
+Todo o nosso amor!
+                                                     Mãe
+`
+
+dc_1_6_title=~TYRIAN~ SISTEMA DATAFLUX - SETOR DE ASTEROIDES 1
+dc_1_6_header=Dados
+dc_1_6_body=`O primeiro setor de asteroides do sistema Tyrian é a colônia de mineração
+central onde a Microsol tem fornecido imensas quantidades de metal para
+construção de naves estelares. Aqui podem ser encontradas máquinas de
+perfuração gigantescas e hangares para modelos protótipo que a Microsol
+constrói.
+
+A manobrabilidade neste setor é limitada por causa dos grandes asteroides,
+e a Microsol instalou numerosas torretas de energia que destroem qualquer
+objeto que se aproxime e ameace as instalações. Uma arma
+~multidirecional~ é recomendada para combater os asteroides e as bases.
+
+Além disso, uma anomalia incomum foi detectada no setor indicando uma
+possível mudança dimensional perto de uma estátua antiga no centro do
+campo.
+`
+
+dc_1_7_title=~TYRIAN~ SISTEMA DATAFLUX - SETOR DE ASTEROIDES 2
+dc_1_7_header=Dados
+dc_1_7_body=`O segundo setor de asteroides no sistema Tyrian não é usado pela Microsol
+para mineração, mas sim como campo de provas para novas naves e armas de
+assalto terrestre, a mais recente sendo o Thunder HX-21: um pequeno
+veículo tipo tanque que dispara uma poderosa rajada de plasma capaz de
+danificar até as naves estelares mais blindadas!
+
+Cuidado também com as torretas laser mortais. Os disparos podem obliterar
+os maiores asteroides, então imagine o que podem fazer com uma nave...
+`
+
+dc_1_8_title=~SAVARA~ TRANSMISSÃO MERCANTE
+dc_1_8_header=Mercador
+dc_1_8_body=`Ei, ~Trent~! Parece que você tem uma recompensa pela sua cabeça agora. O
+pessoal da segurança nível 3 diz que a ~Microsol~ está atrás de você, e
+seus pais estão sendo investigados. O que está acontecendo?
+
+Passe por Midway e equipe sua nave. Depois veremos se conseguimos encontrar
+um bom esconderijo para você. Eu te devo uma, afinal.
+
+Temos bastante coisa aqui para você. Canhões sônicos traseiros, lasers
+dianteiros, blindagem média, e os primeiros do nosso carregamento de
+escudos Microsol! Também encontramos algo interessante...
+
+Um pirata do espaço profundo trouxe um par desses estranhos mecanismos
+verdes brilhantes dos confins do setor. Parece que toda a frota de carga
+está lá fora procurando o portal estelar ~Blacknova~. De qualquer forma,
+essa coisa verde brilha e emite um estranho campo ionizado ao redor, mas é fraca demais para um escudo. Mesmo assim, se você estiver interessado, é seu por quase nada. Tenho que te compensar por aquela lâmpada hula...
+`
+
+dc_1_9_title=LANÇAMENTO HOLOVID BETA 06    EXPLOSÃO TÉRMICA ABALA MIDWAY
+dc_1_9_header=Notícias
+dc_1_9_body=`Uma explosão térmica abalou a cidade de Midway hoje, destruindo várias
+residências urbanas no lado sul do Rio Leste. Investigadores dizem que a
+explosão foi centrada em uma residência pertencente à família ~Hawkins~.
+Acredita-se que tanto o marido quanto a esposa foram desintegrados pela
+radiação. Notavelmente, poucas outras pessoas ficaram feridas. Parece que a
+maioria das pessoas da comunidade estavam em um seminário de consciência
+comunitária organizado pela benevolente aliança ~Microsol~.
+
+"Parece que evitamos um grande desastre com nosso seminário de boas-vindas.
+Fico pálido ao pensar que tipo de monstro tentaria eliminar uma comunidade
+inteira. Podem ter certeza de que investigaremos até o limite. Apenas me
+pergunto o que as pessoas pensariam se aquele seminário não estivesse
+acontecendo naquele momento..." disse o novo Primeiro Presidente da
+~Microsol~, Durril.
+
+Funcionários da Usina Principal de Fusão de Tallok disseram que a explosão
+térmica tinha que ter sido uma arma e não poderia ter sido causada por
+fiação defeituosa.
+`
+
+dc_1_10_title=UPLOAD DATAFLUX de Midway
+dc_1_10_header=Mercador
+dc_1_10_body=`Encontrei sua melhor chance de fuga. A sede da aliança tecnológica Gencore:
+~DELIANI~. Vá para lá e você deverá encontrar refúgio com ~TRANSON LOHK~,
+que é o chanceler.
+
+Sinto muito pelos seus pais, Trent. Algo me diz que você quer vingança,
+mas antes de agir precipitadamente, ouça isto...
+
+A ~Gencore~ está em apuros agora. Como a ~Microsol~ está monopolizando
+~Tyrian~, a ~Gencore~ está perdendo poder no conselho de ~REMUS~. Os
+principais pesquisadores da ~Gencore~ também acreditam que algo estranho
+está acontecendo com o desenvolvimento de ~Tyrian~, e se pudessem
+identificar o que é, teriam motivos para oposição e talvez até uma
+paralisação de toda a operação. Porém, não têm pistas. Apenas hipóteses.
+Se você pudesse fornecer informações a eles, a Gencore com sorte te
+ajudaria a encontrar a razão do interesse da ~Microsol~ na sua morte. Boa
+sorte, ~Trent~.
+`
+
+dc_1_11_title=TRANSMISSÃO RECEBIDA de Magnatower Center
+dc_1_11_header=Transon
+dc_1_11_body=`Identificamos você nas nossas telas vidspec como Trent Hawkins, piloto de
+terraformação. Eu sou ~TRANSON LOHK~, chanceler da aliança tecnológica
+~Gencore~. Precisamos da sua ajuda, Trent.
+
+A ~Microsol~ está claramente atrás de você. ~Deliani~ está sendo infiltrada
+neste momento por uma frota inteira de naves patrulha da Microsol. Faremos
+o possível para contê-los até que você possa nos alcançar.
+
+As formações rochosas de ~Tyrian~ controlam a gravidade, você diz? Então
+isso significaria que a ~Microsol~ provavelmente está usando esta nova
+fonte de energia para construir uma frota de naves de guerra incrivelmente
+rápidas. Seu objetivo principal é controlar o setor, como alguns de nossos
+agentes descobriram recentemente. Precisamos de você em nossa equipe de
+infiltração, ~Trent~. Você é obviamente um dos melhores pilotos do setor
+pelas manobras que acabou de executar, então você pode voar até o
+território ~Microsol~ e descobrir exatamente o que eles pretendem fazer e
+quando.
+
+Em toda a sua vida, você nunca terá melhor oportunidade de servir ao seu
+setor. Dirija-se a ~Deliani~ e ~Javi~, nosso chefe de segurança, vai
+informá-lo sobre sua primeira missão.
+`
+
+dc_1_12_title=FONTE DE TRANSMISSÃO: ~XSIV Games~
+dc_1_12_header=Eclipse
+dc_1_12_body=`Ei, Trent, aqui vai outro jogo da ~XSIV~ para você jogar:
+
+~Pretzel Pete~
+
+É a loucura dos pretzels macios: ~Pretzel Pete~ dirige seu caminhão maluco
+tentando recolher os malvados ~Street Pretzels~, que aterrorizam o mundo.
+~Baker Bob~ está por trás dessa loucura e não vai parar até transformar toda
+a humanidade em pretzels vivos!
+
+Se ao menos incluíssem um ~pretzel~ ~macio~ de verdade com o jogo, porque
+jogar dá fome...
+`
+
+dc_1_13_title=FONTE DE TRANSMISSÃO: ~Pib~
+dc_1_13_header=Pib
+dc_1_13_body=`Segue a tradução por computador da linguagem felina:
+
+É necessário que você ~me~ alimente. ~Eu~ estou preso nesta casa há tanto
+tempo que ~eu~ decidi miar para este computador idiota na esperança de que
+você entenda.
+
+Não há petiscos mastigáveis suficientes sendo colocados na ~minha~ tigela, e
+o molho está ralo demais.
+
+Miau.
+
+Pib
+`
+
+dc_1_14_title=FONTE DE TRANSMISSÃO: MagVend 004-55506B
+dc_1_14_header=MagVend
+dc_1_14_body=`Você pode já ter ganhado 2 trilhões de C-Créditos!
+
+Se você devolver o número do prêmio vencedor até a data estelar 445x56.4,
+nós diremos ao vivo na holovisão 4-D - "~Trent Hawkins~ ganhou 2 trilhões
+de C-Créditos!"
+
+Você não pode se dar ao luxo de deixar passar esta oferta.
+
+[Mensagem editada por conteúdo de mau gosto]
+
+MagVend 004-55506B agradece a sua preferência.
+`
+
+dc_1_15_title=FONTE DE TRANSMISSÃO: Nortaneous
+dc_1_15_header=Nort
+dc_1_15_body=`
+<!> ~Transmissão~ ~interceptada~
+
+Mantori, localizamos três ~anomalias~ hiperespaciais no planeta
+designado "~Tyrian~". Aguardamos instruções.
+
+A análise indica que há 56% de chance de que a entrada modifique a posição
+da nave para um local desconhecido. Código de acesso para a sonda 334-G
+solicitado. Localização da primeira ~anomalia~ é stog rock a elpim mb
+tst...
+
+~Prioridade~ ~Drelb~! Possibilidade de interferência com operações normais 94%.
+
+Parece ser a única ~anomalia~ incomum neste setor. Acesso dimensional ao
+submarcon ~"versão~ ~registrada"~ pode fornecer anomalias adicionais.
+`
+
+dc_1_16_title=FONTE DE TRANSMISSÃO: Steffan Tommas
+dc_1_16_header=Steffan
+dc_1_16_body=`Bom, bom, Trent. Parece que você se tornou bastante popular no setor Tyrian.
+As coisas ainda estão bem calmas aqui em Ganimedes, e a Microsol
+dificilmente é uma ameaça para a ~WAR~ no momento. Mas eles parecem estar
+te causando problemas, e eu não gosto que incomodem meus amigos.
+
+Se você conseguir chegar ao planeta Torm, que orbita o planeta capital, Remus, vou
+enviar Dougan para fornecer suprimentos adicionais. Lamento, mas não posso
+enviar HARs para ajudar, já que sua luta é contra naves estelares, e não contra robôs.
+
+Boa sorte, Trent. Se puder, passe por Ganimedes e faremos algumas rodadas.
+Espero sinceramente que suas habilidades com o ~Nova III~ não tenham
+enferrujado.
+`
+
+dc_1_17_title=Protron Cannon Indigo
+dc_1_17_header=DADOS
+dc_1_17_body=`
+Novo no setor Tyrian 2.0, esta é uma opção poderosa disponível para
+qualquer nave.
+
+O Indigo dispara rajadas duplas de Protron IV em rápida sucessão e funciona
+bem quando não está confinado em espaços estreitos. Infelizmente, o
+protótipo Indigo foi visto pela última vez em uma região secreta do
+Episódio 2, protegido por uma frota de formas de vida cristalinas chamadas
+Inzia na Língua Galáctica. Recuperar o dispositivo será certamente difícil,
+já que os Inzia cercam sua nave com minas cristalinas que confundirão o
+sistema Indigo.
+`
+
+dc_1_18_title=Naves companheiras Warfly e Gerund
+dc_1_18_header=DADOS
+dc_1_18_body=`
+Recém-lançadas pela Gencore no setor Tyrian 2.0.
+
+Estes são os mais recentes em sistemas avançados de rastreamento de naves.
+Ambos os modelos possuem um sistema de rastreamento de histórico de nave, o
+que significa que seguirão cada movimento da sua nave, só que ficando um ou dois segundos atrás do seu movimento.
+
+O Warfly é equipado com uma mina de energia cristalina de disparo rápido
+recentemente desenvolvida, enquanto o mais poderoso Gerund usa um sistema
+de feixe triplo. Relatórios recentes revelam que dois protótipos
+personalizados Lightning-Gerund foram projetados e vendidos ao General
+Nortaneous, mas a Gencore nega isso como um boato falso.
+
+A Microsol também lançou uma linha concorrente de armas que se acoplam à sua nave para formar canhões dianteiros permanentes.
+`
+
+dc_1_19_title=ENLACE PRIORITÁRIO DELIANI A1
+dc_1_19_header=Transon
+dc_1_19_body=`Trent, quero que você vá investigar uma perturbação em Savara. Recebemos
+relatos de uma onda gravitacional massiva em uma das principais cidades de
+lá, Tonchus.
+
+A situação lá parece grave, com várias pessoas em pânico tentando fugir. Sei que é em cima da hora, mas faça o seu melhor. Mais detalhes estão
+disponíveis no discurso do ~Imperador~ ~Milktoe~ que também estou enviando.
+
+Você deve eliminar aquele lunático ou o planeta será arruinado.
+
+Transon, câmbio.
+`
+
+dc_1_20_title=EMERGÊNCIA PLANETÁRIA
+dc_1_20_header=Milktoe
+dc_1_20_body=`Aqui é o ~Imperador~ ~Milktoe~ de Savara. Esta emergência planetária não é um exercício!
+
+Um grande feixe de energia desconhecida foi direcionado para 41x30 no
+hemisfério superior do nosso planeta. Causou uma perturbação gravitacional
+incrível que ~está~ elevando os oceanos ~naquele~ ~ponto~ a ~níveis~ nunca
+vistos.
+
+<~tosse~>
+
+O pânico generalizado tomou conta do planeta e os cidadãos estão pegando
+qualquer nave disponível para escapar da superfície. O céu está cheio de
+milhares de lançadeiras e dirigíveis.
+
+Pior ainda, um lunático que se autodenomina ~Lord~ ~Gopenhagen~ está voando em um
+dirigível T-29 modificado e destruindo inúmeras naves e edifícios. Ele
+ameaçou destruir os principais centros de energia do planeta e causar um
+colapso gigante. Em cinco horas ele terá alcançado seu objetivo.
+
+Espero que alguém lá fora possa nos ajudar, mas eu não vou ficar para
+descobrir! Há uma lançadeira real partindo em cinco minutos e eu estarei
+nela!
+
+Até há pouco... ~Imperador~ ~Milktoe~
+`
+
+dc_1_21_title=DESCONHECIDO
+dc_1_21_header=????????
+dc_1_21_body=`Sua arrogância será sua ruína. Nós cuidamos do seu amigo.
+
+
+Espero que tenha aproveitado seu voo. Por favor coloque sua bandeja na
+posição vertical e prepare-se para a destruição.
+
+Ha ha.
+`
+
+dc_1_22_title=ENLACE PRIORITÁRIO DELIANI A1
+dc_1_22_header=Transon
+dc_1_22_body=`Você vai tentar voar de volta a Tyrian pelas rochas gravíticas?
+
+Boa sorte encontrando um pouco desse minério. Se conseguir uma amostra,
+talvez possamos analisá-la para descobrir mais sobre ele.
+
+Espero que o que aconteceu em Savara não se repita. As consequências desse
+poder são aterrorizantes.
+
+Transon, câmbio.
+`
+
+dc_1_23_title=Guia turístico do universo: ~Tyrian~
+dc_1_23_header=Guia
+dc_1_23_body=`  ~TYRIAN:~
+
+~Gastronomia:~
+
+Embora só recentemente habitável, Tyrian apresenta uma culinária razoável.
+Infelizmente não há nada de especial na maioria dos estabelecimentos.
+
+O ~Terrace~ de ~Rock~ é um adorável salão de jantar na cidade de
+~Rockenheimer~ onde criaturas minerais podem jantar com prazer pratos
+deliciosos de quartzo e feldspato.
+
+Para nossos primos reptilianos, há uma fina seleção de iguarias adaptadas
+ao grubbita exigente. Não há larvas de farinha melhores deste lado da galáxia.
+
+Tristemente, há apenas um estabelecimento para humanos: mais uma filial da
+~Casa~ ~Interestelar~ ~do~ ~Mingau~. Esta é ainda mais miserável do que a que fica no chulé de Torm. Evite a todo custo e experimente as
+larvas de farinha.
+
+~Cultura:~
+
+Há apenas uma cultura rudimentar em Tyrian, mas ela possui um bom número de
+encantadores acampamentos recreativos para crianças. ~Rockland~ é um bom
+exemplo dessas alegres instalações. Por apenas 2400 Cs você pode enviar aquele filho mal-amado para trabalhar nas belas minas de quartzo e feldspato,
+onde ele aprenderá tudo sobre instabilidades geológicas, substâncias gasosas,
+marchas forçadas e especialmente escultura de montanhas em grande escala.
+É uma experiência que nenhuma criança jamais esqueceria!
+
+Mineralistas também poderão contemplar com admiração a geologia
+incrivelmente variada dos estratos superficiais. Vale uma olhada.
+
+~Entretenimento:~
+
+A maioria dos visitantes vem a Tyrian para assistir às belas rochas
+flutuantes. A cada dois meses a Microsol apresenta uma nova erupção onde
+você pode ver essas rochas gigantes literalmente se arrancarem da
+superfície. Uma nota de cautela, porém. Infelizmente, isso é extremamente
+perigoso e eles não sabem de antemão exatamente ~quais~ rochas vão voar.
+Mas, por uma pequena taxa, eles providenciarão transporte hospitalar e
+rápidos serviços funerários para viagem.
+`
+
+dc_1_24_title=Guia turístico do universo: ~Campo de asteroides, setor 1~
+dc_1_24_header=Guia
+dc_1_24_body=`  ~ASTEROIDE 1:~
+
+~Gastronomia:~
+
+O Setor 1 abriga nada menos que o único ~Gestalt~ ~Greasers~ da galáxia.
+O edifício é uma bolha gigante incomparável, com uma vista panorâmica
+estendendo-se até as estrelas. Felizmente, o Greasers tem um emissor de
+campo holo que pode projetar na bolha qualquer um de milhares de locais. A comida é uma gororoba sem valor, mas se você sempre quis visitar mil lugares
+ao mesmo tempo, escolheu o lugar certo. O Greasers faz um ótimo trabalho
+com serviços especiais e aniversários. A Ordem de Zinglon não abre mão deste lugar.
+
+~Cultura:~
+
+A maioria das pessoas nesta área simplesmente não pode se dar ao luxo de
+ter cultura, mas há muito estilo de segunda mão aqui. O pouco que podem pagar é concentrado nas maiores festas caipiras que alguém já viu.
+
+~Entretenimento:~
+
+A maior parte do cinturão de asteroides é proibida para turistas, mas há
+várias estradas de acesso público onde você pode passar seu tempo irritando
+mineradores sobrecarregados passando por eles a mais de 8 G. Um evento
+imperdível para toda a família!
+
+Outra grande atração são os bares de mineradores solitários localizados por
+toda a área. Este é ~o~ lugar para encontrar o bárbaro sobrecarregado dos
+seus sonhos.
+`
+
+dc_1_25_title=Guia turístico do universo: ~Campo de asteroides, setor 2~
+dc_1_25_header=Guia
+dc_1_25_body=`  ~ASTEROIDE 2:~
+
+~Gastronomia:~
+
+O setor 2 é uma área extremamente restrita. Apenas os V.I.P.s mais
+importantes podem sequer entrar no espaço ao redor daqui. Por essa razão, o
+setor 2 tem a maior pizzaria flutuante da galáxia. Este negócio é muito
+mais eficiente do que a maioria, mas precisa ser por causa dos grandes
+pedidos que recebe. Quando você faz seu pedido, a entrega é garantida em
+menos de 3 minutos. Para alcançar essa taxa notável para grandes pedidos, a
+pizzaria inteira pode ser movida para a posição acima da válvula de entrada
+de pizza do seu edifício. Então, é bombas ao alvo: o pedido inteiro é lançado na sua sala de recepção a 3000 milhas/seg!
+
+Todo ano, os figurões da Microsol passam meses inventando pedidos cada vez
+mais desafiadores para esse pessoal, mas ainda não ganharam. Pode ter
+certeza de que seus computadores estão trabalhando neste exato minuto para
+encontrar novas formas de exceder o tempo de espera de 3 minutos e receber
+suas pizzas de graça.
+
+O nome do lugar? ~Damenoes~.
+
+~Cultura:~
+
+Um pot-pourri das pessoas inúteis mais importantes percorre os corredores
+subterrâneos desta enorme instalação de pesquisa. Eles representam a maior
+massa de empurradores de papel e afiadores de lápis que o universo já
+conheceu.
+
+~Entretenimento:~
+
+Nenhum. Este centro é um campo de reabilitação para pessoas inúteis. O
+grande plano da Microsol é forçar pelo menos uma pessoa a realizar uma
+única onça de trabalho útil. Este plano foi um fracasso total.
+`
+
+dc_1_26_title=Guia turístico do universo: ~Soh Jin~
+dc_1_26_header=Guia
+dc_1_26_body=`  ~SOH JIN:~
+
+~Gastronomia:~
+
+A cornucópia de alimentos do deserto é suficiente para animar qualquer conto das mil e uma noites. A maioria dos restaurantes serve mais de 20 tipos diferentes só de figos.
+
+O restaurante mais impressionante, porém, é o ~Oásis~ ~Baixas~ ~Calorias~
+~do~ ~Assan~. O Assan vende mais de cem variedades de figos, dezessete
+tipos de pratos de camelo e três outros pratos secretos que nem conseguimos
+reconhecer. Para completar, nada servido aqui tem mais de vinte calorias.
+É o mundo dos sonhos de qualquer pessoa de dieta, pois Assan pode fazer com
+figos o que homens menores apenas sonham.
+
+Do outro lado do mundo empoeirado está ~Coshack~ e sua ~Noz~ ~Verde~.
+Dentro dos confins deste encantador oásis vegetariano encontra-se a única
+nogueira do mundo. Como ele a mantém crescendo neste clima é um mistério,
+mas os visitantes podem fazer um tour guiado detalhando os mistérios da
+fruta deste planeta. Uma experiência imperdível.
+
+~Cultura:~
+
+A tecnologia adaptou este mundo nômade a uma vida nômade de viagem espacial.
+Os locais desconfiam de forasteiros, mas aceitarão você de bom grado desde que
+você possa falar a língua deles. Felizmente, os locais nunca foram muito
+brilhantes e a maioria das pessoas pode fingir sua língua ancestral que
+consiste em apenas uma palavra: Areia.
+
+~Entretenimento:~
+
+Passeios de camelo estão a minutos de qualquer localização no planeta.
+Além disso, coleta de areia e caça de vermes são dois dos prazeres mais
+apreciados que este mundo tem a oferecer.
+
+Soh Jin possui a maior montanha de areia da galáxia. É uma maravilha. Na verdade, é uma maravilha que você consiga vê-la através das constantes
+tempestades de areia, mas se perder os poucos segundos em que fica visível
+a cada mil anos, pode comprar qualquer número de adoráveis cartões-postais
+das pessoas que a viram da última vez.
+
+Certifique-se de contratar um guia local, pois a maioria das pessoas está
+completamente perdida a menos de um metro de um edifício. Os locais
+colocaram astutamente um campo de amortecimento que neutraliza balizas de
+posicionamento, então é melhor seguir seus costumes.
+`
+
+dc_1_27_title=Guia turístico do universo: ~Holes~
+dc_1_27_header=Guia
+dc_1_27_body=`  ~HOLES:~
+
+Esta é uma lua desabitada que está sendo posta em uso por uma raça de
+criaturas desconhecidas sob o aparente financiamento da Microsol. Ainda assim, é um lugar de tirar o fôlego para visitar.
+
+~Gastronomia:~
+
+Embora a superfície seja totalmente inabitável e a atmosfera ainda consista em cloro e ácido, já há uma ~Casa~ ~Interestelar~ ~do~ ~Mingau~ localizada
+aqui. Embora ainda não tenham recebido um cliente que tenha sobrevivido à descida
+até a superfície, eles têm grandes esperanças. Em exibição no salão de
+jantar estão os restos ressecados dos clientes que vieram, mas morreram no
+caminho.
+
+~Cultura:~
+
+Não há uma cultura real aqui, propriamente dita, mas há várias excursões
+militares aqui pela raça que terraformou este planeta. Como eles não gostam
+de mingau, ninguém no setor conheceu uma dessas criaturas ainda.
+
+~Entretenimento:~
+
+Muitos cientistas vêm aqui após a aposentadoria para ver todos os seus
+teoremas matemáticos fundamentais desmoronarem enquanto observam as massas
+de terra flutuando em aparente desafio à obra de suas vidas.
+`
+
+dc_1_28_title=DADOS DE ARQUIVO
+dc_1_28_header=Dados
+dc_1_28_body=`Referência: geradores de cachorro-quente
+
+Após o desmantelamento da franquia ~Superspace~ ~Hot~ ~Dawg~ (tirada de cena
+pela crescente popularidade da ~Casa~ ~Internacional~ ~do~ ~Mingau~), um
+estoque de geradores ultrassecretos de cachorro-quente rápido foi descoberto
+num depósito de pesquisa vendido em ~Camanis~.
+
+Esses geradores eram capazes de sintetizar e alongar nódulos de porco a 16
+ms cada, cozinhá-los no vapor em 2 ms e sintetizar o pão diretamente em
+volta da carne, simultaneamente. A ~SynthaMostarda~ era então aplicada por
+um aparelho de ~jato~ ~de~ ~mostarda~ de alta velocidade. Na prática, 20 ms
+depois de feito o pedido, um simulacro de cachorro-quente podia ser criado e
+entregue da câmara pressurizada a um cliente à espera. A maioria dos
+geradores tinha até 20 câmaras de geração simultâneas.
+
+Eles se destinavam a mercados muito saturados e teriam reduzido os custos em
+50% com o tempo. Na verdade, especialistas especulam que, se essa pesquisa
+~Hot~ ~Dawg~ tivesse sido concluída alguns minutos antes, a oferta de
+aquisição poderia ter sido evitada e a empresa, salva.
+
+No entanto, essa cruel reviravolta do destino deu origem a um mercado negro
+de geradores de cachorro-quente para alimentar cidadãos da classe de luxo e
+promover churrascos internacionais. Além disso, pelo menos um relatório
+afirma que, com os bicos adulterados, esses geradores poderiam ser armas
+perigosas nas mãos erradas.
+`
+
+dc_1_29_title=Guia turístico do universo: ~Gyges~
+dc_1_29_header=Guia
+dc_1_29_body=`  ~GYGES:~
+
+~Gastronomia:~
+
+Este planeta é o lar da maior massa de criaturas orgânicas já vista. O que
+se reproduz nas profundezas do planeta é desconhecido e irreconhecível, mas
+pode ser comprado por um preço baixo no ~Wobbo:~ ~Terra~ ~da~ ~Carne~.
+
+A ~surpresa~ ~crayball~ é uma iguaria muito elegante, servido com Zimbles
+frescos ou Tokkies, à sua escolha. O fino sortimento de iguarias gyganianas do Wobbo não tem igual em nenhum outro estabelecimento de Gyges. Para
+festas, peça um Prato Garmon inteiro. Do tamanho de uma grande nave
+batedora, este crustáceo massivo serve mais de 500 comensais de tamanho
+humano!
+
+Vegetarianos devem evitar este planeta a todo custo, já que as criaturas
+locais veem tais pessoas como as mais baixas na cadeia alimentar. No que
+diz respeito a este planeta, vegetarianos são presa livre. Mais de um
+infeliz vegetariano ousou evitar a comida local e foi subsequentemente
+devorado.
+
+Um ditado comum em Gyges: "Se você não quer comer meus amigos, então eu
+como VOCÊ!"
+
+~Cultura:~
+
+A maioria dos habitantes viscosos deste lugar estranho não fala nenhum tipo
+de linguagem reconhecível. Para aqueles que simplesmente precisam fazer uma
+excursão lá embaixo, tragam um destruidor estelar, ou então alguns vegetarianos para servir de isca. Se os habitantes não estiverem com muita
+fome naquele dia, você provavelmente conseguirá escapar jogando apenas
+alguns vegetarianos para as massas. Lembre-se de que você vai querer ir
+embora depois.
+
+Se tiver a sorte de ser autorizado a visitar o grande Estômago para
+prestar-lhe homenagem, sua estadia será bem recompensada. Apenas poucos
+podem visitar esta criatura especial, e ele tem o poder de oferecer negócios muito lucrativos àqueles em quem confia. As autoridades alegam que ele
+frequentemente viola a lei intergaláctica com suas empresas, mas até agora
+nenhum dos policiais conseguiu prender o planeta inteiro.
+
+~Entretenimento:~
+
+Gyges possui algumas casas noturnas maravilhosamente sórdidas e só perde para Torm em desespero e pirataria geral. Pode ter certeza de
+que se visitar este planeta, ele abrirá um mundo totalmente novo de diversão
+e emoção. Só não deixe de experimentar a comida local... senão...
+`
+
+dc_1_30_title=Último Top 10 da Eclipse Central
+dc_1_30_header=Música
+dc_1_30_body=`Aqui estão eles, começando pelo #10...
+
+  "~Droids~ ~Just~ ~Wanna~ ~Have~ ~Fun~" : Pop Retrô
+
+Droids just wanna have fuh-un; oh oh oh; Droids just a-wanna have fuh-unnn.
+
+  "~If~ ~I~ ~Had~ ~a~ ~Blaster...~" : Religioso
+
+If I had a blaster, I'd blaster in the morning, I'd blaster in the e-e-ev-ning...
+
+  "~Computer~ ~Generated~ ~Music~ ~#45592-2300-66A~" : CompuGen
+
+WoULD yoU Li~k~e to sI~N~G a SonG wIt~H~ me sUbJEc~T~ ~T~o bL~U~e CashEWs?
+
+  "~Six~ ~Planets~ ~to~ ~Twenty~" : Rock
+
+[Solo de guitarra]  There'll be six  [Solo de guitarra]  ~PLANETS~ to ~TWENTY~.  Yea,  [Solo de guitarra]  just six ~PLANETS~  [Solo de guitarra]  to ~TWENTY~!
+
+  "~If~ ~I~ ~was~ ~a~ ~Hamburger,~ ~I'd~ ~Eat~ ~Myself~" : Jazz
+
+Give me a minute.  I'm findin' some mu-stard.  Give me a minute.  I'm pumpin' some may-o.
+It's just me... and this seeded bu-un!  Just look at me now... Ham-bur-ger.
+
+  "~The~ ~4-Minute~ ~Quiet~" : Nada
+
+  "~Mending~ ~Pumpkins~" : Clássica
+
+  "~Logic~ ~Absorbtion~" : Rock
+
+[Ruído estridente]  [Mais ruído estridente]  [Solo de guitarra]  [Ruído estridente]
+
+  "~Sand~ ~by~ ~Me~" : Pop
+
+Sand by me; There's sand by me.  Oh, darling, darling, look at it!  There's sand, all a-round me.  Sand 'round me.  Sand 'r-ound me.  Sand 'round... me-e.
+
+E a canção mais popular desta hora solar:
+
+"~CliffTunes~" : Retrô New-Wave
+
+Ten years.  Got some money.  Lost my mind.  Got more money.  Found a life but
+lost my rhythm.  Never saw... A paper orangutang.
+
+Aqui foi MiMi Jeff, da Eclipse Central, encerrando.
+`
+
+dc_1_31_title=Ordem de Zinglon
+dc_1_31_header=Decreto
+dc_1_31_body=`Por ordem do Grande Moolah Yimbo, todas as principais naves espaciais devem
+cumprir o Decreto Anti-Fruta.
+
+~Decreto~ ~Anti-Fruta~:
+
+Devido à natureza blasfema de permitir que produtos alimentícios flutuem
+infinitamente no espaço, potencialmente perturbando a natureza de Zinglon,
+qualquer nave que permita que frutas escapem dela após sua destruição será
+enviada ao Grande Buffet para fazer penitência.
+
+Além disso, armas portadoras de frutas também são uma violação direta deste decreto se não forem abençoadas por um sacerdote usando as túnicas
+vermelho-tijolo da incomestibilidade.
+
+Qualquer pessoa com conhecimento de alguém que tenha violado estas regras
+sagradas deve confessar-se à Ordem de Zinglon ou sofrer penitência similar
+na Grande Sala de Espera Acima do Buffet.
+
+  Grande Moolah Yimbo
+
+  Ordem de Zinglon
+`
+
+dc_1_32_title=Ordem de Zinglon
+dc_1_32_header=História
+dc_1_32_body=`Está escrito que nos dias da holovisão 2-D, uma imagem apareceu a todos no
+universo. Essa imagem foi a ascensão do nosso deus, Zinglon. Ele nos deu
+esta imagem de sua forma para que pudéssemos contemplá-lo e perceber a
+grande dor que sentiu para que pudéssemos viver novas vidas, livres dos
+aspectos negativos da vida.
+
+Logo depois, o profeta Monses recebeu os onze cubos de regras sagradas, os
+mandamentos pelos quais todas as raças devem viver em harmonia.
+
+O maior destes mandamentos é que ~Todas~ ~as~ ~Formas~ ~de~ ~Vida~ ~Podem~
+~Participar~ ~da~ ~Sabedoria~ ~de~ ~Zinglon~. Toda criatura, grande e
+pequena, recebe a oportunidade de se salvar da condenação aprendendo os
+escritos de nossa ordem.
+
+Também importante é o ~Direito~ ~à~ ~Liberdade~ ~de~ ~Expressão~ ~Com~
+~Exceções~. Ou seja, qualquer pessoa que siga o direito de Zinglon pode
+produzir qualquer material que julgar adequado, desde que não zombe do próprio Grande Ser. Aqueles que não seguem a ordem também podem produzir
+qualquer material que desejem, embora a ordem seja livre para travar Jihad
+contra eles.
+
+Outro grande avanço nos direitos livres é o ~Direito~ ~Espiritual~ ~de~
+~Comer~ ~Biscoitos~.
+
+Os restantes são:
+
+A Lei da Ordem de Zinglon é final e absoluta.
+
+Todas as raças devem viver em harmonia ou sofrer as consequências.
+
+Objetos cuja quantidade é onze são espiritualmente divinos.
+
+Nenhuma raça tem permissão para destruir totalmente outra, independentemente
+de seu crime. Quem o fizer deve pelo menos manter um membro da raça alvo
+em estase às suas próprias custas.
+
+Nenhuma forma de vida tem o direito de invocar o poder de Zinglon em ídolos
+pagãos.
+
+Todas as formas de vida têm direito à tarifa de ônibus subsidiada.
+
+Todas as formas de vida têm direito à educação subsidiada, desde que lhes
+sejam ensinadas as regras de Zinglon e sejam escravizadas por toda a vida.
+
+Nenhuma forma de vida pode ser prejudicada pela ordem a menos que a ordem
+prove que ela não seguiu os mandamentos acima.
+`
+
+dc_1_33_title=COMO JOGAR
+dc_1_33_header=Jogo
+dc_1_33_body=`Como jogar o jogo especial final ~A~ ~CERVEJA~ ~DE~ ~ZINGLON~:
+
+Em sua busca para alcançar as extensões ilimitadas da imaginação, Zinglon
+descobriu os meios mágicos para criar cerveja. Agora, porém, ~Dai-Zan~
+roubou os barris sagrados de Zinglon e ameaça beber toda a cerveja do
+universo para si mesmo. Você, devoto seguidor de Zinglon, não deve
+permitir isso! O destino de toda a cerveja do universo está em suas mãos.
+
+Neste jogo, você deve desviar de onda após onda de inimigos quicantes na
+tentativa de coletar o máximo de cerveja possível. Embora desviar bem seja
+importante, você também deve limpar completamente a tela de inimigos antes
+de avançar para o próximo nível. O jogo continua infinitamente, embora
+fique cada vez mais difícil.
+
+Inimigos:
+
+~Ignatz~ : Nave em U girando : 15 pts
+
+~Morble~ : Nave em O girando : 20 pts
+
+~William~ : Nave preta em forma de V : 20 pts
+
+~Clifts~ : Nave marrom e redonda : 25 pts
+
+~Meeble~ : Minas cinza : 50 pts
+
+~Deeble~ : Minas douradas : 75 pts
+
+~Zeeblex~ : Minas azuis : ???
+
+~Tyco~ : Pequena bolha vermelha : 15+100 pts
+
+Os ~Triângulos~ ~Brussee~ : 50 pts
+
+~Zoglo~ : Bola vermelha brilhante : 10 pts
+
+~Servo~ ~de~ ~Dai-Zan:~ ~O~ ~Mestre~ ~Cervejeiro~ : ??? : ??? pts
+
+A nave de blindagem ainda descerá para ajudar se você estiver danificado.
+
+Vidas extras são ganhas em 10000, 20000, e a cada 25000 pts depois.
+`
+
+dc_1_34_title=ESTRATÉGIA
+dc_1_34_header=Jogo
+dc_1_34_body=`Guia de estratégia para ~A~ ~CERVEJA~ ~DE~ ~ZINGLON~:
+
+Este jogo simples pode ser enganosamente difícil. Não se deixe hipnotizar
+pelos fluxos intermináveis de inimigos!
+
+Nível 1: ~Pânico~
+
+Uma onda rápida de naves ataca de uma vez. Pegue a cerveja e destrua-as rapidamente.
+
+Nível 2: ~Minas~
+
+É principalmente um grande grupo de minas que o atacará lentamente.
+Certifique-se de evitar o Zeeblex a todo custo - ele é indestrutível!
+
+Nível 3: ~Saltadores~
+
+Dois grupos de Ignatz o atacarão. Porém, você pegará duas garrafas de
+cerveja aqui.
+
+Nível 4: ~Williams~
+
+Dois grupos de Williams atacam, um logo após o outro. Elimine-os e pegue
+ambas as garrafas de cerveja.
+
+Nível 5: ~Guerras Morble~
+
+Formações duplas de Morble atacam. Quatro garrafas.
+
+Nível 6: ~Rodada Bônus~
+
+Cerveja à vontade! Cuidado com o Zeeblex, porém.
+
+Níveis 7-12: ~?????~
+
+Descubra por si mesmo! Note que este é um jogo infinito, aqui apenas para
+seu entretenimento.
+
+Não há movimentos especiais disponíveis neste jogo.
+
+E, só para adicionar um pequeno desafio, minha pontuação mais alta é 85600...
+`
+
+dc_1_35_title=LEMBRETE
+dc_1_35_header=Jogo
+dc_1_35_body=`Você não precisa jogar este jogo para continuar. É apenas um jogo extra para seu prazer. Se quiser continuar com o jogo normal, simplesmente
+selecione ~Desistir~ no menu Próximo nível.
+
+Além disso, este jogo não pode ser jogado por dois jogadores e só estará disponível no modo de jogo normal. Ele não aparece no modo arcade nem em outros modos.
+
+Divirta-se!
+`
+
+dc_1_36_title=MINGAU
+dc_1_36_header=Anúncio
+dc_1_36_body=`Brilhava e as viscosas criaturas gingavam até...
+
+~A~ ~Casa~ ~Interestelar~ ~do~ ~Mingau~
+
+Sim, amigos. Tudo está acontecendo aqui no nosso Mingau!
+
+Sou Jacob Riitwiit, chefe de pesquisa de mingau na NAQEM - Não Acredito Que É Mingau. Trabalhamos longas horas aperfeiçoando a maior receita de
+mingau de todos os tempos!
+
+Alguns dos seus ancestrais podem ter caminhado em cabanas primitivas,
+experimentando este lanche nutritivo. E agora, você pode continuar a
+tradição com:
+
+As ~Barrinhas~ ~Enrola-didili-blugus~ ~da~ ~Titia~ ~Boglog~! Pegamos o
+mesmo ótimo sabor e aroma tentador e enfiamos nestas barrinhas.
+
+[Desenho nojento de gnomos cantando e nadando em um toco cheio de
+mingau.]
+
+Espalhe aqui,
+amasse ali,
+tudo é um bolo de mingau.
+
+Gostamos de comer este lanche gostoso
+e logo você tam-bém!
+
+Pois somos os gnomos de Cackle-Berry
+que fazem este saboroso mingau.
+
+Sustenta... nutre...
+e gruda bem na parede.
+
+Nós... as cha... ma----mos...
+
+Barrinhas Enrola-didili-blugus!
+
+Saborosas com coração!
+
+Barrinhas Enrola-didili-blugus!
+
+Seladas com um p---
+
+[Cena editada.]
+
+Então compre algumas hoje!
+`
+
+dc_1_37_title=RECLAMAÇÃO
+dc_1_37_header=Carta
+dc_1_37_body=`Prezados Senhores:
+
+Gostaria de reclamar sobre a edição de material que consideram prejudicial e
+de mau gosto. No último comercial, vocês retiraram a cena onde o gnomo
+
+[Carta editada por comentário de mau gosto]
+
+Obrigado por publicar meu ponto de vista.
+
+Imperador Milktoe de Savara
+`
+
+dc_2_1_title=BRIEFING DE MISSÃO FLUX 0473
+dc_2_1_header=Javi
+dc_2_1_body=`Chefe de Segurança da Gencore
+
+Temos monitorado remessas incomuns de cargueiros entre o planeta abandonado de
+Gyges e o planeta capital de Torm. Ambos estão marcados na sua Tela de
+Navegação. Entender essas remessas pode nos dar uma pista sobre o paradeiro da base de
+operações da Microsol. Primeiro, siga para Torm e investigue. Depois volte
+a Deliani para relatar o que achou e aguardar novas ordens.
+
+Você receberá um Gencore Hawk para esta missão e prioridade maior de acesso
+a armas. Boa sorte!
+`
+
+dc_2_2_title=TRANSMISSÃO DELIANI FLUX 2894
+dc_2_2_header=Javi
+dc_2_2_body=`Alguns avisos sobre Torm. Há dragões lá. Sim, dragões. Esses dragões das
+árvores adoram comer metal e minério de berílio, de que sua nave é feita; uma vez despertos, vão devorá-lo em pleno voo. A melhor arma contra eles é uma arma de fogo ou de chamas.
+
+Cuidado também com os piratas espaciais, que montaram várias bases secretas
+lá e atacam sem aviso. Suas naves costumam ser camufladas em tons de verde
+e são difíceis de ver nas selvas densas de Torm.
+`
+
+dc_2_3_title=TRANSMISSÃO TORM FLUX
+dc_2_3_header=Dougan
+dc_2_3_body=`Ora, ora, ora. Parece que você se meteu em encrenca demais, como sempre.
+Torm não é lugar para investigar remessas da Microsol.
+
+Hmm... talvez tenham rastreado você até aqui porque havia um localizador
+plantado no trem de pouso da sua nave. De sinal bem forte, aliás. Não se
+preocupe. Eu o removi, mas quem quer que esteja mandando você nessas
+missões parece não fazer ideia do que ocorre. As atividades da Microsol se
+concentram em Savara e no Stargate. Eu diria que mandaram você caçar
+fantasmas. Fale com esse Javi Onukala que você citou. Exija respostas.
+`
+
+dc_2_4_title=TRANSMISSÃO DELIANI FLUX 02975
+dc_2_4_header=Javi
+dc_2_4_body=`Vejo que investigou Torm sem sucesso. TEM de haver algo lá.
+
+Localizador? Não sei nada disso, mas vou abrir uma investigação. Não
+podemos deixar que tentem matar nossos agentes. Agora...
+
+Recebi relatos do setor Ixmucane de que algo incomum acontece lá. Sua próxima missão é voar até lá e investigar. Escolha o que quiser dos nossos
+estoques.
+`
+
+dc_2_5_title=TRANSMISSÃO DELIANI FLUX 02976
+dc_2_5_header=Javi
+dc_2_5_body=`Cuidado nesta missão com os rebeldes do setor Mendivian C, perto de
+Ixmucane. São piratas humanos que ajudam as forças Hazudra de lá,
+lideradas por um chefe de facção chamado Reid. Tenha cautela ou eles vão
+destruí-lo, achando que você é um batedor da Microsol.
+
+A Microsol tenta tomar o território Hazudra de lá, daí as forças rebeldes.
+Mas eles não abrem exceção para nenhum intruso.
+`
+
+dc_2_6_title=TRANSMISSÃO STARGATE FLUX 13619
+dc_2_6_header=???
+dc_2_6_body=`Sua vida está perdida, humano. Sabemos de seus planos de varrer o setor
+Tyrian e destruir toda a vida. Vamos atacar sua frota e aniquilar suas
+naves impiedosas até que não sejam mais uma ameaça. Sua única chance de escapar é cancelar o ataque. Agora.
+
+Vou apreciar sua destruição.
+`
+
+dc_2_7_title=TRANSMISSÃO DELIANI FLUX 23920
+dc_2_7_header=Javi
+dc_2_7_body=`Fomos notificados de uma mudança de curso. Siga imediatamente para o setor
+Mendivian C e para a cidade natal das forças rebeldes de lá. Aniquile-os e
+volte para nós. Eles ameaçam dominar o setor.
+
+Cuidado, Trent. Vai precisar de todo o poder de fogo possível.
+`
+
+dc_2_8_title=TRANSMISSÃO ASTEROID CITY 37238
+dc_2_8_header=Reid
+dc_2_8_body=`Sou Reid, chefe da liga rebelde Mendivian e Antimicrosol. Não sabemos por
+que você atacou. Gostaria de uma explicação.
+
+O quê?? NÃO somos nós que planejamos atacar o setor para dominá-lo. É a Microsol, baseada em Savara e pronta para atacar em 10 dias! Você foi
+enganado! Ao que parece, por Javi, que é um traidor Hazudra. Ele foi
+roubado ao nascer e posto sob controle mental holográfico pela Microsol. O
+máximo que descobrimos é que ele seria um infiltrado na Gencore Tech
+Alliance. Você PRECISA voltar a Deliani e detê-lo! Ele deve ser o meio da
+Microsol para derrubar a Gencore.
+
+Rápido... reabasteça sua nave e siga para Deliani antes que Javi consiga
+avisar a Microsol para iniciar o ataque!
+
+Talvez chegue antes que montem uma defesa estratégica.
+`
+
+dc_2_9_title=TRANSMISSÃO DELIANI FLUX 83278
+dc_2_9_header=Javi
+dc_2_9_body=`Vejo que descobriu a verdade. Eu ia usá-lo como batedor da frota antes de
+mandar escanear seu cérebro atrás do que sabe sobre o Gravitium. Enfim,
+não importa. Já cumpriu seu papel. Nossos cientistas revelaram os segredos
+dele e instalaram motores novos nas naves da frota, dando-lhes muito mais
+energia para os bancos de armas. A invasão começa em breve e você terá
+apenas alguns preciosos dias antes de ser executado. Está sendo levado por
+raio trator até a Estação de Apreensão em Gryphon, um canto obscuro e
+desolado do setor, de onde não poderá ajudar seus amigos na Asteroid City.
+Aproveite suas últimas horas, Trent.
+`
+
+dc_2_10_title=FONTE DE TRANSMISSÃO: MagVend 004-55506W
+dc_2_10_header=MagVend
+dc_2_10_body=`Parabéns, Sr. Trent Hawkins
+
+A MagVend 004-55506 tem o orgulho de parabenizar o vencedor do primeiro
+lugar do nosso grande sorteio.
+
+Porém, como não encomendou nada recentemente e no momento é procurado por traição galáctica, o senhor foi rebaixado ao terceiro lugar para evitar má publicidade.
+
+Para receber seu prêmio, digite o código secreto:
+
+FILE0001 LOOT
+
+Depois da palavra LOOT, digite ALT-254 para confirmar o código secreto e
+pressione enter.  Lamentamos que este código não possa ser transmitido por
+modem/rede devido à sua natureza ultrassecreta.
+
+A MagVend 004-55506B agradece sua preferência.
+`
+
+dc_2_11_title=DADOS DE ARQUIVO
+dc_2_11_header=Dados
+dc_2_11_body=`Referência: A Não-Tão-Grande Explosão de Gryphon
+
+Sob o comando do General Zinglon, comandante da estação Gryphon, um grupo
+de cientistas escavou o que hoje se chama planeta Gyges, em homenagem ao
+falecido Doutor em Metacologia, Gyges Phildren.  Acredita-se que escavaram
+vários artefatos e dispositivos, depois levados para a estação secreta de
+pesquisa, Gryphon.
+
+Os detalhes nunca vieram a público, mas sabe-se que Gyges conduzia
+pesquisas heterodoxas sobre a energia metafísica anormal envolvida no
+disparo de uma arma secreta apelidada de Zica Flamethrower.  Ele teria
+retirado o invólucro externo do dispositivo.  O erro custou sua vida e a
+de mais de doze mil tripulantes que serviam naquela seção da estação na
+época.  Seções da estação seguem ausentes, pois julgou-se caro e
+ineficiente demais reparar as partes danificadas em vez de construir
+seções novas e mais bem projetadas.
+
+Aliás, acredita-se que o General Zinglon demonstrava um novo transportador
+de matéria na hora da explosão, mas ele nunca chegou ao destino.  Houve um
+pico de energia quando o gerador de fusão perto da seção de pesquisa
+explodiu.  O transportador estava ligado a esse gerador porque exigia mais
+energia do que os reatores padrão ofereciam.
+
+Na mesma hora, bilhões de pessoas relataram ver nas suas vidtelas uma
+imagem muito parecida com a dele.  Isso gerou uma facção fanática de
+buscadores do divino, frustrados por não convencerem ninguém de que formas
+circulares deviam ser adoradas como deuses.  Chamam a si mesmos de Culto de Zinglon
+e hoje trabalham em segredo para trazer Zinglon, "Senhor de Tudo", de
+volta da dimensão para onde suas moléculas se espalharam.
+
+Ver Tunnel World, Zica
+    Pesquisa de Armas, Estação Gryphon
+    Zica Flamethrower
+`
+
+dc_2_12_title=TRANSMISSÃO GRYPHON FLUX 02333
+dc_2_12_header=Vykromod
+dc_2_12_body=`Quem você pensa que é, verme insignificante?  Sabe o que espera por você
+aqui?  A frota inteira de Gryphon está mobilizada e pronta para atacar.
+
+Só um pirata passou por nossas defesas.  Nós o matamos um mês depois.
+
+
+A hora do recreio não será interrompida por gente como você.
+`
+
+dc_3_1_title=ASTEROID CITY FLUX 53861
+dc_3_1_header=Reid
+dc_3_1_body=`Finalmente conseguimos contato! Javi bloqueava nossas transmissões há algum
+tempo. Lamento a perda de seus pais, Trent. Soube da morte deles há poucas
+horas. E na mesma hora li sobre sua prisão por Javi. Cabe a você nos ajudar
+a impedir que a frota da Microsol use o Gravitium. Voe até Ixmucane,
+planeta-base da Microsol, e nos passe dados sobre a força da frota para que possamos reunir nossas tropas. Quantas naves, armas, defesas, tudo. Depois
+envie a informação por um Link Flux. Estaremos esperando, e boa sorte.
+`
+
+dc_3_2_title=ESTAÇÃO GRYPHON FLUX 73725
+dc_3_2_header=Capitão
+dc_3_2_body=`Monitoramos sua fuga, Hawkins. Você não irá longe. Avisei a patrulha da
+Microsol aqui perto e eles estão em rota de interceptação para buscá-lo.
+Facilite meu trabalho: espere onde está, pois dei ordens para destruí-lo
+se mostrar resistência.
+`
+
+dc_3_3_title=ASTEROID CITY FLUX 53862
+dc_3_3_header=Reid
+dc_3_3_body=`Um aviso ao manobrar pelas cavernas de Ixmucane. Cuidado com as serras
+circulares que a Microsol instalou como medida de segurança. Se bem me
+lembro, essas serras teriam sido criadas, ou ao menos guardadas, na estação
+Gryphon. Os modelos mais avançados são quase indestrutíveis. Além disso,
+enormes lajes de rocha podem ser arrancadas das paredes e lançadas contra
+sua nave pelo poder do Gravitium. Cuidado.
+`
+
+dc_3_4_title=DELIANI FLUX 23672
+dc_3_4_header=Vykromod
+dc_3_4_body=`Então... você acha que pode enganar uma corporação cujo tamanho nem
+consegue imaginar? Você é o maior tolo que já vi. Volte agora, enquanto há
+tempo. Jamais achará a base secreta da frota, e logo sairemos e o
+reduziremos a polpa se ficar aqui. Vá embora.
+`
+
+dc_3_5_title=ASTEROID CITY FLUX 53863
+dc_3_5_header=Reid
+dc_3_5_body=`Trent! Fuja ao setor Stargate imediatamente!! Detectamos grande
+esquadrxxma.
+
+
+<Regsitro do Computador: ~Fim~ ~da~ ~transmissão~.>
+`
+
+dc_3_6_title=TRANSMISSÃO STARGATE FLUX 0178205
+dc_3_6_header=???
+dc_3_6_body=`Vemos que você não faz parte da massa hedionda que ameaça o setor. Mas não é seguro para você estar aqui. Vá a Camanis, o mundo de gelo, onde podemos
+lhe fornecer armas capazes de destruir por completo a frota da Microsol.
+Não podemos entrar no setor com nossa raça porque a Microsol fechou o
+Stargate. Agora depende de você, humano. Pela vida de milhões, detenha
+essa frota.
+`
+
+dc_3_7_title=TRANSMISSÃO CAMANIS FLUX 001
+dc_3_7_header=Beppo
+dc_3_7_body=`Opa, amigo. Vejo que topou com uns companheiro meu lá em Torm, né? Nós pirata semo bom. Trabalho pros forasteiros e eles mandaram eu te dar
+um monte de armas pra sua nave. Sai da frente que eu instalo as que você
+quiser. Piloto é bom. Arma é bom. Liberdade é bom! Depois desta
+batalha, a gente pode ir pular na neve. Que me diz?
+`
+
+dc_3_8_title=TRANSMISSÃO SUBESPACIAL FLUX 002
+dc_3_8_header=Vykromod
+dc_3_8_body=`Nós rastreamos você. Agora está ao nosso alcance. Prepare-se para morrer,
+Trent Hawkins. Já causou problemas demais à Microsol.
+
+Isto não é ameaça vazia, idiota. Você VAI morrer.
+`
+
+dc_3_9_title=TRANSMISSÃO TYRIAN FLUX 01282
+dc_3_9_header=Borogar
+dc_3_9_body=`Trent Hawkins, parabéns! Você venceu o jogo! Mas ainda não acabou...
+
+Tyrian X o aguarda! Você terá de voar de novo ao mundo onde começou toda
+essa confusão e enfrentar ondas incessantes de inimigos! Achamos que
+gostaria de outra chance pelo título. Divirta-se! Heh...
+heh, heh...
+`
+
+dc_3_10_title=DADOS DE ARQUIVO
+dc_3_10_header=Dados
+dc_3_10_body=`Referência: Zica SuperCharger
+
+Esta é uma adaptação modular do Gencore Zica SuperLaser.  Deveria usar um
+núcleo de laser Zica original em vez do modelo maior e voraz de energia
+reprojetado pela Gencore.  A tecnologia por trás do Zica Laser é pouco
+compreendida, e por isso as cópias do modelo não são tão potentes quanto o
+original.
+`
+
+dc_3_11_title=DADOS DE ARQUIVO
+dc_3_11_header=Dados
+dc_3_11_body=`Referência: Stargate
+
+Resumo:
+Stargates são grandes distorções no espaço.  Há um aqui no episódio 3.
+Aproveite a estadia.
+
+Acredita-se que os stargates sejam uma espécie de fenda criada por um
+buraco negro massivo.  A teoria agrada aos escritores de ficção
+científica, mas o fenômeno real por trás do stargate é desconhecido.  Já
+se sugeriu que sejam porções de espaço criadas no big bang que formou o
+universo.
+
+Acredita-se que o tempo seja a "quarta dimensão" e, portanto, tenha quantidade e reaja como os demais fenômenos.  O Stargate do nosso
+quadrante parece distorcer o tempo ou o espaço, talvez ambos.  As poucas
+naves que o exploraram e voltaram relataram mudanças enormes de posição.
+Tão enormes que nenhum capitão que passou por ele reconheceu constelação
+alguma em direção alguma.
+
+Logo, há um deslocamento tremendo de lugar ou de tempo para produzir
+resultados tão inesperados.  Nenhuma nave passou tempo suficiente além do
+Stargate para determinar qual é o resultado real.  O problema piora porque
+capitães independentes relataram chegar a lugares diferentes, sugerindo
+que o destino do Stargate não é fixo.
+
+Sugere-se que, se você atravessar o stargate, inverta o curso na hora e
+volte!
+`
+
+dc_3_12_title=TRANSMISSÃO CAMANIS FLUX 0178205
+dc_3_12_header=???
+dc_3_12_body=`Você sabe que tudo está condenado, não sabe?
+
+Queria nunca ter entrado nessa confusão.
+
+Bom, enfim, vamos falar de cachorro-quente!
+
+Sabe, daqueles que faziam nos jogos de holo-críquete.  AQUILO sim era um
+cachorro-quente.  Eu comeria um agora mesmo.
+
+Se puder passar por Ixmucane de novo, por que não traz um pra mim?
+
+Seu amigo, Nanol.
+`
+
+dc_3_13_title=TRANSMISSÃO ANÔNIMA
+dc_3_13_header=Anônimo
+dc_3_13_body=`Os Perigos das Frutas Espaciais:
+
+O que, no universo, todas essas frutas fazem voando pelo espaço?  Há muito tempo é prática dos capitães destruir outras naves e recolher seus estoques de
+comida protegidos como troféu, já que quase toda a matéria restante é incinerada.
+
+Mas por que fazemos isso?  O que torna uma vida senciente tão insensível à dor e ao sofrimento a ponto de acharmos que apanhar a última refeição da vítima é um grande feito de perícia?  Pode parecer engraçado a vocês,
+gentis leitores, ver canecas de cerveja voando, laranjas girando e
+morangos disparados, mas eu vejo os restos dos mortos, as pobres almas
+cujas vidas se perderam sem o consolo de devorar aquele último pedaço de
+comida replicada.
+
+Rogo-te, gentil leitor, que penses duas vezes antes de celebrar tal
+vitória.  Onde acabará essa loucura?  Valores de troca medidos em frutas
+no lugar de moedas e gemas?  Talvez alguém crie armas de destruição
+alimentar em massa, para arremessar gêneros contra vítimas desavisadas.
+Não!  Isso não pode acontecer!  Reze a Zinglon para que nos livre desta
+ameaça vil!
+
+Pago pelos benevolentes membros da igreja de Zinglon.
+`
+
+dc_3_14_title=DADOS DE ARQUIVO
+dc_3_14_header=Dados
+dc_3_14_body=`Referência: Mega SoundChair
+
+Sensores da sua nave captam as minúsculas perturbações causadas por ondas
+sonoras agindo sobre os finíssimos fluxos de partículas do espaço, depois
+amplificam e filtram as distorções identificadas, que são enviadas à sua Mega SoundChair para reprodução.  É um produto de consumo que se mostrou
+capaz de aliviar o estresse e o pânico de pilotos sem treino que passaram
+a invadir o espaço com seus próprios Star Yachts há alguns anos.  Notou-se
+que, postas no silêncio, as pessoas recorriam à música para aliviar o
+pavor (e a loucura seguinte) de estar sozinhas no espaço sem ouvir nada.  O
+remédio, porém, era insuficiente, pois a música tinha vários efeitos
+adversos:  não fazia sentido para a mente quando se veem meteoros e
+outros objetos passando, os consumidores não ouviam as mensagens
+transmitidas a eles e as pessoas se envolviam tanto na música que
+relaxavam e não olhavam para onde iam.  Isso era um problema sério na
+época anterior ao refinamento dos sistemas de Guia Automático e Aviso de
+Proximidade.  Então decidiram amplificar o pouco som que havia lá fora e
+resolver o pânico do silêncio sem fim antes que não sobrasse nenhum Star
+Yacht.
+`
+
+dc_3_15_title=TRANSMISSÃO SUBESPACIAL FLUX 410
+dc_3_15_header=Vykromod
+dc_3_15_body=`Ah, poxa.  Agora você foi e destruiu meu planeta natal.
+
+Já se perguntou por que eu uso um manto roxo?
+
+HAHAHAHAHAHAHAHA!  Agora terei minha vingança!
+
+O nome deste jogo não é Tyrian!  Você o escreveu errado, Trent Hawkins!  O
+universo saberá do seu erro patético e eu voltarei a reinar!
+`
+
+dc_3_16_title=TRANSMISSÃO DELIANI FLUX 263
+dc_3_16_header=Beppo
+dc_3_16_body=`Bom dia pra ti, pequeno marujo.
+
+Eu sou o clone daquele velho pirata safado.  O flagelo de Torm, me chamam.
+
+Eu achei, Trent!  Achei sim, e bem achado.  O maravilhoso Prototype Stalker.  Se conseguir passar de Savara, talvez eu pense em entregar a
+você.  Por um preço...
+
+Essa belezinha tem tudo.  Um dia você talvez até aprenda a usar o ultrassecreto lançador de Post-It Mines.
+
+Bom, eu já vou. Arrrrr!
+`
+
+dc_3_17_title=DATAFLUX EMPÓRIO DELIANI
+dc_3_17_header=Anúncio
+dc_3_17_body=`Agora que o jogo está quase no fim, Hank finalmente saiu da cadeia por
+fraude USP!  E agora ficou louco!
+
+Ele contratou o clone de Beppo para vasculhar os sete setores e roubar
+tudo o que der dos destroços que Trent Hawkins espalhou pela galáxia.  E
+sabe de uma coisa?  Achou tudo!
+
+Zica Lasers, Constant Lasers, Lightning Blasts, Protron Cannons,
+Missile Launchers, 8-Way Microbombs, Side Ships e muito, muito
+mais.  Dizem também que Beppo tem o novo Microsol Fighter, mas só conta se
+você tiver a grana.
+
+Então venha já, enquanto dura a anarquia!
+`
+
+dc_3_18_title=Ultrassecreto: Gravitron Pulse-Wave
+dc_3_18_header=Arquivo
+dc_3_18_body=`O Gravitron Pulse-Wave é o auge da tecnologia de sistemas de energia.
+Baseia-se no projeto de pesquisa Tyrian.  Poucos sabem que a Explosão de
+Gryphon foi causada por um propulsor Gravitron ligado a um sistema Zica
+Flamethrower.  Isso gerou um choque de 10 UEA [unidades de explosão
+astral] que destruiu boa parte da estação.  Por isso, não se recomenda
+usar este propulsor em combate aberto.
+
+O sistema Harbringer Plasma foi projetado para a nave invisível
+Illuminator.  Ela será posicionada na retaguarda da frota principal da
+Microsol no assalto final.  Qualquer falha na missão fará a nave se
+retirar do combate.
+
+<Nota de arquivo: mais detalhes sobre o Illuminator são Classe-16 e acessíveis só em nível Vykromod.>
+
+O Illuminati é defendido por uma plataforma de batalha secundária, também
+classificada.  A função dela é montar uma barreira de minas enquanto o
+Illuminator age de uma posição segura.  Se a plataforma secundária for
+destruída, o Illuminator abandonará o ataque.
+
+Este sistema de energia é altamente confidencial e não deve ser liberado
+para distribuição geral.  Qualquer nave Microsol está autorizada a se
+autodestruir com o código F2+F3+F4.  Depois de vaporizar a blindagem com o
+código, recomenda-se que os pilotos espatifem a nave em local não mapeado,
+se possível.
+`
+
+dc_3_19_title=TRANSMISSÃO RECEBIDA de Magnatower Center
+dc_3_19_header=Transon
+dc_3_19_body=`Escute aqui, Trent Hawkins: estou farto de você explodir a
+nossa Nave de Defesa Central Z-29!
+
+Leve sua guerra idiota para outro lugar e pare de destruir nossa frota de
+defesa!
+
+Não me importa se sua família FOI morta aqui embaixo!
+Se voltar a Savara, vou acionar um alerta planetário e mandar o setor
+inteiro atrás da sua nave!
+
+Então, SUMA DAQUI!
+`
+
+dc_3_20_title=TRANSMISSÃO DELIANI FLUX 83278
+dc_3_20_header=Javi
+dc_3_20_body=`Olá, Trent.  Um Transon Lohk bem irritado me avisou que você viria para
+cá.
+
+O Illuminator está bem guardado onde você não vai achar.  Vou dar uma
+dica.  Não está em Deliani.
+
+Mas eu estou.
+
+Tenho as defesas do planeta inteiro esperando para cair sobre você e
+eliminá-lo.
+
+Aproveite a estadia, Trent.  Se está lendo esta mensagem, sei que invadiu
+nossa rede de defesa.  Se não...
+`
+
+dc_3_21_title=TRANSMISSÃO DELIANI FLUX 83278
+dc_3_21_header=Javi
+dc_3_21_body=`Ah, a propósito.  Belo serviço que nos prestou lá em Ixmucane.  Teríamos
+perdido várias naves para as armas Zica modificadas testadas lá.
+
+Não sabia disso, hein?  Pena, ninguém pode ajudar você agora.
+`
+
+dc_4_4_title=IXMUCANE - LINK PRIVADO
+dc_4_4_header=Técnico
+dc_4_4_body=`Mensagem privada codificada em feixe estreito.
+Retransmitida pela Downstar por link desconhecido.
+Mensagem anexa incluída como segundo dado.
+
+Transmissão decodificada a seguir:
+
+Aqui é ~Harble~ ~Wom~, no planeta ~Microsol~ ~Ixmucane~.  Este é um pedido de
+emergência ~Downstar~ do agente ~Downstar~ ID ~00329~, Tec ~IX9204~.  Estou ligado a uma
+rede segura e não posso explicar tudo.
+
+Colaborando com outros Técnicos, descobri que a ~Microsol~ destravou alguns
+dos códigos de comando ~Zica~.  Os SCIs ativaram o antigo sistema de
+computador!  A temperatura aqui na baía de serviço é de 103 graus e subindo.
+Os homens reclamam, mas os guardas os expulsam.  Temo que só um conflito
+armado impeça nosso massacre.  Vários Técnicos estão desaparecidos e
+tememos que tenham sido mortos ao tentar fugir.
+
+Eu acho...
+
+Acho que eles vão transformar este planeta num sol.
+
+ME TIREM DAQUI!
+
+NÃO QUERO ESTAR PRESO NO MEIO DESTE PLANETA QUANDO ELES O TRANSFORMAREM
+NUM SOL!!!!
+
+~ENVIEM~ ~ALGUÉM~ ~PARA~ ~CÁ~ ~AGORA~ ~IDIOTAS~
+
+[Fim do arquivo]
+`
+
+dc_4_5_title=TRANSMISSÃO RECEBIDA da Nave de Comando Gencore IcoStar II
+dc_4_5_header=Transon
+dc_4_5_body=`Você já deve ter lido a mensagem anterior, Trent.  Não preciso dizer que
+isso é um problema, e que significa a ruína.
+
+Sei que sou um velho chato e que te arrastei de volta pela galáxia contra a
+sua vontade, mas por favor me escute.
+
+Estou na lamentável posição de ter que tentar deter essa insanidade.
+Espero que ~Harble~ esteja errado, mas isto é tecnologia alienígena mais
+avançada que a nossa.
+
+A ~Gencore~ acredita que, se a ~Microsol~ reativar os sistemas de computador,
+terá uma fonte de energia ilimitada e certamente monopolizará o comércio
+de energia.
+
+Por pior que fosse, se fosse só isso eu teria que, a contragosto, deixar
+que ativassem o planeta e ficassem com sua energia.  Ainda poderíamos
+lutar economicamente por outros meios.  O problema é que há um número
+enorme de cientistas e técnicos de governos independentes e centros de
+ensino alocados em ~Ixmucane~ pela ~Lei~ ~do~ ~Ensino~ ~Livre~ universal.  Na
+última contagem, havia cerca de ~1,5~ ~milhão~ das mentes mais brilhantes do
+universo reunidas em ~Ixmucane~.  E agora há uma frota militar gigantesca
+voando dentro daquela maldita rocha, impedindo quase todos de escapar!
+
+Se transformarem aquela rocha num sol, será um atraso científico de
+milênios!  Temos boa parte da informação, mas poucos fora do sistema de
+~Ensino~ ~Livre~ têm capacidade de compreendê-la e usá-la.  Enquanto
+reaprendemos tudo o que se perdeu, a ~Microsol~ sem dúvida avançará e tomará o resto do universo colonizado.
+
+Não posso permitir isso, custe o que custar.
+
+Nós, junto com várias outras grandes corporações, reunimos uma ~frota~ ~de~ ~emergência~ que convergirá sobre ~Ixmucane~.
+
+Sim, Trent, você faz parte da ~frota~ ~de~ ~emergência~.  Na sua última
+revisão, plantamos programação falsa nos bancos de dados do seu computador.  Ao receber
+minha mensagem codificada, sua tela será reativada corretamente.  Aquelas
+férias que você planejava terão de esperar.  Que bom te ter conosco.
+
+Contamos com você para atrasá-los o bastante para libertarmos os presos.
+Se ativarem o planeta, daremos um jeito de impedir que o usem.
+
+E Trent... não sei se você vai aceitar isso, mas me desculpe.
+`
+
+dc_4_6_title=TRANSMISSÃO RECEBIDA da Nave de Comando Gencore IcoStar II
+dc_4_6_header=Transon
+dc_4_6_body=`VidCom gravado - GT 29:21
+
+Eu não sabia se teria notícias suas de novo, mas você limpou naves de
+superfície suficientes para furarmos o bloqueio e começarmos a resgatar as pessoas
+presas nas seções superiores do planeta.
+
+Precisamos de mais tempo, Trent.  A temperatura já sobe até na superfície
+e é questão de minutos até ser letal.  Você tem que voar para dentro do
+planeta e distrair o que quer que esteja no núcleo.  Destruímos balizas de
+interferência suficientes para escanear o interior e localizamos um poço
+central que desce fundo no planeta.  As coordenadas foram enviadas ao seu
+computador com esta mensagem.
+
+Boa sorte.  Tentaremos salvar o máximo possível antes que o planeta vá.
+
+Não poderei mais me comunicar, mas há grupos amigos nas seções inferiores
+que tomaram o controle.  Eles provavelmente tentarão contatá-lo e poderão
+ajudar.  Um veículo robô de serviço foi enviado atrás de você.  É tudo o que podemos dispensar.
+
+Todos contamos com você para distraí-los.  Faça o que for preciso.
+
+Transon Lohk
+`
+
+dc_4_7_title=IXMUCANE - LINK PRIVADO
+dc_4_7_header=Técnico
+dc_4_7_body=`Mensagem privada codificada em feixe estreito.
+Origem: seção interna 12-9-4 de Ixmucane.
+
+Aqui é o técnico ~Harble~ ~Wom~, do nível 12.  Libertamos esta seção do controle
+da Microsol e monitoramos sua nave chegando.
+
+Você parece pilotar uma nave batedora neutra de mercado livre.  Veio
+ajudar?  Foi a ~Downstar~ que mandou você?
+
+Estamos presos aqui no nível 12 por um bloqueio de segurança e não
+conseguimos furar a blindagem antiexplosão.
+
+Olha, seja você quem for, estamos encrencados.  Não há mais tempo para
+fugirmos - os drones de defesa estão inacessíveis a estes computadores e
+ninguém aqui consegue burlar os códigos.  Você tem que nos ajudar.  Somos
+milhares presos no meio desta rocha.  Temos alguns sensores funcionando e
+sabemos que alguém lá em cima evacua a população, mas não há tempo.
+
+Este planeta vai vaporizar em uns 30 minutos, talvez uma hora.  Há mais gente nossa presa lá embaixo, mais perto do núcleo, e também não conseguem sair.
+Não há como você chegar até nós aqui embaixo.
+
+A ~Microsol~ ativou um velho sistema Zica lá perto do núcleo, e ele está
+elevando a temperatura de um jeito medonho.  Você tem que destruí-lo
+rápido ou nunca sairemos daqui!
+
+Sem tempo!  Só continue por aquele túnel!  Há algo enorme lá embaixo
+queimando um buraco através do planeta!  Mandamos outro datacubo com um
+relatório de sensores do núcleo.  Espero que tenha recebido!
+
+Pelo amor de Zinglon, salve-nos!
+`
+
+dc_4_8_title=DADOS DE ARQUIVO
+dc_4_8_header=Dados
+dc_4_8_body=`Referência: sensores do núcleo de Ixmucane
+
+Os sensores detectaram 3 tipos principais de leituras anômalas.
+
+1 - Sistemas de defesa Zica desconhecidos.  A maioria irradia muita
+energia infravermelha e provavelmente é de base térmica.
+Uma força desconhecida parece dirigir o fluxo de energia térmica.
+
+2 - Minério cristalino.  Um minério cristalino altamente volátil e rico em
+energia foi detectado nesta área.  Dralictite e Morenzinum aparecem em
+quantidades bastante altas perto do centro.
+
+3 - Grande fonte de energia desconhecida.  Uma fonte central produz níveis
+desconhecidos de energia térmica.  Essa fonte é uma ameaça crítica e sua
+blindagem térmica durará cerca de 30 segundos em contato com o
+dispositivo.  Você terá cerca de 10 segundos para destruir a fonte quando
+estiver em alcance crítico.
+`
+
+dc_4_9_title=IXMUCANE - LINK PRIVADO
+dc_4_9_header=Capitão
+dc_4_9_body=`Mensagem privada codificada em feixe estreito.
+Origem: seção interna 1-1-1 de Ixmucane.
+
+Quem é você?  Eu não te conheço?
+
+Não importa.  Este planeta vai ser vaporizado, intruso.  Não há esperança
+de você chegar ao núcleo a tempo de destruí-lo.
+
+Vá embora agora, seja quem for.  Isto não é assunto seu.  Eu mesmo te
+mataria, mas não sou burro de ficar aqui e morrer.
+
+
+~Capitão~ ~Nob~
+
+Força-Tarefa ~Alpha~ de ~Ixmucane~
+`
+
+dc_4_10_title=DADOS DE ARQUIVO
+dc_4_10_header=Dados
+dc_4_10_body=`Referência: Massa de Pretzel de Gente
+
+Segundo uma transmissão interestelar perturbadora, um planeta distante
+relata que pessoas viram ~Massa~ ~de~ ~Pretzel~ ~de~ ~Gente~.
+Não se confirmou o que exatamente é isso, mas os cientistas acreditam que
+seja bem saboroso.
+
+Qualquer grupo de pesquisa interessado deve procurar Pretzel Pete para
+mais informações.
+`
+
+dc_4_11_title=DADOS DE ARQUIVO
+dc_4_11_header=Dados
+dc_4_11_body=`Referência: Canhão Sônico
+
+Classificação: ~Não~ ~Engraçado~
+
+O canhão sônico cria um minúsculo centro gravitacional usando FPP
+(tecnologia de Empacotamento Forçado de Partículas) que permite manter um
+campo de partículas intacto.  Esse centro é desestabilizado por
+um modulador de hiperfluxo antes de ser liberado pela arma.  O núcleo
+gravitacional desestabilizado modula numa frequência fixa, rápida o
+bastante para criar um campo cintilante na faixa óptica próxima do verde.
+O gerador usa um sistema de geradores de ondas sonoras para
+ajudar a modular a frequência visando a máxima dispersão de partículas e
+energia possível - daí o dano da arma ser causado pelos moduladores
+sônicos antes de a arma ser disparada.
+`
+
+dc_4_12_title=DADOS DE ARQUIVO
+dc_4_12_header=Dados
+dc_4_12_body=`Referência: Lança-Chamas Zica
+
+Esta arma foi encontrada durante a escavação de um antigo mundo-túnel
+aparentemente construído por essas estranhas criaturas do espaço.
+Acredita-se que os Zica não respiravam ar, mas subsistiam sobretudo de
+radiação térmica e de vários líquidos.
+
+Acreditamos que isso teve profundo impacto no seu desenvolvimento tecnológico,
+já que parecem ter criado ferramentas e dispositivos para manipular e
+aproveitar energias térmicas e outras de base radiante.  Seu domínio da
+energia térmica parece ter levado ao desenvolvimento deste lança-chamas de
+espaço nulo, único em seu gênero.
+
+A pouca informação vazada da Estação Gryphon, onde estão guardadas as
+únicas amostras restantes do dispositivo, indica que a arma usa um campo
+de partículas energético para gerar a chama sem qualquer fonte externa de
+ar ou energia.
+
+Nem essa informação limitada existiria se não fosse o infeliz acidente
+ocorrido quando um pesquisador removeu a cobertura externa para estudar o
+interior.  Uma grande seção da parte traseira esquerda da Estação Gryphon
+continua faltando até hoje, um testemunho para os que brincam com algo que
+não compreendem.
+
+Veja A Não-Tão-Grande Explosão de Gryphon
+
+    Mundos-Túnel, Zica
+
+    Atividade Pirata, Setor Gryphon
+
+    Pesquisa de Armas, Estação Gryphon
+
+    Arma Laser Zica
+`
+
+dc_4_13_title=DADOS DE ARQUIVO
+dc_4_13_header=Dados
+dc_4_13_body=`Referência: Atividade Pirata, Setor Gryphon
+
+Classificação: ~Não~ ~Engraçado~
+
+O Setor Gryphon é o principal centro secreto de pesquisa de armas da
+Microsol.  Por muito tempo correu o boato de que era uma estação militar comum, mas
+desde a Não-Tão-Grande Explosão de Gryphon a Microsol decidiu deixar que
+isso ficasse de conhecimento público.  De fato, uma vez por ano eles
+convidam membros de indústrias concorrentes à Estação para ver o quanto
+estão atrasados em comparação com a Microsol.
+
+Ainda assim, a estação teve sua cota de dificuldades.  Muitos piratas dos clãs Mikal e Patrok há muito a veem como o auge da carreira: furar as
+defesas da estação, desembarcar um grupo de assalto na seção de pesquisa e
+voltar com algo dos laboratórios de armas.  A maioria nem chega à estação,
+destruída pelas temidas naves Pong.
+
+Um pirata aposentado do clã Patrok, o Mestre de Nave Carlos,
+escreveu um livro detalhando os pontos altos de sua vasta carreira.  Um
+deles foi a infiltração e a retirada de uma arma hoje conhecida como
+Canhão Laser Zica.  Acredita-se que ele tenha sido assassinado no dia seguinte,
+mas chegaram tarde demais para impedir a Gencore de transmitir seu livro
+pela Fluxnet.  Além disso, sua nave nunca foi encontrada, embora se
+acredite que estivesse equipada com o Laser Zica.  Dois meses depois, a
+Gencore concluiu o desenvolvimento de um dispositivo também chamado Laser
+Zica.
+
+Veja A Não-Tão-Grande Explosão de Gryphon
+
+    Pesquisa de Armas, Estação Gryphon
+
+    Arma Laser Zica
+`
+
+dc_4_14_title=DADOS DE ARQUIVO
+dc_4_14_header=Dados
+dc_4_14_body=`Referência: Arma Laser Zica
+
+Classificação: ~Não~ ~Engraçado~
+
+A Arma Laser Zica foi lançada pela Gencore após vários anos de lançamentos
+bem-sucedidos de produtos Zica pela Microsol.  Ainda se desconhece por que
+tantos desses produtos levaram o nome dos Zica, uma raça antiga que
+habitava Gyges, entre outros mundos-túnel.  Contudo, é possível que alguns
+desses dispositivos não sejam apenas parte do frenesi de marketing, mas de
+fato tecnologias únicas de Gyges.
+
+Esta arma é a que mais provavelmente está ligada à escavação de Gyges, embora,
+curiosamente, a Gencore não tenha participado da pesquisa arqueológica.
+Ainda assim, a arma gera rajadas laser forçadas que cientistas
+independentes não conseguiram explicar por completo.  Os efeitos de laser
+são bem conhecidos na faixa azul da luz, mas os padrões de pulso forçado
+são totalmente inexplicáveis.
+
+A única resposta dada até agora é que pode haver alguma energia
+desconhecida atuando para distorcer o laser.  Ainda se pesquisam os
+efeitos e as reações dessa energia, embora pouco tenha sido alcançado.
+
+Veja Mundo-Túnel, Zica
+`
+
+dc_4_15_title=DADOS DE ARQUIVO
+dc_4_15_header=Dados
+dc_4_15_body=`Referência: Mundo-Túnel, Zica
+
+~Ixmucane~ é o único mundo-túnel conhecido a ter sido escavado.  Embora os
+~Zica~ aparentemente estivessem mortos há 421965032 anos padrão, 14 dias e
+32 minutos (estimativa ~SCI~), suas defesas internas ainda estavam
+parcialmente ativas e destruíram muitas naves que vieram investigar o
+mundo-túnel.
+
+A ~Microsol~ lançou uma escavação gigantesca do planeta, equipada com
+destróieres poderosos e naves de pesquisa.  Mesmo assim, 241 morreram
+tentando deter os sistemas defensivos.  O ~General~ ~Zinglon~ teria
+sacrificado naves para chegar aos centros de controle, em vez de permitir
+que as armas defensivas fossem destruídas.
+
+Até hoje o mundo-túnel é um centro de atividade da ~Microsol~.  Seus túneis
+abertos permitem construção naval e mineração fáceis, além da poderosa
+radiação geotérmica perto do núcleo.  Os cientistas, porém, ainda não têm certeza do segundo exato em que morreu o último membro da raça ~Zica~ em
+~Gyges~, mas creem ser cerca de 25 segundos além da estimativa anterior
+(calculados a partir da hora exata de chegada para a escavação final).
+
+Pesquisadores citam avanços nas técnicas de datação para determinar com
+mais precisão os eventos em ~Gyges~.  Alegam também que o fato de muitos de
+seus pesquisadores ainda morrerem em acidentes com a tecnologia alienígena
+atrapalha a realização de mais testes.
+
+Um ~SCI~ anônimo declarou que os avanços na tecnologia de datação aqui
+valeram as vidas gastas para alcançar o núcleo.  Em entrevista por feixe
+estreito, disse: "Esta solução de cronometragem será o momento supremo da
+minha carreira.  É a meta mais importante para nós.  O ~Projeto~ ~Sol~ é totalmente superestimado".
+`
+
+dc_4_16_title=DADOS DE ARQUIVO
+dc_4_16_header=Dados
+dc_4_16_body=`Referência: Pesquisa de Armas, Estação Gryphon
+
+Classificação: ~Não~ ~Engraçado~
+
+A ~Estação~ ~Gryphon~ tem sido a principal fonte do programa
+avançado de armas da ~Microsol~.  Eles lançaram vários sistemas
+de armas de alta potência, incluindo diversos avanços nos sistemas ~Pulse~
+~Cannon~ e seu campo de defesa ~Starburst~, único no gênero.
+
+Após a ~Não-Tão-Grande~ ~Explosão~ ~de~ ~Gryphon~, alguns aspectos da pesquisa
+foram abertos ao escrutínio público, acredita-se que por causa das
+investigações de famílias e amigos dos doze mil tripulantes que morreram.
+Agora corre o boato de que eles acabaram de desenvolver um novo campo de
+tecnologia de armas que lhes permitirá montar armas muito maiores em
+cruzadores de batalha convencionais.
+
+Veja A Não-Tão-Grande Explosão de Gryphon
+`
+
+dc_4_17_title=TRANSMISSÃO RECEBIDA da Nave de Comando Gencore IcoStar II
+dc_4_17_header=Transon
+dc_4_17_body=`~Trent!~  Detectamos um acúmulo enorme de energia na sua área!  Parece
+que a conversão do planeta começou!
+
+Só conseguimos resgatar cerca de 9000 pessoas até agora, mas precisamos
+nos afastar para evitar nossa própria destruição.  O que há aí embaixo?
+
+Não estamos recebendo você direito, mas estamos enviando as coordenadas de um
+túnel que deve lhe dar uma rota de fuga.
+
+Sei que você fez o seu melhor, Trent.
+
+Eu...
+
+Eu queria que pudéssemos ter salvado todos.
+
+Trent...
+
+Teve notícias do ~Harble~?  Ele era um agente nosso aí embaixo.  Tenho
+certeza de que já morreu, mas espero que tenha podido ajudar.  Recebemos
+uma transmissão final dele após derrubarmos a última baliza de interferência.
+
+Ele disse:
+"Seja você quem for... hum...
+Obrigado assim mesmo.  ~AAAAUUUGGGHHH!~  ~O~ ~PAINEL~ ~DE~ ~CONTROLE~ ~PEGOU~ ~FOGO!~"
+
+Nada mais a fazer, Trent.  Saia daí antes que o lugar exploda!
+`
+
+dc_4_18_title=TRANSMISSÃO RECEBIDA da Nave de Comando Gencore IcoStar II
+dc_4_18_header=Transon
+dc_4_18_body=`Você conseguiu!
+
+A fonte de energia que detectamos está sumindo rápido e a temperatura está
+voltando ao normal.
+
+Na verdade, temos um problema novo.
+
+A temperatura cai tão depressa que você deve ter explodido a fonte central
+de energia do núcleo.  Estimamos que o planeta vai congelar em cerca de 6
+horas.  Continuaremos o socorro, mas há várias pessoas presas nos níveis
+inferiores que nunca alcançaremos.
+
+Além disso, Trent, recebemos uma transmissão de ~Harble~ ~Wom~, um agente da
+Gencore que temos escondido aí embaixo.  Parece que ele detectou sua nave
+e tentou lhe mandar dados de sensores.  Tente contatá-lo se precisar de
+ajuda.  Ele está preso no nível 12.
+
+É o melhor que podemos esperar.  Não há mais nada que você possa fazer aí
+embaixo.  Enviamos as coordenadas de um provável túnel de fuga para você
+usar.  Trate de sair daí inteiro, está bem?  Não preciso de mais um
+cadáver na consciência.
+`
+
+dc_4_19_title=IXMUCANE - LINK PRIVADO
+dc_4_19_header=Capitão
+dc_4_19_body=`Mensagem privada codificada em feixe estreito.
+Origem: seção interna [desconhecida] de Ixmucane.
+
+Em nome dos 29 infernos de ~Dai-Zan~, o que você faz aqui?
+
+Como achou nossa nave com blindagem de anulação?!  Temos o equipamento mais
+sofisticado do universo aqui embaixo!  Custou muito dinheiro.  Agora vou
+matar aquele traficante em Savara...
+
+Não vou entregar minha vida a um pilotinho batedor patético como você!
+Venha me atacar, se tiver coragem.
+`
+
+dc_4_20_title=IXMUCANE - LINK PRIVADO
+dc_4_20_header=Capitão
+dc_4_20_body=`Mensagem privada codificada em feixe estreito.
+Origem: seção interna [desconhecida] de Ixmucane.
+
+Pegue todo o lixo que quiser daquela nave, seu cretino!
+Nada ali te salvará de uma morte gelada neste buraco.
+
+Espero que congele.
+`
+
+dc_4_21_title=IXMUCANE - LINK PRIVADO
+dc_4_21_header=Técnico
+dc_4_21_body=`Mensagem privada codificada em feixe estreito.
+Origem: seção interna 12-9-4 de Ixmucane.
+
+Ei, camarada, te pegamos de volta nos sensores.  O que há aí fora?
+
+Este lugar está ficando tão frio que nossos painéis de exibição começam a
+rachar com o estresse térmico!
+
+Olha, camarada.  Temos aqui um daqueles malditos SCIs da ~Microsol~, e com
+uma sondagem amigável a laser o fizemos falar.  Ele diz que há um túnel de
+fuga lá fora - o que você está percorrendo - que contém o centro técnico
+principal deles.
+
+Ele diz que dá para reativar o núcleo por um dos consoles daquele setor.
+O código de acesso foi anexado a esta mensagem e deve estar nos bancos de dados do seu computador.  Você tem que desativar este lugar louco e reativar o
+sistema principal.  Só mesmo um ~SCI~ para estragar um planeta inteiro
+tentando fazer uma droga funcionar direito!
+
+E faça isso ~RÁPIDO~, tá!?  Não quero morrer aqui embaixo nesta masmorra da
+~Microsol~!
+`
+
+dc_4_22_title=TRANSMISSÃO RECEBIDA da Nave de Comando Gencore IcoStar II
+dc_4_22_header=Transon
+dc_4_22_body=`A temperatura está caindo ao ponto crítico perto da sua seção.  Acho que
+não conseguiremos salvar todos nos níveis inferiores, mas você nos deu o
+tempo valioso de que precisávamos.  Agradeço por isso.
+
+Cerca de ~7500~ pessoas ~viveram~ por causa da sua distração.
+
+Como eu disse, o ar perto de você chega a um ponto crítico e acreditamos que a atmosfera aí embaixo vai literalmente congelar.  Ainda há um grupo de
+drones de combate perto de você, mas é a única saída rápida dali.
+
+Ah sim, recebemos uma breve transmissão do ~Harble~.
+
+Ele disse:
+"Seja você quem for... hum...
+Obrigado assim mesmo.  ~AAAAUUUGGGHHH!~  ~O~ ~PAINEL~ ~DE~ ~CONTROLE~ ~SE~ ~ESTILHAÇOU!~"
+
+Nada mais a fazer, Trent.  Saia daí antes que o lugar congele!
+`
+
+dc_4_23_title=TRANSMISSÃO RECEBIDA da Nave de Comando Gencore IcoStar II
+dc_4_23_header=Transon
+dc_4_23_body=`Não acredito no que vejo!
+
+Nossos sensores dizem que o núcleo central voltou a funcionar de algum
+jeito e a temperatura do núcleo está voltando ao normal.  O que você fez?
+Detectamos uma escaramuça e muitas grandes explosões protron.
+
+Não sei como você conseguiu, mas agora podemos estender nossos esforços
+aos presos nos níveis inferiores.  Acho que vamos conseguir salvar essa
+gente afinal.
+
+Este nunca mais será um mundo da ~Microsol~.  Acho que vou conseguir
+convencer as outras corporações a se juntarem a mim agora.  Não dá para
+imaginar o que teriam feito se este lugar ficasse ativo.
+
+Agora posso te contar, Trent.
+
+Acredito que não haveria como neste universo determos a ~Microsol~ se este
+planeta fosse ativado.  Talvez levasse uma década ou duas, mas não há como
+competir com uma fonte de energia ilimitada assim.  O máximo que
+poderíamos esperar era impedir que a controlassem.  Com todos os nossos
+melhores SCIs mortos, porém, não teríamos como impedi-los.
+
+Trent, o ar aí fora ainda está no ponto crítico de congelamento, então é melhor você sair daí antes que a onda de frio te alcance.  Não se preocupe
+com os presos lá embaixo.  Eles estão bem seguros atrás desta blindagem
+Zica, e os condutos de energia chegarão a eles primeiro.  Você é que está aí, a céu aberto!
+
+Não preciso de um cadáver congelado nas mãos!
+`
+
+dc_4_24_title=UPLINK PRIORITÁRIO DELIANI A2
+dc_4_24_header=Mondus
+dc_4_24_body=`Mensagem privada codificada em feixe estreito.
+Retransmitida pela Nave de Comando Gencore IcoStar II - Uplink A1.
+
+Mensagens anexas incluídas como segundo e terceiro dados.
+
+~Transon~.  Estamos sob ataque de uma frota de combate ~Microsol~ gigantesca.
+
+Isolei a superfície do planeta com uma frota de cruzadores de batalha, mas
+alguém parece estar fazendo estrago lá em cima com nossos códigos de
+segurança.  Nossa rede de defesa foi virada contra nós e não controlo mais
+o sistema principal de computadores.
+
+Um grupo de elite de guardas e eu isolamos o centro de comando secreto e
+estamos prontos para acionar o sistema de fuga.  Fomos cortados do sistema
+principal e não controlamos mais o planeta.  Foi tudo o que pude fazer
+para lhe enviar este canal codificado antes que anulem os links privados.
+
+Sabemos pouco do que ocorre lá em cima, mas conseguimos detectar uma nave
+gigantesca movendo-se pelo subterrâneo do planeta.  A coisa é absurdamente
+grande e está drenando nossos sistemas de energia.  Não creio que
+poderíamos deter isso agora, mesmo se tivéssemos como tentar.
+
+Você precisa isolar o planeta.
+
+Ou então...
+
+~Transon~.  Nossa preocupação principal foi manter o ~UPLINK~ ~A1~ aberto.  Se
+você não puder impedir que a frota tome o controle total do planeta, terá
+de acionar o sistema ~Nova~.  Não creio que levem muito tempo para nos
+achar assim que nos ejetarmos do núcleo do planeta.
+
+Faça-os sofrer, ~Transon~.  Eu... faria.
+`
+
+dc_4_25_title=TRANSMISSÃO DELIANI FLUX 02975
+dc_4_25_header=Javi
+dc_4_25_body=`Obrigado, ~Transon~.  Quando os ratos saem, o gato faz a festa.  Hehe.
+
+Espero que tenha se divertido brincando com ~Ixmucane~.  Agora vamos
+brincar um pouco com o seu planeta.
+
+Vejo que você ainda é confiante demais, ~Transon~.  Não acredito que ainda
+deixou alguns daqueles velhos códigos de segurança no lugar.  Não fazem
+mais gente como você.
+`
+
+dc_4_26_title=TRANSMISSÃO RECEBIDA da Nave de Comando Gencore IcoStar II
+dc_4_26_header=Transon
+dc_4_26_body=`Algo está acontecendo lá embaixo em ~Deliani~!
+
+Certamente você leu as duas mensagens anteriores.
+
+O que podemos fazer?  Você tem que ir na frente e distraí-los até
+chegarmos, de algum jeito.  Enviamos uma nave-drone para acoplar alguns
+propulsores extras à sua nave.  Devem bastar para levá-lo a ~Deliani~.
+Tentaremos lhe mandar equipamento pelo caminho e quando você chegar ao
+planeta.
+
+Agora você sabe tanto quanto eu, ~Trent~.  Não acredito que conseguiram
+tirar essa frota sem serem detectados.  Algo está acontecendo - não gosto
+nem um pouco disso.  Captamos naves ~desconhecidas~, estranhas, e padrões
+de energia o tempo todo em órbita deste planeta.
+
+O universo está mergulhando no caos, ~Trent~!  Esta é a única chance de
+salvar o que restou!  Se você falhar, nunca alcançaremos o planeta a
+tempo, mesmo que quiséssemos destruí-lo.  Não posso dizer neste canal o que é o sistema ~Nova~,
+mas basta dizer que era nossa última esperança caso um dia não
+conseguíssemos deter a Microsol.  Parece que esse dia chegou sem que eu percebesse - que tolo cego eu fui!
+`
+
+dc_4_27_title=TRANSMISSÃO DELIANI FLUX 02975
+dc_4_27_header=Javi
+dc_4_27_body=`~Trent!?~  É você?
+
+Nunca pensei em vê-lo de novo tão cedo.  Não acredito que você
+decidiu se sacrificar para tentar me impedir de tomar este lugar!
+
+Com ~Vykromod~ mutilado pelo tiro que você deu na nave dele, assumi o
+comando da frota.
+
+Tenho uma surpresa desagradável esperando aqui embaixo.  Então venha,
+~Trent~, seja o herói que você sempre quis ser e venha atrás de mim.  Tenho
+outros compromissos, porém, assim que eu explodir o tolo irritante nesta
+cápsula de fuga.
+
+Você é insignificante demais para fazer parte do meu plano.  Ficaria
+espantado se você passasse das baías de mísseis.
+`
+
+dc_4_28_title=UPLINK PRIORITÁRIO DELIANI A2 [código P]
+dc_4_28_header=Mondus
+dc_4_28_body=`Mensagem privada codificada em feixe estreito.
+
+Você é o Trent?  Ouvi falar de você pelo ~Transon~.
+
+Perdoe-me por não me apresentar, mas um certo ~lunático~ ~ensandecido~ está
+martelando a blindagem da minha cápsula com rajadas ~Lightning~.  Não creio
+que haja boa probabilidade de sobrevivermos muito mais, mas preciso lhe
+dizer o que você vai enfrentar.
+
+A rede de defesa principal consiste em ~plataformas~ ~de combate~.  A maioria
+lança ~micromísseis~ ~semiguiados~, embora algumas disparem
+~rajadas~ ~de energia~ mais banais.  Os mísseis são o que você deve vigiar
+primeiro, porém.  Eu sugeriria equipar algum
+~armamento~ ~de tiro lateral~ direto, se tiver disponível.
+
+Na metade do núcleo você encontrará uma grande ~seção~ ~de combate~ que deve
+eliminar primeiro.  Isso é bem simples, mas depois você será atacado por
+uma série de ~gigantescos~ ~mísseis~ ~semiguiados~ por trás.  Não tente
+destruí-los.  Em vez disso, poupe energia e ache um jeito de contorná-los,
+sem perder de vista aqueles ~micromísseis~.
+
+A última ~nave~ ~da frota~ parece ser uma defesa de vários estágios
+   -.  - ip. Quando ela - . . ..- -. vai soltar um .- .. - -.  - ~deve~ ~atirar~.
+
+Adeus, Trent. --. - . - assim faz - -. feliz eu ser só um androi
+
+[Fim da transmissão]
+`
+
+dc_4_29_title=TRANSMISSÃO RECEBIDA da Nave de Comando Gencore IcoStar II
+dc_4_29_header=Transon
+dc_4_29_body=`Captamos sua transmissão sobre a vitória contra a nave de defesa
+principal.  Não quero criticar sua capacidade, mas aquilo pareceu fácil
+demais.
+
+Acho que podemos reparar o dano que você causou a Deliani sem muito
+problema.  Ao menos assim que voltarmos à rede de computadores.  Com
+Mondus, o chefe do ~Controle~ ~de Deliani~, destruído, teremos dificuldade
+para nos reconectar ao computador.  Com todas as pessoas que você ajudou a
+resgatar, a ~IcoStar~ ~II~ deve ter cérebros suficientes para quebrar a
+segurança em breve, espero.
+
+Este definitivamente não era o objetivo principal deles.  Tentamos
+capturar um ~Capitão~ ~Nob~ fugindo de ~Ixmucane~, mas não conseguimos
+impedi-lo.  Só sabemos que ele seguia na direção de ~Savara~.  Mandamos
+naves de suprimento na frente para encontrar você e outros
+caças que acabamos de despachar.
+
+Eles entrarão primeiro para destruir as usinas de processamento químico, o
+que deve parar os sistemas de produção de energia deles.  Receio ter
+reconstruído a ~Nave~ ~de Defesa~ ~Central~ ~Z-29~ de novo, e melhoramos o
+projeto.  A ~Microsol~ provavelmente já a capturou com as mesmas portas dos
+fundos de segurança que usaram aqui.  Desculpe.  Preciso que você vá e a
+destrua de novo.
+
+Assim que voltarmos e ligarmos nossa grade de sensores, poderemos ajudá-lo
+mais a localizar o alvo principal da ~Microsol~.
+
+Boa sorte, Trent.
+`
+
+dc_4_30_title=BENO CRACKERS
+dc_4_30_header=Anúncio
+dc_4_30_body=`Novo, da Omara corp.
+
+Quando você achou que nunca mais veria um Beno, chegam os ~Beno~
+~Crackers~.  Feitos numa imitação razoável das criaturas reais, esses biscoitos salgados são uma delícia!
+
+Pegue uma holo-tigela deles hoje e banqueteie-se com as formas de vida
+fofas demais para sobreviver [O Editor].
+`
+
+dc_4_31_title=FLUX DESCONHECIDO 02975
+dc_4_31_header=Javi
+dc_4_31_body=`Por que diabos você ainda está vivo?!  Achei que eu tinha mandado
+você morrer da última vez!
+
+~QUANTAS~ ~VEZES~ ~EU~ ~TEREI~ ~QUE~ ~MATAR~ ~VOCÊ?!?~
+
+Desta vez, Trent, não há escapatória!
+
+Vou acabar com você com meu ~DREADNAUGHT!~ pessoal.  Você não é nada para
+mim, está ouvindo!  ~NADA!!!~
+`
+
+dc_4_32_title=NAVE ID 000 EM SAVARA FLUX 00000
+dc_4_32_header=Ninja
+dc_4_32_body=`Aqui é seu velho amigo, Trent.  Consegui derrubar as ~usinas~
+~de processamento~ ~químico~ aqui em Savara, mas acho que há um problema.
+
+Meus sensores de longo alcance detectaram uma ~nave~ ~gigantesca~ vindo em
+nossa direção.  Não é o tamanho que me incomoda, porém.  Ela nem é tão grande assim, mas as ~leituras~ ~de energia~ que recebo dela estão fora da
+~escala~.
+
+Parece ter também uma ~leitura~ ~de análise~ ~de massa~ ~insana~, como se fosse
+algo tão maciço quanto um ~planeta~.  Não gosto disso, Trent.  Preciso
+cuidar das naves aqui embaixo em Savara, mas ela parece interessada só em
+você, pois está ~seguindo~ ~seu~ ~curso~ exatamente.
+
+Falta cerca de uma hora até ela chegar à órbita.  Minha nave está...
+danificada.  Admito humildemente que não alcançarei a órbita
+sozinho.  Sinto não poder ajudá-lo desta vez, mas é melhor que eu fique e
+ajude estes inocentes aqui em Savara, de qualquer forma.
+
+Você será lembrado para sempre, Trent.
+`
+
+dc_4_33_title=NAVE ID 184-3C EM SAVARA FLUX 12002
+dc_4_33_header=Dougan
+dc_4_33_body=`Como vai a guerra?  Estou aqui embaixo com o resto deste bando maltrapilho tentando resolver as coisas.
+
+Interceptei as outras transmissões que você recebeu e não gostei de
+nenhuma delas, a do ~Javi~ ainda menos.  Acho que posso ajudar, porém.  Minha
+nave não está equipada para combate, mas tenho uma ~grade~ ~de~ ~sensores~ ~VLR~
+reforçada e um ~sistema~ ~de~ ~comunicação~ ~TQ930~ enfiados nesta belezinha.  Se
+mantiver seu canal de comunicação aberto, tentarei alimentar seu computador com
+dados holográficos sobre os pontos fracos do dreadnought.
+
+Parece que a blindagem daquela nave está sendo perturbada pelo estranho
+~campo~ ~gravitacional~, e sempre que certos sistemas são ativados ela puxa
+muita energia dos escudos.  Vou tentar localizar as ~fraquezas~ para você.
+Seu computador as mostrará na sua tela com ~setas~ ~holográficas~ ~verdes~.
+
+Queria estar aí para ver você chutar aquela ~lata~ ~velha~ de volta pela
+galáxia de onde ela veio.  O ~Javi~ é um tolo se acha que uma nave grande
+vai salvá-lo!
+`
+
+dc_4_34_title=PROCURADO
+dc_4_34_header=Anúncio
+dc_4_34_body=`Você já viu este homem?
+
+Em caso afirmativo, voe já até a ~Estação~ ~da~ ~Patrulha~ ~Brownie~ mais próxima
+e informe a posição dele.
+
+Este homem deve ser considerado armado e perigoso!  Ele é procurado por
+~Grande~ ~Traição~ ~Planetária~ contra Savara.  Ele era conhecido
+como ~Imperador~ ~Milktoe~.
+
+Não se engane!  ~Fuja~ ~daqui!~
+`
+
+dc_4_35_title=BENO CRACKERS
+dc_4_35_header=Anúncio
+dc_4_35_body=`Novo, da Omara corp.
+
+O que você precisa
+
+pra começar o dia
+
+são ~Beno~ ~Crackers~
+
+do jeito ~Omara~!
+
+
+Pegue uma holo-tigela já!
+
+Contate a Fluxnet @15003-00421-92431-19327 para um distribuidor Omara
+perto de você.
+`
+
+dc_4_36_title=NAVE ID 000 EM SAVARA FLUX 00000
+dc_4_36_header=Ninja
+dc_4_36_body=`Olá, Trent. Captei você de novo no meu link de comunicação.
+
+As coisas não vão muito bem aqui embaixo. Sem um reforço de energia externo,
+não sei se nossas naves vão aguentar. Metade do nosso grupo já se foi e o
+resto está danificado.
+
+Sem ajuda externa, não teremos combustível para voltar para casa.
+
+Suspiro...
+
+Enfim, vamos falar mais sobre cachorros-quentes. Você pegou alguns para mim
+em Ixmucane antes de acabar com a frota ~Microsol~? Eu bem que queria um
+agora.
+
+Desligando.
+`
+
+dc_4_37_title=NAVE ID 184-3C EM SAVARA FLUX 12002
+dc_4_37_header=Dougan
+dc_4_37_body=`Ótimo trabalho! Deu para ver a explosão daqui de Savara! Javi não vai mais
+comandar frota de ataque ~Microsol~ nenhuma.
+
+Trent, os outros aqui embaixo não estão nada bem. Não posso ajudá-los
+diretamente, então voltei à órbita para tentar contato com Transon. Você
+soube de algo?
+
+Espero conseguir apoio antes que nos liquidem. Quase nenhum de nós tem motor
+interestelar operante, e ninguém aqui embaixo parece capaz de nos ajudar.
+
+Enfim, tenho um relatório de sensores de longo alcance para você. As naves
+de batalha principais deles seguem para ~Gyges~ por algum motivo. Se puder,
+vá para ~Gyges~. Acho que estão prontos para fazer algo bem ruim agora que
+travamos o ataque principal. Prefiro não estar aqui quando estiverem prontos.
+
+Posso perder contato com você se não tomarmos a ~Fluxnet~ aqui em Savara.
+Sem ela, meu sinal não tem alcance para chegar aí.
+
+De agora em diante, temo que você voe às cegas. Rezo a ~Zinglon~ para que
+~Transon~ ponha o Deli no ar de novo.
+
+Espero ter notícias suas.
+`
+
+dc_4_38_title=SETOR GYGES - TRANSMISSÃO PRIVADA ID 11432
+dc_4_38_header=Muldar
+dc_4_38_body=`[Mensagem amplificada]
+
+Este é um pedido de socorro prioritário.
+
+Estamos sob ataque de uma frota ~Microsol~.
+
+Alguém aí me ouve? Estou preso por uma grande frota ~Microsol~ aqui em
+~Gyges~!
+
+Buscávamos um carregamento de orgânicos quando um enorme fluxo de naves veio
+do nada em nossa direção. Não respondem às nossas comunicações! Não temos
+sistemas de combate!
+
+Alguém nos ajude! ~ESTÃO~ ~SE~ ~APROXIMANDO!~
+
+[Mensagem se repete]
+`
+
+dc_4_39_title=UPLINK PRIORITÁRIO DELIANI A1 [código A]
+dc_4_39_header=Transon
+dc_4_39_body=`Trent? Está me recebendo?
+
+Recuperamos parte de Deliani e detectamos você dentro de ~Gyges~!? ~O~ ~que~
+~você~ ~faz~ ~lá~ ~fora?!?~
+
+Um drone mercante vai se encontrar com você - é tudo o que podemos fazer.
+Também captamos pedidos de socorro de Savara e vamos tentar ajudar.
+
+Dougan falou de um monte de naves partindo para ~Gyges~, e de um couraçado
+abatido perto de Savara. Não temos mais informação sobre o que ocorre aí,
+então faça o seu melhor.
+
+Transon desligando.
+
+
+Maldita rede de computadores...
+
+O que diabos está havendo lá fora, Almos? Não temos ~NADA~ funcionando?
+
+[ID desconhecido:] Não, comandante.
+
+Não consigo nem obter relatórios do que ocorre na superfície aqui, muito menos em
+Savara ou... ~Gyges!?~ Quero saber o que está havendo, Almos. Quero
+~RESPOSTAS!~
+
+[ID desconhecido:] Desculpe, comandante. Vou ver o que posso fazer. Ah, e
+precisam de você na estação de comando 2. Algo sobre uma autorização de
+computador.
+
+Pelo amor de ~Zinglon~, Almos. Por que não me ~disse~?
+
+[ID desconhecido:] Desculpe. Vou cuidar da central de comunicações.
+
+Boa sorte. Não tiro nem cara nem rubnik do que está havendo. Fiquei
+espantado de captar até ~Dougan~ lá fora, com sua maldita navezinha chique,
+muito menos ~Trent~.
+
+[ID desconhecido:] Vai ficar tudo bem aqui. Adeus, comandante.
+
+[ID desconhecido:] Hmm? O que isto ainda faz ligado?
+
+[Fim da transmissão]
+`
+
+dc_4_40_title=SETOR GYGES - TRANSMISSÃO PRIVADA ID 11432
+dc_4_40_header=Muldar
+dc_4_40_body=`~Adeus~, Trent. Eu ~controlo~ ~as~ frotas ~agora.~ ~Que~ ~bom~ ~que~ ~veio~
+~aqui~ ~receber~ ~minha~ ~mensagem.~
+
+
+~<tosse>~
+
+
+Você me poupou o trabalho de ~detonar~ ~Javi~, mas eu esperava que ele
+estivesse mais perto de ~Savara~. Sem problema, só um pequeno ajuste. Você
+praticamente já os varreu por mim.
+
+Com Deliani mergulhada no caos, não haverá ninguém capaz de me impedir de tomar os
+outros mundos livres. Eu começava ~a~ achar que todos ~lá~ fora ~eram~
+incompetentes, ~mas~ você ~conseguiu~ ~nos~ ~achar~. ~Interessante.~
+
+
+<pigarro>
+
+~<pigarro>~
+
+<tosse>
+
+
+Vou adorar ver minhas ~microbrocas~ drenarem sua mente, Trent.
+`
+
+dc_4_41_title=FLUXNET 21 APRESENTA
+dc_4_41_header=Anúncio
+dc_4_41_body=`Almo e Zik-Nar X3
+
+A comovente história de ~Zik-Nar~ ~X3~, garoto cibernoide, e seu amoroso cão
+parasita ~Almo~. Acompanhe a saga épica dos dois pela galáxia, corrigindo as
+injustiças de piratas espaciais.
+
+Mas ~Zik-Nar~ tem um fraco por ~Blibbo~, uma lesma fêmea dos confins da
+galáxia. Veja os dois se apaixonarem enquanto ~Zik-Nar~ ~X3~ viaja com ela em
+busca do lar perdido.
+
+Mas se você quer ação, não procure além de ~Almo~. Ele vai sugar o seu coração
+neste show familiar único no século.
+
+~Almo~ e ~Zik-Nar~ ~X3~, numa holo-tela perto de você na próxima rotação.
+`
+
+dc_4_42_title=FLUXNET 21 APRESENTA
+dc_4_42_header=Anúncio
+dc_4_42_body=`Família Suíça de Queijo
+
+Mais um espetáculo familiar para todos.
+
+Esta série memorável sobre uma família de ~queijo~ ~mofado~ vai trazer uma
+lágrima ao olho e um brilho ao coração. Através de ~vento~, ~chuva~,
+~seca~ e ~parasitas~ ~concorrentes~, esta família vai perseverar. Não por
+serem fortes, mas por terem vontade de sobreviver.
+
+Mais um show da ~Fluxnet~ 21 que você não vai querer perder!
+`
+
+dc_4_43_title=FLUXNET 21 APRESENTA
+dc_4_43_header=Anúncio
+dc_4_43_body=`De volta a pedido do público, as hilárias trapalhadas de ~Meu~ ~Tio~ ~a~
+~Preguiça~!
+
+Siga o ~Tio~ ~Preguiça~ pelas florestas de ~Torm~ enquanto
+espera habilmente a passagem de ~dragões~ gigantes, come vegetação e
+aprende o que é ser uma ~Preguiça~.
+
+Série especial apresentada em formato integral, sem cortes, com 2.890
+episódios de 10 horas!
+
+Mais um show da ~Fluxnet~ 21. Não perca!
+`
+
+dc_4_44_title=FLUXNET 21 APRESENTA
+dc_4_44_header=Anúncio
+dc_4_44_body=`Mais uma produção dos líderes em holo-entretenimento...
+
+~Os~ ~Onze~ ~Mandamentos~
+
+O maior épico já feito para as telas - apresentado no formato ~holobox~
+original.
+
+~---~
+
+Monses caminhou sobre Savara e disse:
+
+"Que haja um conjunto de leis para o povo seguir, para que aprendam a ser
+virtuosos e vivam com honra."
+
+E ~Zinglon~ disse:
+
+"Eis, seja assim, pois agora quando a terça vier com não outra vez, seja
+outra menos mais seja. Seja fé dada donde vim a mim, mas não precisa para a
+mim, pois ainda seja aprender a ser."
+
+E Monses ergueu as mãos para tomar os ~holocubos~, mas as baixou de novo e
+disse:
+
+"Han?"
+
+E ~Zinglon~ falou:
+
+"Olha. Aqui está o que você pediu. Pegue e me deixe em paz."
+
+Monses tomou os ~holocubos~ do céu, mas viu que havia um cubo a mais, um cubo
+que ele não esperava. Interrompeu de novo e falou aos céus:
+
+"Para que serve o outro cubo?"
+
+E ~Zinglon~ falou:
+
+"Sabe quando o povo já aprendeu, mas os dez cubos não bastam? Este é para aquele empurrão extra quando dez não bastam."
+
+Monses coçou a cabeça e respondeu:
+
+"Não daria para deixar os outros dez mais fortes?"
+
+E ~Zinglon~ falou:
+
+"Mas os meus vão até ~onze~. Agora suma."
+
+E ~Zinglon~ soprou Monses e os ~holocubos~ montanha abaixo...
+
+Aproveite estas cenas e muito mais da maior produção de todos os tempos!
+
+~---~
+
+~Monses~ e os ~Onze~ ~Mandamentos~
+
+Nas holotelas em 13.5553.231!
+`
+
+dc_4_45_title=MINGAU: O MODO MODERNO
+dc_4_45_header=Anúncio
+dc_4_45_body=`Os laboratórios de pesquisa Gencore apresentam o livro de receitas essencial do gourmet do
+mingau.
+
+Neste tomo de bom gosto há clássicos como:
+
+O Mingau de ~7~ ~Dias~
+
+Mingau de ~Queijo~ ~Suíço~
+
+Mingau de ~Truta~ ~Arco-Íris~
+
+Mingau ~Zest~ ~Negro~
+
+Mingau de ~Manga~ ~Malhada~ ~Farinhenta~ ~Marmórea~ da Annie
+
+O ~Bolo~-de-~Mingau~ do Chef Louco
+
+Mingau ~Mágico~ da ~Matança~, Grumoso ~Vorpal~ +2
+
+Mingau para ~2000~ : ~Um~ ~Mingau~ ~Para~ ~Todo~ ~Sempre~
+
+
+Neste livro há ~Mingau~ para ~toda~ ~estação~!
+
+Então baixe ~Mingau~: O ~Modo~ ~Moderno~ hoje e esteja pronto para
+espantar o próximo encontro de família.
+
+Só da ~Gencore~. Apresentado pela ~Casa~ ~Interestelar~ ~do~ ~Mingau~.
+`
+
+dc_4_46_title=QUEM É VOCÊ?
+dc_4_46_header=Vykromod
+dc_4_46_body=`Eu... sinto sua presença, Trent. Onde você está? Não vejo.
+
+O que você fez comigo, Trent? Não sinto... nada.
+
+Onde está meu corpo? Quem sou eu? Ainda sou eu?
+
+Quero morrer. Por que não me mexo?
+
+Me mate. Alguém?
+
+Trent?
+`
+
+dc_4_47_title=ME AJUDE.
+dc_4_47_header=Vykromod
+dc_4_47_body=`De novo sinto sua presença, Trent. Agora posso me mover. Não sei bem no que
+me tornei, mas sei o que fazer. Sinto que você é a causa da minha dor.
+
+Venha até mim, Trent. Um de nós deve morrer antes que o outro fique inteiro.
+
+Eu... não sei o que isso significa. Você deve vir. Eu... devo ser eu de novo.
+
+Algo está prestes a acontecer. Posso sentir.
+
+No que... ~ME~ ~TORNEI?!?~
+`
+
+dc_4_48_title=UPLINK PRIORITÁRIO DELIANI A1 [código A]
+dc_4_48_header=Transon
+dc_4_48_body=`Trent, aqui é Transon Lohk.
+
+Espero que consiga receber esta mensagem. Perdemos você nos sensores. Sua
+nave sumiu há uns 8 minutos. Onde você está?
+
+Sua vida corre perigo. Tenho certeza disso.
+
+Um enorme pico de energia cresce dentro de Gyges. Não sei o que é, mas você
+deve investigar. Talvez já saiba. Não há tempo de mandar reforços. Terá de
+se virar com o que achar por aí.
+
+A frota em Savara foi neutralizada - muitos se perderam. Não temos os
+detalhes, mas procuramos sobreviventes. Enfim, não restou ninguém que possa
+chegar tão longe até você. Você está por conta própria.
+
+Boa sorte, Trent. Só queria saber o que está havendo aí. Sei que fará o seu
+melhor. Tentaremos contato mais tarde.
+
+Transon desligando.
+
+
+[ID desconhecido:] Comandante, rápido, quanto é a raiz quadrada de 4? Acho
+que o computador caiu e não sabemos consertar!
+
+[Transon:] Dois. Sabe, aspirante, você tem cérebro de ervilha. Se eu
+recolhesse sua mente e a mantivesse como refém, não conseguiria provar que
+era algo além de um grão de areia.
+
+[ID desconhecido:] Desculpe, comandante.
+
+[Transon:] Faz ideia do que está havendo lá fora?
+
+[ID desconhecido:] Desculpe, comandante?
+
+[Transon:] Sobre o Trent.
+
+[ID desconhecido:] Ooo. Desculpe, comandante.
+
+[Transon:] Ele vai [~risinho~] salvar o universo de novo. E depois, sabe o
+que ele provavelmente vai fazer?
+
+[ID desconhecido:] Desculpe, comandante?
+
+[Transon:] Vai salvar o universo de novo, e de novo, e de novo! Vai fazer
+tudo o que eu quiser para ajudar o universo e eu não vou precisar mexer um
+dedo, só mandar essas mensagenzinhas tipo... ops...
+
+[Fim da transmissão]
+`
+
+dc_4_49_title=LINK ALFA MICROSOL 1
+dc_4_49_header=Almirante
+dc_4_49_body=`Você pode ter matado todos os outros, mas eu ainda estou vivo!
+
+Eu, Nob, agora sou almirante de tudo o que vejo!
+
+Não, espere.
+
+~General!~
+
+Hmmm...
+
+~Imperador!~
+
+Não. Não. Maior.
+
+~Supremo~ ~Governante~ ~Intergaláctico~ ~de~ ~Tudo!~
+
+Haha!
+
+Tarde demais para impedir meu reinado. Vou ativar o projeto ~Vykromod~!
+
+Estes serão seus últimos momentos de vida. Aproveite-os.
+
+~Capitão~ ~Nob~
+
+Força-Tarefa ~Alpha~ de ~Ixmucane~
+
+
+Ops... Um segundo...
+
+...cadê a maldita tecla Y neste teclado? Não tenho 8 dedos, como é que eu digito nisto? Talvez se eu usar o dedão para segurar o... ~ahhhhhh!!!~
+
+Agora... sejam testemunhas!
+
+~Supremo~ ~Governante~ ~Intergaláctico~ de ~Tudo~ ~Nob~
+
+~Comandante~ da ~Super~ ~Frota~ ~Alpha~ ~Microsol~
+
+~Líder~ de ~Todos~
+
+~Mestre~ de ~Tudo~
+
+~Muito~-~Querido~ pelos ~Animais~
+`
+
+dc_4_50_title=HOLO NOTÍCIAS - XP9 v123-02-39
+dc_4_50_header=Notícias
+dc_4_50_body=`Aqui é Rob Neither com as notícias do dia.
+
+~Nariz~ ~de~ ~Zinglon~ ~é~ ~Roubado~
+
+Um artefato sagrado tido como o nariz do próprio Zinglon foi roubado do
+Museu Orbital de Torm. Os fiéis estão revoltados e exigem que os
+responsáveis devolvam o nariz de imediato. Uma investigação ampla foi aberta
+e vários planetas se mobilizam para a jihad - guerra santa.
+
+~Ixmucane~ ~Ameaçada~ ~De~ ~Destruição~ -
+~1,5~ ~Milhão~ ~Podem~ ~Morrer~
+
+Em outras notícias, a Microsol teria ameaçado exterminar 1,5 milhão de
+cientistas e engenheiros no planeta Ixmucane. Uma pequena frota de socorro
+foi convocada, liderada sobretudo pela Gencore, para salvar o maior número
+possível de pessoas.
+
+[Clara, Co-repórter [~CC~]] : Isso importa mesmo, Rob? Começo a achar que não
+há canto da galáxia sem alguma ameaça misteriosa, mas de algum jeito tudo se
+resolve fácil e sem mortes do nosso lado. Não é algum tipo de farsa?
+
+[Rob, Repórter [~RR~]] : Para mim parece que sim. Eu me lembro de quando uma guerra
+era algo que dava para ~sentir~. Não só um relatório de quantos cacos de
+metal foram achados. Até hoje não há prova real de naves da Gencore ou de
+outra aliança em qualquer conflito de vulto. Só escaramuças com naves
+batedoras do nosso lado.
+
+[~CC~] : Então isto ~é~ algum tipo de farsa?
+
+[~RR~] : Provavelmente. É essa falta de padrão que me faz querer voltar aos
+holo-esportes. Aquilo sim tinha futuro. Esta guerra falsa está me deixando
+doente. Não há nada pior do que alguém fabricar uma guerra explodindo
+toneladas de naves-robô. Nada além de uma grande queima de fogos.
+
+[~CC~] : ~OH?~ Ainda estamos no ar?
+
+[Programa interrompido por falha técnica]
+`
+
+dc_4_51_title=TYRIAN - O HOLO FILME
+dc_4_51_header=Anúncio
+dc_4_51_body=`Em breve na ~Fluxnet~ ~21~: ~Tyrian~! O filme feito para holo!
+
+Acompanhe as jornadas de Trent Hawkins enquanto ele salva o universo vez
+após vez. No quarto volume desta série Eclipse, você o verá salvar o mundo gigante de Ixmucane da destruição ao destruir a ~nave~ ~de~ ~lava~ gigante na
+fase 3. Depois, voe com ele enquanto devolve a paz à Gencore e enfrenta o
+centro final da Microsol. É um filme que você não vai querer perder!
+
+À venda agora na Asteroid Charlies.
+
+~Nota~: Devido à demanda extrema, estamos temporariamente sem estoque.
+Obrigado por escolher a ~Fluxnet~ ~21~.
+`
+
+dc_4_52_title=DIÁRIO PESSOAL
+dc_4_52_header=Eu
+dc_4_52_body=`Olá, eu. Vamos morrer, nós sabemos. Achei que já soubéssemos disso.
+
+Devo admitir: estou bem cansado de salvar o universo vez após vez. Aquele
+idiota do Transon vai me achar onde quer que eu vá e me obrigar a enfrentar
+frotas enormes até eu morrer ou envelhecer. Talvez ele dê um jeito nisso também. Preciso cair fora daqui! Deve haver algum lugar onde ninguém espere
+que eu limpe planetas inteiros sozinho.
+
+Mas onde?
+
+Preciso achar um jeito! Senão vou ficar preso lutando com essas naves
+Microsol pelo resto da eternidade! ~Aaaaarrrrrggghhh!~
+
+Eu desligando.
+`
+
+dc_4_53_title=COMO JOGAR
+dc_4_53_header=Jogo
+dc_4_53_body=`Como jogar o jogo final secreto ~A~ ~VINGANÇA~ ~DE~ ~ZINGLON~:
+
+Uma nave gigante projeta um campo horizontal de energia. Pequenos inimigos
+caem do alto e quicam pelas bordas da tela e contra o campo de energia.
+Tocar o campo ou um dos inimigos significa morte quase certa e instantânea.
+
+Você deve atirar em todos os pequenos inimigos para avançar de fase.
+
+Há 4 tipos de inimigos:
+
+~Roobles~ : Bolas de Fogo - Dano baixo - Vão da esquerda para a direita
+
+~Tokkies~ : Bolas Espinhosas - Dano baixo - Sobem e descem rápido
+
+~Zimbles~ : Globos Oculares - Dano médio - Andam na diagonal devagar
+
+~Blottes~ : Células de Sangue - Dano alto - Descem devagar e depois quicam
+rápido na diagonal
+
+
+Este jogo tem 6 fases, começando na ~fase~ ~5~ e descendo em ordem até a fase
+final.
+
+Fase 5 : Quase só Roobles
+
+Fase 4 : Quase só Tokkies
+
+Nave extra recebida após a Fase 5.
+
+Fase 3 : Zimbles e Blottes
+
+Fase 2 : Roobles, Tokkies e Blottes
+
+Fase 1 : Quase só Zimbles
+
+Nave extra recebida após a Fase 1.
+
+Fase 0 : Blottes - Destruir o campo de energia?
+
+Nave extra recebida após a Fase 0.
+
+Fase -1 : ???
+`
+
+dc_4_54_title=ESTRATÉGIA
+dc_4_54_header=Jogo
+dc_4_54_body=`Guia de estratégia para ~A~ ~VINGANÇA~ ~DE~ ~ZINGLON~:
+
+Obviamente o ponto principal do jogo é desviar dos pequenos inimigos o
+melhor possível.
+
+~Roobles~ : Bolas de Fogo - Muito fáceis de destruir, mas atrapalham bastante quando descem muito. Tente eliminá-las rápido se der, a menos que venha um
+Blotte.
+
+~Tokkies~ : Bolas Espinhosas - Dá para evitá-las com facilidade, pois cruzam
+a tela bem devagar. Em geral dá para posicionar um aliado sob elas tempo suficiente para eliminá-las.
+
+~Zimbles~ : Globos Oculares - São bem lentos e em geral dá para adiar o tiro
+até começarem a encher a tela. Tente eliminar antes os inimigos mais
+rápidos, se der.
+
+~Blottes~ : Células de Sangue - São os inimigos mais difíceis de destruir do jogo. É fácil acertá-las enquanto descem, então tente ao menos danificá-las bem. Quando chegam ao fundo, começam a quicar rápido e ficam difíceis de
+destruir.
+
+~SEGREDO~:
+
+Sim, claro que há golpes secretos neste jogo. ~21~ deles, aliás.
+
+Vários dos mais comuns estão detalhados abaixo:
+
+~Aliados:~ Prenda um ou dois deles à sua nave.
+
+  Aliado vermelho : Aperte Direita,Baixo,Esquerda, depois segure Fogo e
+aperte Cima.
+
+~Cachorro-Quente:~ Uma rajada de cães mortais. Gasta sua blindagem devagar.
+
+  Aperte Cima, depois segure Fogo e aperte Baixo.
+
+Claro, ~todos~ os outros golpes especiais também funcionam aqui.
+
+Boa sorte!
+
+Até agora, até mesmo o designer tem dificuldade de vencer este jogo, como deve
+ser! Meu tempo habitual a ser batido é ~3:30~, sem usar muitos golpes secretos.
+`
+
+dc_4_55_title=Guia turístico do universo: ~Savara~
+dc_4_55_header=Windy
+dc_4_55_body=`  ~SAVARA:~
+
+~Gastronomia:~
+
+Venha visitar os salões interestelares de refeições na cidade submarina de
+~Ploo~. Dezenas de peixes nadam junto às janelas do domo, e você simplesmente
+aponta para o peixe desejado: ele será capturado e cozido em menos de 30
+segundos!
+
+Notável também é a desconcertante variedade de restaurantes étnicos na
+superfície. Muitos atendem também aos gostos mais exóticos servindo os
+fregueses dos restaurantes rivais, literalmente! Qualquer coisa comestível
+[e algumas não comestíveis] pode ser comprada aqui a preço competitivo.
+
+~Cultura:~
+
+Savara é o polo eclético do setor, onde muitas culturas variadas convivem em
+aparente paz e harmonia, embora você vá querer evitar essas áreas, já que
+poucos turistas saem vivos delas. Mesmo assim, dá para sentar atrás de
+vidros e ver a raça de sua escolha em suas tarefas diárias, sem que possam
+impedir você de bisbilhotar a vida privada delas.
+
+Há também o serviço Trazemos Até Você, no qual por uma pequena taxa os
+locais saem e reúnem alguns grupos étnicos de sua escolha, obrigados a agir
+como se gostassem da sua presença. Indispensável para o viajante inibido!
+
+~Entretenimento:~
+
+Savara é o centro mercantil do setor, onde quase tudo o que você quer e tudo
+o que não quer pode ser achado a preço agressivo. O tabelamento de preços e
+o controle da Máfia garantem que nenhum comerciante jamais cobre algo
+injusto.
+
+Você também vai querer visitar a ~Casa~ ~Interestelar~ ~do~ ~Mingau~, onde
+verá a fascinante história por trás do grande mundo do Mingau. Diversão para
+a família toda!
+`
+
+dc_4_56_title=Guia turístico do universo: ~Deliani~
+dc_4_56_header=Windy
+dc_4_56_body=`  ~DELIANI:~
+
+~Dica~ ~de~ ~viagem:~
+
+Embora a maioria das áreas do planeta seja restrita e os guardas tenham
+ordem de atirar em quem não for identificado, se você ficar na Zona Verde-Clara não deverá ter problemas para evitar ferimentos e morte. Evite as
+Zonas Verde-Azul e Turquesa, bem como a Zona Stix. As Zonas Vermelha e
+Amarela são seguras, embora a Amarela seja muitas vezes confundida com as
+Áreas Mortais Branco-Sujo e Pêssego. Muito viajante daltônico já morreu por
+acidente.
+
+~Gastronomia:~
+
+Deliani oferece os sistemas de cozinha mais avançados do universo conhecido.
+Pratos que simplesmente não são palatáveis em lugar nenhum continuam não
+sendo bons aqui, mas o lema do Chef Yo de Deliani é: se for matéria, a gente
+faz você comer. Uma experiência única que você jamais vai poder repetir!
+
+~Cultura:~
+
+Uma palavra: Robótica. Qualquer fetiche por robótica pode ser satisfeito
+aqui. Androbots, Lobots, Robôs, Androides, Redroides, Droides Droides e
+muitas outras variedades de vida metálica são bem-vindos aqui, desde que
+fiquem nas Zonas Siena Queimada ou Vermelho-Tijolo.
+
+Deliani é a terra de sucessos da ~Fluxnet~ ~21~ como Querida, Curto-Circuitei
+as Crianças - Almo e Zik-Nar X3 - Minha Mãe, a Lobot.
+
+~Entretenimento:~
+
+A Gencore sempre tem várias oportunidades empolgantes de entretenimento para
+turistas. Inúmeros exercícios militares, desfiles e treinos bárbaros de
+tortura por informação podem ser vistos aqui. Indispensável para os aficionados por assuntos militares.
+`
+
+dc_4_57_title=Guia turístico do universo: ~Ixmucane~
+dc_4_57_header=Windy
+dc_4_57_body=`  ~IXMUCANE:~
+
+A sede original da Microsol. O planeta tem superfície seca e desértica, com
+alguma cadeia de montanhas. A vantagem deste mundo é a crosta interna fraca,
+que permite à Microsol erguer instalações gigantescas de pesquisa no
+subsolo. Imensas cidades sob domos surgem nos principais locais de pesquisa e produção. A tragédia de Ixmucane é que ele foi originalmente o lar dos ~Zica~, uma raça alienígena
+desconhecida que escavou sistemas de túneis labirínticos incomensuráveis sob
+a superfície.
+Os ~Zica~ são temidos pelos xenocientistas, que acreditam que eles fugiram para
+os confins do setor, onde planejam lançar um ataque massivo contra Deliani e
+a Microsol, usando tecnologia extradimensional.
+Mas será verdade...?
+
+E, se for, será que eu, o escritor, algum dia ficarei entediado o bastante
+para escrever a sequência usando esta trama sugerida?
+`
+
+dc_4_58_title=Guia turístico do universo: ~Torm~
+dc_4_58_header=Windy
+dc_4_58_body=`  ~TORM:~
+
+Um rubnik vale mais que mil palavras neste planeta.
+
+Capital do setor e sede regional do Governo Interplanetário. Torm é um dos maiores mundos do setor, superado em tamanho apenas pelo mundo de gelo
+Camanis. A superfície lembra a de Savara, embora feita de campos e regiões
+montanhosas de floresta densa. A capital, Portoch, é uma metrópole de
+corrupção e dias escuros e chuvosos.
+
+~Gastronomia:~
+
+Torm é o deleite ou o pior pesadelo de um vegetariano. Vinte e oito mil
+tipos de pratos vegetarianos são servidos por dia, com outros sessenta mil
+sob encomenda. Também é comum uma grande seleção de pratos de animais, com o
+sempre popular e caro ~succotash~ de ~dragão~. Muita gente economiza a vida
+toda só para pedir este prato uma vez. Muitos outros sucumbem à natureza
+tóxica do prato, mas que jeito de partir.
+
+~Cultura:~
+
+Só visite se quiser ficar deprimido, pois os prédios estão tão abandonados
+que ficam riscados de sujeira. Dizem que os senhores do capítulo são tão
+decadentes que raramente saem dos clubes locais de simulação. A própria cidade é um exemplo de por que a Microsol tem tanta influência nas políticas
+de governo: suborno.
+
+~Entretenimento:~
+
+Em Torm, você pode participar dos esportes e atos mais degradantes
+conhecidos no universo. Poucos saem deste planeta os mesmos, e menos ainda
+saem - ou conseguem. Uma visita a este planeta é daquelas que você não esquece fácil. Traga um guarda-costas. Aliás, traga um exército inteiro. Vai
+precisar.
+`
+
+dc_4_59_title=COMO JOGAR
+dc_4_59_header=Jogo
+dc_4_59_body=`Como jogar o jogo final secreto ~OS~ ~ESQUADRÕES~ ~DE~ ~ZINGLON~: [~ZINGALA~]
+
+Grandes formações de naves descem para atacar você. Naves isoladas dos
+grupos se destacam e descem de várias maneiras. Você deve destruir a frota
+inteira para avançar para a próxima frota. Basicamente, atire em tudo.
+
+Você deve atirar em todos os pequenos inimigos para avançar de fase.
+
+Há 7 tipos de inimigos:
+
+~Zimbles~ : 10 pts / 20 pts atacando : Dano 4 : Globos Oculares
+
+~Blottes~ : 15 pts / 30 pts atacando : Dano 6 : Células de Sangue
+
+~Zoomers~ : 20 pts / 40 pts atacando : Dano 5 : Bombas
+
+~Roobles~ : 25 pts / 50 pts atacando : Dano 5 : Bolas de Fogo
+
+~Tokkies~ : 50 pts / 100 pts atacando : Dano 7 : Bolinhas Espinhosas
+
+~Garmons~ : 100 pts / 200-300 pts atacando : Dano 10 : Bolas Espinhosas
+Grandes
+
+~Widgets~ : 250 pts / 500-??? pts atacando : Dano 20 : Nave Marrom Grande
+
+Sua nave tem um simples canhão de trilho que não pode ser melhorado. Você
+também não tem escudos e vive só de blindagem. Ainda assim, a nave de
+blindagem vai descer para ajudar.
+
+Vidas extras são ganhas em 10000, 20000 e a cada 25000 pts depois disso.
+`
+
+dc_4_60_title=ESTRATÉGIA
+dc_4_60_header=Jogo
+dc_4_60_body=`Guia de estratégia para ~OS~ ~ESQUADRÕES~ ~DE~ ~ZINGLON~: [~ZINGALA~]
+
+Há quatro tipos de formação inimiga:
+
+Tipo 1 : ~Bloco~ : Uma simples massa de inimigos em quatro fileiras. Atacam
+rápido, mas se você não liga para a pontuação dá para varrer todos bem
+depressa.
+
+Tipo 2 : ~Bombas~ : Esta variação do bloco tem uma fileira de bombas na
+frente, difíceis de destruir e que descem rápido. Se conseguir furar essa linha, terá
+tiro livre para os Garmons. O Garmon central não se move, então tente
+eliminá-lo antes de a formação sair, por pontos extras.
+
+Tipo 3 : ~Delta~ : Esta não é uma formação difícil no início, pois dá para
+eliminar os inimigos das laterais bem rápido. Infelizmente, os Tokkies do
+centro voam para cima de você muito rápido e são difíceis de prever. Não
+deixe os Zimbles chegarem perto do fundo, ou você terá dificuldade de
+manobrar.
+
+Tipo 4 : ~Bônus~ : Esta é uma formação bem rápida, para pontos extras. Os
+Zoomers e Roobles atacam em força primeiro. Depois, o Widget ataca. Não
+deixe de destruí-lo! Depois do Widget vêm mais algumas naves pequenas e os
+dois Garmons restantes.
+
+Não há golpes especiais neste jogo.
+`
+
+dc_4_61_title=LEMBRETE
+dc_4_61_header=Jogo
+dc_4_61_body=`Você não precisa jogar este jogo para continuar. É só um jogo extra para
+sua diversão. Se quiser seguir para o Episódio 5, basta escolher ~Pular~
+~Isso~ no menu Próximo nível.
+
+Além disso, este jogo não aceita dois jogadores e só estará
+disponível no jogo completo.
+
+Divirta-se!
+`
+
+dc_4_62_title=NAVE ID 184-3C EM SAVARA FLUX 12002
+dc_4_62_header=Dougan
+dc_4_62_body=`Trent? Captei você nos meus sensores.
+
+Sem tempo para conversa! Tem um maluco da ~Microsol~ na minha cola e estou
+voando desarmado. Vou ficar bem enquanto me mantiver fora de alcance. Aquele ninja
+esquisito da nave furtiva está vindo ajudar.
+
+Falo com você de novo quando puder. Boa sorte.
+
+Dougan desligando.
+`
+
+dc_4_63_title=TRANSMISSÃO CIFRADA CÓDIGO 445-A1-A1-Jack
+dc_4_63_header=Reid
+dc_4_63_body=`Trent, que bom ver você! A Microsol destruiu a maior parte das defesas de
+Savara e tomou o resto. Vieram rápido. Alguém vendeu nosso planeta para
+eles. Quem?
+
+Fico feliz em saber que você está aí fora. Eu e muitos outros nos abrigamos
+em refúgios subterrâneos. Eles controlam a ~Nave~ ~de~ ~Defesa~ ~Central~.
+
+Um punhado de outros já luta na superfície, mas estamos em número muito
+menor.
+
+Preciso ir. Temos de poupar bateria para os hospitais. Eles danificaram
+muito os geradores de fusão.
+
+Reid
+
+Presidente Interino de Savara
+`
+
+dc_4_64_title=Pesquisa de Armas, Camanis
+dc_4_64_header=SECRETO
+dc_4_64_body=`Memorando confidencial #4410-303-TDCam
+
+A pesquisa de laser avança de forma constante, conforme previsto.
+
+O Projeto Thermos concluiu a etapa 2 e passa à etapa final 3. Esperamos ter um protótipo de canhão laser de etapa 3 muito em breve.
+
+A estação de pesquisa Loopy, em Camanis, pode lhe enviar 3 cruzadores de
+batalha modificados assim que recebermos sua resposta. Coordenadas planetárias de
+retirada: 399 x 21.
+
+Precisamos de confirmação imediata. Até agora, não acreditamos que qualquer força
+inimiga tenha sabido de nossa posição, mas temos apenas uma defesa mínima.
+Nenhum cruzador de batalha principal está ativo. Isso nos deixa
+especialmente vulneráveis a ataque externo.
+
+Aqui é Mycroft Dalo, Controle de Pesquisa Microsol, desligando.
+`
+
+dc_4_65_title=Alambusol
+dc_4_65_header=Anúncio
+dc_4_65_body=`[Sala de estar alegre e bem iluminada. Decoração do fim do século 103.]
+
+Quando terríveis parasitas alienígenas perfuram minha cabeça, eu pego ~Alambusol~.
+
+~Alambusol~ é o único xeno-spray antiparasita em que confio. Duas borrifadas
+e dez minutos depois, minha cabeça está limpa e sem infestação.
+
+[Corte para consultório médico. Bem moderno.]
+
+Sim, quatro dos nossos cinco médicos recomendam ~Alambusol~ aos pacientes
+infestados. O outro foi demitido. Dá para ver que estamos firmemente
+comprometidos com o uso deste spray nos pacientes.
+
+[Corte rápido para um frasco de spray flutuando num campo de estase.]
+
+Então transmita um frasco de ~Alambusol~ para você hoje! Não vai se arrepender.
+`
+
+dc_4_66_title=Ressurectos
+dc_4_66_header=Anúncio
+dc_4_66_body=`Está se sentindo por baixo... falecido? Amigos e família pararam de ligar
+agora que você está 2 metros sob a terra?
+
+Pois não se aflija mais!
+
+A Dansen Technologies tem a resposta para seus problemas pós-vida.
+
+~Ressurectos~!
+
+Dentro destas pilulazinhas há uma potente receita doadora de vida com garantia
+de trazer você de volta. Basta tomar uma pela manhã, após a lua cheia do seu
+planeta (ou luas), e beber um copo de água. Você será o mesmo num instante.
+
+Procure a gente na ~FLUXNET~: 405-4003-3030.
+`
+
+dc_4_67_title=Guia turístico do universo: ~Camanis~
+dc_4_67_header=Guia
+dc_4_67_body=`  ~CAMANIS:~
+
+~Gastronomia:~
+
+A 3 km a leste da ultrassecreta estação de pesquisa da Microsol fica o
+~IceCream-O-Matic~ do Todo-Poderoso Bob Hartley. O máximo em instalações de
+criofabricação instantânea de alta potência, o sistema ICOM pode gerar na
+hora até 12 km cúbicos de sorvete, em qualquer um de 24 bilhões de sabores.
+
+A Microsol tornou isso possível comprando todas as demais fábricas de
+sorvete e reunindo as receitas de todo vendedor que já existiu.
+
+Esta decisão desconcertante abalou o mercado futuro do sorvete, mas fez da
+Microsol a mestra incontestada de todo o sorvete do universo. Eles levam o
+gelo a sério.
+
+~Cultura:~
+
+Não é muita gente que gosta de viver no confinamento abaixo de zero deste
+planeta. Por isso, são um povo extremamente orgulhoso, propenso a xingar
+molengas como você, que têm controle de clima. Se for visitar, não mencione
+o frio, a não ser que queira uma conversa bem unilateral. Puxe os assuntos
+para as belas paisagens e os vastos museus de esculturas de gelo.
+
+~Entretenimento:~
+
+Um sonho para esquiadores. Este é o destino frio de férias do universo.
+Milhões de pistas de esqui cobrem o mundo, dando diversão a visitantes sem
+fim todo ano. Camanis ostenta neve o ano todo e visibilidade quase nula
+opcional para o esquiador ultrassuicida. O que mais se poderia pedir?
+
+Para os amigos desses esquiadores suicidas, arrastados junto nas férias,
+tente a escultura livre de gelo a laser em larga escala. Por uma pequena
+taxa por hora, você tem o prazer de talhar sua própria montanha. Se fizer
+mesmo questão de levá-la para casa, Camanis ainda oferece entrega em 2 minutos! Basta achar um lugar para guardar sua montanha e mantê-la gelada.
+Uma aventura para a família toda!
+`
+
+dc_5_1_title=HOLO NOTÍCIAS - GD3 v123-02-48
+dc_5_1_header=Notícias
+dc_5_1_body=`Aqui é Rob Neither com as notícias do dia.
+
+~Cultistas~ ~de~ ~Zinglon~ ~por~ ~Trás~ ~dos~ ~Ataques~
+
+Em um gesto estranho, um grupo de cultistas seguidores do recém-falecido
+~Lorde~ ~Zinglon~ assumiu a autoria de vários atentados ligados a comida
+no sistema Savara.
+
+Os ataques se concentraram em um pequeno depósito lunar operado pelo
+excêntrico ~Baker~ ~Bob~.  Ao que parece, muita massa de pretzel e
+~Twister~ ~Bakers~ de alta velocidade foram roubados nas explosões.
+
+Ainda se desconhece o verdadeiro propósito ou a causa dos atentados, mas
+as autoridades locais montaram um bloqueio ao redor do planeta.
+`
+
+dc_5_2_title=DADOS DE ARQUIVO
+dc_5_2_header=Dados
+dc_5_2_body=`Referência: Biologia de Torm - Dragão
+
+Pesquisadores no planeta-selva ~Torm~ fizeram uma descoberta decisiva
+sobre a verdadeira natureza da fauna chamada de dragões.
+
+Pelo visto, essas formas de vida não são nativas do planeta: chegaram a esse mundo por conta própria, sem ajuda.  Essa espécie sempre foi difícil e perigosa de estudar, ainda mais pela agressividade extrema das fêmeas no ninho, mas agora se estabeleceu um elo entre a estrutura genética dos dragões de Torm
+e espécies parecidas achadas em vários outros mundos não colonizados.
+
+A favor disso, os dragões jovens têm uma membrana quitinosa mais dura em
+volta do corpo, que se mantém intacta até no vácuo absoluto.  As reservas
+de alimento são grandes graças ao terceiro estômago, que guarda comida não
+digerida.  Somando-se a isso a capacidade de viver tanto de oxigênio quanto de
+dióxido de carbono, é bem possível que existam no espaço e manobrem
+deslocando a própria massa em fortes vibrações das asas.
+
+O financiamento posterior tem sido escasso, mas os membros restantes do
+projeto esperam determinar se há algum instinto migratório ou exploratório
+na mente do dragão.
+`
+
+dc_5_3_title=DESPACHO DATACUBO 0497:SV-510
+dc_5_3_header=Notícias
+dc_5_3_body=`Relatório, Agentes L-line, fluxo 60
+
+O RETORNO DOS LIVROS CINZENTOS:
+
+Livros cinzentos misteriosos cheios de material desconhecido surgiram em
+uma expedição arqueológica a Savara chefiada pelo famoso cientista
+~Graphim~ ~Arugo~.
+
+Os livros vêm envoltos em um material durável de grau médio e são
+alienígenas, embora ~Graphim~ acredite que venham de um planeta
+distante chamado ~Terra~, citado em várias lendas.
+
+Cheios de compostos de grafite e chumbo, os livros parecem trazer uma
+pista para desvendar o passado desconhecido de ~Tyrian~.
+A equipe de pesquisa acredita que os compostos de grafite têm ligação
+direta com a crosta gravitron de ~Tyrian~.
+`
+
+dc_5_4_title=DESPACHO DATACUBO 0499:CA-220
+dc_5_4_header=Notícias
+dc_5_4_body=`Relatório, Agentes L-line, fluxo 2041
+
+MEMORIAL DE TRENT HAWKINS ERGUIDO
+
+Data: 100031iRev
+
+Hoje, com a colaboração do comitê central de Deliani e do tribunal
+regional de Tyrian, uma estátua memorial foi erguida no pedestal do
+complexo central de Fauchi, cidade capital de Tyrian.
+
+A estátua celebra os feitos heroicos de Trent Hawkins, já uma lenda na
+galáxia por sua perícia sobre-humana como piloto de caça e por ter
+salvado sozinho o sistema da frota invasora de Vykromod.
+`
+
+dc_5_5_title=DESPACHO DATACUBO 024484: ZI-11
+dc_5_5_header=Notícias
+dc_5_5_body=`Os seguidores de Zinglon anunciaram que enfim encerraram sua
+vendeta secular contra os seguidores de Daizan, um grupo
+radical menos popular, mas ainda atuante, formado na escola
+militarista Chesapeake Academy, setor Fauchi, em Tyrian.
+
+A Academia, aninhada nas florestas do Severnai Park, foi
+escola religiosa de muitos eruditos ilustres em religião
+revelada, mas caiu em descrédito por causa das ações dos
+cultos de Zinglon e Daizan.  Os problemas começaram quando
+dois alunos quebraram de propósito o braço e a perna de um
+pesquisador Zinglon durante um torneio esportivo.
+`
+
+dc_5_6_title=DESPACHO DATACUBO 142: WZ-01
+dc_5_6_header=Alerta
+dc_5_6_body=`Este é o farol de emergência da ~Estação~ ~23~.  Recomenda-se
+manter distância da área imediata em torno da ~Estação~ ~23~.  Vigora
+um estado de alarme não especificado devido a hostilidades recentes.  Quem
+entrar neste setor será considerado hostil e destruído.
+
+Repito: quem entrar neste setor será considerado hostil e destruído.
+
+Obrigado por respeitar esta mensagem.
+`
+
+dc_5_7_title=VOCÊ VIU O PRETZEL PETE?
+dc_5_7_header=Alerta
+dc_5_7_body=`O perigoso criminoso Pretzel Pete roubou todos os meus pretzels!
+
+Se o vir, aja com cautela: os pretzels que ele roubou sofreram mutações
+horríveis sob suas maquinações malignas e são extremamente perigosos!
+
+Informe qualquer notícia dele às autoridades mais próximas.
+
+A mania de pretzel que ele desencadeou precisa ser detida!
+`
+
+dc_5_8_title=Gravação do computador
+dc_5_8_header=Mensagem
+dc_5_8_body=`Lamentamos muito ter de tomar esta medida.  Enquanto o universo seguia sem
+você, nós, parte do todo Hazudra, prendemos uma bomba de proximidade na sua nave e a
+desviamos com um leve empurrão para um sistema de asteroides inimigo e muito hostil.
+
+Seu sistema criogênico o acordará aqui.  Assim que detectarmos seu
+sinal renovado, daremos novas instruções.
+
+Votos de boa sorte.
+`
+
+dc_5_9_title=MENSAGEM RECEBIDA DE ZINGLON : 00426 mark
+dc_5_9_header=Zinglon
+dc_5_9_body=`De novo você infesta nosso caminho rumo à sabedoria suprema.  De novo voltam
+sua mente maldita e sua tecnologia de caça roubada.
+
+Julgávamos que você tinha sido destruído na batalha com nosso deus, ~Zinglon~.
+Mas vejo que um destino torto permite que você viva.
+
+Eu não permito.
+`
+
+dc_5_10_title=MENSAGEM RECEBIDA DE ZINGLON : 00471 mark
+dc_5_10_header=Zinglon
+dc_5_10_body=`Uma mensagem gloriosa do nosso ~deus~ nos levou a este caminho final.  Alguns
+duvidam, mas vimos que, para cumprir os desejos de ~Zinglon~, temos de
+controlar a comida.  Depois submetê-la à vontade dele.
+
+A ira ~dele~ é absoluta, e o ódio ~dele~ por você transborda e envolve seu
+futuro.
+
+Em breve verá o ~fruto~ do nosso glorioso e divino líder.
+`
+
+dc_5_11_title=MENSAGEM RECEBIDA DE HAZUDRA : 92777 mark
+dc_5_11_header=Coletor
+dc_5_11_body=`Ótimo ver que você saiu vitorioso dos campos de asteroides.  Foi um
+espetáculo e tanto ver as naves deles explodirem sob seu ataque.
+
+De novo, pedimos desculpas por colocá-lo neste curso perigoso, mas não
+havia mesmo outro jeito de deter os ~Zinglonitas~.
+
+Sim, ~Zinglon~.  Embora não haja sinal dele sob forma alguma, sua essência
+vive nos seguidores.  É certo que tentam de novo destruir tudo.
+
+A ~Microsol~ é apenas uma frente do poder deles, já bem enfraquecida.  O que resta é um subterfúgio mais sinistro.  Por exemplo, os estoques de comida já
+se reduziram a quase nada além de ~Mingau~.  Acreditamos que a fome faz parte dos
+planos deles.
+
+~Savara~ ou ~Camanis~ seriam bons lugares para procurar primeiro, pois a
+atividade nos dois mundos esta altíssima agora.  Sua nave poderá viajar a
+qualquer um deles, claro, sem medo de detonação.  Se notarem sua presença,
+achamos que há boa chance de se revelarem a você, levados pela raiva.
+
+E obrigado, ~Trent~.  O amigo ~Hazudra~ que você teve também foi próximo de
+mim.  Sinto que ele não possa estar com você agora, pois um bom amigo
+tornaria a jornada bem mais fácil.
+`
+
+dc_5_12_title=[A fazer]
+dc_5_12_header=Diário
+dc_5_12_body=`
+`

@@ -1,0 +1,10 @@
+# Ruff (lint and formatting) for the Python tools: utils/ and rewrite/.
+# Run by rewrite/scripts/lint.sh.
+line-length = 120
+target-version = "py311"
+extend-exclude = ["artifacts", "marketing", "rewrite/godot/addons/gdUnit4", "rewrite/target"]
+
+[lint]
+select = ["E4", "E7", "E9", "F", "W", "I", "UP", "B"]
+# "%" formatting remains accepted: it is not a defect, and rewriting it would change hundreds of messages.
+ignore = ["UP031"]

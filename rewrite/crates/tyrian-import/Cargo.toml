@@ -1,0 +1,14 @@
+[package]
+name = "tyrian-import"
+description = "Conversion of the original game data into Godot resources"
+edition.workspace = true
+license.workspace = true
+version.workspace = true
+
+[dependencies]
+tyrian-formats = { path = "../tyrian-formats" }
+anyhow.workspace = true
+clap.workspace = true
+png.workspace = true
+serde.workspace = true
+serde_json.workspace = true

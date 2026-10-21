@@ -1,0 +1,4 @@
+# Ticks whose 8-bit image INTENTIONALLY differs from the c-final C: the shadow of a shot, a ship or an enemy trail
+# no longer darkens a sprite already drawn underneath (docs/divergences.md, no. 59). Each changed pixel is the same pixel, lightened.
+# Format: tick hash (FNV-1a 64 of the 8-bit indices of the playfield). Test: playfield.rs golden_image_tests.
+2000 399a8b1e103c30ca

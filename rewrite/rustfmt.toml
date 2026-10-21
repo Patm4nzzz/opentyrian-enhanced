@@ -1,0 +1,4 @@
+# rustfmt: width 120 and full lines, like the existing code (the default
+# settings split thousands of short lines).
+max_width = 120
+use_small_heuristics = "Max"

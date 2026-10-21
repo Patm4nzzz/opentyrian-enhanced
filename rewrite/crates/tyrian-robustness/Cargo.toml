@@ -1,0 +1,21 @@
+[package]
+name = "tyrian-robustness"
+description = "Bot playing seeded random games: crashes, panics and non-reproducibility of the tyrian-sim core"
+edition.workspace = true
+license.workspace = true
+version.workspace = true
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "tyrian-robustness"
+path = "src/main.rs"
+
+[dependencies]
+tyrian-sim = { path = "../tyrian-sim" }
+tyrian-formats = { path = "../tyrian-formats" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+clap = { workspace = true }
+anyhow = { workspace = true }

@@ -1,0 +1,16 @@
+# Scripted sweep: bits 0 up, 1 down, 2 left, 3 right, 4 fire, 5 fire mode change, 6-7 sidekicks
+# (golden_master.c). The ship fires continuously and sweeps the screen for ~70 s of play.
+40 00
+150 10
+120 14
+240 18
+120 14
+80 11
+80 12
+240 14
+240 18
+120 30
+240 14
+240 18
+240 14
+240 18

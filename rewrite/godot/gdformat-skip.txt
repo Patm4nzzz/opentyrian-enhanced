@@ -1,0 +1,17 @@
+# GDScript files excluded from gdformat --check (rewrite/scripts/lint.sh): gdformat
+# reports comments inside an expression there or breaks a line. Formatted by
+# hand; gdlint still checks them.
+scripts/achievements_screen.gd
+scripts/high_scores.gd
+scripts/instructions.gd
+scripts/joystick_menu.gd
+scripts/load_screen.gd
+scripts/modes_menu.gd
+scripts/new_game.gd
+scripts/replays_screen.gd
+scripts/save_menu.gd
+scripts/setup.gd
+scripts/shop.gd
+scripts/title.gd
+test/setup_graphics_test.gd
+test/setup_level_fx_test.gd

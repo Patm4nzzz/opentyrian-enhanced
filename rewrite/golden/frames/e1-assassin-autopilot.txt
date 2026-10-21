@@ -1,0 +1,9 @@
+# Playfield (x 24..287, y 0..183, score corner x<32 y>=172 set to 0) presented by the c-final C at the tick: FNV-1a 64 hash of the 8-bit indices.
+# C images: GOLDEN_FRAMES, replay of the .gm inputs (seed 235, assists), RGBA layer excluded. Test: tyrian-godot playfield.rs golden_image_tests.
+clock_offset 7948
+2800 74456a7f329323cf
+3600 5ab8681bcdc53d1a
+3950 1f4296e3faf6507a
+6000 1788fdb520d0b642
+9000 6df7b4d22dfffc63
+12000 33f8ee23d4b73dbd

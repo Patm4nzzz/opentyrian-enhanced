@@ -1,0 +1,12 @@
+# Python dependencies of utils/ — install with:
+#     python3 -m pip install -r utils/requirements.txt
+#
+# Everything `make check` runs (the eight CI lints and utils/tests) is
+# stdlib-only and needs NONE of this. The packages below serve the asset
+# pipeline (asset_*), the reference generators (ref_*) and the preview
+# step of mod_preview.py / mod_package.py.
+Pillow>=9.0
+
+# Optional extras, each used by a single script; uncomment when needed.
+# fonttools    # asset_extract_font.py
+# brotli       # asset_extract_font.py (WOFF2 output)

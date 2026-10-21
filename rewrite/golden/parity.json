@@ -1,0 +1,1294 @@
+[
+  {
+    "file": "e1-chain-1.gm",
+    "ticks": 6968,
+    "matched_prefix": 6968,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-chain-2.gm",
+    "ticks": 5601,
+    "matched_prefix": 5601,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-chain-3.gm",
+    "ticks": 5401,
+    "matched_prefix": 5401,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-shop-1.gm",
+    "ticks": 6968,
+    "matched_prefix": 6968,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-shop-2.gm",
+    "ticks": 5957,
+    "matched_prefix": 5957,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e2-e3-chain-1.gm",
+    "ticks": 6934,
+    "matched_prefix": 6934,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e2-e3-chain-2.gm",
+    "ticks": 3052,
+    "matched_prefix": 3052,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "demo-1.gm",
+    "ticks": 6649,
+    "matched_prefix": 6649,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "demo-2.gm",
+    "ticks": 5062,
+    "matched_prefix": 5062,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "demo-3.gm",
+    "ticks": 3012,
+    "matched_prefix": 3012,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "demo-4.gm",
+    "ticks": 1734,
+    "matched_prefix": 1734,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "demo-5.gm",
+    "ticks": 2982,
+    "matched_prefix": 2982,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-savara-autopilot.d1.gm",
+    "ticks": 5047,
+    "matched_prefix": 5047,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-tyrian-autopilot.d1.gm",
+    "ticks": 6968,
+    "matched_prefix": 6968,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "endless-arcade-seed7.d1.gm",
+    "ticks": 1527,
+    "matched_prefix": 1527,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "endless-arcade-seed7.d3.gm",
+    "ticks": 1527,
+    "matched_prefix": 1527,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-asteroid1-autopilot.gm",
+    "ticks": 4536,
+    "matched_prefix": 4536,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-asteroid2-autopilot.gm",
+    "ticks": 6675,
+    "matched_prefix": 6675,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-nort-pulse.gm",
+    "ticks": 5662,
+    "matched_prefix": 5662,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-option-plasma-autopilot.gm",
+    "ticks": 6965,
+    "matched_prefix": 6965,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-option-plasma-pulse.gm",
+    "ticks": 5941,
+    "matched_prefix": 5941,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-orbit-autopilot.gm",
+    "ticks": 6952,
+    "matched_prefix": 6952,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-savara-autopilot.gm",
+    "ticks": 5047,
+    "matched_prefix": 5047,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-sfcodes-script.gm",
+    "ticks": 9319,
+    "matched_prefix": 9319,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-astral-autopilot.gm",
+    "ticks": 6966,
+    "matched_prefix": 6966,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-astral-pulse.gm",
+    "ticks": 1239,
+    "matched_prefix": 1239,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-attractor-autopilot.gm",
+    "ticks": 7083,
+    "matched_prefix": 7083,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-blade-autopilot.gm",
+    "ticks": 6969,
+    "matched_prefix": 6969,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-blade-pulse.gm",
+    "ticks": 5942,
+    "matched_prefix": 5942,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-drone-pulse.gm",
+    "ticks": 1227,
+    "matched_prefix": 1227,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-flare-autopilot.gm",
+    "ticks": 6970,
+    "matched_prefix": 6970,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-flare-pulse.gm",
+    "ticks": 9319,
+    "matched_prefix": 9319,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-invuln-pulse.gm",
+    "ticks": 1227,
+    "matched_prefix": 1227,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-microsol-autopilot.gm",
+    "ticks": 6981,
+    "matched_prefix": 6981,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-microsol2-pulse.gm",
+    "ticks": 5980,
+    "matched_prefix": 5980,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-minefield-autopilot.gm",
+    "ticks": 7083,
+    "matched_prefix": 7083,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-pearl-autopilot.gm",
+    "ticks": 7082,
+    "matched_prefix": 7082,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-protron-autopilot.gm",
+    "ticks": 7083,
+    "matched_prefix": 7083,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-repair23-pulse.gm",
+    "ticks": 1227,
+    "matched_prefix": 1227,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-repair43-pulse.gm",
+    "ticks": 6620,
+    "matched_prefix": 6620,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-repulsor-autopilot.gm",
+    "ticks": 6967,
+    "matched_prefix": 6967,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-repulsor-pulse.gm",
+    "ticks": 5977,
+    "matched_prefix": 5977,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-sandstorm-autopilot.gm",
+    "ticks": 6969,
+    "matched_prefix": 6969,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-sandstorm-pulse.gm",
+    "ticks": 1265,
+    "matched_prefix": 1265,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-zinglon-autopilot.gm",
+    "ticks": 6969,
+    "matched_prefix": 6969,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-special-zinglon-pulse.gm",
+    "ticks": 5978,
+    "matched_prefix": 5978,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-tyrian-autopilot.gm",
+    "ticks": 6968,
+    "matched_prefix": 6968,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-tyrian-hard-autopilot.gm",
+    "ticks": 6969,
+    "matched_prefix": 6969,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e1-tyrian-script.gm",
+    "ticks": 1162,
+    "matched_prefix": 1162,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e2-first-autopilot.gm",
+    "ticks": 6423,
+    "matched_prefix": 6423,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e2-gryphon-autopilot.gm",
+    "ticks": 6934,
+    "matched_prefix": 6934,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e2-special-vulcan-autopilot.gm",
+    "ticks": 6423,
+    "matched_prefix": 6423,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e2-special-vulcan-pulse.gm",
+    "ticks": 184,
+    "matched_prefix": 184,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e3-first-autopilot.gm",
+    "ticks": 3051,
+    "matched_prefix": 3051,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e4-brainiac-autopilot.gm",
+    "ticks": 13112,
+    "matched_prefix": 13112,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e4-first-autopilot.gm",
+    "ticks": 7396,
+    "matched_prefix": 7396,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "e5-first-autopilot.gm",
+    "ticks": 3174,
+    "matched_prefix": 3174,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "endless-arcade-seed1.gm",
+    "ticks": 2183,
+    "matched_prefix": 2183,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "endless-arcade-seed7.gm",
+    "ticks": 1527,
+    "matched_prefix": 1527,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "endless-combo-seed1.gm",
+    "ticks": 2183,
+    "matched_prefix": 2183,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "endless-combo-seed7.gm",
+    "ticks": 1527,
+    "matched_prefix": 1527,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "endless2-arcade-seed1.gm",
+    "ticks": 3831,
+    "matched_prefix": 3831,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "endless2-arcade-seed7.gm",
+    "ticks": 3831,
+    "matched_prefix": 3831,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "mode-2p-link.gm",
+    "ticks": 1222,
+    "matched_prefix": 1222,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "mode-2p-linked.gm",
+    "ticks": 2144,
+    "matched_prefix": 2144,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "mode-2p-respawn.gm",
+    "ticks": 3831,
+    "matched_prefix": 3831,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "mode-anomalies-autopilot.gm",
+    "ticks": 6869,
+    "matched_prefix": 6869,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "mode-arcade-respawn.gm",
+    "ticks": 1337,
+    "matched_prefix": 1337,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "mode-galaga.gm",
+    "ticks": 1754,
+    "matched_prefix": 1754,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "mode-mouse.gm",
+    "ticks": 831,
+    "matched_prefix": 831,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "mode-mutators-autopilot.gm",
+    "ticks": 6922,
+    "matched_prefix": 6922,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "mode-squadron.gm",
+    "ticks": 5713,
+    "matched_prefix": 5713,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "mode-superarcade1.gm",
+    "ticks": 1505,
+    "matched_prefix": 1505,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "mode-superarcade9.gm",
+    "ticks": 921,
+    "matched_prefix": 921,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "mode-timed1.gm",
+    "ticks": 337,
+    "matched_prefix": 337,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  },
+  {
+    "file": "mode-timed2.gm",
+    "ticks": 314,
+    "matched_prefix": 314,
+    "first_divergence": {
+      "enemies": null,
+      "eshots": null,
+      "mode": null,
+      "mt": null,
+      "player": null,
+      "pshots": null,
+      "rng": null,
+      "scroll": null
+    },
+    "ended_early_at": null,
+    "end_matches": true
+  }
+]

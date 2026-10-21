@@ -1,0 +1,3316 @@
+# OpenTyrian2000 Enhanced Edition - English Datacubes
+# Format: dc_{episode}_{cube}_{field}=value
+# Multiline body uses backtick syntax: =`line1\nline2`
+#
+# GENERE par utils/locale_cubes.py depuis data/cubetxt<N>.dat -- ne pas
+# editer a la main. Ce fichier est la REFERENCE des traducteurs : il doit
+# refleter exactement le texte que le jeu afficherait sans locale.
+#
+# Regenerer :  python3 utils/locale_cubes.py dump --all > data/locales/locale_en_cubes.txt
+# Controler :  python3 utils/locale_cubes.py check
+
+dc_1_1_title=~TYRIAN~ DATAFLUX 040-54-871
+dc_1_1_header=Data
+dc_1_1_body=`After gathering all the available data, I think I've found the safest course
+into Tyrian orbit from my landing platform...
+
+After heading due west out of the Fauchi mines you should come in contact with
+the floating battle platforms. Watch for the auto targeting plasma turrets
+and especially the ~construction~ ~claws~. 
+
+Whoever designed these platforms sure counted on spies and infiltrators, as
+they're loaded with small squadrons of surface ~attack~ ~drones~ as well. 
+
+I think these platforms are filled with ~Gravitic Ore~, which would explain why
+they're floating. No wonder ~Microsol~ wants to mine them so badly. I just hope
+I don't get intercepted before I reach orbit.
+`
+
+dc_1_2_title=HOLOVID RELEASE ALPHA
+dc_1_2_header=Historical
+dc_1_2_body=`Note: Rated Not Funny
+
+The Prime Chair said in a convention at Midway, ~Savara~, "We feel that the
+economic benefits for the mineral gathering on ~Tyrian~ to be immense,
+scientifically and economically.  While so far we haven't found anything but
+worthless granite strata, we have been able to form stable test platforms for
+military deployment which avoids 80% of the gravitational pull of the main
+body of the planet, significantly reducing deployment time and energy
+consumption.  In addition, there is a 260% increase in solar collection at
+that level of the atmosphere and we feel it can be beamed down to the surface
+to provide cheaper, more bountiful power while avoiding the need to deploy
+space-platforms.
+
+If we can keep the gravitational disruption active on the rock and still
+maintain at least a moderate ground G-force, it will increase the worth of
+~Tyrian~ and provide us with an increased capacity for fast colonization."
+
+Scientists believe the mineral compositions in the heavy rock strata on the
+surface of the planet can be easily gathered while the planet's gravity has
+been disrupted.  ~Tyrian~ is the only planet whose gravity shifts enough to
+allow the top strata to break apart from the planet in large sections.
+
+So far, no-one has been able to figure out the odd results in the force, but
+~Gencore~ has stated it believes the mineral components of ~Microsol's~ world to
+be just on the surface of the planet.  They believe the core of the world
+is mostly gas pressure with molten pockets situated in several locations
+around the core, without any matter in the center of the planet.  They have
+distributed holo-models of the force diagrams which indicate the gravitational
+pull is very uneven around the planet, which conflicts near several locations
+on the surface and would provide a near-cancellation of the G-force.
+`
+
+dc_1_3_title=No Title
+dc_1_3_header=None
+dc_1_3_body=`No Message
+`
+
+dc_1_4_title=LOCAL EMPORIUM DATAFLUX
+dc_1_4_header=Ad
+dc_1_4_body=`Come on down and pick up a USP shuttle at Hank's Used Shuttle and
+Holo-Tractor Emporium!
+
+These new Uncorporated Systems Personnel shuttles deliver unparalleled speed
+and versatility, allowing the most dangerous and unskilled pilots to manuever
+with ease. You may also mount conventional weapons to discourage asteroids
+from striking your hull.
+
+The ~USP Talon~ provides you with 1 full inch of armor plating and a generous
+full-sized generator and engine area.  With both forward and rear mounting
+systems and 2 cargo bays, it's just like a real ~Microsol~ fighter!
+Specially designed for speed and maneuverability, it gives you an unparalleled
+3G base thrust addition!  All this for only 6000 cr!!
+
+The USP Perren has all the specifications of the ~Talon~ but with Mark VII
+air-conditioning and a P-3 stabilizer for added comfort in the blackness of
+space.  Also keep a lookout for its stylish drink holder/holosnack bar.
+`
+
+dc_1_5_title=INCOMING MESSAGE FROM MIDWAY, ~SAVARA~ : 21717 mark
+dc_1_5_header=Mom
+dc_1_5_body=`Dear ~Trent~,
+
+     Glad to hear you're doing so well on ~Tyrian~, son.  Papa's so proud of
+you.  Oh yes, how's your Hazudra friend?  He seems nice.
+You'll have to bring him home this Fokar-Cycle for dinner and a holo-snack.
+You're going to come back this Fokar-Cycle, aren't you, son?  We still have
+your room made up just like when you left.
+
+     Papa wants me to tell you he finally has a job with ~Microsol~!
+It seems they're interested in charting the Sti-5 sector where you're
+working.  I always told you Papa was the best holo-chart deployer on ~Savara~!
+Finally, I think we're going to move out of this old home. Papa got a
+huge payment from his new P-Scouting job and we can afford to do some things
+we've always wanted to do.
+
+     Oh, Papa says we have to go to the final interview now.  Seems
+they want us to visit the local branch office for a welcoming party.
+All our love!
+                                                     Mom
+`
+
+dc_1_6_title=~TYRIAN~ SYSTEM DATAFLUX - ASTEROID SECTOR 1
+dc_1_6_header=Data
+dc_1_6_body=`The first asteroid sector of the Tyrian system is the central mining colony
+where Microsol has been providing immense amounts of metal for starship
+construction. Here can be found gigantic drilling machines and hangars for
+prototype models that Microsol builds.
+
+Maneuverability whilst in this sector is limited because of the large
+asteroids, and Microsol has installed numerous energy turrets that destroy
+any approaching objects that threaten the installations. A ~multi-directional~
+weapon is recommended for countering the asteroids and the bases.
+
+Also, an unusual anomaly has been detected in the sector indicating a
+possible dimensional shift near an ancient statue at the center of the field.
+`
+
+dc_1_7_title=~TYRIAN~ SYSTEM DATAFLUX - ASTEROID SECTOR 2
+dc_1_7_header=Data
+dc_1_7_body=`The second sector of asteroids in the Tyrian system is not used by Microsol
+for mining purposes, but instead as a proving grounds for new craft and
+ground assault weapons, their newest being the Thunder HX-21: a small,
+tank-like vehicle that fires a powerful plasma blast that can damage even
+the most heavily armored starships!
+
+Beware also of deadly laser turrets. The blasts can obliterate the largest of 
+asteroids, so imagine what they can do to a ship...
+`
+
+dc_1_8_title=~SAVARA~ MERCHANT TRANSMISSION
+dc_1_8_header=Merchant
+dc_1_8_body=`Hey, ~Trent~!  Looks like you've got a price on your head now. the guys at level
+3 security say ~Microsol~ is after you, and your parents are being investigated.
+What's going on?
+
+Drop by Midway and equip your ship.  Then we'll see if we can find a good
+hiding place for you.  I owe you, after all.
+
+We've plenty here for you.  Rear sonic cannons, front lasers, medium armor,
+and the first of our shipment of Microsol shields!  We've also found something
+interesting...
+
+Deep space pirate brought a couple of these weird glowing green mechanisms
+back from the outer reaches of the sector.  Seems the whole frieghter fleet is
+out there looking for the ~Blacknova~ stargate.  Anyway, this green thing glows
+and emits a weird ionized field around it, but it's far too weak for a
+shield.  Still, if you're interested, it's yours dirt cheap.  Gotta pay you
+back for that hula lamp...
+`
+
+dc_1_9_title=HOLOVID RELEASE BETA 06    THERMAL BLAST VIBRATES MIDWAY
+dc_1_9_header=News
+dc_1_9_body=`A thermal blast rocked the city of Midway today, destroying a number of
+urban dwellings on the south side of the East River.  Investigators say the
+blast was centered on one dwelling owned by the ~Hawkins~ family.
+Both the husband and wife are believed disintegrated by the radiation.
+Remarkably, few other people were injured.  It seems most of the people in
+the community were at a seminar for community awareness produced by the
+benevolent ~Microsol~ alliance.
+
+"It seems we averted a major disaster with our welcoming seminar.  I blanche
+at the thought of what kind of monster would try to take out an entire
+community.  You can be sure we will be investigating it to the fullest extent.
+I only wonder at what the people would think if that seminar wasn't being held
+at that time..." said ~Microsol~'s new Prime Chair Durril.
+
+Officials at the Main Tallok Fusion Plant said the thermal blast had to have
+been a weapon and couldn't have been caused by faulty wiring.
+`
+
+dc_1_10_title=DATAFLUX UPLOAD from Midway
+dc_1_10_header=Merchant
+dc_1_10_body=`I've found the best chance of escape for you.  The home of gencore tech
+alliance: ~DELIANI~.  Head there and you should be able to find refuge with
+~TRANSON LOHK~, who is the chancellor. 
+
+I'm sorry about your parents, Trent. Something tells me you want revenge, but
+before you go off half cocked just listen to this...
+
+~Gencore~ is in a fix right now.  Since ~Microsol~ is monopolizing ~Tyrian~,
+~Gencore~ is losing power in the council at ~REMUS~.  The head research fellows at
+~Gencore~ also believe there is something weird going on concerning the
+development of ~Tyrian~, and if they could pinpoint it, they'd have grounds for
+opposition and perhaps even a shutdown of the whole operation.  Still, they
+have no leads.  Only hypotheses.  If you could provide some information for
+them, ~Gencore~ would hopefully help you find the reason for ~Microsol~'s
+interest in your death. Good luck, ~Trent~.
+`
+
+dc_1_11_title=INCOMING TRANSMISSION from Magnatower Center
+dc_1_11_header=Transon
+dc_1_11_body=`We read you on our vidspec screens as Trent Hawkins, terraformation pilot.
+I am ~TRANSON LOHK~, chancellor of the ~Gencore~ tech alliance.  We need your
+help, Trent.
+
+~Microsol~ is clearly after you. ~Deliani~ is being infiltrated
+even now by a whole fleet of Microsol patrol ships. We'll do our best to hold
+them off until you can reach us.
+
+~Tyrian's~ rock formations are gravity controlling, you say?  So that would mean
+that ~Microsol~ is most likely to be using this new power source to build a
+fleet of incredibly fast warships.  Their main goal is to control the
+sector, as some of our agents have discovered recently. we need you to be on
+our infiltration team, ~Trent~.  You're obviously one of the finest pilots in
+the sector from that manuvering you just pulled off, so you can fly into
+~Microsol~ territory and discover exactly what they intend to do and when.
+
+In all your life, you'll never have a better opportunity of serving your
+sector. Head for ~Deliani~ and ~Javi~, our security chief, will brief you on
+your first mission.
+`
+
+dc_1_12_title=TRANSMISSION SOURCE: ~XSIV Games~
+dc_1_12_header=Eclipse
+dc_1_12_body=`Hey, Trent, here's another game to play from ~XSIV~:
+
+~Pretzel Pete~
+
+It's soft pretzel madness as ~Pretzel Pete~ drives around in his crazy truck,
+trying to scoop up evil ~Street Pretzels~ which are terrorizing the world.
+~Baker Bob~ is behind this pretzel madness and will not stop until he turns
+all of humanity into living pretzels!
+
+If only they'd include a real ~soft pretzel~ with this game, as it makes you
+hungry to play...
+`
+
+dc_1_13_title=TRANSMISSION SOURCE: ~Pib~
+dc_1_13_header=Pib
+dc_1_13_body=`Computer translation of feline language follows:
+
+It is necessary that you feed ~me~.  ~I~ have been stuck here in this house
+so long that ~I~ decided to meow into this idiotic computer in the hope that
+you get the idea.
+
+There are not enough chewey treats being placed into ~my~ bowl and the gravy
+is too thin.
+
+Meow.
+
+Pib
+`
+
+dc_1_14_title=TRANSMISSION SOURCE: MagVend 004-55506B
+dc_1_14_header=MagVend
+dc_1_14_body=`You may have already won 2 trillion C-Credits!
+
+If you return the winning prize number by stardate 445x56.4, we will say on
+live 4-D holovision - "~Trent Hawkins~ has won 2 trillion C-Credits!"
+
+You cannot afford to pass up this offer.
+
+[Message edited due to tasteless content]
+
+MagVend 004-55506B thanks you for your patronage.
+`
+
+dc_1_15_title=TRANSMISSION SOURCE: Nortaneous
+dc_1_15_header=Nort
+dc_1_15_body=`<!> ~Intercepted~ ~Transmission~
+
+Mantori, we have located three hyperspatial ~anomalies~ on the planet
+designated "~Tyrian~".  Please advise.
+
+Analysis indicates there is a 56% chance that entry will modify ship
+position to unknown location.  Access code for probe 334-G requested.
+Location of first ~anomaly~ is stog rock at elpim mb tst...
+
+~Priority Drelb~!  Possibility of interference with normal operations 94%.
+
+Appears to be the only unusual ~anomaly~ in this sector.  Dimensional access to
+submarcon ~"Registered~ ~version"~ may provide additional anomalies.
+`
+
+dc_1_16_title=TRANSMISSION SOURCE: Steffan Tommas
+dc_1_16_header=Steffan
+dc_1_16_body=`Well, well, Trent. It seems you've made yourself quite popular in the Tyrian
+sector. Things are still quite calm here on Ganymede, and Microsol is
+hardly a threat to ~WAR~ at the moment. But they seem to be giving you
+trouble, and I don't appreciate people bothering my friends.
+
+If you can make it to planet Torm, circling the capital planet of Remus, I
+will send Dougan to provide you with additional supplies. With regret I
+cannot send any HARs to assist, since your fight is with starships and not
+robots.
+
+Good luck, Trent. If you can, drop by Ganymede and we'll go a few rounds. I
+sincerely hope your skills with the ~Nova III~ haven't waned.
+`
+
+dc_1_17_title=Protron Cannon Indigo
+dc_1_17_header=DATA
+dc_1_17_body=`New to Tyrian sector 2.0, this is a powerful option available for any ship.
+
+The Indigo fires out dual IR Protron bursts in rapid succession and works
+well when not confined to narrow quarters.  Unfortunately, the prototype Indigo
+was last seen in a secret region of Episode 2, protected by a fleet of
+crystalline life forms called the Inzia in Galactic Tongue.  To retrieve the
+device will certainly be difficult, since the Inzia surround your ship with
+crystalline mines which will confuse the Indigo system.
+`
+
+dc_1_18_title=Companion Ships Warfly and Gerund
+dc_1_18_header=DATA
+dc_1_18_body=`Just released by Gencore into Tyrian sector 2.0.
+
+These are the latest in advanced ship tracking systems.  Both models feature
+a ship-history tracking system which means they will follow your ship's every
+move, only they will stay a second or two behind your movement.
+
+The Warfly packs a newly developed rapid-fire crystalline energy mine, while
+the more powerful Gerund uses a triple-beam system.  Recent reports reveal
+that two custom prototype Lightning-Gerund craft were designed and sold to
+General Nortaneous, but Gencore denies this as a false rumor.
+
+Microsol has also released a competing line of weapons which dock with your
+ship to form permanent forward cannon attachments.
+`
+
+dc_1_19_title=DELIANI PRIORITY UPLINK A1
+dc_1_19_header=Transon
+dc_1_19_body=`Trent, I want you to go investigate a disturbance on Savara.  We've received
+reports of a massive gravity surge in one of the main cities there, Tonchus.
+
+The situation there sounds grim with a number of people panicking and trying
+to escape.  I know it's short notice, but please do your best.  Further details
+are available from ~Emperor~ ~Milktoe's~ address which I am also sending.
+
+You must take out that lunatic or else the planet will be ruined.
+
+Transon out.
+`
+
+dc_1_20_title=PLANETARY EMERGENCY
+dc_1_20_header=Milktoe
+dc_1_20_body=`This is ~Emperor~ ~Milktoe~ of Savara.  This planetary distress is not a drill!
+
+A large beam of unknown energy has been directed at 41x30 in the upper
+hemisphere of our planet.  It has caused an incredible gravitational
+disturbance which ~is~ raising the oceans ~at~ that ~point~ ~to~ unheard-of ~levels~.
+
+<~cough~>
+
+Widespread panic has gripped the planet and the citizens are grabbing any
+ship available to escape the surface.  The sky is filled with thousands of
+shuttles and blimps.
+
+Even worse, a crazed lunatic calling himself ~Lord~ ~Gopenhagen~ is flying
+around in a modified T-29 blimp and destroying countless ships and buildings.
+He has threatened to destroy the main power centers of the planet and cause
+a giant meltdown.  In five hours he will have achieved his objective.
+
+I hope someone out there can help us, but I'm not going to stick around and
+find out!  There's a royal shuttle leaving in five minutes and I'll be
+on it!
+
+Formerly... ~Emperor~ ~Milktoe~
+`
+
+dc_1_21_title=UNKNOWN
+dc_1_21_header=????????
+dc_1_21_body=`Your arrogance will be your downfall.  We have taken care of your friend.
+
+
+I hope you enjoyed your flight.  Please return your tray to the upright position
+and prepare for destruction.
+
+Ha ha.
+`
+
+dc_1_22_title=DELIANI PRIORITY UPLINK A1
+dc_1_22_header=Transon
+dc_1_22_body=`You're going to try and fly back to Tyrian for the gravity rocks?
+
+Good luck finding some of that ore.  If you can pick up a sample, maybe we can
+analyze it to find out more about it.
+
+I hope what happened on Savara won't be repeated.  The consequences of this
+power are terrifying.
+
+Transon out.
+`
+
+dc_1_23_title=Scenic guide to the universe: ~Tyrian~
+dc_1_23_header=Guidebook
+dc_1_23_body=`  ~TYRIAN:~
+
+~Dining:~
+
+Though only recently habitable, Tyrian features some capable cooking.  There
+is little outstanding about most of the establishments, unfortunately.
+
+The ~Terrace~ de ~Rock~ is a lovely dining hall in the city of ~Rockenheimer~
+where mineral creatures can dine to their delight on tasty quartz and feldspar
+dishes.
+
+For our reptilian cousins, there is a fine selection of delicacies tuned to
+the discriminating grubbite.  No finer mealworms can be found this side of
+the galaxy.
+
+Sadly, there is only one dining establishment for humans: another chain in the
+~Interstellar~ ~House~ of ~Gruel~.  This one is even more miserable than the
+one located in the toejam of Torm.  Avoid at all costs and try the mealworms
+instead.
+
+~Culture:~
+
+There is only a rudimentary culture on Tyrian, but it does boast a fair number
+of lovely recreation camps for younger kids.  ~Rockland~ is a fine example of
+these joyous facilities.  For only 2400 Cs you can send your unloved one away
+to slave in the beautiful quartz and feldspar mines, where they will learn all
+about geological instabilities, gaseous substances, forced marches, and
+especially large-scale mountain sculpture.  It's an experience no kid would
+ever forget!
+
+Mineralists will also be able to gaze in wonder at the incredibly varied
+geology of the surface strata.  Worth a look.
+
+~Entertainment:~
+
+Most visitors come to Tyrian to watch the beautiful floating rocks.  Every
+two months Microsol features a new upheaval where you can see these giant
+rocks literally rip themselves out of the surface.  One note of caution, though.
+Unfortunately, this is extremely dangerous and they don't know in advance
+exactly ~which~ rocks will fly off.  But, for a small fee, they will arrange
+hospital pickup and quick to-go funeral services.
+`
+
+dc_1_24_title=Scenic guide to the universe: ~Asteroid Field Sector 1~
+dc_1_24_header=Guidebook
+dc_1_24_body=`  ~ASTEROID 1:~
+
+~Dining:~
+
+Sector 1 is guest to none other than the galaxy's only ~Gestalt~ ~Greasers~.
+The building is an unparalleled giant bubble, with a panoramic view extending
+out into the stars.  Fortunately, Greasers has a holo field emitter which can
+project onto the bubble any one of thousands of locations.  The food is
+worthless slime, but if you ever wanted to visit a thousand locations all at
+once, you have picked the right place.  Greasers does a brisk job of special
+services and birthdays.  The Order of Zinglon swears by this place.
+
+~Culture:~
+
+Most of the people in this area simply cannot afford a culture, but there is
+a great deal of second-hand style in this place.  What little they can afford
+is packed into the greatest hoe-downs anyone has ever seen.
+
+~Entertainment:~
+
+Most of the asteroid belt is off-limits to tourists, but there are a number
+of public access roads where you can spend your time annoying overworked
+miners by buzzing past them at over 8 Gs.  A must event for the whole family!
+
+Another big attraction is the lonely miner bars located all over the area.
+This is ~the~ place to find that overworked barbarian of your dreams.
+`
+
+dc_1_25_title=Scenic guide to the universe: ~Asteroid Field Sector 2~
+dc_1_25_header=Guidebook
+dc_1_25_body=`  ~ASTEROID 2:~
+
+~Dining:~
+
+Sector 2 is an extremely restricted area.  Only the most important V.I.P.s
+are allowed to even enter the space around here.  For this reason, sector 2
+has the galaxy's largest free-floating pizza parlor.  This business is far more
+efficient than most, but it needs to be because of the large orders they
+receive.  When you place your order, you are guaranteed delivery in under
+3 minutes.  To achieve this remarkable rate for large orders, the entire
+parlor can be moved into position above your building's pizza-intake valve.
+Then, it's bombs away as the entire order is blasted to your receiving room
+at 3000 miles/sec!
+
+Every year, the bigwigs at Microsol spend months devising ever more challenging
+orders for these people to fill, but they haven't won yet.  You can be sure
+their computers are churning away at this very minute to find new ways to
+exceed the 3-minute waiting time and receive their pizzas for free.
+
+The name of the place?  ~Damenoes~.
+
+~Culture:~
+
+A potpourri of the most important useless people roam the underground
+corridors of this massive research facility.  They represent the largest
+mass of paper-pushers and pencil-sharpeners the universe has ever known.
+
+~Entertainment:~
+
+None.  This center is a rehabilitation camp for useless people.  Microsol's
+grand design is to force at least one person to realize a single ounce of
+useful work.  This plan has been a total failure.
+`
+
+dc_1_26_title=Scenic guide to the universe: ~Soh Jin~
+dc_1_26_header=Guidebook
+dc_1_26_body=`  ~SOH JIN:~
+
+~Dining:~
+
+The cornucopia of desert foods are enough to enliven any Arabian tale.
+Most restauraunts serve over 20 different types of figs alone.
+
+The most impressive eatery, though, is ~Assan's~ ~Low-Cal~ ~Oasis~.  Assan's
+sells over one hundred varieties of figs, seventeen types of camel dishes,
+and three other secret dishes we can't even recognize.  To top it off, nothing
+served here is over twenty calories.  It's a dieter's dreamworld come true, as
+Assan can do things with figs that lesser men only dream of.
+
+On the other side of the dusty world is ~Coshack~ and his ~Green~ ~Walnut~.
+Within the confines of this lovely vegetarian oasis lies the world's only
+walnut tree.  How he keeps it growing in this climate is but a mystery, but
+guests can take a guided tour detailing the mysteries of this planet's fruit.
+An experience not to be missed.
+
+~Culture:~
+
+Technology has adapted this nomadic world to a nomadic life of space-travel.
+The locals are wary of outsiders, but will freely accept you as long as you
+can speak their language.  Fortunately, the locals were never too bright and
+most people can fake their ancestral language which consists of only one word:
+Sand.
+
+~Entertainment:~
+
+Camel jaunts are minutes away from any location on the planet.  Also, Sand-gathering
+and wyrm hunting are two of the most widely enjoyed pleasures this world has
+to offer.
+
+Soh Jin boasts the galaxy's largest mountain of sand.  It's a wonder.  Actually,
+it's a wonder you can see it through the constant sandstorms, but if you do miss
+the few seconds it's visible every thousand years, you can purchase any number
+of delightful postcards from the people who saw it the last time.
+
+Make sure you hire a local guide, though, as most people are quite lost nearly
+three feet from a building.  The locals have cunningly placed a dampening field
+which neutralizes positioning beacons, so you'd better follow their custom.
+`
+
+dc_1_27_title=Scenic guide to the universe: ~Holes~
+dc_1_27_header=Guidebook
+dc_1_27_body=`  ~HOLES:~
+
+This is an uninhabited moon which is being placed into use by a race of
+unknown creatures under the apparent funding of Microsol.  It is still a
+breathtaking place to visit, though.
+
+~Dining:~
+
+Though the surface is totally uninhabitable and the atmosphere still consists
+of chlorine and acid, there is an ~Interstellar~ ~House~ of ~Gruel~ already
+located here.  While they haven't received a customer yet who survived the
+descent to the surface, they do have high hopes.  Featured on display in the
+dining hall are the withered remains of the customers who came but died on the
+way down.
+
+~Culture:~
+
+There is no real culture here, per se, but there are a number of military
+excursions here by the race who terraformed this planet.  As they don't happen
+to like gruel, nobody in the sector has met one of these creatures yet.
+
+~Entertainment:~
+
+Many a scientist comes here after retirement to watch all their fundamental
+mathematical theorems fall apart as they watch the landmasses floating in
+apparent defiance to their life's work.
+`
+
+dc_1_28_title=ARCHIVE DATA
+dc_1_28_header=Data
+dc_1_28_body=`Reference: Hot Dog Generators
+
+Following the dismantling of the ~Superspace Hot Dawg~ franchise (pushed
+out of the picture by the increasing popularity of ~International~ ~House~ of
+~Gruel~), a cache of top-secret rapid hot dog generators were discovered in
+a sold research warehouse on ~Camanis~.
+
+These generators were capable of synthesizing and elongating pork nodules at
+16ms each, vapor-cooking them within 2ms, and synthesizing the bun directly
+outside of the meat simulatneously.  ~SynthaMustard~ was then applied using
+high-speed ~mustard-jet~ apparatus.  In effect, within 20ms of placing the
+order a hot-dog simulacrum could be created and delivered out of the
+pressurized chamber to a waiting customer.  Most generators were equipped
+with as many as 20 simultaneous generation chambers.
+
+These were intended for very saturated markets and would have reduced costs
+over time by 50%.  In fact, experts speculate that if this ~Hot Dawg~ research
+had been completed a few minutes sooner, the takeover bid could have been
+averted and the company saved.
+
+However, this cruel twist of fate prompted a black-market for hot dog
+generators to feed luxury-class citizens and host international barbecues.
+In addition, at least one report claims that if the nozzles were tampered with
+these generators could be dangerous weapons in the wrong hands.
+`
+
+dc_1_29_title=Scenic guide to the universe: ~Gyges~
+dc_1_29_header=Guidebook
+dc_1_29_body=`  ~GYGES:~
+
+~Dining:~
+
+This planet is the home to the largest mass of organic creatures ever seen.
+What breeds down in the pits of the planet is unknown and unrecognizable, but
+can be purchased for a low price at ~Wobbo:~ ~Land~ ~O'~ ~Meat~.
+
+The ~crayball~ ~surprise~ is a most elegant delectible, served with fresh Zimbles
+or your choice of Tokkies.  Wobbo's fine assortment of Gyganian delicacies are
+not to be matched by any other proprietor on Gyges.  For parties, order an
+entire Garmon Platter.  The size of a large scout ship, this massive crustacean
+serves over 500 human-sized patrons!
+
+Vegetarians should avoid this planet at all costs, as the local creatures
+view such people as the lowest on the food chain.  As far as this planet is
+concerned, vegetarians are free game.  Many a hapless veggie has dared to
+avoid the local food and has been subsequently eaten.
+
+A common saying on Gyges:  "If you don't want to eat my friends, then I'll
+eat YOU!"
+
+~Culture:~
+
+Most of the slimy inhabitants of this weird place don't speak any sort of
+recognizable language.  For those who simply must take an excursion down below,
+bring a star destroyer along with you, or else some vegetarians to serve as
+bait.  If the denziens are not too hungry that day, you can probably slip by with
+only throwing a few vegetarians to the masses.  Just remember that you'll want
+to leave again.
+
+If you're fortunate enough to be allowed to visit the great Stomach to pay
+homage to him, you will find your stay well rewarded.  Only a few are allowed
+to visit this special creature, and he has it in his power to make those he
+trusts quite lucrative deals.  Authorities claim he is often in violation of
+intergalactic law with his enterprises, but so far none of the police have
+been able to arrest the entire planet.
+
+~Entertainment:~
+
+Gyges boasts some rather wonderfully seedy nightclubs and is only rivaled in
+despair and general piracy to Torm.  You can be sure if you visit this planet
+that it will open up a whole new world of fun and excitement.  Just make sure
+you sample the local food... or else.
+`
+
+dc_1_30_title=Latest Top Ten List from Eclipse Central
+dc_1_30_header=Music
+dc_1_30_body=`Here they are, starting at #10...
+
+  "~Droids~ ~Just~ ~Wanna~ ~Have~ ~Fun~" : Retro Pop
+
+Droids just wanna have fuh-un; oh oh oh; Droids just a-wanna have fuh-unnn.
+
+  "~If~ ~I~ ~Had~ ~a~ ~Blaster...~" : Religious
+
+If I had a blaster, I'd blaster in the morning, I'd blaster in the e-e-ev-ning...
+
+  "~Computer~ ~Generated~ ~Music~ ~#45592-2300-66A~" : CompuGen
+
+WoULD yoU Li~k~e to sI~N~G a SonG wIt~H~ me sUbJEc~T~ ~T~o bL~U~e CashEWs?
+
+  "~Six~ ~Planets~ ~to~ ~Twenty~" : Rock
+
+[Guitar solo]  There'll be six  [Guitar solo]  ~PLANETS~ to ~TWENTY~.  Yea,  [Guitar solo]  just six ~PLANETS~  [Guitar solo]  to ~TWENTY~!
+
+  "~If~ ~I~ ~was~ ~a~ ~Hamburger,~ ~I'd~ ~Eat~ ~Myself~" : Jazz
+
+Give me a minute.  I'm findin' some mu-stard.  Give me a minute.  I'm pumpin' some may-o.
+It's just me... and this seeded bu-un!  Just look at me now... Ham-bur-ger.
+
+  "~The~ ~4-Minute~ ~Quiet~" : Nothing
+
+  "~Mending~ ~Pumpkins~" : Classical
+
+  "~Logic~ ~Absorbtion~" : Rock
+
+[Screeching noise]  [More Screeching noise]  [Guitar solo]  [Screeching noise]
+
+  "~Sand~ ~by~ ~Me~" : Pop
+
+Sand by me; There's sand by me.  Oh, darling, darling, look at it!  There's sand, all a-round me.  Sand 'round me.  Sand 'r-ound me.  Sand 'round... me-e.
+
+And the most popular song out this solar hour:
+
+"~CliffTunes~" : Retro New-Wave
+
+Ten years.  Got some money.  Lost my mind.  Got more money.  Found a life but
+lost my rhythm.  Never saw... A paper orangutang.
+
+This is MiMi Jeff with Eclipse Central, signing off.
+`
+
+dc_1_31_title=Order of Zinglon
+dc_1_31_header=Decree
+dc_1_31_body=`By the order of Grand Moolah Yimbo, all main space-faring ships must conform
+to the Anti-Fruit Decree.
+
+~Anti-Fruit~ ~Decree~:
+
+Due to the blasphemous nature of alowing food products to float around endlessly
+in space, potentially disrupting the nature of Zinglon, any ship allowing
+fruit to escape from their ship after their destruction will be sent to
+the Great Buffet to give penance.
+
+What's more fruit-bearing weapons are also a direct violation of this form if
+they are not blessed by a priest wearing the brick-red robes of inedibility.
+
+Anyone with knowledge of someone who has violated these sacred rules must
+confess to the Order of Zinglon or else suffer a similar penance in the Great
+Waiting Room Above the Buffet.
+
+  Grand Moolah Yimbo
+
+  Order of Zinglon
+`
+
+dc_1_32_title=Order of Zinglon
+dc_1_32_header=Story
+dc_1_32_body=`It is written that in the days of 2-D holovision, there appeared an image to
+everyone in the universe.  That image was the ascention of our god, Zinglon.
+He gave us this image of his form so that we may look upon him and realize the
+great pain he felt so that we could live new lives, free from the negative
+aspects of life.
+
+Soon afterward, the prophet Monses received the eleven cubes of holy rules,
+the commandments by which all races must live in harmony.
+
+The greatest of these commandments is that ~All~ ~Life-Forms~ ~May~ ~Partake~
+~of~ ~the~ ~Wisdom~ ~of~ ~Zinglon~.  Every creature, big and small, is given
+the opportunity to save themselves from damnation by learning the writings of
+our order.
+
+Also important is the ~Right~ ~to~ ~Free~ ~Speech~ ~With~ ~Exceptions~.  That
+is, any person who follows the right of Zinglon may produce any material they
+see fit which does not mock the great one himself.  Those who do not follow
+the order may also produce any material they wish, though the order is free
+to wage Jihad against them.
+
+Another great advance in free rights is the ~Spiritual~ ~Right~ ~to~ ~Eat~
+~Crackers~.
+
+The rest are:
+
+The Law of the Order of Zinglon is final and absolute.
+
+All races must live in harmony or suffer the consequences.
+
+Objects whose quantity are eleven are spiritually divine.
+
+No race is allowed to totally destroy another, no matter what their crime.
+Anyone so doing must at least keep one of the target race in stasis under their
+own expense.
+
+No life form has the right to invoke the power of Zinglon within pagan idols.
+
+All life forms have the right to subsidized bus fare.
+
+All life forms have the right to subsidized education, as long as they are
+taught the rules of Zinglon and are bonded into slavery for life.
+
+No life form may be harmed by the order unless the order proves that they have
+not followed the above commandments.
+`
+
+dc_1_33_title=HOW TO PLAY
+dc_1_33_header=Game
+dc_1_33_body=`How to play the special ending game ~ZINGLON'S~ ~ALE~:
+
+In his quest to reach out into the limitless stretches of imagination, Zinglon
+discovered the magical means to create ale.  Now, though, ~Dai-Zan~ has stolen
+the holy casks of Zinglon and threatens to drink all the ale in the universe
+for himself.  You, a devout follower of Zinglon must not let this pass!  The
+fate of all the ale in the universe is in your hands.
+
+In this game, you must dodge wave after wave of bouncing enemies in an attempt
+to gather as much ale as possible.  While good dodging is important, you must
+also clear the screen of enemies completely before you will progress to the
+next level.  The game continues infinitely, though it will keep getting harder
+and harder.
+
+Enemies:
+
+~Ignatz~ : Twirling U-ship : 15 pts
+
+~Morble~ : Spinning O-ship : 20 pts
+
+~William~ : Black V-shaped ship : 20 pts
+
+~Clifts~ : Brown, round ship : 25 pts
+
+~Meeble~ : Grey mines : 50 pts
+
+~Deeble~ : Gold mines : 75 pts
+
+~Zeeblex~ : Blue mines : ???
+
+~Tyco~ : Little red bubble : 15+100 pts
+
+The ~Brussee~ ~Triangles~ : 50 pts
+
+~Zoglo~ : Glowing red ball : 10 pts
+
+~Dai-Zan~ ~Minion:~ ~The~ ~Alemaster~ : ??? : ??? pts
+
+The armor ship will still come down to help you if you are damaged.
+
+Extra lives are earned at 10000, 20000, and every 25000 pts thereafter.
+`
+
+dc_1_34_title=STRATEGY
+dc_1_34_header=Game
+dc_1_34_body=`Strategy Guide for ~ZINGLON'S~ ~ALE~: 
+
+This simplistic game can be deceptively difficult.  Don't allow yourself to
+be hypnotized by the endless streams of enemies!
+
+Level 1:  ~Panic~
+
+A quick wave of ships all attack you at once.  Grab the ale and blast them
+quickly.
+
+Level 2:  ~Mines~
+
+This is mostly a large group of mines which will attack you slowly.  Be sure
+to avoid the Zeeblex at all costs - it's indestructible!
+
+Level 3:  ~Hoppers~
+
+Two sets of Ignatz will attack you.  However, you will pick up two
+ale bottles here.
+
+Level 4:  ~Williams~
+
+Two sets of Williams attack, one right after another.  Take them out and grab
+both bottles of ale.
+
+Level 5:  ~Morble Wars~
+
+Dual Morble formations attack.  Four bottles.
+
+Level 6:  ~Bonus Round~
+
+Ale galore!  Watch out for the Zeeblex, though.
+
+Level 7-12: ~?????~
+
+Find out for yourself!  Note that this is an endless game here for your
+amusement only.
+
+There are no special moves available in this game.
+
+And, just to add a small challenge, my high score is 85600...
+`
+
+dc_1_35_title=REMINDER
+dc_1_35_header=Game
+dc_1_35_body=`You do not need to play this game to continue.  It is merely an extra game
+for your enjoyment.  If you want to continue with the normal game, simply
+select ~Give~ ~Up~ in the Next Level menu.
+
+Also, this game can not be played by two players and will only be available
+in the normal game mode.  It won't appear when playing arcade or other modes.
+
+Enjoy!
+`
+
+dc_1_36_title=GRUEL
+dc_1_36_header=Ad
+dc_1_36_body=`'Twas brillig and the slithey todes did wamble on to...
+
+~The~ ~Interstellar~ ~House~ ~of~ ~Gruel~
+
+Yes, friends.  It's all happening here in our Gruel!
+
+I'm Jacob Riitwiit, head of gruel research at ICBG - I Can't Believe it's
+Gruel.  We have worked long hours perfecting the greatest gruel recipe ever!
+
+Some of your ancestors may have walked in primitive huts, sampling this
+nutritious snack.  And, now, you can continue the tradition with:
+
+~Auntie~ ~Boglog's~ ~Swill-diddily-blugus~ ~Bars!~  We've taken the same great
+taste and tantalizing aroma and crammed it into these little bars.
+
+[Disgusting cartoon of gnomes singing and swimming around in a stump filled
+with gruel.]
+
+Slop it here,
+squish it there,
+it's all a lump of gruel.
+
+We like to eat this tasty snack
+and soon you wi-ill too!
+
+'Cause we're the gnomes of Cackle-Berry
+who make this tasty gruel.
+
+It's filling...
+nutritious...
+and hangs well on the wall.
+
+We..
+call...
+i----t...
+
+Swill-diddily-blugus Bars!
+
+Tasty with a heart!
+
+Swill-diddily-blugus Bars!
+
+Sealed in with a f---
+
+[Scene edited out.]
+
+So buy some today!
+`
+
+dc_1_37_title=COMPLAINT
+dc_1_37_header=Letter
+dc_1_37_body=`Dear Sirs:
+
+I would like to complain about your editing out of material you see as harmful
+and in bad taste.  In the last commercial, you took out the scene where the
+gnome
+
+[Letter edited out due to tasteless comment]
+
+Thank you for printing my point of view.
+
+Emperor Milktoe of Savara
+`
+
+dc_2_1_title=MISSION BRIEFING FLUX 0473
+dc_2_1_header=Javi
+dc_2_1_body=`Gencore Security Chief
+
+We have been monitoring some unusual freighter shipments between the derelict
+planet of Gyges and the capital planet of Torm. Both planets are marked on
+your Navigation Screen. Insight into these shipments may give us a clue to 
+the whereabouts of Microsol's base of operations. First, set course for Torm 
+and investigate. Then return to Deliani to report your findings and to await
+further instructions.
+
+You will be given a Gencore Hawk to fly for this mission and greater weapon
+clearance priority. Good luck!
+`
+
+dc_2_2_title=DELIANI TRANSMISSION FLUX 2894
+dc_2_2_header=Javi
+dc_2_2_body=`Some warnings about Torm. There are dragons there. Yes, dragons. These tree
+dragons enjoy feeding on metal and berillium ore of which your ship is
+built, so once awakened they'll munch you right out of the sky. The best 
+weapon against them is a fire or flame based weapon. 
+
+Also beware of space pirates who have made a number of secret bases there
+and can strike without warning. Their ships are usually camouflaged in shades
+of green and can be difficult to spot amongst Torm's thick jungles.
+`
+
+dc_2_3_title=TORM TRANSMISSION FLUX
+dc_2_3_header=Dougan
+dc_2_3_body=`Well, well, well. Looks like you've gotten yourself into too much trouble,
+as usual. Torm is no place to be investigating for Microsol shipments. 
+
+Hmm... perhaps the reason you've been tracked this far is because there was a
+homing device planted on your ship's undercarriage. Pretty high signal one,
+too. Don't worry. I removed it, but whoever has been sending you on these
+missions sounds like they have no idea what's going on. Microsol's activities
+are centered around Savara and the Stargate. I'd say you've been sent on a 
+wild goose chase. Have a word with that Javi Onukala you mentioned. Ask for 
+answers.
+`
+
+dc_2_4_title=DELIANI TRANSMISSION FLUX 02975
+dc_2_4_header=Javi
+dc_2_4_body=`I see you have investigated Torm without success. There HAS to be something
+there. 
+
+Homing device? I know nothing about that, but I will run an investigation.
+We can't have people trying to murder our agents. Now...
+
+I have been receiving reports from the Ixmucane sector that something 
+unusual is going on there. Your next mission will be to fly there and 
+investigate. Please select anything you like from our supply stocks.
+`
+
+dc_2_5_title=DELIANI TRANSMISSION FLUX 02976
+dc_2_5_header=Javi
+dc_2_5_body=`Beware on this mission of rebels from the Mendivian C sector, near Ixmucane.
+These are human pirates who are aiding the Hazudra forces there led by a
+faction leader named Reid. Be careful in there or they'll destroy you,
+thinking you are a Microsol scout.
+
+Microsol is attempting to gain control of the Hazudra territory there, thus
+the rebel forces. But they will make no exceptions when it comes to an 
+intruder.
+`
+
+dc_2_6_title=STARGATE TRANSMISSION FLUX 13619
+dc_2_6_header=???
+dc_2_6_body=`Your life is forfeit, human. We know of your plans to sweep the Tyrian
+sector and destroy all life. We are going to attack your fleet and obliterate
+your merciless ships until you are no longer a threat to us. Your only hope
+of escape is to call off the attack. Now.
+
+I will enjoy your destruction.
+`
+
+dc_2_7_title=DELIANI TRANSMISSION FLUX 23920
+dc_2_7_header=Javi
+dc_2_7_body=`We have been notified of a course change. You must immediately head for the
+Mendivian C sector and the home city of the rebel forces there. Obliterate
+them and return to us. They are threatening to overtake the sector. 
+
+Be careful, Trent. You'll need all the firepower you can get.
+`
+
+dc_2_8_title=ASTEROID CITY TRANSMISSION 37238
+dc_2_8_header=Reid
+dc_2_8_body=`I am Reid, head of the rebel Mendivian and Anti Microsol league. We do not
+know why you have attacked. I would like an explanation.
+
+What?? WE are not the ones planning an attack against the sector for total
+domination. It is Microsol, stationed in Savara and ready to launch within 
+the next 10 days! You have been tricked! Apparently you were decieved by 
+Javi, who is a Hazudra traitor. He was stolen at birth and placed under 
+holographic mind control by Microsol. The most we have been able to uncover 
+about him is that he is apparently an infiltrator into Gencore Tech Alliance. 
+You MUST return to Deliani and stop him! He is probably the means for Microsol 
+to overthrow Gencore. 
+
+Quickly.. restock your ship and head for Deliani before Javi has another
+chance to signal Microsol for the start of the attack!
+
+You may be able to reach them before they form a strategic defense.
+`
+
+dc_2_9_title=DELIANI TRANSMISSION FLUX 83278
+dc_2_9_header=Javi
+dc_2_9_body=`I see you have discovered the truth. I was going to use you as a scout
+for the fleet before I had your brain scanned for knowledge of the Gravitium. 
+Well, no matter. You have served your purpose. Our scientists have uncovered 
+its secrets and installed new engines into our fleet ships, giving them far 
+more power to distribute to the weapon banks. The invasion will begin soon 
+and you will have only a few precious days left before we execute you. You are 
+being sent by tractor beam to the Impound Station at Gryphon, a little known
+and desolate edge of the sector where you will be unable to help your friends
+in the Asteroid City. Enjoy your last hours, Trent.
+`
+
+dc_2_10_title=TRANSMISSION SOURCE: MagVend 004-55506W
+dc_2_10_header=MagVend
+dc_2_10_body=`Congratulations, Mr. Trent Hawkins
+
+MagVend 004-55506 is proud to congratulate our first-place winner in our
+grand sweepstakes.
+
+However, since you haven't ordered anything recently and you're currently
+wanted for galactic treason, we've demoted you to third-place to avoid bad
+publicity.
+
+To collect your winnings, type in the secret code:
+
+FILE0001 LOOT
+
+After the word LOOT, type in ALT-254 to acknowledge the secret code and press
+enter.  We regret that you cannot transmit this code over modem/network due
+to its top-secret nature.
+
+MagVend 004-55506B thanks you for your patronage.
+`
+
+dc_2_11_title=ARCHIVE DATA
+dc_2_11_header=Data
+dc_2_11_body=`Reference: The Not-so-Great Gryphon Explosion
+
+While under the leadership of General Zinglon, station commander at Gryphon,
+a group of scientists excavated what is now called planet Gyges, after the
+late Doctor of Metacology, Gyges Phildren.  It is believed they excavated a
+number of artifacts and devices which were then transferred to the secret
+research station, Gryphon.
+
+Full details were never released, but it is known that Gyges was conducting
+some unorthodox research into the abnormal meta-physical energy invoved in the
+firing of a secret weapon nicknamed the Zica Flamethrower.  He apparently
+removed the outer casing of the device.  This mistake cost him his life and
+the lives of over twelve thousand crewmembers serving in that section of the
+station at the time.  Sections of the station are still missing, since it was
+deemed too expensive and inefficient to repair the damaged sections than build
+newer, better designed sections.
+
+Incidentally, General Zinglon is believed to have been demonstrating a new matter
+transporter at the time of the explosion, but never arrived at his destination.
+A surge of energy occured as the fusion generator near the research section
+exploded.  The transporter was linked to that generator since it required
+additional power to function than was available with the standard reactors.
+
+At that same time, billions of people reported seeing an image remarkably like
+his on their vidscreens.  This in turn produced a fanatical faction of divine
+seekers, frustrated with their attempts to convince people that circular
+shapes should be worshipped as gods.  They called themselves the Cult of
+Zinglon and now work in secret to bring Zinglon, "Master of All", back from
+whatever dimension his molecules were scattered to.
+
+See Tunnel World, Zica
+    Weapons Research, Station Gryphon
+    Zica Flamethrower
+`
+
+dc_2_12_title=GRYPHON TRANSMISSION FLUX 02333
+dc_2_12_header=Vykromod
+dc_2_12_body=`Who do you think you are, you insignificant scum?  Do you know what lies in
+store for you here?  The entire Gryphon fleet is mobilized and ready to attack.
+
+Only one pirate has ever made it past our defenses.  We killed him one month
+later.
+
+
+Playtime will not be interrupted by the likes of you.
+`
+
+dc_3_1_title=ASTEROID CITY FLUX 53861
+dc_3_1_header=Reid
+dc_3_1_body=`We have finally been able to get through! Javi was jamming our transmissions
+for some time. I grieve for the loss of your parents, Trent. I learned of
+their death only hours ago. And at the same time I read of your imprisonment
+by Javi. It is up to you to help us stop the Microsol fleet from using the
+Gravitium. You must fly to the Microsol base planet of Ixmucane and give us
+information on fleet strength before we can marshall our forces. How many
+ships, weapons, defensive capabilities, everything. Then route the information
+to us via a Link Flux. We will be waiting, and good luck to you.
+`
+
+dc_3_2_title=STATION GRYPHON FLUX 73725
+dc_3_2_header=Captain
+dc_3_2_body=`We have monitored your escape, Hawkins. You won't get far. I have notified
+The Microsol patrol nearby and they are on an intercept course to pick you
+up. You could make it easier for me by waiting where you are, because I have
+given them orders to destroy you if you show resistance.
+`
+
+dc_3_3_title=ASTEROID CITY FLUX 53862
+dc_3_3_header=Reid
+dc_3_3_body=`A word of warning when maneuvering through the caverns of Ixmucane. You must be
+wary of the sawblades that Microsol installed as a security measure. If I
+remember correctly, the sawblades are believed developed or at least stored
+at station Gryphon. The more advanced models can be nearly indestructible.
+Also huge slabs of rock can be torn from the walls and hurled at your ship
+using the power of the Gravitium. Beware.
+`
+
+dc_3_4_title=DELIANI FLUX 23672
+dc_3_4_header=Vykromod
+dc_3_4_body=`So... you think you can outsmart a corporation whose size you cannot even
+possibly imagine? You are the biggest fool I have ever seen. Turn back
+now while you have the chance. You will never find the fleet's secret base, 
+and soon we will emerge and crush you into pulp if you remain here. 
+Leave now.
+`
+
+dc_3_5_title=ASTEROID CITY FLUX 53863
+dc_3_5_header=Reid
+dc_3_5_body=`Trent! Flee to Stargate sector immediately!! Have detected a large sqadron
+apprxxme.
+
+
+<Copmputer Log: ~Transmission~ ~end~.>
+`
+
+dc_3_6_title=STARGATE TRANSMISSION FLUX 0178205
+dc_3_6_header=???
+dc_3_6_body=`We see that you are not a part of the hideous mass that threatens the sector.
+But it is not safe for you to be here. You must go to Camanis, the ice world, 
+where we can supply you with weapons that can utterly destroy the fleet of
+Microsol. We cannot emerge into the sector with our race because Microsol
+has closed the Stargate now. It is up to you now, human. For the life of
+millions, you must stop that fleet.
+`
+
+dc_3_7_title=CAMANIS TRANSMISSION FLUX 001
+dc_3_7_header=Beppo
+dc_3_7_body=`Hey, there, friend. I see you've met up wid a few of me pals on Torm, yes?
+We pirates are good. I work for the outworlders and they have told me to 
+give you lotsa weapons for your ship. Just step aside and I'll install 
+the ones you want. You pilots are good. Weapons are good. Freedom is good!
+After this battle, we can go snow jumping. Waddaya say?
+`
+
+dc_3_8_title=SUBSPACE TRANSMISSION FLUX 002
+dc_3_8_header=Vykromod
+dc_3_8_body=`We have tracked you. You are now within our grasp. Prepare to meet your
+death, Trent Hawkins. You have caused Microsol enough trouble. 
+
+This is not an idle threat, idiot. You WILL die.
+`
+
+dc_3_9_title=TYRIAN TRANSMISSION FLUX 01282
+dc_3_9_header=Borogar
+dc_3_9_body=`Trent Hawkins, congratulations! You've won the game! But it's not over yet...
+
+Tyrian X awaits you! You must once again fly into the world where you started
+this whole shebang and fight off incessant waves of enemies! We
+thought you'd be interested in another shot at the title. Have fun! Heh...
+heh, heh...
+`
+
+dc_3_10_title=ARCHIVE DATA
+dc_3_10_header=Data
+dc_3_10_body=`Reference: Zica SuperCharger
+
+This is a modular adaptation of the Gencore Zica SuperLaser.  It is supposed to
+use an original Zica laser core instead of the larger, power drawing model
+re-engineered by Gencore.  The technology behind the Zica Laser is not well
+understood, which is why duplicates of the model are not as powerful as the
+original model.
+`
+
+dc_3_11_title=ARCHIVE DATA
+dc_3_11_header=Data
+dc_3_11_body=`Reference: Stargate
+
+Summary:
+Stargates are big distortions in space.  There's one here in episode 3.
+Enjoy your stay.
+
+Stargates are believed to be some sort of rift created by a massive black hole.
+While this theory holds up among science fiction writers, the actual phenomenon
+behind the stargate is unknown.  It has been suggested that these are portions
+of space created in the big bang which formed the universe.
+
+It is believed that time is the "fourth dimension" so therefore it may have
+quantity and react in the same way as other phenomena.  The Stargate in our
+quadrant appears to either distort time or space, perhaps both.  The few ships
+that have explored the Stargate and returned reported massive changes in
+location.  So massive are these apparent changes that no recognizable
+constellations have ever been found in any direction from the captains who
+have passed through.
+
+Therefore, there is either a tremendous shift in location or time to produce
+such unexpected results.  No ship so far has spent enough time through the
+Stargate to determine what the actual result is.  This problem is compounded
+by the fact that independent ship captains have reported arriving in different
+locations, suggesting the Stargate's destination is not fixed.
+
+It has been suggested that if you travel through the stargate to
+reverse course immediately and head back!
+`
+
+dc_3_12_title=CAMANIS TRANSMISSION FLUX 0178205
+dc_3_12_header=???
+dc_3_12_body=`You know that everything is doomed, don't you?
+
+I wish I had never gotten into this mess.
+
+Well, anyway, let's talk about hot dogs!
+
+You know, the kind of hot dog that used to be generated at holo-cricket games.
+Now THAT was a hot dog.  I could use one of those right now.
+
+If you get a chance to swing by Ixmucane again, why don't you pick up one for me?
+
+Your pal, Nanol.
+`
+
+dc_3_13_title=ANONYMOUS TRANSMISSION
+dc_3_13_header=Anonymous
+dc_3_13_body=`The Perils of Space-Fruit:
+
+What in the universe is all this fruit doing flying around in outer-space?
+It has long been the practice of ship captains to destroy other ships and
+collect their protected food stores as a trophy, since most other matter is
+generally incinerated.
+
+So why do we do it?  What makes some sentient life so insensible to pain and
+suffering that we think picking up our victim's last meal is some sort of
+great feat of skill?  It may seem humourous to you, gentle readers, to see
+flying mugs of ale, spinning oranges, and hurtling strawberries, but I see
+the remains of the dead, the unfortunate souls whose lives were lost without
+the benefit of scarfing down that last bit of replicated food.
+
+I beseech thee, gentle reader, to think twice before reveling in such victory.
+Where will this madness end?  Trade values measured in fruit to replace
+coins and gems?  Perhaps someone will develop weapons of mass food destruction,
+allowing you to hurtle foodstuffs at unwary victims.  No!  This cannot be
+allowed to happen!  Pray to Zinglon that he will free us from this vile threat!
+
+Paid for by the benevolent members of the church of Zinglon.
+`
+
+dc_3_14_title=ARCHIVE DATA
+dc_3_14_header=Data
+dc_3_14_body=`Reference: Mega SoundChair
+
+Sensors on your ship pick up the minute disturbances caused by sound-waves
+acting on the very fine particle streams in space, then amplify and filter the identified distortions which are
+then sent to your Mega SoundChair for playback.  This is a consumer product which has been found to
+alleviate stress and panic in untrained pilots who began invading space with their own Star Yachts a
+number of years ago.  It was found that when placed into silence, people would turn to music to alleviate
+the dread (and subsequent insanity) caused by being alone in space and unable to hear anything.  This remedy
+was insufficient, however, since the music had several adverse side effects:  It didn't make sense to the
+mind when you're watching meteors and other objects hurtling by, consumers couldn't hear messages
+broadcast to them, and people would get so wrapped up in the music they'd relax and wouldn't watch
+where they were going.  This was an especially bad problem in the time before Automatic Guidance and
+Proximity Warning systems were refined.  So, they decided to amplify what little sound was out there and
+solve the problem of the unending silence panic before there were no more Star Yachts to go around.
+`
+
+dc_3_15_title=SUBSPACE TRANSMISSION FLUX 410
+dc_3_15_header=Vykromod
+dc_3_15_body=`Aw, geez.  Now you've gone and destroyed my home planet.
+
+Did you ever wonder why I carry a purple cloak?
+
+HAHAHAHAHAHAHAHA!  Now, I will have my revenge!
+
+The name of this game isn't Tyrian!  You've spelled it incorrectly, Trent
+Hawkins!  The universe will know of your pitiful mistake and I will rule
+again!
+`
+
+dc_3_16_title=DELIANI TRANSMISSION FLUX 263
+dc_3_16_header=Beppo
+dc_3_16_body=`Top o' the morning, wee laddie.
+
+I be the clone of that nasty old pirate.  The scourge of Torm, I be called.
+
+I found it, Trent!  Be it that I did, and did it at that.  The wondrous
+Prototype Stalker.  If you can make it past Savara, I might consider giving
+it up to you.  For a price...
+
+This baby has it all.  Someday you may even learn to use the top-secret
+post-it mine sprayer.
+
+Well, I be off now. Arrrrr!
+`
+
+dc_3_17_title=DELIANI EMPORIUM DATAFLUX
+dc_3_17_header=Ad
+dc_3_17_body=`Now that the game is almost over, Hank has finally gotten out of jail for
+USP fraud!  And now, he's gone crazy!
+
+He's hired Beppo's clone to scour the seven sectors and steal whatever goods
+he can from the wreckage Trent Hawkins has strewn across the galaxy.  And ya
+know what?  He's found it all!
+
+Zica Lasers, Constant Lasers, Lightning Blasts, Protron Cannons, Missile
+Launchers, 8-Way Microbombs, Side Ships, and much, much more.  Also, rumor
+has it that Beppo's got the new Microsol Fighter, but he's not tellin' unless
+you've got the cash.
+
+So come on down right now while anarchy lasts!
+`
+
+dc_3_18_title=Top Secret: Gravitron Pulse-Wave
+dc_3_18_header=ARCHIVE DATA
+dc_3_18_body=`The gravitron Pulse-Wave is the ultimate in power system technology.
+This is based on the Tyrian research project.  Not commonly known is that
+the Gryphon Explosion was caused by a Gravitron drive being connected to
+a Zica Flamethrower system.  This produced a 10 AEU [astral explosion
+units] shock which destroyed much of the station.  Therefore, use of this
+drive is not suggested in open combat.
+
+The Harbringer Plasma system was designed for the invisible ship
+Illuminator.  The ship will be deployed at the rear of the main Microsol
+fleet in our final assault.  Failure in the mission in any way will
+result in the ship breaking off from combat.
+
+<Archive note: Further details on the Illuminator are Class-16 and available
+ only to Vykromod-level access.>
+
+The Illuminati is being defended by a secondary battleship platform, which
+is also classified.  It's job is to set up a mine defense barrier while
+the Illuminator acts from a safe position.  Should the secondary platform
+be destroyed, the Illuminator will break off the attack.
+
+This energy system is highly confidential and is not to be released into
+general distribution.  Any Microsol ship is authorized to self-destruct
+using the F2+F3+F4 code.  After vaporizing their armor with the code, pilots
+are recommended to crash their ship in an uncharted location if possible.
+`
+
+dc_3_19_title=INCOMING TRANSMISSION from Magnatower Center
+dc_3_19_header=Transon
+dc_3_19_body=`Now look Trent Hawkins: I am sick and tired of you blowing our Z-29
+Central Defense Ship to bits!
+
+Take your stupid war somewhere else and stop destroying our defense fleet!
+
+I don't care if your family WAS killed down here!
+If you ever return to Savara, I'm going to call out a planetary alert and
+send the entire sector after your ship!  
+
+So, GO AWAY!
+`
+
+dc_3_20_title=DELIANI TRANSMISSION FLUX 83278
+dc_3_20_header=Javi
+dc_3_20_body=`Hello, Trent.  I received word from a rather irate Transon Lohk that you'd
+be headed this way.
+
+The Illuminator is safely tucked away where you won't find it.  I'll give
+you a hint.  It's not on Deliani.
+
+But I am.
+
+I have the defenses of the entire planet waiting to move down on you and take
+you out.
+
+Enjoy your stay, Trent.  If you're reading this message, I know you've
+hacked into our defense net.  If not...
+`
+
+dc_3_21_title=DELIANI TRANSMISSION FLUX 83278
+dc_3_21_header=Javi
+dc_3_21_body=`Oh, by the way.  Nice job you did for us back at Ixmucane.  We would have lost
+a number of ships from the modified Zica weapons being tested there.
+
+Didn't know about that, huh?  Too bad, no-one can help you now.
+`
+
+dc_4_4_title=IXMUCANE - PRIVATE LINK
+dc_4_4_header=Tech
+dc_4_4_body=`Tightbeam private coded message.
+Forwarded by Downstar at unknown link.
+Attached message included as second data message.
+
+Decoded transmission follows:
+
+This is ~Harble~ ~Wom~ at the ~Microsol~ planet ~Ixmucane~.  This is a ~Downstar~
+emergency request by ~Downstar~ agent ID ~00329~, Tech ~IX9204~.  I am patched into
+a secure net and cannot explain fully.
+
+Through collaborating with other Techs, I have learned that ~Microsol~ has
+unlocked some of the ~Zica~ command codes.  The SCIs have activated the
+ancient computer system!  Temperature is 103 degrees here in the service bay and
+rising.  Men are complaining but being turned away by the guards.  I fear
+that only armed conflict will prevent our massacre.  Several Techs are reported
+missing and we fear they were killed for trying to escape.
+
+I think...
+
+I think they're going to turn this planet into a sun.
+
+GET ME OUT OF HERE!
+
+I DON'T WANT TO BE CAUGHT OUT IN THE MIDDLE OF THIS PLANET WHEN THEY TURN IT
+INTO A SUN!!!!
+
+~SEND~ ~SOMEONE~ ~OUT~ ~NOW~ ~YOU~ ~STUPID~
+
+[End of File]
+`
+
+dc_4_5_title=INCOMING TRANSMISSION from Gencore Command Ship IcoStar II
+dc_4_5_header=Transon
+dc_4_5_body=`You've probably read the message before this one, Trent.  I don't need to
+tell you that this is a problem, and it means doom.
+
+I know I am a boring old man and I dragged you back across the galaxy against
+your own will, but please hear me out.
+
+I am placed in the regrettible position of having to try and stop this
+insanity.  I hope ~Harble~ was wrong, but this is an alien technology more
+advanced than our own.
+
+~Gencore~ believes that if ~Microsol~ can reactivate the computer systems, they
+will have a limitless power source and would certainly monopolize the energy
+trade.
+
+As regrettible as it would be, if that was all it was I would reluctantly have to
+allow them to activate the planet and keep their energy.  We could
+still fight them economically from other directions.  The problem is that
+there's a vast number of scientists and technicians from independent
+governments and education centers stationed on ~Ixmucane~ via the universal ~Free~
+~Education~ ~Act~.  At last count, there were about ~1.5~ ~million~ of the brightest
+minds in the universe centered on ~Ixmucane~.  Now, there's a giant military
+fleet flying around inside that blasted rock which has prevented nearly
+everyone from escaping!
+
+If they turn that rock into a sun, it will mean a scientific setback that will last for
+millenia!  We have much of the information, but few outside the ~Free~ ~Education~
+system have the ability to comprehend and utilize it.  While we're busy
+relearning all that has been lost, ~Microsol~ will undoubtedly push ahead and
+take over the rest of the colonized universe.
+
+I can't let that happen, under any cost.
+
+We, along with several other major corporations, have assembled an ~emergency~
+~fleet~ which will converge on ~Ixmucane~.
+
+Yes, Trent, you are part of the ~emergency~ ~fleet~.  During your last maintenance
+run, we planted some false programming into your computer banks.  After you
+receive my coded message, your viewscreen will be correctly reactivated.
+That vacation you were planning will just have to wait.  Glad to have you with
+us.
+
+We're counting on you to slow them down long enough for us to free the
+trapped people.  If they activate the planet, we'll somehow make sure they can't use
+it.
+
+And Trent... I don't know if you'll accept this, but I'm sorry.
+`
+
+dc_4_6_title=INCOMING TRANSMISSION from Gencore Command Ship IcoStar II
+dc_4_6_header=Transon
+dc_4_6_body=`Recorded VidCom - GT 29:21
+
+I wasn't sure if I was going to hear from you again, but you cleared out
+enough of the surface ships for us to break through and start rescuing the
+people trapped on the upper sections of the planet.
+
+We need more time, Trent.  The temperature is rising even on the surface now,
+and it's a matter of minutes before it's deadly.  You've got to fly
+down into the planet and distract whatever's in the core.  We've destroyed enough of their
+jamming beacons to scan the interior of the planet and have located a central
+shaft leading deep into the planet.  The coordinates were downloaded into
+your computer with this message.
+
+Good luck.  We'll try to save as many as possible before the planet goes.
+
+Further communications won't be possible from me, but there's some friendly groups in
+the lower sections who have seized control.  They will probably try to contact
+you and may be able to provide assistance.  A robot service vehicle has been
+despatched to follow you down.  It's all we can spare.
+
+We're all depending on you to distract them.  Do what you must.
+
+Transon Lohk
+`
+
+dc_4_7_title=IXMUCANE - PRIVATE LINK
+dc_4_7_header=Tech
+dc_4_7_body=`Tightbeam private coded message.
+Originating from Ixmucane internal section 12-9-4.
+
+This is Tech ~Harble~ ~Wom~ from level 12.  We have freed this section from
+Microsol control and have monitored your incoming ship.
+
+You appear to be piloting a neutral freemarket scout-class starship.  Are you
+here to help?  Did ~Downstar~ send you?
+
+We are trapped here in level 12 by a security lockout and can't break through
+the blast-shielding.
+
+Look, whoever you are, we're in a tight spot.  There's no time left for us to
+escape - the defense drones are inaccessible to these computer systems and
+none of us can override the security codes.  You gotta help us out. There's
+thousands of us trapped here in the middle of this rock.  We've got some
+sensors working and know that someone's up there evacuating the population,
+but there's no time.
+
+This planet is going to vaporize in about 30 minutes, maybe an hour.  There's
+more of us trapped down below somewhere closer to the core and they can't
+get out either.  There's just no way you're gonna reach us down here.
+
+~Microsol's~ activated some old Zica system down there near the core, and it's
+raising the temperature something fierce.  You've got to take it out fast or
+we'll never make it!
+
+No time!  Just continue down that tunnel!  There's something massive down
+there burning a hole through the planet!  We sent another data cube with a
+sensor report of the core.  I hope you got it!
+
+For the love of Zinglon, save us!
+`
+
+dc_4_8_title=ARCHIVE DATA
+dc_4_8_header=Data
+dc_4_8_body=`Reference: Ixmucane Core sensor report
+
+Sensor arrays have detected 3 main types of anomalous readings.
+
+1 - Unknown Zica defense systems.  Most defense systems are radiating large
+amounts of infrared energy and are probably thermal based.  An unknown energy
+force appears to be directing the thermal energy flow.
+
+2 - Crystalline Ore.  A highly volatile, energy-rich crystal ore has been
+detected in this area.  Dralictite and Morenzinum are indicated in fairly
+high quantities near the center.
+
+3 - Large Unknown Energy Source.  A central energy source is producing unknown
+levels of heat energy.  This source is a critical threat and your heat
+shielding will last for approximately 30 seconds in contact with the device.
+You will have approximately 10 seconds to destroy the source when within
+critical range.
+`
+
+dc_4_9_title=IXMUCANE - PRIVATE LINK
+dc_4_9_header=Captain
+dc_4_9_body=`Tightbeam private coded message.
+Originating from Ixmucane internal section 1-1-1.
+
+Who are you?  Don't I recognize you?
+
+No matter.  This planet is going to be vaporized, intruder.  There's no hope
+for you to reach the core in time to destroy it.
+
+Leave now, whoever you are.  This is not your affair.  I'd kill you myself,
+but I'm not stupid enough to stay behind and die.
+
+
+~Captain~ ~Nob~
+
+~Ixmucane~ Task Force ~Alpha~
+`
+
+dc_4_10_title=ARCHIVE DATA
+dc_4_10_header=Data
+dc_4_10_body=`Reference: People Pretzel Dough
+
+According to a disturbing interstellar transmission, a distant planet reports
+that people are being turned into ~People Pretzel Dough~.  Reports are
+unconfirmed what exactly that is, but scientists believe it's pretty tasty.
+
+Any interested research party is instructed to locate Pretzel Pete for more
+information.
+`
+
+dc_4_11_title=ARCHIVE DATA
+dc_4_11_header=Data
+dc_4_11_body=`Reference: Sonic Cannon
+
+Rated: ~Not~ ~Funny~
+
+The sonic cannon weapon creates a minute gravitational center using FPP (Forced Particle Packing
+technology) which allows a particle field to remain intact.  The gravitational center is destabilized with a
+hyper flux modulator before being released from the weapon.  The destabilized gravitational core
+modulates at a fixed frequency which is fast enough to create a shimmering field in the optical range
+around green.  The frequency generator uses a system of sound wave generators to help modulate the
+frequency for the maximum particle dispersal and energy so far possible - hence the damage from the
+weapon is caused by the sonic modulators before the weapon is fired.
+`
+
+dc_4_12_title=ARCHIVE DATA
+dc_4_12_header=Data
+dc_4_12_body=`Reference: Zica Flamethrower
+
+This weapon was found during an excavation of an ancient tunnel-world apparently
+build by these strange space-inhabiting creatures.  It is believed the Zica were
+not air-breathers but subsisted mostly on thermal radiation and various
+liquids for survival.
+
+We believe this had a profound impact on their technological development,
+since they appear to have developed tools and devices to manipulate and take
+advantage of thermal and other radiation-based energies.  Their mastery of
+thermal energy appears to have led to the development of this unique null-space
+flamethrower.
+
+What little information which has leaked out of Station Gryphon, where the only
+remaining samples of this device are stored, indicates the weapon uses an
+energy-based particle field to generate the flame without any external air
+or energy source.
+
+Even this limited information would not have been available if it wasn't for
+the unfortunate accident which apparently occured when a researcher removed
+the outer covering to study the interior.  A large section of the left-rear
+portion of Station Gryphon is still missing to this day, a testimony to those
+who would fool with something they do not understand.
+
+See The Not-so-Great Gryphon Explosion
+
+    Tunnel Worlds, Zica
+
+    Pirate Activity, Gryphon Sector
+
+    Weapons Research, Station Gryphon
+
+    Zica Laser Weapon
+`
+
+dc_4_13_title=ARCHIVE DATA
+dc_4_13_header=Data
+dc_4_13_body=`Reference: Pirate Activity, Gryphon Sector
+
+Rated: ~Not~ ~Funny~
+
+Gryphon Sector is the main secret weapons research center for Microsol.
+It was long rumored to be an ordinary military station, but since the
+Not-so-Great Gryphon Explosion, Microsol has decided to let it remain in
+public knowledge.  In fact, once a year, they invite members of competing
+industries to the Station to view how far behind they are in comparison to
+Microsol.
+
+Still, the station has had it's share of hardships.  Many pirates of both
+the Mikal and Patrok clans have long looked upon it as the pinnacle of their
+career if they can infiltrate the station's defenses and land a raiding party
+within the research section, then return with something from their weapons
+labs.  Most never even make it to the station, destroyed by the dreaded Pong
+ships.
+
+One retired pirate of the Patrok clan, one ShipMaster Carlos, wrote a book
+detailing highlights of his extensive career.  One of which was the
+infiltration and removal of a weapon now commonly referred to as the Zica
+Laser Cannon.  He is believed to have been assassinated the next day, but
+they were too late to stop Gencore from transmitting his book over Fluxnet.
+In addition, his ship was never found, though it is believed to have been
+equipped with the Zica Laser.  Two months later, Gencore finished development
+of a device also called the Zica Laser.
+
+See The Not-so-Great Gryphon Explosion
+
+    Weapons Research, Station Gryphon
+
+    Zica Laser Weapon
+`
+
+dc_4_14_title=ARCHIVE DATA
+dc_4_14_header=Data
+dc_4_14_body=`Reference: Zica Laser Weapon
+
+Rated: ~Not~ ~Funny~
+
+The Zica Laser Weapon was introduced by Gencore after several years of
+successful introduction of Zica products by Microsol.  It is still unknown
+why so many of these products were named after the Zica, an ancient race
+which used to inhabit Gyges, among other tunnel worlds.  However, it is
+possible that some of these devices are not simply part of the marketing
+frenzy but are actually unique technologies from Gyges.
+
+This weapon is the most likely to be linked to the Gyges excavation, though
+oddly enough, Gencore was not involved in the archaeological research.  Still,
+the weapon generates forced laser bursts which independent scientists have
+not been able to fully explain.  Laser effects are well known for the blue
+range of light, but the forced pulse patterns are totally unreasonable.
+
+The only answer that has been given so far is that there may be some unknown
+energy working to distort the laser.  Research is still being conducted on
+the effects and reactions of the energy, though little has been accomplished.
+
+See Tunnel World, Zica
+`
+
+dc_4_15_title=ARCHIVE DATA
+dc_4_15_header=Data
+dc_4_15_body=`Reference: Tunnel World, Zica
+
+~Ixmucane~ is the only known tunnel world to have been excavated.  Even though the
+~Zica~ had apparently been dead for 421965032 standard years, 14 days, and 32
+minutes (~SCI~ estimation), their internal defenses were still partially active and destroyed
+many ships who came to investigate the tunnel world.
+
+~Microsol~ launched a giant excavation of the planet, equipped with powerful
+destroyers as well as research vessels.  Even still, 241 died trying to stop
+the defensive systems.  ~General~ ~Zinglon~ reportedly sacrificed ships to get
+through to the control centers, rather than allow the defensive weapons to be
+destroyed.
+
+To this day, the tunnel world is a center of ~Microsol~ activity.  Its open
+tunnels allow for easy shipbuilding and mining of mineral deposits, as well
+as the powerful geothermal energy radiation near the core.  Scientists, however,
+are still not certain of the exact second that the last member of the ~Zica~
+race on ~Gyges~ died, but believe it is about 25 additional seconds from their
+previous estimate (calculated from their exact time of arrival for final excavation).
+
+Researchers quote advances in dating techniques to determine more accurately
+the events on ~Gyges~.  Also, they claim the fact that many of their
+researchers are still being killed by accidents involving the alien technology
+hampers their ability to conduct more tests.
+
+One anonymous ~SCI~ has reported that the advances in dating technology here were worth the lives expended to
+reach the core.  In a tightbeam interview he said, "This timing solution will be the crowning moment in my
+career.  It's the most important goal to us.  The ~Sun~ ~Project~ is entirely
+overrated".
+`
+
+dc_4_16_title=ARCHIVE DATA
+dc_4_16_header=Data
+dc_4_16_body=`Reference: Weapons Research, Station Gryphon
+
+Rated: ~Not~ ~Funny~
+
+~Station~ ~Gryphon~ has recently been the main output of ~Microsol's~ advanced
+weapon design program.  They have released a number of high powered weapon
+systems, including several advancements on their ~Pulse~ ~Cannon~ systems, and
+their unique ~Starburst~ defense field.
+
+After the ~Not-so-Great~ ~Gryphon~ ~Explosion~, some aspects of their research were
+turned over to public scrutiny, believed to be because of investigations by
+families and friends of the twelve thousand crew members that died.  It is
+now rumored that they have just developed a new field of weapons technology
+which will allow them to build much bigger weapons onto conventional battle
+cruisers.
+
+See The Not-so-Great Gryphon Explosion
+`
+
+dc_4_17_title=INCOMING TRANSMISSION from Gencore Command Ship IcoStar II
+dc_4_17_header=Transon
+dc_4_17_body=`~Trent!~  We've picked up a giant energy buildup in your area!  It seems the
+planet conversion has started!
+
+We've only been able to retrieve about 9000 people so far, but we must
+disengage to prevent our own destruction.  What's going on down there?
+
+We can't read you very well, but we're sending down the coordinates of a
+tunnel which should provide you with an escape route.
+
+I know you did your best, Trent.
+
+I...
+
+I wish we could have saved them all.
+
+Trent...
+
+Did you hear from ~Harble~?  He was an agent of ours somewhere down there.
+I'm sure he's dead now, but I hope he was able to help you.  We received a
+final transmission from him after we knocked out the last of the jamming
+beacons.
+
+He said:
+"Whoever you are... um...
+Thanks anyway.  ~AAAAUUUGGGHHH!~  ~THE~ ~CONTROL~ ~PANEL'S~ ~ON~ ~FIRE!~"
+
+Nothing left to do, Trent.  Get out of there before the place explodes!
+`
+
+dc_4_18_title=INCOMING TRANSMISSION from Gencore Command Ship IcoStar II
+dc_4_18_header=Transon
+dc_4_18_body=`You did it!
+
+The energy source we detected is fading fast and the temperature is dropping
+back to normal.
+
+Actually, we have a new problem.
+
+The temperature is falling so fast, you must have blown up the central
+energy source for the core.  We estimate the planet is going to freeze in
+about 6 hours.  We will continue the relief efforts, but there's a number of
+people trapped on the lower levels we'll never reach.
+
+Also, Trent, we received a transmission from ~Harble~ ~Wom~, a Gencore agent
+we've got stashed down there.  Seems he detected your ship and tried to send
+some sensor data your way.  Try and contact him if you need help.  He's
+trapped in level 12.
+
+It's the best we can hope for.  There's nothing else you can do down there.
+We sent the coordinates of a probable escape tunnel for you to use.
+Try and get yourself out of there in one piece, will you?  I don't need
+another corpse on my conscience.
+`
+
+dc_4_19_title=IXMUCANE - PRIVATE LINK
+dc_4_19_header=Captain
+dc_4_19_body=`Tightbeam private coded message.
+Originating from Ixmucane internal section [unknown].
+
+What in the name of the 29 hells of ~Dai-Zan~ are you doing here?
+
+How did you find our null-shielded ship?!  We've got the most sophisticated
+equipment in the universe down here!  It cost a lot of money.  Now I'll have
+to kill that dealer on Savara...
+
+I'm not about to give up my life to some pitiful scout pilot like you!  Come
+and attack me if you dare.
+`
+
+dc_4_20_title=IXMUCANE - PRIVATE LINK
+dc_4_20_header=Captain
+dc_4_20_body=`Tightbeam private coded message.
+Originating from Ixmucane internal section [unknown].
+
+Go ahead, take all the junk you want from that ship, you cretin!
+Nothing there will save you from a cold death in this hole.
+
+I hope you freeze.
+`
+
+dc_4_21_title=IXMUCANE - PRIVATE LINK
+dc_4_21_header=Tech
+dc_4_21_body=`Tightbeam private coded message.
+Originating from Ixmucane internal section 12-9-4.
+
+Hey, buddy, we've got you back on our sensors.  What's going on out there?
+
+This place is getting so cold now our display panels are starting to crack
+from the temperature stress!
+
+Look, buddy.  We've got one of those cursed ~Microsol~ SCIs down here with us,
+and with a little friendly laser probing we've got him to talking.  He says
+that they've got an escape tunnel out there - the one you're on - which
+contains their main tech center.
+
+He says you can reactivate the core with one of the consoles in that sector.
+The access code has been attached to this message and should be in your
+computer banks.  You've gotta deactivate this crazy place and reactivate
+the main system.  Just like an ~SCI~ to mess up the whole planet trying to get
+one dang thing to work right!
+
+And, do it ~FAST~, will ya!?  I don't want to die down here in this ~Microsol~
+dungeon!
+`
+
+dc_4_22_title=INCOMING TRANSMISSION from Gencore Command Ship IcoStar II
+dc_4_22_header=Transon
+dc_4_22_body=`The temperature is dropping to the critical point near your section.  I don't
+think we'll be able to save everyone in the lower levels, but you gave us the
+valuable time we needed.  I thank you for it.
+
+About ~7500~ people ~lived~ because of your diversion.
+
+As I said, the air near you is reaching a critical point and we believe the atmosphere
+down there is going to literally freeze solid.  There's still a group of
+combat drones near you, but it's the only quick way out from there.
+
+Oh yes, we received a brief trasmission from ~Harble~.
+
+He said:
+"Whoever you are... um...
+Thanks anyway.  ~AAAAUUUGGGHHH!~  ~THE~ ~CONTROL~ ~PANEL~ ~SHATTERED!~"
+
+Nothing left to do, Trent.  Get out of there before the place freezes solid!
+`
+
+dc_4_23_title=INCOMING TRANSMISSION from Gencore Command Ship IcoStar II
+dc_4_23_header=Transon
+dc_4_23_body=`I can't believe my eyes!
+
+Our sensors tell us the central core has come back online somehow and the
+core temperature is returning to normal.  What did you do?  We detected a
+skirmish and a release of many large protron explosions.
+
+I don't know how you managed it, but we can now extend our efforts toward
+those trapped in the lower levels.  I think we're going to be able to save
+these people after all.
+
+No way is this ever going to be a ~Microsol~ world again.  I think I'm going
+to be able to convince the other corporations to join me now.  There's no
+telling what they would have done if this place became active.
+
+I can tell you now, Trent.
+
+I believe there's no way in this universe we could have stopped ~Microsol~
+if this planet was activated.  It might have taken a decade or two, but there's
+no way to compete with an unlimited energy source like this.  Best we could
+have hoped for was to keep them from controlling it.  With all our best
+SCIs dead, though, we couldn't have stopped them.
+
+Trent, the air out there is still at the critical freezing point, so you'd
+better get out of there before the coldwave reaches you.  Don't worry about
+the people trapped below.  They're pretty safe behind this Zica shielding,
+and the energy conduits will reach them first.  You're out there in
+the open!
+
+I don't need a frozen cadaver on my hands!
+`
+
+dc_4_24_title=DELIANI PRIORITY UPLINK A2
+dc_4_24_header=Mondus
+dc_4_24_body=`Tightbeam private coded message.
+Forwarded by Gencore Command Ship IcoStar II - Priortily UpLink A1.
+
+Attached messages included as second and third data messages.
+
+~Transon~.  We are under attack by a giant ~Microsol~ combat fleet.
+
+I have sealed off the planet surface with a fleet of battle cruisers, but someone
+seems to be playing havoc up there with our security codes.  Our defense net
+has been turned against us, and I'm not in control of the main computer
+system anymore.
+
+An elite group of guards and I have sealed off the secret command center and
+are prepared to activate the escape system.  We are cut off from the main
+system and no longer control the planet.  It is all I could do to get this
+coded channel out to you before they override the private comm links.
+
+We know little about what is happening up there, but we have managed to detect
+a giant ship moving through the underground of the planet.  This thing is
+unusually large, and is tapping into our power systems.  I do not think we
+could stop it now if we even had the means to try.
+
+You must seal off the planet.
+
+Or else...
+
+~Transon~.  We have made it our primary concern to keep the ~A1~ ~UPLINK~ open.  If
+you can not stop the fleet from taking total control of the planet, you will
+have to activate the ~Nova~ system.  I do not think it will take them too long
+to find us once we jettison ourselves from the planet core.
+
+Make them suffer, ~Transon~.  I... would.
+`
+
+dc_4_25_title=DELIANI TRANSMISSION FLUX 02975
+dc_4_25_header=Javi
+dc_4_25_body=`Thanks, ~Transon~.  While the mice are away, the cat will play.  Heh.
+
+I trust you've enjoyed playing with ~Ixmucane~.  Now, we're going to do a little
+playing around with your planet.
+
+I can see you're still too trusting, ~Transon~.  Can't believe you still left
+some of those old security codes in place.  They don't make 'em like you
+anymore.
+`
+
+dc_4_26_title=INCOMING TRANSMISSION from Gencore Command Ship IcoStar II
+dc_4_26_header=Transon
+dc_4_26_body=`Something's going on down there on ~Deliani~!
+
+I'm sure you read the two previous messages.
+
+What can we do?  You've got to fly ahead and distract them until we arrive,
+somehow.  We've sent out a droneship to attach some booster packs to your
+ship.  They should be enough to get you to ~Deliani~.  We'll try to get some
+equipment to you along the way and once you reach the planet.
+
+You now know as much as I do, ~Trent~.  I can't believe they were able to
+get this fleet out undetected.  Something's going on - I don't like this
+one bit.  We've been picking up ~unknown~, strange ships and energy patterns the
+whole time while in orbit around this planet.
+
+The universe is erupting into chaos, ~Trent~!  This is the only chance to save
+what's left!  If you fail, we'll never be able to reach the planet in time,
+even if we wanted to destroy it.  I can't tell you what the ~Nova~ system is
+on this link,
+but suffice it to say - it was our final hope in case we couldn't stop
+Microsol someday.  It seems that day has passed me by - the blind fool I've been!
+`
+
+dc_4_27_title=DELIANI TRANSMISSION FLUX 02975
+dc_4_27_header=Javi
+dc_4_27_body=`~Trent!?~  Is that you?
+
+I never thought I'd get to see you again so soon.  I can't believe you've
+decided to forfeit yourself to try and stop me from taking over this place!
+
+With ~Vykromod~ crippled from the blast you gave his ship, I've taken command
+of the fleet.
+
+I've got a nasty surprise waiting down here.  So come on, ~Trent~, be the
+hero you've always wanted to be and come after me.  I've got other engagements,
+though, once I've blasted the irritating fool in this escape pod.
+
+You're too insignificant to be a part of my plan.  I'd be amazed if you make
+it past the missile bays.
+`
+
+dc_4_28_title=DELIANI PRIORITY UPLINK A2 [code P]
+dc_4_28_header=Mondus
+dc_4_28_body=`Tightbeam private coded message.
+
+Are you Trent?  I have heard of you from ~Transon~.
+
+Forgive me for not introducing myself, but a certain ~crazed~ ~lunatic~ is
+hammering on my pod's shielding with ~Lightning~ blasts.  I do not believe there
+is a very good probability we will survive much longer, but I need to tell you
+what you are up against.
+
+The main defense net consists of ~battle~ ~platforms~.  Most of these launch
+~semi-guided~ ~micro~ ~missiles~, though some fire more mundane ~energy~ ~blasts~.  The
+missiles are what you should first look out for, though.  I would suggest
+equipping some direct ~side-firing~ ~weaponry~ if you have it available.
+
+Halfway through the core you will encounter a large ~battle~ ~section~ which you
+should take out first.  This is fairly straightforward, but afterward you will be
+attacked with a number of ~giant~ ~semi-guided~ ~missiles~ from behind.  Do not
+attempt to destroy these.  Instead, try to conserve your energy and find a way
+around them, while keeping a hold on those ~micro~ ~missiles~.
+
+The final ~fleet~ ~ship~ seems to be a multi-stage defense
+   -.  - ip. When it - . . ..- -. it will release a .- .. - -.  - ~must~ ~shoot~.
+
+Goodbye, Trent. --. - . - like this makes - -. happy I'm only an androi
+
+[End of Transmission]
+`
+
+dc_4_29_title=INCOMING TRANSMISSION from Gencore Command Ship IcoStar II
+dc_4_29_header=Transon
+dc_4_29_body=`We've picked up your transmission of success in defeating the main defense
+ship.  I don't mean to criticize your ability, but that seemed too easy.
+
+I think we can repair the damage you did to Deliani without too much trouble.
+At least, once we get back into the computer net.  With Mondus, the head
+of ~Deliani~ ~Control~, destroyed, we're going to have a tough time trying to
+reinterface with the computer.  With all the people you helped us rescue,
+the ~IcoStar~ ~II~ should have enough brainpower to crack the security
+fairly soon, I hope.
+
+This definitely wasn't their main objective.  We tried to pick up a ~Captain~
+~Nob~ escaping from ~Ixmucane~, but were unable to stop him.  All we know is that
+he was heading in the direction of ~Savara~.  We sent some supply ships on
+ahead to rendezvous with you and some other fighter ships we just dispatched.
+
+They'll be moving in first to take out the chemical processing plants, which
+should draw their energy production systems to a halt.  I'm afraid I rebuilt the ~Z-29~
+~Central~ ~Defense~ ~Ship~ again, and we improved on the design.
+~Microsol's~ probably already captured it with the same security backdoors
+they used here.  Sorry.  I need you to go and destroy it again.
+
+Once we get back in and get our sensor grid up we'll be able to help you
+some more in locating ~Microsol's~ main target.
+
+Good luck, Trent.
+`
+
+dc_4_30_title=BENO CRACKERS
+dc_4_30_header=Ad
+dc_4_30_body=`New, from Omara corp.
+
+Just when you thought you would never see another Beno again, comes ~Beno~
+~Crackers~.  Made in a reasonable facsimile of the real creatures, these
+tasty snack crackers are a real treat!
+
+Pick up a holo-bowl of them today and feast down on the life forms too cute
+to survive [The Editor].
+`
+
+dc_4_31_title=UNKNOWN FLUX 02975
+dc_4_31_header=Javi
+dc_4_31_body=`What in the universe are you doing still alive?!  I thought I told you to
+die the last time you showed up!
+
+~HOW~ ~MANY~ ~TIMES~ ~MUST~ ~I~ ~KILL~ ~YOU?!?~
+
+This time, Trent, there is no escape!
+
+I will take you out with my personal ~DREADNAUGHT!~  You are nothing to me,
+do you hear me!  ~NOTHING!!!~
+`
+
+dc_4_32_title=SHIP ID 000 IN SAVARA FLUX 00000
+dc_4_32_header=Ninja
+dc_4_32_body=`This is your old friend, Trent.  I've managed to take out the ~chemical~
+~processing~ ~plants~ here on Savara, but I think we have a problem.
+
+My long-range sensors have detected a ~gigantic~ ~ship~ heading our way.  It's
+not the size that bothers me, though.  It's not really all that big in size,
+but the ~energy~ ~readings~ I'm getting from it are off the ~scale~.
+
+It appears to also have an ~insane~ ~mass~ ~analysis~ ~reading~, like it was
+something as massive as a ~planet~.  I don't like this, Trent.  I must deal
+with the ships down here on Savara, but it appears to be interested only in
+you, as it's ~matching~ ~your~ ~course~ exactly.
+
+There's about one hour left before it reaches orbit.  My ship is... damaged.
+I must humbly admit I won't be able to achieve orbit on my own.  I'm sorry
+I couldn't help you out this time, but it is best that I stay and help these
+innocents here on Savara, anyway.
+
+You will be remembered always, Trent.
+`
+
+dc_4_33_title=SHIP ID 184-3C IN SAVARA FLUX 12002
+dc_4_33_header=Dougan
+dc_4_33_body=`How's the war going?  I'm down here with the rest of this rag-tag band trying
+to sort things out.
+
+I intercepted the other trasmissions you received and don't like either of
+them very much, ~Javi~ more so.  I think I can help you out, though.  My ship
+isn't equipped for combat, but I've got a heavy-duty ~VLR~ ~sensor~ ~grid~ and a
+~TQ930~ ~comm~ ~system~ packed in this baby.  If you keep your comm channel open,
+I'll try to feed your computer some holographic data on the dreadnought's weak
+points.
+
+It seems that the shielding on that ship is being disrupted by the weird
+~gravity~ ~field~, and whenever certain systems are activated, it draws a lot of
+power from the shields.  I'll try to pinpoint the ~weaknesses~ for you.  Your
+computer will display them on your vidscreen with ~green~, ~holographic~ ~arrows~.
+
+I wish I could be there to see you kick that ~tin~ ~can~ back across the galaxy
+where it came from.  ~Javi's~ a fool if he thinks some big ship is going to
+save him!
+`
+
+dc_4_34_title=WANTED
+dc_4_34_header=Ad
+dc_4_34_body=`Have you seen this man?
+
+If so, fly immediately to your nearest ~Brownie~ ~Patrol~ ~Station~ and report
+his position.
+
+This man should be considered armed and dangerous!  He is wanted for ~Grand~
+~Planetary~ ~Treason~ against Savara.  This man was formerly known as ~Emperor~
+~Milktoe~.
+
+Don't kid yourself!  ~Run~ ~away!~
+`
+
+dc_4_35_title=BENO CRACKERS
+dc_4_35_header=Ad
+dc_4_35_body=`New, from Omara corp.
+
+What you need
+
+before the day
+
+are ~Beno~ ~Crackers~
+
+the ~Omara~ way!
+
+
+Pick up a holo-bowl today!
+
+Contact Fluxnet @15003-00421-92431-19327 for an Omara distributor near you.
+`
+
+dc_4_36_title=SHIP ID 000 IN SAVARA FLUX 00000
+dc_4_36_header=Ninja
+dc_4_36_body=`Hello, Trent.  I have picked you up on my comm link again.
+
+Things aren't going too well down here.  Without an outside energy boost, I'm
+not sure if our ships are going to hold out.  About half of our group is gone
+already and the rest are damaged.
+
+Without outside help, we will not have enough fuel to return home.
+
+Sigh...
+
+Anyway, let's talk some more about hot dogs.  Did you pick some up for me
+back on Ixmucane before you took out the ~Microsol~ fleet?  I could really use
+one of those right now.
+
+Signing off.
+`
+
+dc_4_37_title=SHIP ID 184-3C IN SAVARA FLUX 12002
+dc_4_37_header=Dougan
+dc_4_37_body=`Great job!  We could see the explosion all the way back down here on Savara!
+Javi won't be heading any ~Microsol~ attack fleets anymore.
+
+Trent, the others down here aren't doing so well.  I can't help them out
+directly, so I've gone back into orbit to try and contact Transon.  Have
+you heard anything?
+
+I hope I can get through for backup before we're taken out.  Almost none of us
+have operational interstellar drives, and it doesn't look like anyone down
+here can help us.
+
+Anyway, I've got a long-range sensor report for you.  Their main battle ships
+are headed toward ~Gyges~ for some reason.  If you can, head for ~Gyges~.  I
+think they're getting ready to do something really bad now that we've stopped
+their main assault.  I'd rather not be here when they're ready.
+
+I may lose contact with you if we can't capture ~Fluxnet~ here on Savara.
+Without it, my comm signals won't have the range to reach you out there.
+
+From now on, I'm afraid you're flying blind.  I pray to ~Zinglon~ that ~Transon~
+can get the Deli back online.
+
+I hope I hear from you again.
+`
+
+dc_4_38_title=GYGES SECTOR - PRIVATE TRANSMISSION ID 11432
+dc_4_38_header=Muldar
+dc_4_38_body=`[Message Amplified]
+
+This is a priority distress.
+
+We are being attacked by a ~Microsol~ attack fleet.
+
+Can anyone out there hear me?  I'm trapped by a large ~Microsol~ fleet out here
+in ~Gyges~!
+
+We were picking up a shipment of organics when a huge stream of ships came
+hurtling out of nowhere towards us.  They're not responding to our communications!
+We have no combat systems!
+
+Someone help us!  ~THEY'RE~ ~CLOSING~ ~IN!~
+
+[Message Repeats]
+`
+
+dc_4_39_title=DELIANI PRIORITY UPLINK A1 [code A]
+dc_4_39_header=Transon
+dc_4_39_body=`Trent?  Are you receiving me?
+
+We've got part of Deliani operational again and have picked you up inside
+~Gyges~!?  ~What~ ~are~ ~you~ ~doing~ ~out~ ~there?!?~
+
+A merchant drone will rendezvous with you - about all we can do.  We just
+picked up distress calls from Savara as well and will try to help them out.
+
+Dougan said something about a bunch of ships leaving towards ~Gyges~, and
+something about a dreadnought being taken out near Savara.  We have no
+additional information about what's going on out there, so give it your best.
+
+Transon out.
+
+
+Cursed computer net...
+
+What in the heck is going on out there, Almos?  Don't we have ~ANYTHING~
+working?
+
+[Unknown ID:] No, Commander.
+
+I can't even get any reports on what's going on the surface here much less
+off on Savara or... ~Gyges!?~  I want to know what's going on, Almos.  I want
+~ANSWERS!~
+
+[Unknown ID:] Sorry, Commander.  I'll see what I can do.  Oh, and you're needed
+in command station 2.  Something about a computer authorization.
+
+For ~Zinglon's~ sake, Almos.  Why didn't you ~tell~ me?
+
+[Unknown ID:] Sorry.  I'll look after the communications center.
+
+Good luck.  I can't make heads or rubniks of what's going on.  I was amazed to
+pick up even ~Dougan~ out there, with his accursed, fancy little ship, much less
+~Trent~.
+
+[Unknown ID:] Everything will be fine here.  Goodbye, commander.
+
+[Unknown ID:] Hmm?  What's this still doing on?
+
+[Transmission End]
+`
+
+dc_4_40_title=GYGES SECTOR - PRIVATE TRANSMISSION ID 11432
+dc_4_40_header=Muldar
+dc_4_40_body=`~Goodbye~, Trent.  I ~control~ ~the~ fleets ~now.~  ~Glad~ you ~could~ ~drop~ ~by~ ~to~
+~receive~ ~my~ ~message.~
+
+
+~<cough>~
+
+
+You saved me the trouble of ~detonating~ ~Javi~, but I had hoped he would be
+closer to ~Savara~.  No matter, just a slight alteration.  You pretty much wiped
+them out for me already.
+
+With Deliani in chaos, there won't be anyone who can stop me from taking over
+the other free worlds.  I was beginning ~to~ think everyone ~out~ there ~was~
+incompetent, ~but~ you ~managed~ ~to~ ~find~ us.  ~Interesting.~
+
+
+<hack>
+
+~<hack>~
+
+<cough>
+
+
+I'll enjoy watching my ~microborers~ drain your mind, Trent.
+`
+
+dc_4_41_title=FLUXNET 21 PRESENTS
+dc_4_41_header=Ad
+dc_4_41_body=`Almo and Zik-Nar X3
+
+The touching tale of a ~Zik-Nar~ ~X3~, boy cybernoid, and his loving, parasitic dog ~Almo~.
+Join their epic tale as they careen through the galaxy, righting the wrongs
+of unjust space pirates.
+
+But ~Zik-Nar~ has a soft side for ~Blibbo~, a female slug from the far reaches
+of the galaxy.  Watch them fall in love as ~Zik-Nar~ ~X3~ journeys with her
+to find her lost home.
+
+But if you're looking for action, look no further than ~Almo~.  He'll suck the
+very heart right out of you in this once in a century family show.
+
+~Almo~ and ~Zik-Nar~ ~X3~, coming to a holo-screen next rotation.
+`
+
+dc_4_42_title=FLUXNET 21 PRESENTS
+dc_4_42_header=Ad
+dc_4_42_body=`Swiss Family Cheese
+
+Another family spectacle for one and all.
+
+This memorable series about a family of ~cheese~ ~mold~ will bring a tear to your
+eye and a glow to your heart.  Through ~wind~, ~rain~, ~drought~, and ~competing~
+~parasites~, this family will persevere.  Not because they are strong but
+because they have the will to survive.
+
+It's another ~Fluxnet~ 21 show you won't wanna miss!
+`
+
+dc_4_43_title=FLUXNET 21 PRESENTS
+dc_4_43_header=Ad
+dc_4_43_body=`Back by popular damand, it's the hilarious antics of ~My~ ~Uncle~ ~the~ ~Sloth~!
+
+Follow ~Uncle~ ~Sloth~ on his journeys across the forests of ~Torm~ as he
+skillfully waits for giant ~dragons~ to fly by, eats vegetation, and learns
+what it is to be a ~Sloth~.
+
+This special series is presented in its full, uncut format with 2,890 10-hour
+episodes!
+
+Another ~Fluxnet~ 21 show.  Don't miss it!
+`
+
+dc_4_44_title=FLUXNET 21 PRESENTS
+dc_4_44_header=Ad
+dc_4_44_body=`Another production from the leaders in holo-entertainment...
+
+~The~ ~Eleven~ ~Commandments~
+
+The most incredible screen epic ever made - presented in the original
+~holobox~ format.
+
+~---~
+
+Monses walked upon Savara and said:
+
+"Let there be a group of laws for people to follow, so that they might learn
+to be virtuous and live with honor."
+
+And ~Zinglon~ said:
+
+"Lo, let be it, for now when Tuesday then cometh with not again, be it
+another less more it be.  Be faith giveth whence came me unto, yet not needeth
+for unto me, for yet be learn to be."
+
+And Monses raised his hands aloft to take the ~holocubes~, but lowered them
+again and said:
+
+"Huh?"
+
+And ~Zinglon~ spake:
+
+"Look.  Here's the stuff you asked for.  Take it and leave me alone."
+
+Monses took the ~holocubes~ from the sky but saw that there was an extra cube,
+a cube he had not expected.  He interrupted again and spake to the heavens:
+
+"What's the other cube for?"
+
+And ~Zinglon~ spake:
+
+"You know when the people have learned but the ten cubes just aren't enough?
+This is for that extra push when ten just isn't enough."
+
+Monses scratched his head and replied:
+
+"Surely you could make the other ten stronger?"
+
+And ~Zinglon~ spake:
+
+"But mine go up to ~eleven~.  Now go away."
+
+And, ~Zinglon~ blew Monses and the ~holocubes~ off the mountain...
+
+Enjoy these scenes and more from the greatest production of all time!
+
+~---~
+
+~Monses~ and the ~Eleven~ ~Commandments~
+
+Coming to holoscreens in 13.5553.231!
+`
+
+dc_4_45_title=GRUEL: THE MODERN WAY
+dc_4_45_header=Ad
+dc_4_45_body=`Gencore research labs presents the quintissential cookbook for the gourmet
+gruelist.
+
+In this tome of good taste are presented such undying classics as:
+
+The ~7-Day~ Gruel
+
+~Swiss~ ~Cheese~ Gruel
+
+~Rainbow~ ~Trout~ Gruel
+
+~Black~ ~Zest~ Gruel
+
+Annie's ~Marbelized~ ~Mealy~ ~Mottled~ ~Mango~ Gruel
+
+The Mad Chef's ~Lump~-O-~Gruel~
+
+~Magic~ Gruel of ~Slaying~, ~Vorpal~ Lumpy +2
+
+Gruel for ~2000~ : ~A~ ~Gruel~ ~For~ ~All~ ~Time~
+
+
+In this book you'll find ~Gruel~ for ~any~ ~season~!
+
+So download ~Gruel~: The ~Modern~ ~Way~ today and be ready to turn away that
+next great family gathering.
+
+Only from ~Gencore~.  Presented by the ~Interstellar~ ~House~ of ~Gruel~.
+`
+
+dc_4_46_title=WHO ARE YOU?
+dc_4_46_header=Vykromod
+dc_4_46_body=`I... I feel your presence, Trent.  Where are you?  I cannot see.
+
+What have you done to me, Trent?  I feel... nothing.
+
+Where is my body?  Who am I?  Am I still me?
+
+I want to die.  Why can't I move?
+
+Kill me.  Someone?
+
+Trent?
+`
+
+dc_4_47_title=HELP ME.
+dc_4_47_header=Vykromod
+dc_4_47_body=`Again, I feel your presence, Trent.  I can move now.  I don't know quite
+what I have become, but I know what I must do.  I feel you are the cause
+of my pain.
+
+Come to me, Trent.  One of us must die before the other can become whole.
+
+I... don't know what that means.  You must come.  I... must be me again.
+
+Something is about to happen.  I can feel it.
+
+What... have ~I~ ~BECOME?!?~
+`
+
+dc_4_48_title=DELIANI PRIORITY UPLINK A1 [code A]
+dc_4_48_header=Transon
+dc_4_48_body=`Trent, this is Transon Lohk.
+
+I hope you are able to get this message.  We've lost you on our sensors.
+Your ship disappeared about 8 minutes ago.  Where are you?
+
+Your life is in danger.  I am sure of it.
+
+A great power surge is building from within Gyges.  I don't know what it is,
+but you must investigate.  Perhaps you already know.  There is no time to
+send any backup to help you.  You'll have to make do with what you can find
+around there.
+
+The fleet at Savara has been disabled - many were lost.  We don't have the
+specific details, but we're looking for survivors.  Anyway, there is no-one
+left who can reach you that far out there.  You're on your own.
+
+Good luck, Trent.  I only wish I knew what was going on out there.  I know
+you will do your best.  We will try to contact you again later.
+
+Transon out.
+
+
+[Unknown ID:]  Commander, quick, what's the square root of 4?  I think the
+computer is down and we can't figure out how to fix it!
+
+[Transon:]  Two.  You know, ensign, you have the brain of a pea.  If I was to
+collect your mind and hold it for ransom, I wouldn't be able to prove it was
+anything but a grain of sand.
+
+[Unknown ID:]  Sorry, Commander.
+
+[Transon:]  Do you have any idea what's going on out there?
+
+[Unknown ID:]  Sorry, Commander?
+
+[Transon:]  About Trent.
+
+[Unknown iD:]  Ooo.  Sorry, Commander.
+
+[Transon:]  He's going to [~chuckle~] save the universe again.  And then, do you
+know what he'll probably do?
+
+[Unknown ID:]  Sorry, Commander?
+
+[Transon:]  He'll save the universe again, and again, and again!  He'll do
+anything I want him to do to help the universe and I won't have to lift a
+finger to do anything except send him these little messages like... oops...
+
+[Transmission End]
+`
+
+dc_4_49_title=MICROSOL ALPHA LINK 1
+dc_4_49_header=Admiral
+dc_4_49_body=`You may have killed all the others, but I am still alive!
+
+I, Nob, am now admiral of all that I see!
+
+No, wait.
+
+~General!~
+
+Hmmm...
+
+~Emperor!~
+
+No.  No.  Bigger.
+
+~Supreme~ ~Intergalactic~ ~Ruler~ ~of~ ~Everything!~
+
+Haha!
+
+You are too late to stop my rule.  I will now activate project ~Vykromod~!
+
+These will be the last moments you spend alive.  Cherish them.
+
+~Captain~ ~Nob~
+
+~Ixmucane~ Task Force ~Alpha~
+
+
+Oops... Wait a sec...
+
+...where's the stupid Y key on this keypad?  I don't have 8 fingers, how am I
+supposed to type with this thing?  Maybe if I use my toe to hold down the...
+~ahhhhhh!!!~
+
+Now... bear witness!
+
+~Supreme~ ~Intergalactic~ ~Ruler~ of ~Everything~ ~Nob~
+
+~Commander~ of ~Microsol~ ~Super~ ~Fleet~ ~Alpha~
+
+~Leader~ of ~Everyone~
+
+~Master~ of ~All~
+
+~Well~-~Liked~ by ~Animals~
+`
+
+dc_4_50_title=HOLO NEWS - XP9 v123-02-39
+dc_4_50_header=News
+dc_4_50_body=`This is Rob Neither with the daily news.
+
+~Zinglon's~ ~Nose~ ~Stolen~
+
+A holy artifact believed to be the nose of Zinglon himself was stolen from the
+Torm Orbiting Museum.  Religious followers are in an uproar and demand that
+the party responsible return the nose immediately.  A full-scale investigation
+has been launched and several planets are fully mobilizing for jihad - holy war.
+
+~Ixmucane~ ~Threatened~ ~With~ ~Destruction~ -
+~1.5~ ~Million~ ~to~ ~Be~ ~Killed~
+
+In other news, Microsol has reportedly threatened the extinction of 1.5
+million scientists and engineers on the planet Ixmucane.  A small relief fleet
+has been called in, headed mainly by Gencore, to save as many people as possible.
+
+[Clara, Co-reporter [~CC~]] : Does it really matter, Rob?  I'm beginning to think
+there's nowhere in the galaxy not under some mysterious threat, but somehow it
+all seems to work out fairly easily with no deaths on our side.  Isn't this
+some kind of a hoax?
+
+[Rob, Reporter [~RR~]] : Seems that way to me.  I can remember when a war was
+something you could ~feel~.  Not just some report on how many scraps of metal
+were found.  To date, there has been no real evidence of any Gencore or other
+alliance ships participating in any major conflict.  Just minor skirmishes
+with scout ships on our side.
+
+[~CC~] : So this ~is~ some kind of hoax?
+
+[~RR~] : Probably.  It's this lack of standards that make me wish I was back in
+holo-sports.  Now that had a future.  This fake war is making me sick.  There's
+nothing worse than someone manufacturing a war by exploding tons of robot
+starships.  Nothing but a big fireworks display.
+
+[~CC~] : ~OH?~ Are we still on the air?
+
+[Program stopped due to technical fault]
+`
+
+dc_4_51_title=TYRIAN - THE HOLO MOVIE
+dc_4_51_header=Ad
+dc_4_51_body=`Coming soon to ~Fluxnet~ ~21~: ~Tyrian~!  The made-for-holo movie!
+
+Follow the journeys of Trent Hawkins as he saves the universe time and time
+again.  In the fourth volume in this Eclipse series, you'll see him save the
+giant world Ixmucane from destruction by destroying the ~giant~ ~lava~ ~ship~ on
+level 3.  Then, fly with him as he restores peace to Gencore and takes on
+the final Microsol center.  It's a movie you won't want to miss!
+
+On sale now at Asteroid Charlies.
+
+~Note~: Due to extreme demand, we are temporarily out of stock.  Thank you for
+choosing ~Fluxnet~ ~21~.
+`
+
+dc_4_52_title=PERSONAL LOG
+dc_4_52_header=Self
+dc_4_52_body=`Hello, self.  We're going to die, we know.  I thought we knew that.
+
+I must admit, I am rather tired of saving the universe again and again.  That
+idiot Transon will find me no matter where I go and force me to take on huge
+fleets until I either die or grow old.  Maybe he'll find a way around that.
+I've got to get out of here!  There must be somewhere I can go where people
+won't expect me to take out entire planets by myself.
+
+But where?
+
+I must find a way!  Otherwise I'll be stuck fighting these Microsol ships for
+the rest of eternity!  ~Aaaaarrrrrggghhh!~
+
+Self out.
+`
+
+dc_4_53_title=HOW TO PLAY
+dc_4_53_header=Game
+dc_4_53_body=`How to play the secret ending game ~ZINGLON'S~ ~REVENGE~:
+
+A giant ship projects a horizontal field of energy.  Small enemies fall down
+from above and bounce around the edges of the screen and against the energy
+field.  Touching the field or one of the little enemies means almost certain
+instant death.
+
+You must shoot all the small enemies to advance to the next level.
+
+There are 4 kinds of enemies:
+
+~Roobles~ : Round Fireballs - Low damage - Move left to right
+
+~Tokkies~ : Spikey Balls - Low damage - Move up and down quickly
+
+~Zimbles~ : Eyeballs - Moderate damage - Move diagonally slowly
+
+~Blottes~ : Blood Cells - High damage - Descend slowly and then bounce up quickly
+diagonally
+
+
+This game consists of 6 levels, starting on ~level~ ~5~ and descending in order
+to the final level.
+
+Level 5 : Mostly Roobles
+
+Level 4 : Mostly Tokkies
+
+Extra ship received after Level 5.
+
+Level 3 : Zimbles and Blottes
+
+Level 2 : Roobles, Tokkies, and Blottes
+
+Level 1 : Mostly Zimbles
+
+Extra ship received after Level 1.
+
+Level 0 : Blottes - Destroy the energy field?
+
+Extra ship received after Level 0.
+
+Level -1 : ???
+`
+
+dc_4_54_title=STRATEGY
+dc_4_54_header=Game
+dc_4_54_body=`Strategy Guide for ~ZINGLON'S~ ~REVENGE~:
+
+Obviously the main point to the game is to dodge the little enemies as well
+as possible.
+
+~Roobles~ : Round Fireballs - These are very easy to destroy but get in your
+way easily once they descend fairly low.  Try to take these out quickly if
+you can unless a Blotte is coming.
+
+~Tokkies~ : Spikey Balls - These can be avoided fairly easily since they move
+very slowly across the screen.  You can usually position a sidekick to stay
+underneath them long enough to take them out.
+
+~Zimbles~ : Eyeballs - These are pretty slow and you can usually delay shooting
+them until they start filling the screen.  Try to take out the faster-moving
+enemies first if you can.
+
+~Blottes~ : Blood Cells - These are the hardest enemies to destroy in the game.
+They are fairly easy to take out while descending, so try to at least to damage
+them fairly well.  Once they reach bottom, they'll start bouncing quickly and
+can be hard to destroy.
+
+~SECRET~:
+
+Yes, of course there are secret moves in this game.  ~21~ of them, in fact.
+
+Several of the more common ones are detailed below:
+
+~Sidekicks:~ Attach one or two of these to your ship.
+
+  Red sidekick : Press Right,Down,Left, then hold Fire and press Up.
+
+~Hot Dog:~ A blast of deadly dogs.  Uses up your armor slowly, though.
+
+  Press Up, then hold Fire and press Down.
+
+Of course, ~all~ other special moves are also available here.
+
+Good luck!
+
+So far, even the designer has problems winning this game, as it should be!
+My general time to beat is ~3:30~, without using many secret moves.
+`
+
+dc_4_55_title=Scenic guide to the universe: ~Savara~
+dc_4_55_header=Windy
+dc_4_55_body=`  ~SAVARA:~
+
+~Dining:~
+
+Come and visit the interstellar dining halls in the underwater city of
+~Ploo~.  Dozens of aquatic fish swim about the domed windows, and you can
+simply point to the fish of your desire and it will be captured and cooked
+for you in under 30 seconds!
+
+Also remarkable is the bewildering variety of ethnic restauraunts located on
+the surface.  Many also cater to the more exotic tastes by serving the patrons
+of competing restauraunts, literally!  Anything edible [and some things that
+aren't] can be purchased here at a competitive price.
+
+~Culture:~
+
+Savara is the eclectic hub of the sector, where many varied cultures live
+together in apparent peace and harmony, though you'll want to avoid these areas
+since few tourists leave them alive.  However, you can sit behind glass
+enclosures as you watch the race of your choice go about their daily tasks,
+unable to stop you from prying into their private affairs.
+
+Also available is the Bring it to You service, where for a small fee the
+locals will run out and round up a few ethnic groups of your choice who will
+be forced to act as if they enjoy your presence.  A must for the self-conscious
+traveller!
+
+~Entertainment:~
+
+Savara is the merchant center of the sector, where just about anything you want
+and everything you don't want can be found at an agressive price.  Price
+fixing and Mob control have seen that no individual merchants will ever charge
+anything that isn't fair.
+
+Also, you will definitely want to visit the ~Interstellar~ ~House~ ~of~
+~Gruel~ wherein you will see the fascinating history and story behind the
+great world of Gruel.  A fun affair for the whole family!
+`
+
+dc_4_56_title=Scenic guide to the universe: ~Deliani~
+dc_4_56_header=Windy
+dc_4_56_body=`  ~DELIANI:~
+
+~Travel Tip:~
+
+Though most areas of the planet are restricted and guards are often ordered
+to shoot unidentified personnel on sight, if you stay in the Light Green Zone
+you should have no problems avoiding personal injury and death.  Be sure to
+avoid the Blue-Green and Turquoise Zones as well as the Stix Zone.  The
+Red and Yellow Zones are safe for travel, though the Yellow is often confused
+with the Off-White and Peach Deadly Areas.  Many a color-blind traveller has
+been killed by accident.
+
+~Dining:~
+
+Deliani provides the most technically advanced cooking systems in the known
+universe.  Dishes that simply aren't palatable anywhere else still won't be
+very good here, but Chef Yo of Deliani's motto is:  If it's matter, we can
+make you eat it.  A unique experience you'll never be able to repeat!
+
+~Culture:~
+
+One word: Robotics.  Anyone's fetish for robotics can be satisfied here.
+Androbots, Lobots, Robots, Androids, Redroids, Droid Droids, and many other
+varieties of metallic life forms are welcome here, as long as they stay in the
+Burnt Sienna or Brick Red Zones.
+
+Deliani is the home of such ~Fluxnet~ ~21~ favorites as Honey, I Shorted-Out
+the Kidforms - Almo and Zik-Nar X3 - My Mother the Lobot.
+
+~Entertainment:~
+
+Gencore always has a number of exciting entertainment opportunities available
+for tourists.  Any number of military drills, parades, and barbaric information
+torture drills can be found here.  A must for military buffs.
+`
+
+dc_4_57_title=Scenic guide to the universe: ~Ixmucane~
+dc_4_57_header=Windy
+dc_4_57_body=`  ~IXMUCANE:~
+
+The original headquarters of Microsol.  This planet has a very dry
+and desert-like surface with the occasional mountain range.  The advantage of
+this world is its weak inner crust, allowing Microsol to build
+gigantic research facilities undergound.  Immense domed cities can be seen
+in major research and production locations.  The tragedy of Ixmucane is that it
+was originally the home of the ~Zica~, an unknown race of alien that
+originally carved immeasurable labrynthine tunnel systems under the
+surface.
+The ~Zica~ are feared by xenoscientists, who believe that the they have fled
+to the outer reaches of the sector where they plan to launch a massive attack
+on Deliani and Microsol, using outer-dimensional technology.
+But is it true...?
+
+And, if so, will I, the writer, ever grow bored enough to write the sequel
+using this suggested plotline?
+`
+
+dc_4_58_title=Scenic guide to the universe: ~Torm~
+dc_4_58_header=Windy
+dc_4_58_body=`  ~TORM:~
+
+A rubnik is worth a thousand words on this planet.
+
+Sector capital and regional chapter of the Interplanetary Government.  Torm is 
+one of the largest worlds in the sector, surpassed in size only by the ice 
+world of Camanis. The surface is similar to Savara's, though consisting of 
+grasslands and heavily forested mountain regions.  The city capital, Portoch, 
+is a metropolis of corruption and dark, rainy days.
+
+~Dining:~
+
+Torm is a vegetarian's delight or worst nightmare.  Twenty-eight thousand
+types of vegetarian dishes are served daily, with another Sixty thousand
+on request.  Also prevalent is a large selection of animal dishes with the
+ever-popular and expensive ~dragon~ ~succotash~.  Many people save up their
+whole lives just to order this dish once.  Many others succumb to the toxic
+nature of the dish, but what a way to go.
+
+~Culture:~
+
+Only make a visit to be depressed, since the buildings are so neglected they
+are streaked with dirt.  It is said that the chapter lords are so decadent 
+that they seldom emerge from the local simulation clubs.  The city itself is 
+an example of why Microsol holds so much sway in governmental policies: bribery.
+
+~Entertainment:~
+
+On Torm, you can partake of the most degrading sports and acts known in the
+universe.  Few ever leave this planet the same, and fewer even leave - or can.
+A visit to this planet is one you won't easily miss.  Be sure to bring a
+bodyguard.  Actually, bring a whole army.  You'll need them.
+`
+
+dc_4_59_title=HOW TO PLAY
+dc_4_59_header=Game
+dc_4_59_body=`How to play the secret ending game ~ZINGLON'S~ ~SQUADRONS~: [~ZINGALA~]
+
+Large formations of ships fly down to attack you.  Individual ships in the
+groups break off to fly down in various ways.  You must destroy the entire
+fleet to advance to the next fleet.  Basically, just shoot everything you
+can.
+
+You must shoot all the small enemies to advance to the next level.
+
+There are 7 kinds of enemies:
+
+~Zimbles~ : 10 pts / 20 pts attacking : Damage 4 : Eyeballs
+
+~Blottes~ : 15 pts / 30 pts attacking : Damage 6 : Blood Cells
+
+~Zoomers~ : 20 pts / 40 pts attacking : Damage 5 : Bombs
+
+~Roobles~ : 25 pts / 50 pts attacking : Damage 5 : Fireballs
+
+~Tokkies~ : 50 pts / 100 pts attacking : Damage 7 : Little Spikey Balls
+
+~Garmons~ : 100 pts / 200-300 pts attacking : Damage 10 : Big Spikey Balls
+
+~Widgets~ : 250 pts / 500-??? pts attacking : Damage 20 : Big Brown Ship
+
+Your ship is armed with a simple rail gun which cannot be increased.  Also,
+you have no shields and merely subsist on armor.  However, the armor ship will
+still come down to help you.
+
+Extra lives are earned at 10000, 20000, and every 25000 pts thereafter.
+`
+
+dc_4_60_title=STRATEGY
+dc_4_60_header=Game
+dc_4_60_body=`Strategy Guide for ~ZINGLON'S~ ~SQUADRONS~: [~ZINGALA~]
+
+There are four types of enemy formations:
+
+Type 1 : ~Block~ : A simple four row mass of enemies.  They attack quickly but
+if you don't care about your score you can blast through them pretty quickly.
+
+Type 2 : ~Bombs~ : This block variation has a row of bombs in the front which
+are difficult to destroy and fly down quickly.  If you can blast through them,
+you can get a clear shot at the Garmons.  The center Garmon will not move, so
+try to take it out before the formation leaves for extra points.
+
+Type 3 : ~Delta~ : This is not a difficult formation at first, as you can take
+out the side enemies fairly quickly.  Unfortunately, the center Tokkies will
+fly out at you extremely quickly and are difficult to anticipate.  Don't let
+the Zimbles get close to the bottom or else you may have difficulty maneuvering.
+
+Type 4 : ~Bonus~ : This is a very quick formation for extra points.  The
+Zoomers and Roobles will attack in force first.  Then, the Widget will attack.
+Make sure you destroy this!  After the Widget will come some more small ships
+and the two remaining Garmons.
+
+There are no special moves available in this game.
+`
+
+dc_4_61_title=REMINDER
+dc_4_61_header=Game
+dc_4_61_body=`You do not need to play this game to continue.  It is merely an extra game
+for your enjoyment.  If you want to continue on to Episode 5, simply
+select ~Skip~ ~It~ in the Next Level menu.
+
+Also, this game can not be played by two players and will only be available
+in the full game.
+
+Enjoy!
+`
+
+dc_4_62_title=SHIP ID 184-3C IN SAVARA FLUX 12002
+dc_4_62_header=Dougan
+dc_4_62_body=`Trent?  I've picked you up on my sensors.
+
+No time to talk!  There's a ~Microsol~ freak on my tail and I'm flying unarmed.
+I'll be ok as long as I can stay out of range.  That weird ninja guy with the
+stealth ship is moving in to help.
+
+I'll contact you again when I'm able.  Good luck.
+
+Dougan out.
+`
+
+dc_4_63_title=SCRAMBLED TRANSMISSION CODE 445-A1-A1-Jack
+dc_4_63_header=Reid
+dc_4_63_body=`Trent, am I glad to see you!  Microsol has destroyed most of the defenses on
+Savara and the rest have been taken over.  They came quickly.  Someone has
+sold our planet out to them.  Who?
+
+I am glad to know you are out there.  I and many others have taken refuge
+in shelters below ground.  They have control of the ~Central~ ~Defense~ ~Ship~.
+
+A handful of others are already fighting on the surface, but we are sorely
+outnumbered.
+
+I must go.  We need to conserve battery power for the hospitals.  They have
+severely damaged the fusion generators.
+
+Reid
+
+Acting President of Savara
+`
+
+dc_4_64_title=Weapons Research, Camanis
+dc_4_64_header=TOP SECRET
+dc_4_64_body=`Confidential memo #4410-303-TDCam
+
+Laser research is progressing steadily, according to projections.
+
+Project Thermos has completed stage 2 and is moving to the final stage 3.  We
+anticipate having a prototype stage 3 laser cannon very soon.
+
+Camanis research station Loopy is prepared to ship 3 modified battle cruisers
+to you as soon as we receive word from you.  Planetary coordinates for pickup
+are 399 x 21.
+
+We need confirmation immediately.  So far, we don't believe any enemy forces
+have learned of our position, but we only have a skeleton defense force.  No
+main battle cruisers are currently online.  This leaves us especially vulnerable
+to outside attack.
+
+This is Mycroft Dalo, Microsol Research Control, signing off.
+`
+
+dc_4_65_title=Alambusol
+dc_4_65_header=Ad
+dc_4_65_body=`[Cheerful, brightly lit living room.  Late 103rd century decor.]
+
+When dreaded alien parasites are drilling into my head, I reach for ~Alambusol~.
+
+~Alambusol~ is the only anti-parasite xeno-spray which I trust.  Two squirts and
+ten minutes later, my head is clear and free of infestation once again.
+
+[Cut to Medical office.  Very modern.]
+
+Yes, four out of our five doctors recommend ~Alambusol~ to their infested
+patients.  The other doctor was fired.  So, you can see that we are firmly
+commited to using this spray on our patients.
+
+[Quick wipe down to scene of rendered Spray bottle floating in a stasis field.]
+
+So transmit a bottle of ~Alambusol~ to yourself today!  You won't be sorry.
+`
+
+dc_4_66_title=Ressurectos
+dc_4_66_header=Ad
+dc_4_66_body=`Are you feeling down in the dumps... deceased?  Have friends and family stopped
+calling you now that you're 6 feet under?
+
+Well, fret no more!
+
+Dansen Technologies has the answer to all your afterlife problems.
+
+~Ressurectos~!
+
+Within these little pills is a potent life-giving recipe which is guaranteed
+to bring you back to life.  Simply take one in the morning after a full moon
+on your planet (or moons) and drink a glass of water.  You'll be your old
+self in no time.
+
+Check us out at ~FLUXNET~: 405-4003-3030.
+`
+
+dc_4_67_title=Scenic guide to the universe: ~Camanis~
+dc_4_67_header=Guidebook
+dc_4_67_body=`  ~CAMANIS:~
+
+~Dining:~
+
+Located 2 miles east of the Ultra-secret Microsol research station is the
+All-powerful Bob Hartley's ~IceCream-O-Matic~.  The ultimate in high-powered
+instant cryo manufacturing facilities, the ICOM system can instantaneously
+generate up to 3 cubic miles of ice cream, in any of 24 billion flavors.
+
+Microsol has made this possible by purchasing out all other ice cream manufacturing
+facilities and amassing the recipes of every vendor who has ever existed.
+
+This bewildering decision rocked the world of ice cream futures but made
+Microsol the undisputed master of all the ice cream in the universe.  They take
+their ice seriously.
+
+~Culture:~
+
+Not many people enjoy living in the sub-zero confines of this planet.  Because
+of this, they are an extremely proud people, prone to bawling out wimps like
+you who have climate control.  If you visit, be sure not to mention how cold
+it is unless you want a very one-sided conversation.  Steer your topics
+toward their lovely scenery and extensive museums of ice sculptures.
+
+~Entertainment:~
+
+A skiiers dream.  This is the cold vacation spot of the universe.  Millions of
+ski slopes litter the world, providing entertainment to endless visitors each
+year.  Camanis boasts year-round snow and optional near-zero visibility for the
+ultra-suicidal skiier.  What more could one ask for?
+
+For the friends of those suicidal skiiers who are dragged along on vacation,
+try out your hand at massive free-form laser ice sculpture.  For a small fee
+per hour, you can have the enjoyment of carving up your very own mountain.
+If you simply must take it back home with you, Camanis even offers 2nd minute
+delivery!  All you have to do is to find a place to store your mountain and
+keep it cool.  An adventure for the whole family!
+`
+
+dc_5_1_title=HOLO NEWS - GD3 v123-02-48
+dc_5_1_header=News
+dc_5_1_body=`This is Rob Neither with the daily news.
+
+~Zinglon~ ~Cultists~ ~Believed~ ~Behind~ ~Attacks~
+
+In a strange move, a group of cultists following the recently deceased
+~Lord~ ~Zinglon~ have claimed responsibility for several food-related
+bombings in the Savara system.
+
+The attacks seemed to be mainly situated upon a small moon storage facility
+run by the eccentric ~Baker~ ~Bob~.  Apparently, a large quantity of pretzel
+dough and high-speed ~Twister~ ~Bakers~ were stolen during the explosions.
+
+It is still unknown what the true purpose or cause of these bombings is, but
+local authorities have set up a blockade around the planet.
+`
+
+dc_5_2_title=ARCHIVE DATA
+dc_5_2_header=Data
+dc_5_2_body=`Reference: Torm Biology - Dragon
+
+Researchers on the jungle planet ~Torm~ made a breakthrough discovery on the
+true nature of the wildlife referred to as dragons.
+
+Apparently, these lifeforms are not indigenous to the planet but actually
+seeded themselves onto the world without assistance.  Long a difficult and
+dangerous species to study, moreso due to the extreme aggressiveness of nesting
+females, a link has been established to the genetic structure of Torm dragons
+and similar species found on several other uncolonized worlds.
+
+To corroborate this fact, young dragons have a harder chitinous membrane around
+their bodies which stay intact even in a dead vaccuum.  Food reserves are high
+due to the large third stomach which holds undigested food.  Coupled with
+their ability to live off of both oxygen and carbon dioxide and it's clearly
+possible that they can exist in space and maneuver through shifting their
+own mass in powerful wing vibrations.
+
+Later research funding has been low, however, but the remaining project
+members hope to determine if there is some kind of migratory or exploratory
+instinct in the dragon mind.
+`
+
+dc_5_3_title=DATACUBE DISPATCH 0497:SV-510
+dc_5_3_header=News
+dc_5_3_body=`Report, L-line Agents, stream 60
+
+THE GREY BOOKS RETURN:
+
+Mysterious grey books filled with unknown material have surfaced in
+an archaeological expedition to Savara led by well known scientist
+~Graphim~ ~Arugo~.
+
+The books are encased in a medium grade durable material and are alien
+in nature, although ~Graphim~ believes that they originated on a distant
+planet named ~Earth~ mentioned in several folklore passages.
+
+Filled with graphite and lead compounds, the books seem to carry a clue
+to unraveling the mystery behind ~Tyrian's~ unknown past.
+The research team believes that the graphite compounds have a direct
+connection to ~Tyrian's~ gravitron crust.
+`
+
+dc_5_4_title=DATACUBE DISPATCH 0499:CA-220
+dc_5_4_header=News
+dc_5_4_body=`Report, L-line Agents, stream 2041
+
+TRENT HAWKINS MEMORIAL ERECTED
+
+Date: 100031iRev
+
+Today with the collaboration of the Deliani central committee and the 
+Tyrian regional tribunal, a memorial statue was erected on Tyrian's
+capital city of Fauchi's central complex pedestal. 
+
+The statue was erected to commemorate the heroic efforts of Trent
+Hawkins, already a legend in the galaxy for his superhuman fighter
+pilot skills and his single handed rescue of the system from the 
+invading Vykromod fleet.
+`
+
+dc_5_5_title=DATACUBE DISPATCH 024484: ZI-11
+dc_5_5_header=News
+dc_5_5_body=`The followers of Zinglon have announced that they have finally
+settled their centuries old vendetta against the followers of 
+Daizan, a less popular but still proactive radical group who
+attended the militarist school of Chesapeake Academy, Fauchi
+sector on Tyrian.
+
+The Academy, nestled in the forests of Severnai Park, has been
+a religious teaching school for many distinguished literary
+scholars on revealed religion, but recently has fallen into 
+disrepute because of the actions of the Zinglon and Daizan cults.
+The difficulties began when two students maliciously broke the
+arm and leg of a Zinglon research student during a sports
+tournament.
+`
+
+dc_5_6_title=DATACUBE DISPATCH 142: WZ-01
+dc_5_6_header=Alert
+dc_5_6_body=`This is the emergency distress beacon at ~Station~ ~23~.  You are
+advised to keep clear of the immediate area around ~Station~ ~23~.  An
+unspecified state of alarm is in effect due to recent hostilities.  Anyone
+entering this sector will be considered hostile and destroyed.
+
+Repeat: Anyone entering this sector will be considered hostile and destroyed.
+
+Thank you for your observence of this message.
+`
+
+dc_5_7_title=HAVE YOU SEEN PRETZEL PETE?
+dc_5_7_header=Alert
+dc_5_7_body=`The dangerous criminal known as Pretzel Pete has stolen all of my pretzels!
+
+If you see him, proceed with caution, as the pretzels he's stolen have mutated
+horribly under his evil machinations and are extremely dangerous!
+
+Please report any knowledge of him to the nearest authorities.
+
+The pretzel mania he has unleashed must be stopped!
+`
+
+dc_5_8_title=Computer Recording
+dc_5_8_header=Message
+dc_5_8_body=`We deeply regret having to take this action.  While the universe continued on without
+you, we, part of the Hazudra whole, strapped a proximity bomb onto your ship and redirected
+you with a subtle nudge towards a very hostile enemy asteroid system.
+
+Your cryo system will wake you at this point.  Once we detect your renewed
+signal we'll instruct you further.
+
+Good wishes.
+`
+
+dc_5_9_title=INCOMING MESSAGE FROM ZINGLON : 00426 mark
+dc_5_9_header=Zinglon
+dc_5_9_body=`Again you plague our path toward ultimate wisdom.  Again your cursed mind and stolen
+starfighter technology return.
+
+You were thought to be destroyed in your battle with our god, ~Zinglon~.
+However, I see that some twisted destiny permits you to live.
+
+I cannot.
+`
+
+dc_5_10_title=INCOMING MESSAGE FROM ZINGLON : 00471 mark
+dc_5_10_header=Zinglon
+dc_5_10_body=`A glorious message from our ~god~ led us to this final path.  Some doubt us, but
+we realized to fulfill ~Zinglon's~ wishes we must control the food supply to all.
+Then twist it to his will.
+
+~His~ ire is absolute, and ~his~ hatred for you brims over and envelops your
+future.
+
+Soon you shall behold the ~fruit~ of our glorious and divine leader.
+`
+
+dc_5_11_title=INCOMING MESSAGE FROM HAZUDRA : 92777 mark
+dc_5_11_header=Collector
+dc_5_11_body=`Grand to see that you have emerged victorious from the asteroid fields.  It
+was a most impressive display to see their ships explode from your assault.
+
+Again, we do apologize for setting you on this dangerous course, but there
+really was no other way to stop the ~Zinglonites~.
+
+Yes, ~Zinglon~.  While there is no sign of him in any form, his essence lives
+on in his followers.  It is certain that they are trying once again to
+destroy everything.
+
+~Microsol~ is merely one front to their power, though decidedly weakened.  What
+remains is a more sinister subterfuge.  For instance, already food supplies have
+been reduced to little else but ~Gruel~.  We believe starvation is one part of their
+plans.
+
+Either ~Savara~ or ~Camanis~ would be a good place to look first, as activity on
+both worlds is very high right now.  Your ship will be allowed to travel to either,
+of course, without fear of detonation.  If they notice your presence we
+feel there is a good chance they will reveal themselves to you out of anger.
+
+And thank you, ~Trent~.  The ~Hazudra~ friend you had was once close to me as well.
+I am sorry he could not be with you now, for a good friend would have made the
+journey so much easier.
+`
+
+dc_5_12_title=[Todo]
+dc_5_12_header=Ship's Log
+dc_5_12_body=`
+`
+

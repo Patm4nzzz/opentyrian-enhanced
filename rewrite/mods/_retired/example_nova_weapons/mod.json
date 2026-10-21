@@ -1,0 +1,114 @@
+// Nova Weapons -- example mod in the rewrite's single format (MODDING.md).
+//
+// Three weapons written from scratch, with their power levels front[] / rear[].
+// To clone an original object ("base" + "tint"), see Alien Pack.
+//
+// What this mod shows:
+//   * weapon levels  -- each front[] / rear[] entry is a power level;
+//   * original sprites cited by name (data/sprite_manifest.json), without PNG;
+//   * mod PNG        -- sprites/shots/ion_beam.png is registered under the name "ion_beam";
+//   * shop icons    -- icon_sprite → sprites/pickups/weapons/<name>.png;
+//   * damage { "pierce": n } -- piercing shot, n damage to each enemy crossed;
+//   * homing > 5     -- shot guided towards the nearest enemy.
+//   No number anywhere: the engine assigns the slots.
+//
+// Conventions (MODDING.md §5.3):
+//   * POSITIVE speed_y = upwards (the engine inverts it);
+//   * sub_delay 255 = the shot lives until it leaves the screen;
+//   * trail 255 = no trail, 98 = smoke;
+//   * max_on_screen = number of projectiles of the level.
+{
+  "$schema": "../../mod.schema.json",
+  "format_version": 1,
+  "name": "Nova Weapons",
+  "author": "OpenTyrian2000 Team",
+  "version": "2.0",
+  "description": "3 futuristic weapons built from scratch — a worked example.",
+  "enabled": false, // to be enabled in Setup → Mods
+
+  "weapons": [
+    // 1) Nova Pulse Array -- teal salvos that widen at each level.
+    //    ORIGINAL sprite "orb_teal_1", cited from the manifest.
+    {
+      "name": "Nova Pulse Array",
+      "cost": 1200,
+      "power_use": 22,
+      "icon_sprite": "nova_pulse", // sprites/pickups/weapons/nova_pulse.png
+      "always_available": true,
+      "front": [
+        { // Level 1: one straight shot
+          "fire_delay": 4, "projectile_count": 1, "max_on_screen": 1, "sound": 20, "trail": 255,
+          "projectiles": [
+            { "damage": 4, "sub_delay": 255, "speed_y": 16, "sprite": "orb_teal_1" },
+          ],
+        },
+        { // Level 2: two shots that spread apart
+          "fire_delay": 4, "projectile_count": 2, "max_on_screen": 2, "sound": 20, "trail": 255,
+          "projectiles": [
+            { "damage": 4, "sub_delay": 255, "speed_x": -1, "speed_y": 16, "sprite": "orb_teal_1" },
+            { "damage": 4, "sub_delay": 255, "speed_x":  1, "speed_y": 16, "sprite": "orb_teal_2" },
+          ],
+        },
+        { // Level 3: fan of three
+          "fire_delay": 4, "projectile_count": 3, "max_on_screen": 3, "sound": 20, "trail": 255,
+          "projectiles": [
+            { "damage": 5, "sub_delay": 255, "speed_x": -2, "speed_y": 15, "sprite": "orb_teal_1" },
+            { "damage": 5, "sub_delay": 255,                "speed_y": 17, "sprite": "orb_teal_3" },
+            { "damage": 5, "sub_delay": 255, "speed_x":  2, "speed_y": 15, "sprite": "orb_teal_2" },
+          ],
+        },
+      ],
+    },
+
+    // 2) Ion Piercer -- slow lance that PIERCES the enemies.
+    //    damage { "pierce": 5 } = piercing, 5 damage to each enemy hit.
+    //    The sprite is a mod PNG: sprites/shots/ion_beam.png → "ion_beam".
+    {
+      "name": "Ion Piercer",
+      "cost": 3000,
+      "power_use": 45,
+      "icon_sprite": "ion_piercer",
+      "always_available": true,
+      "front": [
+        { // Level 1: one piercing lance
+          "fire_delay": 12, "projectile_count": 1, "max_on_screen": 1, "sound": 18, "trail": 255,
+          "projectiles": [
+            { "damage": { "pierce": 5 }, "sub_delay": 255, "speed_y": 12, "sprite": "ion_beam" },
+          ],
+        },
+        { // Level 2: two diverging lances (the spread comes from speed_x)
+          "fire_delay": 12, "projectile_count": 2, "max_on_screen": 2, "sound": 18, "trail": 255,
+          "projectiles": [
+            { "damage": { "pierce": 5 }, "sub_delay": 255, "speed_x": -1, "speed_y": 12, "sprite": "ion_beam" },
+            { "damage": { "pierce": 5 }, "sub_delay": 255, "speed_x":  1, "speed_y": 12, "sprite": "ion_beam" },
+          ],
+        },
+      ],
+    },
+
+    // 3) Quark Seeker -- rear guided missiles, smoke trail.
+    //    rear[] without front[]: the weapon is mounted at the rear.
+    {
+      "name": "Quark Seeker",
+      "cost": 2200,
+      "power_use": 35,
+      "icon_sprite": "quark_seeker",
+      "always_available": true,
+      "rear": [
+        { // Level 1: one missile
+          "fire_delay": 16, "projectile_count": 1, "max_on_screen": 1, "homing": 11, "trail": 98, "sound": 26,
+          "projectiles": [
+            { "damage": 10, "sub_delay": 255, "speed_y": 8, "sprite": "missile_blue_tiny" },
+          ],
+        },
+        { // Level 2: two missiles
+          "fire_delay": 16, "projectile_count": 2, "max_on_screen": 2, "homing": 11, "trail": 98, "sound": 26,
+          "projectiles": [
+            { "damage": 10, "sub_delay": 255, "speed_x": -2, "speed_y": 8, "sprite": "missile_blue_tiny_left" },
+            { "damage": 10, "sub_delay": 255, "speed_x":  2, "speed_y": 8, "sprite": "missile_blue_tiny_right" },
+          ],
+        },
+      ],
+    },
+  ],
+}

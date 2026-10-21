@@ -1,0 +1,11 @@
+# Player 1 (keyboard) of the two-player scenarios: mask bits like sweep.in.
+# Standing still while firing to let player 2 come and link up, then a press
+# on a sidekick (bit 6) that unlinks (player_movement.c), then a sweep.
+40 00
+900 10
+3 50
+400 10
+200 14
+200 18
+200 14
+200 18

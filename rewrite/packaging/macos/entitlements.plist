@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Entitlements of the ad-hoc signature applied by scripts/package.sh (macOS).
+  Only one: the game loads its GDExtension (Contents/Frameworks/libtyrian_godot.dylib),
+  signed ad-hoc like the app; Godot requires library validation to be disabled
+  for an ad-hoc signed app. No microphone, camera, network, location or
+  sandbox entitlement. Game controllers need none.
+-->
+<plist version="1.0">
+<dict>
+	<key>com.apple.security.cs.disable-library-validation</key>
+	<true/>
+</dict>
+</plist>

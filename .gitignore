@@ -1,0 +1,116 @@
+# User config and save files
+opentyrian.cfg
+opentyrian.json
+opentyrian.sav
+tyrian.cfg
+tyrian.sav
+
+# Screenshots and stray images
+*.png
+*.bmp
+
+# BUT keep reference sprites and mod sprites
+!data/reference/sprites/**/*.png
+# Mods shipped with the rewrite (single format, ADR 0083).
+!rewrite/mods/**/*.png
+# gdUnit4 addon (ADR 0084): its icons and the HTML report template.
+!rewrite/godot/addons/gdUnit4/**/*.png
+# Tyrian icon (window, Windows executable, Linux desktop).
+!rewrite/godot/icon/*.png
+# Player check references (rewrite/scripts/player-smoke.sh).
+!rewrite/golden/player-smoke/*.png
+# Media of the Godot + Rust rewrite (marketing/godot/): home GIF and README
+# gallery screenshots.
+!marketing/godot/*.png
+# Screenshots cited by the docs (ADR 0100, docs/FIRST_LEVEL_15_MIN.md).
+!docs/screenshots/export/*.png
+!docs/screenshots/mods/*.png
+
+# Text editor detritus
+*~
+*.swp
+*.bak
+
+# Dependency files
+*.d
+
+# Make build output
+/obj/
+/src/*.gch
+/opentyrian
+/opentyrian2000
+
+# Windows build output
+/opentyrian2000.exe
+/opentyrian.exe
+/opentyrian-*.exe
+/opentyrian-*.ilk
+/opentyrian-*.pdb
+/opentyrian-*.iobj
+/opentyrian-*.ipdb
+/SDL2.dll
+/SDL2_net.dll
+/lib*.dll
+
+# Windows runtime output
+/stderr.txt
+/stdout.txt
+
+# Test binaries
+/tests/test_runner
+
+# Data files (downloaded separately)
+tyrian2000.zip
+
+# DOS binaries in data/ (not needed for SDL2 port)
+/data/*.exe
+/data/*.pif
+/data/*.ovl
+/data/*.ico
+/data/*.box
+/data/*.awe
+/data/readme.txt
+
+# Local working dirs
+/rips/
+/tmp/
+
+# HD sprite pipeline output (generated)
+/pipeline/
+/data/hd/upscaled/
+
+# Plan files (local only)
+phase*_plan.md
+
+# Local scratch files
+/ss.png
+
+# Runtime logs
+crash.log
+debug.log
+
+# Local datasets and generated HTML references
+raiden2_dataset.zip
+/data/reference/stock_catalog.html
+
+# Python cache
+__pycache__/
+
+# Compiled tools
+/utils/xbrz_scale
+/utils/*.o
+opentyrian.dat
+/utils/vpad
+
+# Raw audio dump of SDL_AUDIODRIVER=disk (lands in the root without SDL_DISKAUDIOFILE)
+sdlaudio.raw
+
+# Packages produced by rewrite/scripts/package.sh
+/build/
+rewrite/godot/tmp/
+
+# Local work output (reports, captures, logs): never published.
+/artifacts/
+
+# Local working notes (roadmaps, todo lists): kept out of the public repo.
+work/

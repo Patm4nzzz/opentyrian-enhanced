@@ -1,0 +1,9 @@
+[package]
+name = "tyrian-sim"
+description = "Deterministic Tyrian simulation core, with no Godot dependency"
+edition.workspace = true
+license.workspace = true
+version.workspace = true
+
+[dependencies]
+tyrian-formats = { path = "../tyrian-formats" }
