@@ -27,7 +27,7 @@
 
 Tyrian ist der Kult-Vertikal-Shoot-'em-up von Eclipse Software aus dem Jahr 1995: Du bist **Trent Hawkins**, Kampfpilot, und trittst in **fünf Episoden** voller hektischer Ausweichmanöver, übertriebener Waffen und mit Geheimnissen gespickter Level gegen den Konzern MicroSol an.
 
-**OpenTyrian2000 Enhanced Edition** spielt die komplette Kampagne von Tyrian 2000 auf einer neuen Engine für **Windows, Linux und Steam Deck**. Spiel es so, wie du es in Erinnerung hast, oder schalte Endloswellen, Couch-Koop, Mutatoren und selbst gebaute Mods dazu.
+**OpenTyrian2000 Enhanced Edition** spielt die komplette Kampagne von Tyrian 2000 auf einer neuen Engine für **Windows, Mac, Linux und Steam Deck**. Spiel es so, wie du es in Erinnerung hast, oder schalte Endloswellen, Couch-Koop, Mutatoren und selbst gebaute Mods dazu.
 
 ## ✨ Was Tyrian 2000 nie hatte
 
@@ -87,12 +87,14 @@ Noch nicht moddbar: Levelkarten (Kacheln), Musik, Soundeffekte und die Palette. 
 |---|---:|---|
 | `OpenTyrian2000-Enhanced-v1.0-rc1-windows-x86_64.zip` | 704,0 MB | Windows, komplett (mit HD-Grafik (KI)) |
 | `OpenTyrian2000-Enhanced-v1.0-rc1-linux-x86_64.tar.gz` | 683,4 MB | Linux / Steam Deck, komplett |
+| `OpenTyrian2000-Enhanced-v1.0-rc1-macos-universal.zip` | 727,3 MB | macOS (Intel und Apple Silicon), komplett, experimentell |
 | `OpenTyrian2000-Enhanced-v1.0-rc1-windows-x86_64-lite.zip` | 197,3 MB | Windows, Lite (ohne HD-Grafik (KI)) |
 | `OpenTyrian2000-Enhanced-v1.0-rc1-linux-x86_64-lite.tar.gz` | 185,6 MB | Linux / Steam Deck, Lite |
-| `OpenTyrian2000-Enhanced-v1.0-rc1-hd-pack.zip` | 506,5 MB | HD-Grafik (KI) für einen Lite-Download, beide Systeme |
+| `OpenTyrian2000-Enhanced-v1.0-rc1-hd-pack.zip` | 506,5 MB | HD-Grafik (KI) für einen Lite-Download, Windows oder Linux |
 
 - **Windows** — entpacke das `.zip`, öffne den Ordner `OpenTyrian2000-Enhanced` und starte `OpenTyrian2000-Enhanced.exe`. Zeigt Windows „Der Computer wurde durch Windows geschützt“, klicke auf **Weitere Informationen → Trotzdem ausführen**; die SHA-256-Prüfsumme jedes Archivs steht in `SHA256SUMS.txt`.
 - **Linux / Steam Deck** — entpacke das `.tar.gz` und starte `./OpenTyrian2000-Enhanced.x86_64`. Füge das Spiel auf dem Steam Deck in Steam als Nicht-Steam-Spiel hinzu, damit sein Controller-Profil angewendet wird ([Steam-Deck-Leitfaden](https://tyrian-enhanced.com/de/steam-deck/)).
+- **macOS (experimentell)**: entpacke das Archiv und öffne `OpenTyrian2000 Enhanced.app` (du kannst die App in den Programme-Ordner verschieben). Die App ist noch nicht von Apple signiert oder notarisiert: Klicke beim ersten Mal mit der rechten Maustaste (oder mit gedrückter Ctrl-Taste) darauf, wähle **Öffnen** und dann noch einmal **Öffnen**. Verweigert macOS das Öffnen weiterhin, führe `xattr -cr "/Applications/OpenTyrian2000 Enhanced.app"` im Terminal aus (mit dem Pfad der App). Benötigt macOS 10.13 oder neuer auf Intel, macOS 11 oder neuer auf Apple Silicon.
 - Jeder Download enthält die Spieldaten, den MIDI-Soundtrack und die fünf Mod-Pakete; die Komplettpakete enthalten zusätzlich die HD-Grafik (KI). Lass den Ordner zusammen.
 
 Kein Installationsprogramm, kein Konto. Bekanntes Problem: Netzwerkspiel ist nicht verfügbar („Modem-/Netzwerkspiel“ ist ausgegraut).
