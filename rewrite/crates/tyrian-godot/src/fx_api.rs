@@ -44,7 +44,7 @@ impl TyrianSim {
         }
         FX.with(|f| {
             let mut r = FxRender::new(seed);
-            r.options = opts;
+            r.set_options(opts);
             *f.borrow_mut() = r;
         });
     }
@@ -87,7 +87,7 @@ impl TyrianSim {
             }
         }
         let opts = self.fx_opts;
-        FX.with(|f| f.borrow_mut().options = opts);
+        FX.with(|f| f.borrow_mut().set_options(opts));
     }
 
     /// Visual FX preset (`visual_fx.c`): `screenshake_enabled` and
@@ -108,7 +108,7 @@ impl TyrianSim {
             }
         }
         let opts = self.fx_opts;
-        FX.with(|f| f.borrow_mut().options = opts);
+        FX.with(|f| f.borrow_mut().set_options(opts));
     }
 
     /// `screenshake_get_offset` of the current frame: integer (dx, dy) to
@@ -160,14 +160,7 @@ impl TyrianSim {
     /// a defeated boss, or -1 outside slow motion.
     #[func]
     fn kill_slowmo_speed(&self) -> f32 {
-        FX.with(|f| {
-            let k = f.borrow().kill_slowmo;
-            if k > 0.0 {
-                0.3 + (1.0 - k) * 0.7
-            } else {
-                -1.0
-            }
-        })
+        FX.with(|f| f.borrow().kill_slowmo_speed())
     }
 
     /// Measurements: [live particles, fireballs, shockwaves,

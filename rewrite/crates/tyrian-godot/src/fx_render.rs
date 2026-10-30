@@ -48,7 +48,7 @@ pub struct FxOptions {
     /// `damagenumbers.c:damage_numbers_enabled` / `colored_damage_numbers`.
     pub damage_numbers: bool,
     pub colored: bool,
-    /// `hitstop.c:hitstop_enabled` (the boss flash depends on it).
+    /// `hitstop.c:hitstop_enabled` (boss slow motion and flash depend on it).
     pub hitstop: bool,
     /// `rumble.c:rumble_enabled`.
     pub rumble: bool,
@@ -217,7 +217,7 @@ pub struct FxRender {
     /// (intensity, duration ms).
     pub rumble: Vec<(f32, i32)>,
     /// `hitstop.c:kill_slowmo` (display speed after a boss).
-    pub kill_slowmo: f32,
+    kill_slowmo: f32,
     /// Level palette (768 bytes), for `palette32`.
     palette: Vec<u8>,
     /// Events waiting for the frame where the C draws them.
@@ -280,6 +280,14 @@ impl FxRender {
             modern: ModernExplosions::new(seed),
             reserve: Vec::new(),
             palette_art: false,
+        }
+    }
+
+    /// Apply settings immediately, canceling any boss ramp when Freeze Frames is off.
+    pub(crate) fn set_options(&mut self, options: FxOptions) {
+        self.options = options;
+        if !options.hitstop {
+            self.kill_slowmo = 0.0;
         }
     }
 
@@ -840,7 +848,7 @@ impl FxRender {
                 self.shockwave(x, y, kill_color, 120, 20);
                 // hitstop.c:on_boss_defeated: processorType < 2 exits here,
                 // with no slow motion or flash (nor cascade, on the simulation side).
-                if self.options.processor_type >= 2 {
+                if o.hitstop && o.processor_type >= 2 {
                     self.kill_slowmo = 1.0;
                     self.flash_frames = 3;
                     self.flash_color = kill_color;
@@ -909,11 +917,21 @@ impl FxRender {
 
     // --- damagenumbers.c ----------------------------------------------------
 
+    /// `hitstop.c:kill_slowmo_update`: boss speed, or -1 outside slow motion.
+    pub(crate) fn kill_slowmo_speed(&self) -> f32 {
+        if self.kill_slowmo > 0.0 {
+            0.3 + (1.0 - self.kill_slowmo) * 0.7
+        } else {
+            -1.0
+        }
+    }
+
     /// `nortsong.c:game_speed`: 1 at rest, `BULLET_TIME_SPEED` (0.25) in slow motion,
     /// ramp 0.3 -> 1 after a boss (`hitstop.c:kill_slowmo_update`, which takes precedence).
     fn game_speed(&self) -> f32 {
-        if self.kill_slowmo > 0.0 {
-            0.3 + (1.0 - self.kill_slowmo) * 0.7
+        let boss_speed = self.kill_slowmo_speed();
+        if boss_speed > 0.0 {
+            boss_speed
         } else if self.options.bullet_time {
             0.25
         } else {
@@ -1532,5 +1550,136 @@ mod debris_tests {
         r.options.style = STYLE_CLASSIC;
         r.explosion_fx(100, 80, true, false, 1);
         assert_eq!(r.particles.len(), 2);
+    }
+}
+
+#[cfg(test)]
+mod boss_slowmo_tests {
+    use super::*;
+
+    fn fixture() -> tyrian_sim::Sim {
+        let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../../..");
+        let gm = tyrian_golden::GoldenMaster::load(&root.join("rewrite/golden/e1-tyrian-autopilot.gm"))
+            .expect("boss effects fixture required");
+        gm.make_sim(&root.join("data")).expect("real level fixtures required")
+    }
+
+    fn boss() -> FxEvent {
+        FxEvent::BossDefeated { x: 130, y: 90, value: 2000, frame: 1 }
+    }
+
+    #[test]
+    fn boss_event_respects_freeze_frames_without_suppressing_effects() {
+        let sim = fixture();
+        let w = sim.world();
+        for style in [STYLE_RETRO_PLUS, STYLE_MODERN] {
+            let options = FxOptions { particles: true, style, ..Default::default() };
+            let mut off = FxRender::new(7);
+            off.set_options(options);
+            let mut on = FxRender::new(7);
+            on.set_options(FxOptions { hitstop: true, ..options });
+            for tick in 1..=8 {
+                let events = if tick == 1 { vec![(tick, boss())] } else { Vec::new() };
+                off.frame(events.clone(), w, tick, tick as u32 * 14);
+                on.frame(events, w, tick, tick as u32 * 14);
+                assert_eq!(off.kill_slowmo_speed(), -1.0);
+                assert!(on.kill_slowmo_speed() > 0.0);
+                assert_eq!(off.particle_count(), on.particle_count());
+                assert_eq!(off.fireball_count(), on.fireball_count());
+                assert_eq!(off.shockwave_count(), on.shockwave_count());
+                assert_eq!(off.spawned, on.spawned);
+                assert_eq!(off.rng_draws, on.rng_draws);
+                if tick == 1 {
+                    assert_eq!(off.flash_frames(), 0);
+                    assert_eq!(on.flash_frames(), 3);
+                }
+            }
+            assert!(off.particle_count() > 0, "boss debris continues without Freeze Frames");
+            assert!(off.shockwave_count() > 0, "boss shockwaves are independent of Freeze Frames");
+            if style == STYLE_MODERN {
+                assert!(off.fireball_count() > 0, "the independent boss explosion chain continues");
+            }
+        }
+    }
+
+    #[test]
+    fn enabled_boss_slowmo_preserves_ramp_and_classic_restriction() {
+        let sim = fixture();
+        let w = sim.world();
+        let mut r = FxRender::new(7);
+        r.set_options(FxOptions { hitstop: true, ..Default::default() });
+        r.frame(vec![(1, boss())], w, 1, 14);
+        let mut speed = r.kill_slowmo_speed();
+        assert!((speed - 0.3042).abs() < 0.000001, "the original first-frame boss speed");
+        assert_eq!(r.flash_frames(), 3);
+        for tick in 2..=166 {
+            r.frame(Vec::new(), w, tick, tick as u32 * 14);
+            let next = r.kill_slowmo_speed();
+            assert!(next > speed && next < 1.0, "the original ramp is still active at tick {tick}");
+            speed = next;
+        }
+        r.frame(Vec::new(), w, 167, 167 * 14);
+        assert_eq!(r.kill_slowmo_speed(), -1.0, "the original 167-frame ramp completes");
+        assert_eq!(r.flash_frames(), 0);
+
+        let mut classic = FxRender::new(7);
+        classic.set_options(FxOptions { hitstop: true, particles: true, processor_type: 1, ..Default::default() });
+        classic.frame(vec![(1, boss())], w, 1, 14);
+        assert_eq!(classic.kill_slowmo_speed(), -1.0);
+        assert_eq!(classic.flash_frames(), 0);
+        assert!(classic.particle_count() > 0);
+        assert!(classic.shockwave_count() > 0);
+    }
+
+    #[test]
+    fn disabling_freeze_frames_cancels_boss_slowmo_without_resuming() {
+        let sim = fixture();
+        let w = sim.world();
+        let options = FxOptions { hitstop: true, damage_numbers: true, ..Default::default() };
+        let mut r = FxRender::new(7);
+        r.set_options(options);
+        r.frame(vec![(1, boss())], w, 1, 14);
+        for tick in 2..=20 {
+            r.frame(Vec::new(), w, tick, tick as u32 * 14);
+        }
+        assert!(r.kill_slowmo_speed() > 0.3 && r.kill_slowmo_speed() < 1.0);
+
+        r.set_options(FxOptions { hitstop: false, ..options });
+        assert_eq!(r.kill_slowmo_speed(), -1.0, "disable is immediate, before another frame");
+        r.set_options(options);
+        assert_eq!(r.kill_slowmo_speed(), -1.0, "re-enable must not resurrect the canceled ramp");
+        let hit = FxEvent::ShotHit { x: 100, y: 100, damage: 5, frame: 1 };
+        r.frame(vec![(21, hit), (21, hit)], w, 21, 21 * 14);
+        assert_eq!(r.kill_slowmo_speed(), -1.0);
+        let numbers = r.numbers();
+        assert_eq!(numbers.len(), 1, "damage numbers use normal speed after cancellation");
+        assert_eq!(numbers[0].2, 10);
+
+        let hit = FxEvent::ShotHit { x: 200, y: 80, damage: 5, frame: 1 };
+        r.frame(vec![(22, boss()), (22, hit), (22, hit)], w, 22, 22 * 14);
+        assert!(r.kill_slowmo_speed() > 0.0, "a new boss event starts a new ramp");
+        let mut damage: Vec<_> = r.numbers().iter().map(|n| n.2).collect();
+        damage.sort_unstable();
+        assert_eq!(damage, [5, 5, 10], "damage numbers use boss speed again for the new ramp");
+    }
+
+    #[test]
+    fn boss_speed_controls_damage_number_merging() {
+        let sim = fixture();
+        let w = sim.world();
+        for hitstop in [false, true] {
+            let mut r = FxRender::new(7);
+            r.set_options(FxOptions { hitstop, damage_numbers: true, ..Default::default() });
+            let hit = FxEvent::ShotHit { x: 100, y: 100, damage: 5, frame: 1 };
+            r.frame(vec![(1, boss()), (1, hit), (1, hit)], w, 1, 14);
+            let damage: Vec<_> = r.numbers().iter().map(|n| n.2).collect();
+            if hitstop {
+                assert!(r.kill_slowmo_speed() > 0.0);
+                assert_eq!(damage, [5, 5], "boss speed disables merging");
+            } else {
+                assert_eq!(r.kill_slowmo_speed(), -1.0);
+                assert_eq!(damage, [10], "Freeze Frames off keeps normal-speed merging");
+            }
+        }
     }
 }
