@@ -1599,6 +1599,7 @@ func _player_effects() -> bool:
 func apply_effects() -> void:
 	if sim != null and _player_effects():
 		SetupScreen.apply_effects_to(sim)
+		Effects.kill_slowmo = sim.kill_slowmo_speed()
 		if not replaying and sim.has_method("set_processor_type") and sim.processor_type() != Game.processor_type:
 			sim.set_processor_type(Game.processor_type)
 

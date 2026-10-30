@@ -485,6 +485,10 @@ its own screen (Gamepad), gamepads are no longer set in the Controls screen. Sca
 CRT are also on the Display options screen (F10). Replays and recorded comparisons always play
 without Freeze Frames and with the original explosions, like the C version's golden masters.
 
+Turning **Freeze Frames** off also disables automatic boss-kill slow motion and cancels
+an active boss slowdown immediately. Explosion style, particles and screen shake
+remain controlled by their own settings.
+
 **Visual Effects** (Setup > Graphics): **Off** (pure 1995 look: no particles, no screen shake, no
 advanced lighting), **Basic** (particles and shake) or **Extended**, the default, which adds the
 advanced lighting — exactly the C's Visual FX presets, which the game maps to its internal effect
