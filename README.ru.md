@@ -85,12 +85,12 @@ Tyrian — культовый вертикальный скролл-шутер 1
 
 | Файл | Размер | |
 |---|---:|---|
-| `OpenTyrian2000-Enhanced-v1.0-rc2-windows-x86_64.zip` | 704,0 МБ | Windows, полный (с HD-графикой (ИИ)) |
-| `OpenTyrian2000-Enhanced-v1.0-rc2-linux-x86_64.tar.gz` | 683,4 МБ | Linux / Steam Deck, полный |
-| `OpenTyrian2000-Enhanced-v1.0-rc2-macos-universal.zip` | 727,3 МБ | macOS (Intel и Apple Silicon), полный, экспериментальный |
-| `OpenTyrian2000-Enhanced-v1.0-rc2-windows-x86_64-lite.zip` | 197,3 МБ | Windows, облегчённый (без HD-графики (ИИ)) |
-| `OpenTyrian2000-Enhanced-v1.0-rc2-linux-x86_64-lite.tar.gz` | 185,6 МБ | Linux / Steam Deck, облегчённый |
-| `OpenTyrian2000-Enhanced-v1.0-rc2-hd-pack.zip` | 506,5 МБ | HD-графика (ИИ) для облегчённой версии, Windows или Linux |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-windows-x86_64.zip` | 708,9 МБ | Windows, полный (с HD-графикой (ИИ)) |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-linux-x86_64.tar.gz` | 688,7 МБ | Linux / Steam Deck, полный |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-macos-universal.zip` | 732,2 МБ | macOS (Intel и Apple Silicon), полный, экспериментальный |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-windows-x86_64-lite.zip` | 201,7 МБ | Windows, облегчённый (без HD-графики (ИИ)) |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-linux-x86_64-lite.tar.gz` | 190,1 МБ | Linux / Steam Deck, облегчённый |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-hd-pack.zip` | 506,2 МБ | HD-графика (ИИ) для облегчённой версии, Windows или Linux |
 
 - **Windows** — распакуйте `.zip`, откройте папку `OpenTyrian2000-Enhanced` и запустите `OpenTyrian2000-Enhanced.exe`. Если Windows покажет окно «Система Windows защитила ваш компьютер», нажмите **Подробнее → Выполнить в любом случае**; контрольные суммы SHA-256 всех архивов лежат в `SHA256SUMS.txt`.
 - **Linux / Steam Deck** — распакуйте `.tar.gz` и запустите `./OpenTyrian2000-Enhanced.x86_64`. На Steam Deck добавьте игру в Steam как стороннюю, чтобы применился её профиль управления ([руководство для Steam Deck](https://tyrian-enhanced.com/ru/steam-deck/)).

@@ -13,13 +13,13 @@ version, whose `README.md` describes different keys and options.
 Each release (current: [v1.0-rc2](https://github.com/Patm4nzzz/opentyrian-enhanced/releases/tag/v1.0-rc2))
 offers five files; the version is part of each name:
 
-| File | Size (v1.0-rc1) | Content |
+| File | Size (v1.0-rc2) | Content |
 |---|---:|---|
-| `OpenTyrian2000-Enhanced-<version>-windows-x86_64.zip` | 703.8 MB | Windows, full (with HD (AI) art) |
-| `OpenTyrian2000-Enhanced-<version>-linux-x86_64.tar.gz` | 683.2 MB | Linux / Steam Deck, full |
-| `OpenTyrian2000-Enhanced-<version>-windows-x86_64-lite.zip` | 197.1 MB | Windows, without `upscaled/` |
-| `OpenTyrian2000-Enhanced-<version>-linux-x86_64-lite.tar.gz` | 185.5 MB | Linux / Steam Deck, without `upscaled/` |
-| `OpenTyrian2000-Enhanced-<version>-hd-pack.zip` | 506.5 MB | `upscaled/` alone, for a lite download |
+| `OpenTyrian2000-Enhanced-<version>-windows-x86_64.zip` | 708.9 MB | Windows, full (with HD (AI) art) |
+| `OpenTyrian2000-Enhanced-<version>-linux-x86_64.tar.gz` | 688.7 MB | Linux / Steam Deck, full |
+| `OpenTyrian2000-Enhanced-<version>-windows-x86_64-lite.zip` | 201.7 MB | Windows, without `upscaled/` |
+| `OpenTyrian2000-Enhanced-<version>-linux-x86_64-lite.tar.gz` | 190.1 MB | Linux / Steam Deck, without `upscaled/` |
+| `OpenTyrian2000-Enhanced-<version>-hd-pack.zip` | 506.2 MB | `upscaled/` alone, for a lite download |
 
 Download one game archive; the HD pack is only useful with a lite one.
 

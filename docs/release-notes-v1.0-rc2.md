@@ -15,12 +15,12 @@ downloads leave out the HD (AI) art, which you can add later with the HD pack.
 
 | File | Size | What it is |
 |---|---:|---|
-| `OpenTyrian2000-Enhanced-v1.0-rc2-windows-x86_64.zip` | TBD | Windows, full (with HD (AI) art) |
-| `OpenTyrian2000-Enhanced-v1.0-rc2-linux-x86_64.tar.gz` | TBD | Linux / Steam Deck, full (with HD (AI) art) |
-| `OpenTyrian2000-Enhanced-v1.0-rc2-macos-universal.zip` | TBD | macOS (Intel and Apple Silicon), full, experimental |
-| `OpenTyrian2000-Enhanced-v1.0-rc2-windows-x86_64-lite.zip` | TBD | Windows, lite (no HD (AI) art) |
-| `OpenTyrian2000-Enhanced-v1.0-rc2-linux-x86_64-lite.tar.gz` | TBD | Linux / Steam Deck, lite (no HD (AI) art) |
-| `OpenTyrian2000-Enhanced-v1.0-rc2-hd-pack.zip` | TBD | HD (AI) art pack for the lite downloads (Windows and Linux) |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-windows-x86_64.zip` | 708.9 MB | Windows, full (with HD (AI) art) |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-linux-x86_64.tar.gz` | 688.7 MB | Linux / Steam Deck, full (with HD (AI) art) |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-macos-universal.zip` | 732.2 MB | macOS (Intel and Apple Silicon), full, experimental |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-windows-x86_64-lite.zip` | 201.7 MB | Windows, lite (no HD (AI) art) |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-linux-x86_64-lite.tar.gz` | 190.1 MB | Linux / Steam Deck, lite (no HD (AI) art) |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-hd-pack.zip` | 506.2 MB | HD (AI) art pack for the lite downloads (Windows and Linux) |
 
 Sizes in MB (1 MB = 1,000,000 bytes). The SHA-256 checksums are listed on the release page.
 

@@ -85,12 +85,12 @@ Not moddable yet: level maps (tiles), music, sound effects and the palette. Full
 
 | Download | Size | |
 |---|---:|---|
-| `OpenTyrian2000-Enhanced-v1.0-rc2-windows-x86_64.zip` | 704.0 MB | Windows, full (with HD (AI) art) |
-| `OpenTyrian2000-Enhanced-v1.0-rc2-linux-x86_64.tar.gz` | 683.4 MB | Linux / Steam Deck, full |
-| `OpenTyrian2000-Enhanced-v1.0-rc2-macos-universal.zip` | 727.3 MB | macOS (Intel and Apple Silicon), full, experimental |
-| `OpenTyrian2000-Enhanced-v1.0-rc2-windows-x86_64-lite.zip` | 197.3 MB | Windows, lite (no HD (AI) art) |
-| `OpenTyrian2000-Enhanced-v1.0-rc2-linux-x86_64-lite.tar.gz` | 185.6 MB | Linux / Steam Deck, lite |
-| `OpenTyrian2000-Enhanced-v1.0-rc2-hd-pack.zip` | 506.5 MB | HD (AI) art for a lite download, Windows or Linux |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-windows-x86_64.zip` | 708.9 MB | Windows, full (with HD (AI) art) |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-linux-x86_64.tar.gz` | 688.7 MB | Linux / Steam Deck, full |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-macos-universal.zip` | 732.2 MB | macOS (Intel and Apple Silicon), full, experimental |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-windows-x86_64-lite.zip` | 201.7 MB | Windows, lite (no HD (AI) art) |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-linux-x86_64-lite.tar.gz` | 190.1 MB | Linux / Steam Deck, lite |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-hd-pack.zip` | 506.2 MB | HD (AI) art for a lite download, Windows or Linux |
 
 - **Windows** — extract the `.zip`, open the `OpenTyrian2000-Enhanced` folder, run `OpenTyrian2000-Enhanced.exe`. If Windows shows "Windows protected your PC", click **More info → Run anyway**; the SHA-256 of each archive is in `SHA256SUMS.txt`.
 - **Linux / Steam Deck** — extract the `.tar.gz`, run `./OpenTyrian2000-Enhanced.x86_64`. On Steam Deck, add it to Steam as a non-Steam game so its controller profile applies ([Steam Deck guide](https://tyrian-enhanced.com/steam-deck/)).

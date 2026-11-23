@@ -85,12 +85,12 @@ Non ancora modificabili con le mod: le mappe dei livelli (tile), la musica, gli 
 
 | Download | Dimensione | |
 |---|---:|---|
-| `OpenTyrian2000-Enhanced-v1.0-rc2-windows-x86_64.zip` | 704,0 MB | Windows, completo (con la grafica HD (IA)) |
-| `OpenTyrian2000-Enhanced-v1.0-rc2-linux-x86_64.tar.gz` | 683,4 MB | Linux / Steam Deck, completo |
-| `OpenTyrian2000-Enhanced-v1.0-rc2-macos-universal.zip` | 727,3 MB | macOS (Intel e Apple Silicon), completo, sperimentale |
-| `OpenTyrian2000-Enhanced-v1.0-rc2-windows-x86_64-lite.zip` | 197,3 MB | Windows, leggero (senza la grafica HD (IA)) |
-| `OpenTyrian2000-Enhanced-v1.0-rc2-linux-x86_64-lite.tar.gz` | 185,6 MB | Linux / Steam Deck, leggero |
-| `OpenTyrian2000-Enhanced-v1.0-rc2-hd-pack.zip` | 506,5 MB | Grafica HD (IA) per un download leggero, Windows o Linux |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-windows-x86_64.zip` | 708,9 MB | Windows, completo (con la grafica HD (IA)) |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-linux-x86_64.tar.gz` | 688,7 MB | Linux / Steam Deck, completo |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-macos-universal.zip` | 732,2 MB | macOS (Intel e Apple Silicon), completo, sperimentale |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-windows-x86_64-lite.zip` | 201,7 MB | Windows, leggero (senza la grafica HD (IA)) |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-linux-x86_64-lite.tar.gz` | 190,1 MB | Linux / Steam Deck, leggero |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-hd-pack.zip` | 506,2 MB | Grafica HD (IA) per un download leggero, Windows o Linux |
 
 - **Windows** — estrai lo `.zip`, apri la cartella `OpenTyrian2000-Enhanced` e avvia `OpenTyrian2000-Enhanced.exe`. Se Windows mostra “PC protetto da Windows”, fai clic su **Ulteriori informazioni → Esegui comunque**; lo SHA-256 di ogni archivio è indicato in `SHA256SUMS.txt`.
 - **Linux / Steam Deck** — estrai il `.tar.gz` e avvia `./OpenTyrian2000-Enhanced.x86_64`. Su Steam Deck, aggiungi il gioco a Steam come gioco non Steam, così viene applicato il suo profilo del controller ([guida per Steam Deck](https://tyrian-enhanced.com/it/steam-deck/)).
