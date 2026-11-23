@@ -411,6 +411,7 @@ impl Ctx<'_> {
         r
     }
 
+    #[allow(clippy::needless_range_loop)] // the index is the item id, also used as the key
     fn finish(mut self, episode: u8, reports: Vec<ModReport>) -> ResolvedMods {
         let t = &self.t;
         let mut patch = TablePatch::default();

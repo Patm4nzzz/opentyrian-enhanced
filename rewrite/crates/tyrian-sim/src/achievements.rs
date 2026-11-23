@@ -1622,6 +1622,7 @@ mod tests {
     }
 
     #[test]
+    #[allow(clippy::needless_range_loop)] // the index is the achievement number
     fn completionist_and_achievement_hunter_count_unlocked() {
         let mut t = tracker();
         for i in 0..49 {

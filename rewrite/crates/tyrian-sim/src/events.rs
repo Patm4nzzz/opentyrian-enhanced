@@ -368,6 +368,7 @@ impl World {
     }
 
     /// Modification of the existing enemies of a link (or of all).
+    #[allow(clippy::needless_range_loop)] // index loops as in the C code
     fn event_modify_enemies(&mut self, ev: Event) {
         match ev.eventtype {
             19 => self.event_global_move(),
@@ -764,6 +765,7 @@ impl World {
     }
 
     /// Event 19: speed imposed on a group of enemies.
+    #[allow(clippy::needless_range_loop)] // index loops as in the C code
     fn event_global_move(&mut self) {
         let ev = self.cur_ev();
         let (initial_i, max_i, all_enemies);

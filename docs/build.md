@@ -279,7 +279,7 @@ belongs to the modes work package.
 ## macOS package (experimental, unsigned)
 
 No Mac and no paid Apple Developer account: the macOS app is built by the **`macos` job** of
-`.github/workflows/rewrite.yml` (manual `workflow_dispatch` only, `macos-14` runner, Apple Silicon)
+`.github/workflows/rewrite.yml` (manual `workflow_dispatch` only, `macos-15` runner, Apple Silicon)
 and signed **ad-hoc** (`codesign --sign -`): it runs on any Mac once the player gets past Gatekeeper
 (right-click › Open, see the README), but it is neither Developer ID signed nor notarized.
 It is not attached to releases yet.

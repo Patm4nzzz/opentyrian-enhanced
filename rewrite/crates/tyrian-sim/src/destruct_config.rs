@@ -671,6 +671,7 @@ pub fn scancode_name(code: u16) -> &'static str {
 /// `destruct.c:load_destruct_config` applied to the content of `destruct.cfg`
 /// (empty if it does not exist). Returns the configuration, the file to rewrite and
 /// the warnings (out-of-bounds values).
+#[allow(clippy::needless_range_loop)] // index loops as in the C code
 pub fn load(data: &[u8]) -> (DestructConfig, Vec<u8>, Vec<String>) {
     let mut file = ConfigFile::parse(data);
     let mut cfg = DestructConfig::default();

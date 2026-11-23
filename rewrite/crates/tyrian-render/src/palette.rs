@@ -28,6 +28,7 @@ impl HwPalette {
     }
 
     /// `set_colors`.
+    #[allow(clippy::needless_range_loop)] // index loops as in the C code
     pub fn set_colors(&mut self, color: [u8; 3], first: usize, last: usize) {
         for i in first..=last.min(255) {
             self.colors[i] = color;

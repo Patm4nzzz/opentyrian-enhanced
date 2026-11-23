@@ -161,6 +161,7 @@ fn retired_example_mods_still_resolve() {
 /// two shipped ship packs), all resolve. Each pose sits at shipgraphic + bank * 2,
 /// where level.gd draws it, and no mod image lands on an original ship.
 #[test]
+#[allow(clippy::needless_range_loop)] // the index is printed in the message
 fn fourteen_mod_ships_with_five_poses_resolve() {
     if !have_data() {
         return;

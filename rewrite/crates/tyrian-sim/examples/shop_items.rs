@@ -7,6 +7,7 @@ fn name(n: &tyrian_formats::hdt::PascalName) -> String {
     String::from_utf8_lossy(&n.bytes[..(n.len as usize).min(30)]).to_string()
 }
 
+#[allow(clippy::needless_range_loop)] // the index is printed in the message
 fn dump(label: &str, it: &ItemTables) {
     println!("=== {label}");
     for i in [9usize, 16, 20, 30, 31] {

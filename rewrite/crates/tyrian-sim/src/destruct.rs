@@ -1198,6 +1198,7 @@ impl Destruct {
     }
 
     /// `DE_RunTickAI`.
+    #[allow(clippy::needless_range_loop)] // index loops as in the C code
     fn run_ai(&mut self) {
         let n = self.config.max_installations as usize;
         for i in 0..MAX_PLAYERS {
