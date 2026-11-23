@@ -720,28 +720,40 @@ func _draw_ship_illustration(lo: PackedInt32Array, ship: Dictionary, shield: Dic
 	vga.blit_sprite_hv(VGA_SCREEN, 28, 23, OPTION_SHAPES, 26, 15, int(shield.get("mpwr", 0)) - 10)
 
 
-## game_menu.c:JE_drawItem (type 1 ship, 2-7 items; without the mods'
-## override tables).
+## items.json table of each JE_drawItem type (1 ship, 2-3 front / rear weapon,
+## 4 shield, 5 generator, 6-7 sidekicks).
+const SHOP_ITEM_ROWS := {
+	1: "ships", 2: "weapon_ports", 3: "weapon_ports", 4: "shields", 5: "generators", 6: "sidekicks", 7: "sidekicks"
+}
+
+
+## Row of `table` for item `id`: the mods' item when a mod adds this id
+## (Mods.item_row: its armor, its icon, its name), otherwise the row of `items`
+## (the episode's part of items.json, which only knows the game's own tables).
+static func item_row(items: Dictionary, table: String, id: int) -> Dictionary:
+	var mod_row := Mods.item_row(table, id)
+	if not mod_row.is_empty():
+		return mod_row
+	var rows: Array = items.get(table, [])
+	return rows[id] if id >= 0 and id < rows.size() else {}
+
+
+## game_menu.c:JE_drawItem (type 1 ship, 2-7 items) from the original sheets;
+## the images provided by a mod are laid over the screen by shop.gd. A mod item
+## copied from an original one (`base`, no image of its own) shows that image.
 func _draw_shop_item(item_type: int, id: int, x: int, y: int, surf := VGA_SCREEN) -> void:
 	if id <= 0:
 		return
+	var row := item_row(_items_json, SHOP_ITEM_ROWS.get(item_type, ""), id)
+	if row.is_empty():
+		return
 	if item_type == 1:
-		var ships: Array = _items_json["ships"]
-		if id >= ships.size():
-			return
-		var g := int(ships[id].get("shipgraphic", 0))
+		var g := int(row.get("shipgraphic", 0))
 		if g > 500:
 			vga.blit_sprite2(surf, x, y, "main:12", g - 500, 0, 0, true)
 		else:
 			vga.blit_sprite2(surf, x, y, "main:8", g, 0, 0, true)
 		return
-	var table: String = (
-		{2: "weapon_ports", 3: "weapon_ports", 4: "shields", 5: "generators", 6: "sidekicks", 7: "sidekicks"}
-		. get(item_type, "")
-	)
-	var rows: Array = _items_json.get(table, [])
-	if id >= rows.size():
-		return
-	var g := int(rows[id].get("itemgraphic", 0))
+	var g := int(row.get("itemgraphic", 0))
 	if g > 0:
 		vga.blit_sprite2(surf, x, y, "newsh1.shp", g, 0, 0, true)

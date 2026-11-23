@@ -468,6 +468,15 @@ impl TyrianVga {
     #[func]
     fn blit_sprite(&mut self, surf: i32, x: i32, y: i32, table: i32, index: i32) {
         let sf = &mut self.surfaces[surf.clamp(0, 2) as usize];
+        // sprite.c:blit_sprite: a portrait, planet or weapon picture given by
+        // a mod takes the place of the sprite (sprite_override_for_table).
+        let replaced = table >= 0
+            && index >= 0
+            && with_assets(|a| crate::mod_sprites::blit_screen_sprite(sf, a, x, y, table as usize, index as usize))
+                .unwrap_or(false);
+        if replaced {
+            return;
+        }
         sf.tag = crate::hd_ui::simple_tag(table, index);
         with_assets(|a| {
             if let Some(sp) = a.sprite(table as usize, index as usize) {

@@ -732,3 +732,118 @@ fn published_original_names_match_the_data() {
     let published = std::fs::read_to_string(example_mods().join("original-names.json")).unwrap();
     assert!(published == set.originals.to_json(), "rewrite/mods/original-names.json is out of date: rerun `cargo run -p tyrian-mods -- catalog --data ../data --sheets ../docs/original-enemies`");
 }
+
+/// Warnings of the resolution of a temporary mod `m` on episode 1 (12×14 PNGs).
+fn warnings_for(tag: &str, files: &[(&str, &str)]) -> Vec<String> {
+    let dir = std::env::temp_dir().join(format!("tyrian-mods-warn-{tag}-{}", std::process::id()));
+    let _ = std::fs::remove_dir_all(&dir);
+    for (rel, content) in files {
+        let p = dir.join("m").join(rel);
+        std::fs::create_dir_all(p.parent().unwrap()).unwrap();
+        if rel.ends_with(".png") {
+            let mut png = vec![0x89, b'P', b'N', b'G', 13, 10, 26, 10, 0, 0, 0, 13, b'I', b'H', b'D', b'R'];
+            png.extend_from_slice(&12u32.to_be_bytes());
+            png.extend_from_slice(&14u32.to_be_bytes());
+            png.extend_from_slice(&[8, 6, 0, 0, 0, 0, 0, 0, 0]);
+            std::fs::write(p, png).unwrap();
+        } else {
+            std::fs::write(p, content).unwrap();
+        }
+    }
+    let mut set = ModSet::load_from(&data(), &dir);
+    set.set_enabled("m", true);
+    let (_, items) = episode_items(&data(), 1).unwrap();
+    let res = set.resolve(1, &items);
+    let _ = std::fs::remove_dir_all(&dir);
+    assert_eq!(res.diagnostics.count(Severity::Error), 0, "{:?}", res.diagnostics.items);
+    res.diagnostics.items.iter().filter(|d| d.severity == Severity::Warning).map(|d| d.message.clone()).collect()
+}
+
+/// The shop reads one image table per kind of item (game_menu.c:JE_drawItem):
+/// an icon PNG placed in another sprites folder would show nothing. The mod
+/// still loads, with a warning that names the right folder.
+#[test]
+fn icon_in_the_wrong_sprites_folder_is_reported() {
+    if !have_data() {
+        return;
+    }
+    let mod_json = r#"{"format_version":1,"name":"m",
+        "sidekicks":[{"name":"Pod","base":"Single Shot Option","icon_sprite":"pod_icon"}],
+        "shields":[{"name":"Dome","base":"Structural Integrity Field","icon_sprite":"dome_icon"}]}"#;
+    let w = warnings_for(
+        "wrong",
+        &[("mod.json", mod_json), ("sprites/pickups/pod_icon.png", ""), ("sprites/pickups/dome_icon.png", "")],
+    );
+    assert!(w.iter().any(|m| m.contains("sidekick 'Pod'") && m.contains("sprites/sidekicks/")), "{w:?}");
+    assert!(w.iter().any(|m| m.contains("shield 'Dome'") && m.contains("sprites/pickups/shields/")), "{w:?}");
+    // In the folders the shop reads: nothing to report.
+    let w = warnings_for(
+        "right",
+        &[
+            ("mod.json", mod_json),
+            ("sprites/sidekicks/pod_icon.png", ""),
+            ("sprites/pickups/shields/dome_icon.png", ""),
+        ],
+    );
+    assert!(w.is_empty(), "{w:?}");
+}
+
+/// Every image category of MODDING.md is drawn by the game: none is reported.
+/// Planets and weapon pictures are named by the number of the sprite they
+/// replace, the only name those sprites have in data/sprite_manifest.json; a
+/// number stays an error everywhere else, and when no sprite has it.
+#[test]
+fn every_sprite_category_loads_and_numbers_name_planets_and_weapon_pictures() {
+    if !have_data() {
+        return;
+    }
+    let mod_json = ("mod.json", r#"{"format_version":1,"name":"m"}"#);
+    let w = warnings_for(
+        "drawn",
+        &[
+            mod_json,
+            ("sprites/shots/my_shot.png", ""),
+            ("sprites/ships/usp_talon.png", ""),
+            ("sprites/sidekicks/single_shot_option.png", ""),
+            ("sprites/pickups/weapons/pulse_cannon.png", ""),
+            ("sprites/pickups/shields/structural_integrity_field.png", ""),
+            ("sprites/pickups/specials/repulsor.png", ""),
+            ("sprites/coins/coin_gold.png", ""),
+            ("sprites/explosions/speck_red_0.png", ""),
+            ("sprites/enemies/tech_corridor_32.png", ""),
+            ("sprites/portraits/buce.png", ""),
+            ("sprites/planets/010.png", ""),
+            ("sprites/weapon_icons/003.png", ""),
+        ],
+    );
+    assert!(w.is_empty(), "{w:?}");
+    // The planet PNG lands on sprite 10 of its table, the weapon picture on sprite 3.
+    let dir = std::env::temp_dir().join(format!("tyrian-mods-numbers-{}", std::process::id()));
+    let _ = std::fs::remove_dir_all(&dir);
+    for rel in ["mod.json", "sprites/planets/010.png", "sprites/weapon_icons/003.png"] {
+        let p = dir.join("m").join(rel);
+        std::fs::create_dir_all(p.parent().unwrap()).unwrap();
+        if rel.ends_with(".png") {
+            let mut png = vec![0x89, b'P', b'N', b'G', 13, 10, 26, 10, 0, 0, 0, 13, b'I', b'H', b'D', b'R'];
+            png.extend_from_slice(&12u32.to_be_bytes());
+            png.extend_from_slice(&14u32.to_be_bytes());
+            png.extend_from_slice(&[8, 6, 0, 0, 0, 0, 0, 0, 0]);
+            std::fs::write(p, png).unwrap();
+        } else {
+            std::fs::write(p, mod_json.1).unwrap();
+        }
+    }
+    let mut set = ModSet::load_from(&data(), &dir);
+    set.set_enabled("m", true);
+    let (_, items) = episode_items(&data(), 1).unwrap();
+    let res = set.resolve(1, &items);
+    let _ = std::fs::remove_dir_all(&dir);
+    let at = |t: tyrian_mods::SpriteTable| res.sprites.iter().find(|s| s.table == t).map(|s| s.index);
+    assert_eq!(at(tyrian_mods::SpriteTable::Planets), Some(10), "{:?}", res.diagnostics.items);
+    assert_eq!(at(tyrian_mods::SpriteTable::WeaponIcons), Some(3));
+    // A number no planet has, and a number in a category named by words.
+    for rel in ["sprites/planets/999.png", "sprites/shots/123.png", "sprites/portraits/2.png"] {
+        let e = errors_for(&[mod_json, (rel, "")]);
+        assert!(e.iter().any(|m| m.contains("never a number")), "{rel}: {e:?}");
+    }
+}

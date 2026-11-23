@@ -29,7 +29,10 @@ func test_language_picker_saves_settings() -> void:
 
 
 func test_c_profile_scores_and_settings_are_converted() -> void:
-	var dir := OS.get_environment("TMPDIR") if not OS.get_environment("TMPDIR").is_empty() else "/tmp"
+	# Temporary folder of the system: TMPDIR, TEMP under Windows (no /tmp there).
+	var dir := OS.get_environment("TMPDIR")
+	if dir.is_empty():
+		dir = OS.get_environment("TEMP").replace("\\", "/") if OS.get_name() == "Windows" else "/tmp"
 	dir = dir.path_join("c_profile_test_%d" % Time.get_ticks_usec())
 	DirAccess.make_dir_recursive_absolute(dir)
 	var root := {

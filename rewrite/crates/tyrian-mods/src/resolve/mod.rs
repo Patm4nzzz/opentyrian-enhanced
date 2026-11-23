@@ -223,6 +223,9 @@ struct Ctx<'a> {
     pending_sidekick_icon: BTreeMap<usize, String>,
     pending_shield_icon: BTreeMap<usize, String>,
     pending_special_icon: BTreeMap<usize, String>,
+    /// Table of each PNG registered under a new name (`png_index`): an icon
+    /// cited by an item must sit in the table the shop reads for that item.
+    png_tables: BTreeMap<String, SpriteTable>,
     weapon_tint: BTreeMap<usize, f32>,
     starter: StarterLoadout,
     /// `starter` section: key → (mod folder, object name).
@@ -281,6 +284,7 @@ impl ModSet {
             pending_sidekick_icon: BTreeMap::new(),
             pending_shield_icon: BTreeMap::new(),
             pending_special_icon: BTreeMap::new(),
+            png_tables: BTreeMap::new(),
             weapon_tint: BTreeMap::new(),
             starter: StarterLoadout::default(),
             pending_starter: BTreeMap::new(),

@@ -214,6 +214,10 @@ var debrief_frozen := false
 ## State of player[] inherited from the previous level (TyrianSim.campaign_carry),
 ## empty at the first level of a game.
 var campaign_carry := PackedInt32Array()
+## Place of player 1's rear weapon mode in `campaign_carry`, and size of the
+## list (tyrian-sim LevelCarry::to_values).
+const CARRY_WEAPON_MODE := 7
+const CARRY_SIZE := 9
 ## ]x[ (extraGame): the current shop offers a mini-game; the
 ## "Next Level" menu then shows "Bonus Game" (game_menu.c, miscText[67]).
 var extra_game := false
@@ -761,6 +765,23 @@ func campaign_leave_shop(choice := 0, shop_loadout := PackedInt32Array()) -> voi
 	advance_campaign()
 
 
+## player[0].weapon_mode (rear weapon mode, 1 or 2) as the last level or the
+## shop left it. The C never resets it between two levels: the mode chosen in
+## the shop ("/" in the rear gun list) is the one the next level starts with.
+func rear_weapon_mode() -> int:
+	if campaign_carry.size() <= CARRY_WEAPON_MODE:
+		return 1
+	return maxi(campaign_carry[CARRY_WEAPON_MODE], 1)
+
+
+## Mode left by the shop (TyrianShop state "weapon_mode"), for the next level.
+func set_rear_weapon_mode(mode: int) -> void:
+	if campaign_carry.size() < CARRY_SIZE:
+		# Zeros carry nothing else: no friction, special shot released.
+		campaign_carry.resize(CARRY_SIZE)
+	campaign_carry[CARRY_WEAPON_MODE] = maxi(mode, 1)
+
+
 ## End of mainint.c:JE_nextEpisode (story scene): next episode at its
 ## first section; Super Tyrian game finished: return to the title.
 func campaign_next_episode(_finished_episode: int, to_title: bool) -> void:
@@ -841,11 +862,20 @@ func campaign_level_finished(stats: Dictionary) -> void:
 	if two_player_game() and stats.has("cash2") and campaign_modes_extra.size() >= 2:
 		campaign_modes_extra[1] = int(stats["cash2"])
 	# Actual end-of-level equipment (weapon power gained in play included):
-	# it is what the next shop resells (player[0].items, JE_itemScreen).
+	# it is what the next shop resells (player[0].items, JE_itemScreen). The
+	# special weapon picked up in the level is kept too (player_collide.c:130
+	# writes player[0].items.special, mainint.c:JE_endLevelAni keeps the items).
 	var end_loadout: PackedInt32Array = stats.get("loadout", PackedInt32Array())
 	if end_loadout.size() >= 11:
-		end_loadout[9] = loadout[9]
 		loadout = end_loadout
+	# Two-player game: player 2 keeps its equipment too (rear weapon and sidekicks
+	# picked up, lives = weapon power). The C sets player[1].items once, at the start
+	# of the game (mainint.c:JE_initPlayerData); without this, player 2 went back to the
+	# starting equipment at each level. Not after a mini-game, whose equipment is
+	# dropped (JE_loadGame).
+	var end_loadout2: PackedInt32Array = stats.get("loadout2", PackedInt32Array())
+	if two_player_game() and not mini_game and end_loadout2.size() >= 10 and campaign_modes_extra.size() >= 4:
+		campaign_modes_extra[3] = end_loadout2.slice(0, 10)
 	goto_scene(SCENE_DEBRIEF)
 
 

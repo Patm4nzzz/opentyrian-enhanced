@@ -40,6 +40,11 @@ pub struct TyrianShop {
     cubes: Vec<Cube>,
     /// Mods attached by `set_mods`: tables and `always_available` items.
     mods: Option<Gd<crate::TyrianMods>>,
+    /// Shot images drawn by a mod PNG (`set_mod_shot_images`): the
+    /// demonstration does not draw them from the original sheets.
+    mod_shot_images: std::collections::HashSet<u16>,
+    /// Shots of the last `weapon_view_frame`, in drawing order.
+    preview_shots: Vec<tyrian_sim::shop_preview::PreviewSprite>,
     #[var]
     last_error: GString,
 }
@@ -95,6 +100,36 @@ impl TyrianShop {
     #[func]
     fn set_mods(&mut self, mods: Option<Gd<crate::TyrianMods>>) {
         self.mods = mods;
+    }
+
+    /// Rear weapon mode of player 1 on entering the shop (1 or 2): the one of
+    /// the level that just ended (`player[0].weapon_mode`, never reset by
+    /// `JE_itemScreen`). To call after `open`.
+    #[func]
+    fn set_weapon_mode(&mut self, mode: i32) {
+        if let (Some(t), Some(s)) = (self.tables.as_ref(), self.session.as_mut()) {
+            s.set_weapon_mode(t, mode.clamp(0, 255) as u8);
+        }
+    }
+
+    /// Shot images (numbers of the "shots" table of the mods) that a mod draws
+    /// with its own PNG. `weapon_view_frame` leaves them out of the 8-bit image,
+    /// which only knows the original sheets; the caller lays the PNG over the
+    /// image at the positions given by `weapon_view_shots` (like level.gd).
+    #[func]
+    fn set_mod_shot_images(&mut self, images: PackedInt32Array) {
+        self.mod_shot_images = images.as_slice().iter().filter_map(|&i| u16::try_from(i).ok()).collect();
+    }
+
+    /// Shots of the last `weapon_view_frame`: flattened (x, y, image) triplets,
+    /// corner of the image in the 320x200 screen, mod images included.
+    #[func]
+    fn weapon_view_shots(&self) -> PackedInt32Array {
+        let mut out = Vec::with_capacity(self.preview_shots.len() * 3);
+        for sp in &self.preview_shots {
+            out.extend([sp.x, sp.y, sp.frame as i32]);
+        }
+        PackedInt32Array::from(out)
     }
 
     /// Opens the shop (`JE_itemScreen`): `items_available` = the 9
@@ -465,6 +500,8 @@ impl TyrianShop {
         // Number of rear weapon modes (`weaponPort[...].opnum`):
         // "[/] Rear Weapon Mode" only appears if there are two.
         d.set("rear_mode_count", s.rear_mode_count(t) as i32);
+        // `player[0].weapon_mode`: handed to the next level by the caller.
+        d.set("weapon_mode", s.weapon_mode as i32);
         d.set("cube_sel", s.cur_sel[7] as i32);
         d.set("cube_max", s.cube_max as i32);
         let mut titles = PackedStringArray::new();
@@ -491,6 +528,7 @@ impl TyrianShop {
             return 0;
         };
         let sprites = p.frame(&s.items, s.weapon_mode);
+        let mod_images = &self.mod_shot_images;
         let stars = p.stars;
         let power = p.power();
         let sim_time = p.sim_time;
@@ -504,7 +542,7 @@ impl TyrianShop {
         surf.pixels = px;
         // Shots: `blit_sprite2` of spriteSheet8 (`main:7`) or 12 (`main:11`).
         with_assets(|a| {
-            for sp in &sprites {
+            for sp in sprites.iter().filter(|sp| !mod_images.contains(&sp.frame)) {
                 let frame = sp.frame as u32;
                 let (sheet, idx) = if frame > 500 { ("main:11", frame - 500) } else { ("main:7", frame) };
                 if let Some(data) = a.sheet(sheet) {
@@ -527,6 +565,7 @@ impl TyrianShop {
             }
         });
         draw_power_bar(surf, power as i32);
+        self.preview_shots = sprites;
         sim_time as i32
     }
 

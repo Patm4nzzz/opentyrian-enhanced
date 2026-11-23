@@ -392,6 +392,23 @@ impl World {
         // (goto draw_enemy_end).
         if self.hitstop_active() {
             self.hitstop.frozen_updates += 1;
+            // A frozen enemy is still on screen. The C jumps over `enemyOnScreen++` with the
+            // rest of the update, so every layer looked empty during a freeze: a scrolling
+            // stopped for a boss (event 4) was released and the level ran into its end
+            // event, or ended at once through event 36, with the boss alive
+            // (divergences.md, entry 64). Same test as below, on the unmoved position.
+            //
+            // A frozen enemy also keeps following its scenery layer. The C skips
+            // `ey += tempBackMove` too while the backgrounds go on scrolling, so every
+            // freeze left the ground enemies behind their scenery for good: turrets and
+            // buildings slid off their bases, up to 24 pixels in one level
+            // (divergences.md, entry 65).
+            let scroll = self.background.temp_back_move as i16;
+            let e = &mut self.enemy[i];
+            e.ey = e.ey.wrapping_add(scroll);
+            if e.ex > -24 && e.ex < 296 && !e.edamaged {
+                self.enemy_on_screen = self.enemy_on_screen.wrapping_add(1);
+            }
             return;
         }
 

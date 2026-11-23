@@ -34,6 +34,11 @@
 ##                                real seconds (default 60) -> failure
 ##   --campaign-bot-max-ticks=<n> tick cap per level (default 60000)
 ##   --campaign-bot-episodes=<n>  last episode to finish (default 5)
+##   --campaign-bot-player-fx     the player's Setup effects (Freeze Frames,
+##                                explosion style, damage numbers...) instead of
+##                                the golden master settings: the game as the
+##                                player has it by default (level.gd:
+##                                _player_effects)
 ##   --campaign-bot-dodge         lateral dodging of shots and enemies above
 ##                                the ship (_dodge; default: aiming only)
 ##   --campaign-bot-drive=dodge   driving that plans its moves to
@@ -79,6 +84,9 @@ var _episodes_target := 5
 var _max_attempts := 3
 ## Dodging of shots and enemies (--campaign-bot-dodge, default: no).
 var _dodge_on := false
+## --campaign-bot-player-fx: levels played with the player's Setup effects
+## (read by level.gd:_player_effects).
+var player_fx := false
 ## Planned driving (--campaign-bot-drive=dodge): a single object for the whole
 ## campaign (it remembers the sprites that are harmless on contact).
 var _planner: RefCounted
@@ -201,6 +209,8 @@ func _ready() -> void:
 			_buy_plan = Array(arg.trim_prefix("--campaign-bot-buy=").split(",", false)).map(func(v): return int(v))
 		elif arg == "--campaign-bot-dodge":
 			_dodge_on = true
+		elif arg == "--campaign-bot-player-fx":
+			player_fx = true
 		elif arg == "--campaign-bot-drive=dodge":
 			_planner = ClassDB.instantiate("TyrianDodgeBot")
 		elif arg.begins_with("--campaign-bot-attempts="):

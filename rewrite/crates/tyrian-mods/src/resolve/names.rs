@@ -263,20 +263,41 @@ impl Ctx<'_> {
             }
         }
         macro_rules! icons {
-            ($pending:ident, $table:ident) => {
+            ($pending:ident, $table:ident, $what:literal, $shop_table:expr, $dir:literal) => {
                 let v: Vec<(usize, String)> =
                     self.$pending.iter().filter(|(_, s)| !s.is_empty()).map(|(&i, s)| (i, s.clone())).collect();
                 for (id, name) in v {
                     match self.names.lookup(&name) {
-                        Some(r) => self.t.$table[id].itemgraphic = r as u16,
+                        Some(r) => {
+                            self.t.$table[id].itemgraphic = r as u16;
+                            // The shop reads one image table per kind of item
+                            // (game_menu.c:JE_drawItem): a PNG placed in another
+                            // sprites folder is numbered in another table and the
+                            // item would show no icon.
+                            let expected: Option<SpriteTable> = $shop_table;
+                            if let (Some(expected), Some(&found)) = (expected, self.png_tables.get(&name)) {
+                                if found != expected {
+                                    self.diag.warn(
+                                        "",
+                                        format!(
+                                            "{} '{}': icon_sprite '{name}' is not a PNG of sprites/{}/, where the shop reads the icons of this kind of item: no icon will show",
+                                            $what,
+                                            String::from_utf8_lossy(&cname(&self.t.$table[id].name)),
+                                            $dir
+                                        ),
+                                    );
+                                }
+                            }
+                        }
                         None => self.diag.warn("", format!("icon_sprite '{name}' not found (item {id})")),
                     }
                 }
             };
         }
-        icons!(pending_weapon_icon, ports);
-        icons!(pending_sidekick_icon, options);
-        icons!(pending_shield_icon, shields);
-        icons!(pending_special_icon, specials);
+        icons!(pending_weapon_icon, ports, "weapon", Some(SpriteTable::ShopWeapons), "pickups/weapons");
+        icons!(pending_sidekick_icon, options, "sidekick", Some(SpriteTable::Sidekicks), "sidekicks");
+        icons!(pending_shield_icon, shields, "shield", Some(SpriteTable::ShopShields), "pickups/shields");
+        // Specials are never sold: no shop icon to check.
+        icons!(pending_special_icon, specials, "special", None, "pickups/specials");
     }
 }

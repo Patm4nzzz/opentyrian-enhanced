@@ -3,7 +3,8 @@
 #
 #   1. compiles music_render (gcc) with c/lds_play.c, c/opl.c, c/opl_dosbox.c,
 #      c/opl_nuked.c, c/nuked_opl3.c AS IS (frozen copies of the C code,
-#      extracted from the retired C version, tag c-final);
+#      extracted from the retired C version, tag c-final). One exception:
+#      c/opl_nuked.c queues its register writes (docs/divergences.md, entry 66);
 #   2. for each song: 16-bit mono 44,100 Hz PCM -> OGG (ffmpeg libvorbis);
 #   3. writes music.json: title (c/musmast.c:musicTitle), duration, loop point.
 #

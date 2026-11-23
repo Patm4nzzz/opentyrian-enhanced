@@ -15,6 +15,10 @@ func before() -> void:
 	# enemy freeze would shift the game and it would no longer end on the same tick.
 	# The removal of the debriefing's endless loop is verified separately
 	# (debrief_exit_test.gd).
+	# Default settings first: the ones read from the profile at launch may come
+	# from another suite (a Setup mutator left in setup.cfg changes the game
+	# replayed here, which then no longer ends on the recorded tick).
+	SetupScreen.reset_settings()
 	SetupScreen.settings["hitstop_enabled"] = false
 	SetupScreen.apply_settings()
 	EndlessSession.stop()

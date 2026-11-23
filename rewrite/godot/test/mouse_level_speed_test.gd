@@ -10,6 +10,14 @@ const LEVEL := preload("res://scripts/level.gd")
 const OUT_X3 := Vector2i(960, 600)
 
 
+## The cases count raw pixels: the Windows pointer gain of this PC (read once
+## from its settings by MouseSystemScale) is set aside; the gain itself is
+## tested with given settings further down and in mouse_system_scale_test.gd.
+func before_test() -> void:
+	MouseSystemScale.ensure_loaded()
+	MouseSystemScale.values = PackedFloat32Array()
+
+
 func test_formula_matches_c_integer_division() -> void:
 	# (2×0+1)×320/1920 = 0 ; (2×1+1)×320/1920 = 0 ; (2×3+1)×320/1920 = 1 ;
 	# 6 -> 13×320/1920 = 2 ; 12 -> 25×320/1920 = 4 ; 360 -> 721×320/1920 = 120.

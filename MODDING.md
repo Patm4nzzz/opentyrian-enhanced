@@ -269,8 +269,8 @@ Every new ship PNG takes one place in the ship image table shared by all enabled
 | `power` | 100 | effect strength |
 | `subtype` | 1 | effect kind |
 
-The weapon a special fires is the one of its `base`. Shops never sell specials: give one through
-`starter`.
+The weapon a special fires is the one of its `base`. Shops never sell specials and `starter` has
+no key for one: give it in a level, with the `give_special` event (§8).
 
 ### 5.9 Shop slots
 
@@ -295,16 +295,45 @@ every mod has loaded; an unknown name is an error.
 
 PNG files go into `sprites/<category>/<name>.png`:
 
-| Folder | Content |
-|---|---|
-| `shots/` | projectiles |
-| `ships/` | player ships (24×28) |
-| `sidekicks/` | sidekicks |
-| `pickups/`, `pickups/weapons/`, `pickups/shields/`, `pickups/specials/` | shop icons and pickups |
-| `coins/` | coins, gems, data cubes |
-| `weapon_icons/` | HUD icons |
-| `explosions/`, `portraits/`, `planets/` | explosions, portraits, planets |
-| `enemies/<enemy name>.png` | image of an original enemy (§7.4) |
+| Folder | Content | Drawn by the game |
+|---|---|---|
+| `shots/` | projectiles | yes: in a level and in the shop's firing demonstration |
+| `ships/` | player ships (24×28) | yes: in a level and in the shop |
+| `sidekicks/` | shop icons of the sidekicks (24×28) | yes: in the shop |
+| `pickups/weapons/` | shop icons of the weapons | yes: in the shop |
+| `pickups/shields/` | shop icons of the shields | yes: in the shop |
+| `pickups/`, `pickups/specials/` | icons of generators and special weapons | yes: generator icon in the shop, special weapon icon at the top left of a level |
+| `coins/` | coins, gems, data cubes | yes: in a level |
+| `explosions/` | explosions | yes: in a level |
+| `enemies/<enemy name>.png` | image of an original enemy (§7.4) | yes: in a level |
+| `weapon_icons/` | pictures of the weapons and generators on the ship illustration | yes: in the shop |
+| `portraits/` | faces of the data cubes | yes: in the shop's data cube screen |
+| `planets/` | planets of the navigation map, title logos (`146`, `151`) | yes: on the navigation map and the title screen |
+
+Every category is drawn. The planets and the weapon pictures only have numbers in
+`data/sprite_manifest.json` (`000`, `001`...): a PNG of `planets/` or `weapon_icons/` is named by
+the number of the sprite it replaces (`planets/010.png`).
+
+Coins, explosions and enemies are part of the 8-bit picture of the play area: their PNG is mapped
+to the palette of the level (the nearest of its 255 colors, alpha under 128 = transparent), so a
+color the level does not have comes out as its closest neighbor. Ships, shots and shop icons keep
+their own colors.
+
+- A **coin** PNG is the strip of its animation, like the templates of
+  `data/reference/sprites/coins/`: frames of 12×14, or of 24×28 for the large gems, data cubes and
+  power-ups. Every frame of the strip replaces the matching frame of the game.
+- An **enemy** PNG replaces the first image of that enemy. An enemy made of four sheet cells
+  (24×28) takes a 24×28 PNG, which stands for the whole enemy; the other frames of an animated
+  enemy stay the original ones.
+- An **explosion** PNG (12×14) replaces one explosion image.
+- A **portrait**, **planet** or **weapon picture** PNG replaces that sprite on the screens that
+  show it, mapped to the palette of its screen (the face's own palette for a portrait). It must
+  not be larger than the original sprite (sizes in `data/sprite_manifest.json`): the screens place
+  the sprite by its original size, so a larger PNG is not used.
+
+The shop reads one table per kind of item: the `icon_sprite` of a weapon is a PNG of
+`pickups/weapons/`, that of a shield a PNG of `pickups/shields/`, that of a sidekick a PNG of
+`sidekicks/`. An icon placed in another folder would not show; the mod check warns about it.
 
 Any RGBA PNG works; it is mapped to the game palette at load time (alpha 0 = transparent).
 Templates of the original sprites: `data/reference/sprites/` in the repository (not loaded by the
@@ -320,7 +349,8 @@ A PNG is named either:
 - with a **new name**: it is registered under that name, and cited by it in `sprite`,
   `ship_sprite`, `icon_sprite`, `ship_poses`.
 
-A PNG named by a number is an error.
+A PNG named by a number is an error, except in `planets/` and `weapon_icons/`, whose sprites only
+have numbers.
 
 ### 6.3 Tint
 

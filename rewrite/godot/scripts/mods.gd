@@ -28,6 +28,15 @@ var _prefs := ConfigFile.new()
 var _textures := {}
 ## List imposed by --mods (null = player's preferences).
 var _forced: Variant = null
+## Sheet byte of the coins, gems and data cubes (spriteSheet11 of tyrian.shp).
+const COIN_SHEET := 11
+## items.json table of each kind of items().
+const ITEM_TABLES := {
+	"ship": "ships", "weapon": "weapon_ports", "sidekick": "sidekicks", "shield": "shields", "special": "specials"
+}
+## "table:id" -> item of items(), for the episode `_item_rows_episode` (-1: to rebuild).
+var _item_rows := {}
+var _item_rows_episode := -1
 
 
 func _ready() -> void:
@@ -65,6 +74,7 @@ func available() -> bool:
 ## Re-reads all folders; to be called when leaving the mods menu.
 func reload() -> int:
 	_textures.clear()
+	_item_rows_episode = -1
 	if not ClassDB.class_exists("TyrianMods"):
 		push_warning("Mods: GDExtension missing, mods disabled")
 		api = null
@@ -78,6 +88,9 @@ func reload() -> int:
 		for m in api.list(Game.episode):
 			api.set_enabled(m["folder"], (_forced as PackedStringArray).has(m["folder"]))
 		n = api.reload()
+	# Portraits, planets and weapon pictures of the mods: drawn by the 8-bit
+	# screens themselves (TyrianVga.blit_sprite).
+	api.install_screen_sprites(Game.episode)
 	reloaded.emit()
 	return n
 
@@ -118,6 +131,21 @@ func items() -> Array:
 	return api.items(Game.episode) if api != null else []
 
 
+## Item `id` of the items.json table `table` ("ships", "shields"...) when a mod
+## adds it, {} otherwise. The mods' items are not in items.json (the game's own
+## tables): the screens that draw the armor and shield bars, the ship
+## illustration or an item name ask here first.
+func item_row(table: String, id: int) -> Dictionary:
+	if _item_rows_episode != Game.episode:
+		_item_rows_episode = Game.episode
+		_item_rows.clear()
+		for it in items():
+			var t: String = ITEM_TABLES.get(String(it["kind"]), "")
+			if not t.is_empty():
+				_item_rows["%s:%d" % [t, int(it["id"])]] = it
+	return _item_rows.get("%s:%d" % [table, id], {})
+
+
 ## True if an enabled mod provides at least one image for `table` (shots, ships...).
 func has_textures(table: String) -> bool:
 	_build_table_cache(table)
@@ -134,6 +162,18 @@ func texture(table: String, index: int) -> Texture2D:
 	return _textures.get(key, null)
 
 
+## Indices of `table` for which an enabled mod provides an image.
+func texture_indices(table: String) -> PackedInt32Array:
+	_build_table_cache(table)
+	var out := PackedInt32Array()
+	var prefix := "%s:" % table
+	for key: String in _textures:
+		var index := key.trim_prefix(prefix)
+		if key.begins_with(prefix) and index.is_valid_int() and _textures[key] != null:
+			out.append(int(index))
+	return out
+
+
 func _build_table_cache(table: String) -> void:
 	var marker := "%s:built" % table
 	if _textures.has(marker) or api == null:
@@ -147,8 +187,47 @@ func _build_table_cache(table: String) -> void:
 			continue
 		if float(s["hue"]) >= 0.0:
 			_tint(img, float(s["hue"]))
-		_textures["%s:%d" % [table, int(s["index"])]] = ImageTexture.create_from_image(img)
+		var tex := ImageTexture.create_from_image(img)
+		var index := int(s["index"])
 		_textures["%s:any" % table] = true
+		if table == "enemies":
+			# One image per (sheet, index): the first image of the named enemy.
+			_textures["enemies:%d:%d" % [int(s.get("sheet", 0)), index]] = tex
+		elif table == "coins":
+			_store_coin_frames(tex, index)
+		else:
+			_textures["%s:%d" % [table, index]] = tex
+
+
+## A coin PNG is the strip of its animation, like the templates of
+## data/reference/sprites/coins: frames of 12x14 (a coin of one sheet cell,
+## frame k is image index + k) or of 24x28 (a coin of 2x2 cells, frame k is
+## image index + 2k). Any other size is taken as a single image.
+func _store_coin_frames(tex: Texture2D, index: int) -> void:
+	var size := Vector2i(tex.get_size())
+	var frame := Vector2i(12, 14) if size.y == 14 else Vector2i(24, 28)
+	if size.y != frame.y or size.x % frame.x != 0 or size.x == frame.x:
+		_textures["coins:%d" % index] = tex
+		return
+	@warning_ignore("integer_division")
+	for k in size.x / frame.x:
+		var part := AtlasTexture.new()
+		part.atlas = tex
+		part.region = Rect2(k * frame.x, 0, frame.x, frame.y)
+		@warning_ignore("integer_division")
+		_textures["coins:%d" % (index + k * (frame.x / 12))] = part
+
+
+## Image a mod gives to image `index` of the enemy sheet `sheet` (sheet byte of
+## TyrianSim.hd_enemy_sprites), or null: a coin of sheet 11 (tyrian.shp, "coins"
+## table) or the first image of an original enemy ("enemies" table).
+func enemy_texture(sheet: int, index: int) -> Texture2D:
+	if sheet == COIN_SHEET:
+		var coin := texture("coins", index)
+		if coin != null:
+			return coin
+	_build_table_cache("enemies")
+	return _textures.get("enemies:%d:%d" % [sheet, index], null)
 
 
 ## Cosmetic tint (sprite_override.c:apply_tint): replaces the hue of the

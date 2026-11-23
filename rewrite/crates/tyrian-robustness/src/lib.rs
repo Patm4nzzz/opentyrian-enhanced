@@ -316,8 +316,16 @@ fn panic_message(e: &(dyn std::any::Any + Send)) -> String {
     }
 }
 
-/// Plays a game until the end of the level or `max_ticks`.
+/// Plays a game until the end of the level or `max_ticks`, with the settings of the
+/// golden masters (no player effect).
 pub fn play(id: u64, cat: &Catalogue, max_ticks: u64, wild: bool) -> GameOutcome {
+    play_fx(id, cat, max_ticks, wild, false)
+}
+
+/// Same game; `player_fx` turns on what only the player's game enables
+/// (`tyrian_sim::fx::FxConfig`: freeze frames, Modern explosions, effect events), so that
+/// these paths are played too. The golden masters and the other tools run without them.
+pub fn play_fx(id: u64, cat: &Catalogue, max_ticks: u64, wild: bool, player_fx: bool) -> GameOutcome {
     let (spec, rng) = GameSpec::from_id(id, cat, wild);
     let setup = spec.setup(cat);
     let mut out = GameOutcome {
@@ -336,6 +344,9 @@ pub fn play(id: u64, cat: &Catalogue, max_ticks: u64, wild: bool) -> GameOutcome
             return out;
         }
     };
+    if player_fx {
+        sim.set_fx_config(tyrian_sim::fx::FxConfig { hitstop: true, modern_explosions: true, events: true });
+    }
     let snap_len = sim.snapshot().len();
     let mut input = BotInput::new(rng);
     let mut h = out.trace_hash;

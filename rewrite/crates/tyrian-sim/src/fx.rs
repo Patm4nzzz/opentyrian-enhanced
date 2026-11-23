@@ -165,3 +165,170 @@ impl World {
         }
     }
 }
+
+#[cfg(test)]
+mod hitstop_tests {
+    use crate::{
+        fx::FxConfig, setup, GeneratorId, Loadout, PlayerInput, ShieldId, ShipId, SidekickId, Sim, SpecialId, WeaponId,
+    };
+
+    fn loadout() -> Loadout {
+        Loadout {
+            ship: ShipId(1),
+            front_weapon: WeaponId(1),
+            front_power: 1,
+            rear_weapon: WeaponId(0),
+            rear_power: 1,
+            shield: ShieldId(4),
+            generator: GeneratorId(2),
+            left_sidekick: SidekickId(0),
+            right_sidekick: SidekickId(0),
+            special: SpecialId(0),
+            cash: 10000,
+        }
+    }
+
+    /// The ship neither fires nor moves: kept alive to watch the level.
+    fn idle(sim: &mut Sim, frames: usize) {
+        for _ in 0..frames {
+            sim.world.players[0].invulnerable_ticks = 100;
+            sim.step([PlayerInput(0), PlayerInput(0)]);
+        }
+    }
+
+    /// DELIANI (episode 1, level file 5), boss fight in place. Three escort ships (links 1 to
+    /// 3, value 250) come first; the boss (link 10) arrives at time 4780 with event 36 ("ready
+    /// to end the level"); event 4 stops the scrolling at 5015 until the boss layer is empty,
+    /// and event 11 (end of level) waits at 5020.
+    fn deliani_boss_fight(hitstop: bool) -> Option<Sim> {
+        let dir = std::path::PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../../data");
+        if !dir.join("tyrian1.lvl").exists() {
+            return None;
+        }
+        let mut sim = Sim::new(setup::load_level(&dir, 1, 19, 5, 2, loadout(), 7).unwrap());
+        sim.set_fx_config(FxConfig { hitstop, ..Default::default() });
+        let mut guard = 0;
+        while sim.world.script.cur_loc < 5015 && guard < 100_000 {
+            idle(&mut sim, 1);
+            guard += 1;
+        }
+        idle(&mut sim, 30);
+        assert_eq!(sim.world.script.cur_loc, 5015, "the scrolling must be stopped for the boss fight");
+        assert!(sim.world.ending.ready_to_end_level, "event 36 must have armed the level end");
+        assert!(!alive(&sim, 10).is_empty(), "the boss (link 10) must be on screen");
+        assert!(!sim.world.ending.end_level);
+        Some(sim)
+    }
+
+    fn alive(sim: &Sim, link: u8) -> Vec<usize> {
+        (0..crate::world::ENEMY_MAX)
+            .filter(|&i| sim.world.enemy_avail[i] == 0 && sim.world.enemy[i].linknum == link)
+            .collect()
+    }
+
+    /// Destroys one escort ship as a player shot does (lethal hit on one of its parts).
+    fn destroy_escort(sim: &mut Sim, link: u8) {
+        let b = alive(sim, link)[0];
+        let (x, y) = (sim.world.enemy[b].ex as i32, sim.world.enemy[b].ey as i32);
+        sim.world.process_kill_chain(b, x, y, 10, 1, link, Default::default());
+        assert!(alive(sim, link).is_empty());
+    }
+
+    /// Player report on v1.0-rc1: DELIANI ended with its boss alive when the ships that
+    /// escort it were destroyed. The freeze frames of a kill (value 250: 3 frames) hid every
+    /// enemy from the on-screen count, which released the stopped scrolling; the level then
+    /// ran into its end event with the boss alive.
+    #[test]
+    fn destroying_escort_does_not_end_level_while_boss_alive() {
+        let Some(mut sim) = deliani_boss_fight(true) else { return };
+        for link in [1, 2, 3] {
+            destroy_escort(&mut sim, link);
+            assert!(sim.world.hitstop_active(), "a kill worth 250 freezes the frame");
+            for _ in 0..120 {
+                idle(&mut sim, 1);
+                assert!(!sim.world.ending.end_level, "the level ended with its boss alive");
+            }
+        }
+        assert!(!alive(&sim, 10).is_empty());
+        assert_eq!(sim.world.script.cur_loc, 5015, "the scrolling waits for the boss");
+    }
+
+    /// A freeze with no repeating explosion in progress (small enemy destroyed by a hit of 50
+    /// or more) ended the level at once through event 36, boss alive.
+    #[test]
+    fn freeze_frame_alone_does_not_end_level_while_boss_alive() {
+        let Some(mut sim) = deliani_boss_fight(true) else { return };
+        sim.world.hitstop_on_enemy_killed(5, 60);
+        assert!(sim.world.hitstop_active());
+        for _ in 0..10 {
+            idle(&mut sim, 1);
+            assert!(!sim.world.ending.end_level, "the level ended with its boss alive");
+            assert!(sim.world.enemy_on_screen > 0, "frozen enemies are still on screen");
+        }
+        assert!(!alive(&sim, 10).is_empty());
+    }
+
+    /// Same fight with Freeze Frames off: the level goes on (reference behavior).
+    #[test]
+    fn level_goes_on_without_freeze_frames() {
+        let Some(mut sim) = deliani_boss_fight(false) else { return };
+        for link in [1, 2, 3] {
+            destroy_escort(&mut sim, link);
+            idle(&mut sim, 120);
+        }
+        assert!(!sim.world.ending.end_level);
+        assert_eq!(sim.world.script.cur_loc, 5015);
+    }
+
+    /// A freeze must not leave the ground enemies behind their scenery: the backgrounds go on
+    /// scrolling during a freeze, so an enemy that stands on the ground has to follow them.
+    /// TYRIAN (episode 1, level file 9): same level twice, one freeze in the first run only.
+    #[test]
+    fn frozen_ground_enemies_keep_following_the_scenery() {
+        let dir = std::path::PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../../data");
+        if !dir.join("tyrian1.lvl").exists() {
+            return;
+        }
+        let start = || {
+            let mut sim = Sim::new(setup::load_level(&dir, 1, 3, 9, 2, loadout(), 7).unwrap());
+            sim.set_fx_config(FxConfig { hitstop: true, ..Default::default() });
+            sim
+        };
+        // Enemies of the two ground layers (slots 25..50 and 75..100) with no motion of their own.
+        let still = |sim: &Sim| -> Vec<usize> {
+            (25..50)
+                .chain(75..100)
+                .filter(|&i| {
+                    let e = &sim.world.enemy[i];
+                    sim.world.enemy_avail[i] == 0
+                        && (e.exc, e.eyc, e.fixedmovey, e.excc, e.eycc) == (0, 0, 0, 0, 0)
+                        && e.ey > 0
+                        && e.ey < 100
+                })
+                .collect()
+        };
+        let (mut frozen, mut reference) = (start(), start());
+        let mut guard = 0;
+        while still(&frozen).len() < 3 && guard < 20_000 {
+            idle(&mut frozen, 1);
+            idle(&mut reference, 1);
+            guard += 1;
+        }
+        let watched = still(&frozen);
+        assert!(watched.len() >= 3, "TYRIAN must show ground enemies");
+        let before: Vec<i16> = watched.iter().map(|&i| frozen.world.enemy[i].ey).collect();
+
+        frozen.world.hitstop_on_enemy_killed(250, 1);
+        idle(&mut frozen, 6);
+        idle(&mut reference, 6);
+        assert!(frozen.world.hitstop.frozen_updates > 0, "the enemies must have been frozen");
+        assert_eq!(reference.world.hitstop.frozen_updates, 0);
+        for (k, &i) in watched.iter().enumerate() {
+            assert_ne!(reference.world.enemy[i].ey, before[k], "the scenery must be scrolling");
+            assert_eq!(
+                frozen.world.enemy[i].ey, reference.world.enemy[i].ey,
+                "ground enemy {i} left behind its scenery by a freeze"
+            );
+        }
+    }
+}

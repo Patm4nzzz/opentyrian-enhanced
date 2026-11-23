@@ -22,7 +22,7 @@ pub const SAMPLE_RATE: i32 = 44_100;
 /// Fixed synth gain, the only level stage on this side: the music
 /// slider is applied by the Godot player (dB table of the C, without the x2
 /// of the OPL). Equal to `midi_music.c:MIDI_SYNTH_GAIN` (0.18). Highest peak
-/// measured by `tests::loudest_tracks_do_not_clip`: 0.39 (track 1).
+/// measured by `tests::loudest_tracks_do_not_clip`: 0.39 (track 0).
 pub const MASTER_VOLUME: f32 = 0.18;
 
 /// Polyphony: maximum accepted by rustysynth (the C takes 512 with
@@ -279,6 +279,25 @@ mod tests {
         assert_eq!(song_file(&dir, 41), None);
         assert_eq!(song_file(&dir, -1), None);
         assert_eq!(song_file(&data().join("absent"), 0), None);
+    }
+
+    /// Each MIDI file is the same piece as the OPL track of the same number.
+    /// The table is the length of the first pass of the OPL track (music.json
+    /// of the DOSBox render: `loop_start`, or the end of a track played once);
+    /// the transcriptions are up to 5.8 s shorter (29, the title). The two
+    /// "Asteroid Dance" files were swapped until v1.0-rc1: 8.5 s and 8.9 s off.
+    #[test]
+    fn every_midi_file_is_the_piece_of_its_opl_track() {
+        const OPL_FIRST_PASS_S: [f64; 41] = [
+            103.2, 112.0, 60.9, 116.1, 14.8, 103.2, 12.5, 33.2, 182.4, 5.6, 10.5, 58.1, 41.5, 66.4, 41.5, 120.4, 86.8,
+            77.4, 5.5, 34.6, 84.8, 25.9, 96.8, 174.1, 78.5, 59.0, 38.8, 90.3, 86.6, 114.0, 2.2, 58.1, 69.1, 7.3, 81.1,
+            73.8, 59.0, 132.7, 83.0, 55.3, 37.6,
+        ];
+        for (n, opl) in OPL_FIRST_PASS_S.iter().enumerate() {
+            let file = song(n as i32);
+            let midi = MidiFile::new(&mut File::open(&file).unwrap()).unwrap().get_length();
+            assert!((midi - opl).abs() < 6.5, "track {n} ({}): MIDI {midi:.1} s, OPL {opl:.1} s", file.display());
+        }
     }
 
     /// In-memory rendering, without an audio device: one second of the title.

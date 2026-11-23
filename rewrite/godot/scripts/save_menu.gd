@@ -142,10 +142,8 @@ func _draw_status() -> void:
 	SHOP.draw_left_side(self, lo, lo[10])
 	if Game.modes.size() >= 1 and Game.modes[0] != 0:
 		return
-	var ships: Array = _items_json.get("ships", [])
-	var shields: Array = _items_json.get("shields", [])
-	var ship: Dictionary = ships[lo[0]] if lo[0] >= 0 and lo[0] < ships.size() else {}
-	var shield: Dictionary = shields[lo[5]] if lo[5] >= 0 and lo[5] < shields.size() else {}
+	var ship := SHOP.item_row(_items_json, "ships", lo[0])
+	var shield := SHOP.item_row(_items_json, "shields", lo[5])
 	vga.text_shade(VGA_SCREEN, 65, 173, str(lo[10]), 1, 6, 2)
 	bar_draw_shadow(42, 152, 3, 14, int(ship.get("dmg", 0)), 2, 13)
 	bar_draw_shadow(104, 152, 4, 14, int(shield.get("mpwr", 0)) * 2, 2, 13)

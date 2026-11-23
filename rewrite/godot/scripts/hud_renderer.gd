@@ -104,6 +104,9 @@ var banner_suppressed := false
 ## load question), empty = none.
 var pinned_message := ""
 ## F3 / F4 / F6 overlays (level_overlays.gd) and the simulation that provides the figures.
+## Mod image of the special weapon's icon (JE_inGameDisplays, 2x2 at (25, 1)),
+## null when the original sheet applies; drawn by level.gd.
+var mod_special_icon: Texture2D
 var overlays: LevelOverlays
 var overlay_sim: Node
 ## enemy_render.c: "PLAY" at the top right of the play area during a
@@ -739,7 +742,13 @@ func _draw_in_game_displays(h: PackedInt32Array, endless: PackedInt64Array) -> v
 				vga.text_shade(s, cash_x, 175, cash, 8, 8, TyrianText.FULL_SHADE)
 			else:
 				vga.text_shade(s, cash_x, 175, cash, 2, 4, TyrianText.FULL_SHADE)
-		if h[SPECIAL_GR] > 0:
+		# mainint.c:2707 (pickup_overrides): a mod PNG for the icon of the
+		# special weapon is laid over the HUD by level.gd (mod_special_icon),
+		# never blitted into the 8-bit image.
+		mod_special_icon = null
+		if h[SPECIAL_GR] > 0 and Mods.has_textures("pickups"):
+			mod_special_icon = Mods.texture("pickups", h[SPECIAL_GR])
+		if h[SPECIAL_GR] > 0 and mod_special_icon == null:
 			vga.blit_sprite2(s, 25, 1, "main:9", h[SPECIAL_GR], 0, 0, true)
 		# "Lives Left": arcade (one player) or two players.
 		if h[ONE_PLAYER_ACTION] != 0 or two:

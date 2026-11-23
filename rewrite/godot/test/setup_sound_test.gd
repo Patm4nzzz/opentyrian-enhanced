@@ -256,6 +256,25 @@ func test_engine_picker_three_choices_and_authentic_stream() -> void:
 	assert_int(Music.engine).is_equal(Music.ENGINE_ENHANCED)
 
 
+## The Authentic render plays every voice of a track: its level (music.json,
+## `rms`) stays within 10 % of the Classic render of the same track. A render
+## made before the fix of opl_nuked.c (notes not restarted, divergences.md,
+## entry 66) lost whole voices: 34 % of Classic on track 39, 59 % on Sarah's
+## Song. Rendering again: MUSIC_BACKEND=nuked tools/music-render/render.sh.
+func test_authentic_render_plays_every_voice() -> void:
+	assert_int(Music._nuked_songs.size()).is_equal(Music._songs.size())
+	var off: Array[String] = []
+	for i in Music._nuked_songs.size():
+		var ratio := float(Music._nuked_songs[i]["rms"]) / float(Music._songs[i]["rms"])
+		if ratio < 0.9 or ratio > 1.1:
+			off.append("%d %s: %.2f" % [i, Music.title(i), ratio])
+	(
+		assert_array(off)
+		. override_failure_message("Authentic tracks far from the Classic level (stale Nuked render?): %s" % [off])
+		. is_empty()
+	)
+
+
 ## File written before this change (0 Original OPL, 1 MIDI, no [format]):
 ## MIDI becomes Enhanced (2), OPL stays Classic (0); re-saved in format 2.
 func test_old_music_engine_value_is_migrated() -> void:

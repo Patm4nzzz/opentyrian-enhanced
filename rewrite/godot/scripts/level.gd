@@ -672,6 +672,16 @@ func _build_hud() -> void:
 	_timer_text.font = TyrianText.FontKind.SMALL
 	_timer_text.position = Vector2(100, 2)
 	_hud.add_child(_timer_text)
+	# Special weapon icon given by a mod (HudRenderer.mod_special_icon): the C
+	# blits it at (25, 1) of game_screen (mainint.c:JE_inGameDisplays), whose
+	# play area starts PLAY_AREA_X pixels to the left of the window.
+	_mod_special_sprite = Sprite2D.new()
+	_mod_special_sprite.name = "ModSpecialIcon"
+	_mod_special_sprite.centered = false
+	_mod_special_sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	_mod_special_sprite.position = Vector2(25 + SIM_X_TO_SCREEN, 1)
+	_mod_special_sprite.visible = false
+	_hud.add_child(_mod_special_sprite)
 	# mainint.c:JE_pauseGame: "JE_dString(VGAScreenSeg, 120, 90, miscText[22], FONT_SHAPES)".
 	_pause_label = TyrianText.new()
 	_pause_label.font = TyrianText.FontKind.LARGE
@@ -682,6 +692,17 @@ func _build_hud() -> void:
 
 
 var _timer_text: TyrianText
+var _mod_special_sprite: Sprite2D
+
+
+## Special weapon icon of a mod, as HudRenderer.refresh just decided it.
+func _refresh_hud_vga() -> void:
+	if _hud_vga == null:
+		return
+	_hud_vga.refresh(sim)
+	if _mod_special_sprite != null:
+		_mod_special_sprite.texture = _hud_vga.mod_special_icon
+		_mod_special_sprite.visible = _hud_vga.mod_special_icon != null
 
 
 ## Mode HUD texts, updated on every refresh.
@@ -1090,7 +1111,7 @@ func set_paused(on: bool) -> void:
 	# the RGBA label is only used without the extension.
 	if _hud_vga != null:
 		_hud_vga.pause_text = TyrianText.L("miscText_22") if on else ""
-		_hud_vga.refresh(sim)
+		_refresh_hud_vga()
 	elif _pause_label != null:
 		_pause_label.visible = on
 	# JE_pauseGame: set_volume(tyrMusicVolume / 2), then tyrMusicVolume on resume.
@@ -1587,9 +1608,10 @@ func step_sim(mask: int, p2_mask := 0) -> void:
 
 
 ## Player effects (Setup): not for the capture, measurement tools nor
-## the campaign bot, which reproduce the golden master.
+## the campaign bot, which reproduce the golden master. The bot can ask for
+## them (--campaign-bot-player-fx) to play the game as the player has it.
 func _player_effects() -> bool:
-	return not (Capture.active or Bench.active or CampaignBot.active)
+	return not (Capture.active or Bench.active or (CampaignBot.active and not CampaignBot.player_fx))
 
 
 ## Setup effect settings changed during the level (setup.gd). A
@@ -1656,8 +1678,7 @@ func _refresh() -> void:
 	_explosion_node.queue_redraw()
 	_hud.queue_redraw()
 	_update_mode_hud()
-	if _hud_vga != null:
-		_hud_vga.refresh(sim)
+	_refresh_hud_vga()
 	if _debug_text.visible and sim != null:
 		_debug_text.text = "tick %d  curloc %d" % [sim.tick(), sim.cur_loc()]  # locale-exempt: debug overlay
 
@@ -1768,10 +1789,21 @@ func _update_enemies() -> void:
 ## PlayfieldBackground, not by these nodes.
 func _update_enemies_drawn(data: PackedInt32Array) -> void:
 	var used := {0: 0, 1: 0, 2: 0, 3: 0}
+	# Enemy and coin images provided by a mod (enemy_render.c:blit_enemy,
+	# enemy_overrides / coin_overrides): looked up only when a mod has some.
+	var mod_images := Mods.has_textures("enemies") or Mods.has_textures("coins")
 	for i in range(0, data.size() - 6, 7):
 		if data[i + 5] == 2:
 			continue
 		var layer := clampi(data[i], 0, 3)
+		if mod_images:
+			var tex := Mods.enemy_texture(data[i + 1], data[i + 4])
+			if tex != null:
+				_apply_mod_image(_sprite_from_pool(layer, used[layer]), tex, data[i + 2], data[i + 3])
+				used[layer] += 1
+				continue
+			if _mod_image_covers(data[i + 1], data[i + 4]):
+				continue
 		var sheet := TyrianAssets.sheet(TyrianAssets.enemy_sheet_name(data[i + 1]))
 		if sheet == null:
 			continue
@@ -1782,6 +1814,32 @@ func _update_enemies_drawn(data: PackedInt32Array) -> void:
 		var pool: Array = _enemy_pool[layer]
 		for k in range(used[layer], pool.size()):
 			pool[k].visible = false
+
+
+## Mod PNG on a pooled enemy sprite: the whole image, its corner at the corner
+## of the sheet cell it replaces (`x`, `y`: game_screen position of the piece).
+func _apply_mod_image(sprite: Sprite2D, tex: Texture2D, x: int, y: int) -> void:
+	sprite.texture = tex
+	sprite.centered = false
+	sprite.region_enabled = false
+	sprite.scale = Vector2.ONE
+	sprite.position = Vector2(x + SIM_X_TO_SCREEN, y)
+	sprite.visible = true
+
+
+## An enemy of 2x2 cells is drawn as four pieces (images +0, +1, +19, +20). A
+## mod image wider or taller than one cell (12x14), placed on the first piece,
+## stands for the whole enemy: the pieces it covers are not drawn (like the 2x2
+## coins of enemy_render.c:blit_enemy).
+func _mod_image_covers(sheet: int, image: int) -> bool:
+	for part: Array in [[1, true, false], [19, false, true], [20, true, true]]:
+		var tex := Mods.enemy_texture(sheet, image - int(part[0]))
+		if tex == null:
+			continue
+		var size := tex.get_size()
+		if (not part[1] or size.x > 12) and (not part[2] or size.y > 14):
+			return true
+	return false
 
 
 ## `data`: flattened array of TyrianSim.enemies() (ENEMY_STRIDE = 8).
@@ -1864,8 +1922,15 @@ func _draw_explosions() -> void:
 	if sim == null or explosion_sheet == null:
 		return
 	var ex: PackedInt32Array = sim.explosions_to_draw()
+	# Explosion images provided by a mod (explosion_update.c, explosion_overrides):
+	# the names of data/sprite_manifest.json number them like `explosions[].sprite`.
+	var mod_images := Mods.has_textures("explosions")
 	for k in range(0, ex.size() - 2, 3):
-		explosion_sheet.draw(_explosion_node, ex[k + 2] + 1, ex[k] + SIM_X_TO_SCREEN, ex[k + 1])
+		var tex := Mods.texture("explosions", ex[k + 2]) if mod_images else null
+		if tex != null:
+			_explosion_node.draw_texture(tex, Vector2(ex[k] + SIM_X_TO_SCREEN, ex[k + 1]))
+		else:
+			explosion_sheet.draw(_explosion_node, ex[k + 2] + 1, ex[k] + SIM_X_TO_SCREEN, ex[k + 1])
 
 
 ## Level loop sounds: simulation queue (TyrianSim.take_sounds,

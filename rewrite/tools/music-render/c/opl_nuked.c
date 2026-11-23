@@ -20,7 +20,17 @@ void adlib_nuked_init(Bit32u samplerate)
 
 void adlib_nuked_write(Bitu idx, Bit8u val)
 {
-	OPL3_WriteReg(&s_chip, (uint16_t)(idx & 0x1ff), val);
+	/* Buffered write: Nuked applies each queued write at least two chip
+	 * samples after the previous one, as the port delays of the DOS
+	 * player did on a real card.
+	 *
+	 * lds_play.c writes "key off" then "key on" for the same channel in a
+	 * row (lds_playsound), with no sample generated in between. With the
+	 * immediate OPL3_WriteReg the envelope generator never saw the key
+	 * released, so a note played while the previous one was still held
+	 * was not restarted: no attack, and an instrument that had decayed
+	 * to silence stayed silent (docs/divergences.md, entry 66). */
+	OPL3_WriteRegBuffered(&s_chip, (uint16_t)(idx & 0x1ff), val);
 }
 
 void adlib_nuked_getsample(Bit16s *sndptr, Bits numsamples)

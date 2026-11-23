@@ -53,6 +53,7 @@ thread_local! {
 
 use godot::prelude::*;
 
+mod mod_sprites;
 mod mods;
 pub use mods::TyrianMods;
 use tyrian_sim::{Loadout, MusicCue, PlayerInput, Sim, SimState};
@@ -228,8 +229,15 @@ impl TyrianSim {
                         setup.modes.cash.1 = lo2.cash as u64;
                     }
                 }
-                if let Some(m) = self.mods.as_mut() {
-                    m.bind_mut().apply_to(&mut setup, lvl_file_num.max(1) as u16);
+                // Coin, enemy and explosion images of the mods, for the 8-bit
+                // compositor of the play area (mod_sprites.rs); none without mods.
+                match self.mods.as_mut() {
+                    Some(m) => {
+                        let mut m = m.bind_mut();
+                        m.apply_to(&mut setup, lvl_file_num.max(1) as u16);
+                        crate::mod_sprites::set(&m.sprite_assignments(episode));
+                    }
+                    None => crate::mod_sprites::clear(),
                 }
                 self.recorder = None;
                 let mut sim = match record_request {
@@ -587,6 +595,8 @@ impl TyrianSim {
     /// then replays one frame (the masks passed are ignored).
     #[func]
     fn load_replay(&mut self, data_dir: GString, path: GString) -> bool {
+        // A replay plays the original game: no mod image in the play area.
+        crate::mod_sprites::clear();
         let dir = data_dir.to_string();
         let result = tyrian_sim::replay::load_file(Path::new(&path.to_string())).and_then(|rep| {
             // replay.c:JE_initProcessorType: the current setting decides the draws of the
@@ -630,6 +640,8 @@ impl TyrianSim {
     /// (`load_next_demo` returns false: `last_error`).
     #[func]
     fn load_demo(&mut self, data_dir: GString, demo_num: i32, seed: i64, cash: i64) -> VarDictionary {
+        // A demo plays the original game: no mod image in the play area.
+        crate::mod_sprites::clear();
         let mut d = VarDictionary::new();
         let dir = data_dir.to_string();
         let path = Path::new(&dir).join(format!("demo.{demo_num}"));

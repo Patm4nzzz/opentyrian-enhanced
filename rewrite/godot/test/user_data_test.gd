@@ -6,7 +6,10 @@ var _root := ""
 
 
 func before_test() -> void:
-	var tmp := OS.get_environment("TMPDIR") if not OS.get_environment("TMPDIR").is_empty() else "/tmp"
+	# Temporary folder of the system: TMPDIR, TEMP under Windows (no /tmp there).
+	var tmp := OS.get_environment("TMPDIR")
+	if tmp.is_empty():
+		tmp = OS.get_environment("TEMP").replace("\\", "/") if OS.get_name() == "Windows" else "/tmp"
 	_root = tmp.path_join("user_data_test_%d" % Time.get_ticks_usec())
 	DirAccess.make_dir_recursive_absolute(_root.path_join("game"))
 

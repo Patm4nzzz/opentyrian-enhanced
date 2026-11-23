@@ -40,8 +40,41 @@ cargo run --profile robustness -p tyrian-robustness -- --only 1234 [--wild-loado
 ```
 
 `cargo test` additionally runs `tests/short.rs` (24 normal games and 24
-"wild" ones, 600 ticks, each replayed twice); it is skipped if `data/` is
-absent.
+"wild" ones, 600 ticks, each replayed twice, then 12 games of 2,500 ticks with
+the player's effects); it is skipped if `data/` is absent.
+
+## Player effects (`--player-fx`)
+
+The golden masters, the replays and the tools run with the effects that only the
+player's game enables turned off (`tyrian_sim::fx::FxConfig`: freeze frames, Modern
+explosions, effect events), because the C records its golden masters that way. These
+paths were therefore played by no automated check, and two defects of the freeze
+frames reached the players in v1.0-rc1 (docs/divergences.md, entries 64 and 65).
+`--player-fx` turns them on for every game of the run:
+
+```sh
+cargo run --profile robustness -p tyrian-robustness -- --games 4000 --max-ticks 20000 --player-fx
+```
+
+Result (2026-11-22, Windows, 32 threads): 4,000 games, 41,390,604 ticks over the two
+passes, 3,700 levels completed, 70 levels out of 70 drawn; 0 panic, 0 invariant
+violation, 0 non-reproducible game.
+
+The bot detects panics, overflows and non-reproducibility, not a wrong game rule (a
+level that ends too early does not panic): those are covered by the tests of
+`tyrian-sim/src/fx.rs` (`cargo test -p tyrian-sim hitstop_tests`).
+
+The campaign bot of the Godot game (`rewrite/godot/tools/campaign_bot.gd`) has the same switch:
+`--campaign-bot-player-fx` plays the five episodes through the real screens with the player's
+Setup effects instead of the golden master settings.
+
+```sh
+godot --headless --path rewrite/godot -- --campaign-bot=<log.jsonl> --campaign-bot-player-fx
+```
+
+Result (2026-11-23, Windows, headless, speed 20): 45 levels ended, 5 episodes completed,
+47 shops, 52 saves, 5 reloads checked, 0 failure and no error in the output, with and
+without the switch (about 7 minutes each).
 
 ## Actual results (2026-10-04, WSL, 32 cores)
 

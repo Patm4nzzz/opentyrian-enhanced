@@ -112,11 +112,14 @@ impl Ctx<'_> {
     }
 
     pub(super) fn png_index(&mut self, table: SpriteTable, dir: &str, basename: &str, folder: &str) -> Option<i32> {
-        if strtol_full(basename).is_some() {
+        let section = table.section();
+        // A number is not a name, except where the original sprites only have
+        // numbers (planets, weapon icons: "000", "001"... in the manifest).
+        let numbered = self.names.rows.iter().any(|r| r.name == basename && r.section == section);
+        if strtol_full(basename).is_some() && !numbered {
             self.diag.error(folder, format!("sprites/{dir}/{basename}.png: a PNG is named after the sprite it replaces (data/sprite_manifest.json) or has a new name, never a number"));
             return None;
         }
-        let section = table.section();
         let leaf = dir.rsplit('/').next().unwrap_or(dir);
         if let Some(i) = self
             .names
@@ -149,6 +152,7 @@ impl Ctx<'_> {
         while i < table.capacity() {
             if !self.sprites.has(table, i) {
                 self.names.register(basename, i, &mut self.diag, folder);
+                self.png_tables.insert(basename.to_string(), table);
                 return Some(i);
             }
             i += step;

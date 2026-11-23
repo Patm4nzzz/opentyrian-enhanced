@@ -68,6 +68,14 @@ var _mod_items := {}
 ## 8-bit framebuffer, like the other mod additions): position -> texture.
 var _mod_images := {}
 var _mod_image_layer: Node2D
+## Window of the firing demonstration left to the mods' shot images: the
+## fill_rectangle_xy(8, 8, 143, 182) of JE_weaponViewFrame, cut above the power
+## interface (sprites at y 146 and below), which the C draws over the shots.
+const MOD_SHOT_WINDOW := Rect2(8, 8, 136, 138)
+## Shots of the demonstration drawn by a mod PNG: [texture, position] pairs,
+## laid over the shop image like the other mod images (level.gd: ModShots).
+var _mod_shots: Array = []
+var _mod_shot_layer: Node2D
 ## game_menu.c:yLoc: scrolling (pixels) of the open cube.
 var _cube_y := 0
 ## Palette of a cube's face set (game_menu.c paletteChanged / newPal).
@@ -172,6 +180,26 @@ func _ready() -> void:
 	overlay.add_child(_mod_image_layer)
 	overlay.move_child(_mod_image_layer, 0)
 	presented.connect(_sync_mod_images)
+	# Below the mod images: the mounted ship stays above its shots.
+	var shot_window := Control.new()
+	shot_window.name = "ModShotWindow"
+	shot_window.position = MOD_SHOT_WINDOW.position
+	shot_window.size = MOD_SHOT_WINDOW.size
+	shot_window.clip_contents = true
+	shot_window.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_mod_shot_layer = Node2D.new()
+	_mod_shot_layer.name = "ModShots"
+	_mod_shot_layer.position = -MOD_SHOT_WINDOW.position
+	_mod_shot_layer.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	_mod_shot_layer.draw.connect(
+		func() -> void:
+			for it in _mod_shots:
+				_mod_shot_layer.draw_texture(it[0], it[1])
+	)
+	shot_window.add_child(_mod_shot_layer)
+	overlay.add_child(shot_window)
+	overlay.move_child(shot_window, 0)
+	presented.connect(func(_surf: int) -> void: _mod_shot_layer.queue_redraw())
 	_arcade_menu = Game.shop_start_menu()
 	var resume_sel := Game.shop_resume_sel
 	Game.shop_resume_sel = 0
@@ -221,6 +249,7 @@ func _open_session() -> void:
 	# Tables and "always_available" items of the mods (INJECT_AVAIL of the C).
 	if Mods.api != null:
 		_shop.set_mods(Mods.api)
+		_shop.set_mod_shot_images(Mods.texture_indices("shots"))
 	if not _shop.open(Game.data_dir, Game.episode, Game.loadout, Game.shop_items_available, Game.map_sections.size()):
 		push_error("TyrianShop.open: %s" % _shop.last_error)
 		_shop = null
@@ -228,6 +257,9 @@ func _open_session() -> void:
 	# level_load.c ]? : cubes of the section (cubeList); cubeMax after the
 	# script directives (Game.shop_cube_max); game_menu.c:load_cubes.
 	_shop.set_cubes(Game.data_dir, Game.episode, Game.shop_cube_list, Game.shop_cube_max, TyrianText.language)
+	# player[0].weapon_mode: the shop starts with the rear weapon mode of the
+	# level that just ended (the C never resets it on entering JE_itemScreen).
+	_shop.set_weapon_mode(Game.rear_weapon_mode())
 	_state = _shop.state()
 
 
@@ -293,6 +325,8 @@ func _shop_key(name: String) -> void:
 ## same path, game_menu.c:JE_itemScreen).
 func _shop_after(r: Dictionary, before: int) -> void:
 	_state = _shop.state()
+	# Rear weapon mode ("/" in the rear gun list): the next level starts with it.
+	Game.set_rear_weapon_mode(int(_state.get("weapon_mode", 1)))
 	if before != MENU_PLAY_NEXT_LEVEL and int(_state["menu"]) == MENU_PLAY_NEXT_LEVEL:
 		_nav_open()
 	match str(r.get("action", "")):
@@ -625,21 +659,25 @@ func _click_power_arrow(p: Vector2i) -> bool:
 	return true
 
 
-## Mod PNG image for item `id` of `item_type` (1 ship, 2-3 weapons,
-## 4 shield), or null: then the original illustration (original tables) applies.
+## game_menu.c:JE_drawItem: override table consulted for each item type, by
+## shipgraphic for a ship and by itemgraphic for the others (generators go
+## through the pickup table, "no override table" of their own).
+const SHOP_ITEM_IMAGES := {
+	1: "ships", 2: "shop_weapons", 3: "shop_weapons", 4: "shop_shields", 5: "pickups", 6: "sidekicks", 7: "sidekicks"
+}
+
+
+## Mod PNG image for item `id` of `item_type`, or null: then the original
+## sheets apply. Like the C, the lookup goes by the image number of the item,
+## whether a mod adds the item or replaces the image of an original one.
 func _mod_image(item_type: int, id: int) -> Texture2D:
-	var table: String = CATEGORY_TABLES.get(item_type + 1, "")
-	var it: Dictionary = _mod_items.get("%s:%d" % [table, id], {})
-	if it.is_empty():
+	var row := item_row(_items_json, SHOP_ITEM_ROWS.get(item_type, ""), id)
+	if row.is_empty():
 		return null
-	match item_type:
-		1:
-			return Mods.texture("ships", int(it.get("shipgraphic", 0)))
-		2, 3:
-			return Mods.texture("shop_weapons", int(it.get("itemgraphic", 0)))
-		4:
-			return Mods.texture("shop_shields", int(it.get("itemgraphic", 0)))
-	return null
+	var graphic := int(row.get("shipgraphic" if item_type == 1 else "itemgraphic", 0))
+	if graphic <= 0:
+		return null
+	return Mods.texture(SHOP_ITEM_IMAGES[item_type], graphic)
 
 
 ## game_menu.c:JE_drawItem: a mod item that provides a PNG is laid on
@@ -693,6 +731,7 @@ func _item(cat: int, id: int) -> Dictionary:
 func _render() -> void:
 	idle = false
 	_mod_images.clear()
+	_mod_shots.clear()
 	if int(_state.get("menu", 0)) != MENU_DATA_CUBE_SUB:
 		mouse_pointer = MouseCursor.NORMAL
 	_anim_delay = 0
@@ -800,10 +839,10 @@ func _decorate_menu(menu: int, sel: int, lo: PackedInt32Array) -> void:
 	vga.text_shade(VGA_SCREEN, 10, 187, TyrianText.L("mmhelp_%d" % (help - 1)), 14, 1, 2)
 
 
-## Row of items.json (game tables, without the mods): bars and illustration.
+## Item row for the bars and the illustration: the mods' item when a mod adds
+## this id (its armor, its shield power), otherwise the row of items.json.
 func _base_item(table: String, id: int) -> Dictionary:
-	var rows: Array = _items_json.get(table, [])
-	return rows[id] if id >= 0 and id < rows.size() else {}
+	return item_row(_items_json, table, id)
 
 
 ## C cubeMax: cubes readable at this shop (TyrianShop.set_cubes).
@@ -885,6 +924,7 @@ func _render_category(sel: int, lo: PackedInt32Array) -> void:
 ## rear weapons, motionless ship at (72, 110), then JE_drawScore.
 func _weapon_sim_frame(cat: int, lo: PackedInt32Array) -> void:
 	var sim_time: int = _shop.weapon_view_frame(vga)
+	_collect_mod_shots()
 	var left: bool = _state.get("left_power", false)
 	var right: bool = _state.get("right_power", false)
 	if left or right:
@@ -912,6 +952,21 @@ func _weapon_sim_frame(cat: int, lo: PackedInt32Array) -> void:
 		vga.blit_sprite(VGA_SCREEN, 20, 146, OPTION_SHAPES, 17)  # power interface hidden
 	_draw_shop_item(1, lo[0], 72 - 5, 110 - 7)
 	vga.text_shade(VGA_SCREEN, 65, 173, str(int(_state["cash_left"])), 1, 6, 2)
+
+
+## Shots of the demonstration whose image is a mod PNG: the 8-bit image only
+## knows the original sheets (TyrianShop leaves these shots out), so the PNG is
+## laid over it, as level.gd does in a level. Without this a mod weapon looked
+## like it did not fire in the shop.
+func _collect_mod_shots() -> void:
+	_mod_shots.clear()
+	if not Mods.has_textures("shots"):
+		return
+	var shots: PackedInt32Array = _shop.weapon_view_shots()
+	for k in range(0, shots.size() - 2, 3):
+		var tex := Mods.texture("shots", shots[k + 2])
+		if tex != null:
+			_mod_shots.append([tex, Vector2(shots[k], shots[k + 1])])
 
 
 # --- Animated inner loop -----------------------------------------------------
@@ -1504,9 +1559,7 @@ func _decorate_arcade() -> void:
 static func draw_left_side(screen: TyrianScreen, lo: PackedInt32Array, cash: int) -> void:
 	var vga = screen.vga
 	var m := Game.campaign_modes
-	var row := func(table: String, id: int) -> Dictionary:
-		var rows: Array = screen._items_json.get(table, [])
-		return rows[id] if id >= 0 and id < rows.size() else {}
+	var row := func(table: String, id: int) -> Dictionary: return item_row(screen._items_json, table, id)
 	if m.size() >= 10 and m[0] != 0:
 		# miscText[40 + i] and money of the two players.
 		var cash2 := 0

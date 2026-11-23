@@ -139,7 +139,10 @@ impl TyrianMods {
     }
 
     /// Sprites to override: table (shots, ships, ...), index, path (PNG), hue
-    /// (-1 = no tint), bank (shapebank for the enemies table).
+    /// (-1 = no tint), bank (shapebank for the enemies table) and sheet: the
+    /// sheet byte of that bank in the enemy draw records
+    /// (`TyrianSim.hd_enemy_sprites`, `TyrianAssets.enemy_sheet_name`), 0 for
+    /// the other tables.
     #[func]
     fn sprites(&mut self, episode: i32) -> Array<VarDictionary> {
         let mut out = Array::new();
@@ -151,14 +154,24 @@ impl TyrianMods {
                     "path" => s.path.to_string_lossy().as_ref(),
                     "hue" => s.hue.unwrap_or(-1.0),
                     "bank" => s.bank,
+                    "sheet" => crate::mod_sprites::bank_sheet_byte(s.bank),
                 });
             }
         }
         out
     }
 
+    /// Portrait, planet and weapon picture images of the enabled mods, handed
+    /// to the 8-bit screens (`TyrianVga.blit_sprite`, mod_sprites.rs). To call
+    /// after each (re)load of the mods. Returns the number of images.
+    #[func]
+    fn install_screen_sprites(&mut self, episode: i32) -> i32 {
+        crate::mod_sprites::set_screen_sprites(&self.sprite_assignments(episode)) as i32
+    }
+
     /// Items added by the mods: one dictionary per object
-    /// (kind, id, name, cost, itemgraphic, shipgraphic, always_available).
+    /// (kind, id, name, cost, itemgraphic, shipgraphic, always_available;
+    /// a ship also has dmg and bigshipgraphic, a shield mpwr and tpwr).
     #[func]
     fn items(&mut self, episode: i32) -> Array<VarDictionary> {
         let mut out = Array::new();
@@ -180,7 +193,7 @@ impl TyrianMods {
                 ItemKind::Special => (t.specials[i].name.text(), 0, t.specials[i].itemgraphic, 0, "specials"),
             };
             let always = res.shop.get(shop_key).is_some_and(|v| v.contains(&(id as u8)));
-            out.push(&vdict! {
+            let mut d = vdict! {
                 "kind" => kind_name(kind),
                 "id" => id as i64,
                 "key" => key.as_str(),
@@ -189,7 +202,21 @@ impl TyrianMods {
                 "itemgraphic" => icon as i64,
                 "shipgraphic" => ship_gr as i64,
                 "always_available" => always,
-            });
+            };
+            // What the menus draw from the item, under the names of
+            // items.json: armor bar and illustration of a ship, shield bar.
+            match kind {
+                ItemKind::Ship => {
+                    d.set("dmg", t.ships[i].dmg as i64);
+                    d.set("bigshipgraphic", t.ships[i].bigshipgraphic as i64);
+                }
+                ItemKind::Shield => {
+                    d.set("mpwr", t.shields[i].mpwr as i64);
+                    d.set("tpwr", t.shields[i].tpwr as i64);
+                }
+                _ => {}
+            }
+            out.push(&d);
         }
         out
     }
@@ -357,6 +384,11 @@ impl TyrianMods {
 }
 
 impl TyrianMods {
+    /// Images of the enabled mods (all tables), for the play area compositor.
+    pub(crate) fn sprite_assignments(&mut self, episode: i32) -> Vec<tyrian_mods::SpriteAssignment> {
+        self.resolve(episode).map(|r| r.sprites.clone()).unwrap_or_default()
+    }
+
     /// Tables of the episode, mods included, and `always_available` items, for
     /// the shop (`game_menu.c:JE_itemScreen`). None if no mod is enabled.
     pub(crate) fn shop_data(&mut self, episode: i32) -> Option<(Tables, AlwaysAvailable)> {

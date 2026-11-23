@@ -409,3 +409,68 @@ func test_secret_warp_leads_to_its_section() -> void:
 	await get_tree().process_frame
 	Game.campaign_active = false
 	await get_tree().process_frame
+
+
+## player_collide.c:123-130: a special weapon picked up in a level is written to
+## player[0].items.special, and mainint.c:JE_endLevelAni keeps the items
+## ("last_items = items"): the next shop and level have it. Player report on
+## v1.0-rc1: the Ice Beam picked up in DELIANI was gone after the level.
+func test_special_weapon_picked_up_in_level_is_kept() -> void:
+	Game.start_new_game()
+	Game.campaign_leave_shop(0, Game.loadout.duplicate())
+	_check(Game.loadout[9] == 0, "no special weapon at the start (%d)" % Game.loadout[9])
+	var end := Game.loadout.duplicate()
+	end[9] = 5
+	Game.campaign_level_finished(
+		{
+			"all_players_alive": true,
+			"any_player_alive": true,
+			"cash": Game.loadout[10],
+			"loadout": end,
+			"cube_max": 0,
+			"enemy_killed": 3,
+			"total_enemy": 40
+		}
+	)
+	_check(Game.loadout[9] == 5, "special weapon kept after the level (%d)" % Game.loadout[9])
+	await get_tree().process_frame
+	Game.campaign_active = false
+	await get_tree().process_frame
+
+
+## Two-player game: player 2's end-of-level equipment goes to the next level like
+## player 1's (rear weapon and sidekicks picked up, lives = weapon power). The C sets
+## player[1].items once, at the start of the game (mainint.c:JE_initPlayerData).
+func test_two_player_game_keeps_player_two_equipment() -> void:
+	var p1 := PackedInt32Array(Game.NEW_GAME_LOADOUT)
+	p1[0] = 11
+	var options := {
+		"loadout": p1,
+		"difficulty": 3,
+		"modes": PackedInt32Array([1, 0, 0, 0, 0, 0, 0, 0, 1, 2]),
+		"modes_extra": [0, 0, 2, PackedInt32Array([11, 1, 3, 15, 3, 4, 2, 0, 0, 0])],
+	}
+	Game.start_campaign(1, 2, options)
+	Game.campaign_leave_shop(0, Game.loadout.duplicate())
+	_check(Game.two_player_game(), "two-player game started")
+	# Player 2 picked up a rear weapon (17) and sidekicks (5), and lost a life (power 3 -> 2).
+	var end2 := PackedInt32Array([11, 1, 3, 17, 2, 4, 2, 5, 5, 0, 700])
+	Game.campaign_level_finished(
+		{
+			"all_players_alive": true,
+			"any_player_alive": true,
+			"cash": Game.loadout[10],
+			"cash2": 700,
+			"loadout": Game.loadout.duplicate(),
+			"loadout2": end2,
+			"cube_max": 0,
+			"enemy_killed": 3,
+			"total_enemy": 40
+		}
+	)
+	var kept: PackedInt32Array = Game.campaign_modes_extra[3]
+	_check(kept == end2.slice(0, 10), "player 2 equipment kept after the level (%s)" % [kept])
+	_check(int(Game.campaign_modes_extra[1]) == 700, "player 2 money kept (%s)" % [Game.campaign_modes_extra[1]])
+	await get_tree().process_frame
+	Game.campaign_active = false
+	await get_tree().process_frame

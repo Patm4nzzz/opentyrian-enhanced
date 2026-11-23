@@ -215,17 +215,42 @@ fn draw_enemies(px: &mut [u8], sim: View, layers: &[u8]) {
     let mut surf = Surface::new(320, 200);
     surf.pixels.copy_from_slice(px);
     with_assets(|a| {
-        for &layer in layers {
-            for (sheet, x, y, idx, mode, filter) in enemy_blits(sim, layer) {
-                let Some(name) = enemy_sheet_name(sheet) else { continue };
-                let Some(data) = a.sheet(&name) else { continue };
-                match mode {
-                    EnemyBlit::Darken => surf.blit_sprite2_darken(x, y, data, idx),
-                    EnemyBlit::Filter => surf.blit_sprite2_filter(x, y, data, idx, filter),
-                    EnemyBlit::Normal => surf.blit_sprite2(x, y, data, idx),
+        // Enemy and coin images given by a mod (enemy_render.c:blit_enemy,
+        // enemy_overrides / coin_overrides), with the same pixel rule as the
+        // blit they replace.
+        crate::mod_sprites::MOD_SPRITES.with(|m| {
+            let mut mods = m.borrow_mut();
+            mods.ensure_indexed(&crate::mod_sprites::level_palette(a));
+            let has_mods = !mods.is_empty();
+            for &layer in layers {
+                for (sheet, x, y, idx, mode, filter) in enemy_blits(sim, layer) {
+                    if has_mods {
+                        if let Some(img) = mods.enemy(sheet, idx) {
+                            match mode {
+                                EnemyBlit::Darken => {
+                                    crate::mod_sprites::blit(&mut surf, x, y, img, |d, _| ((d & 0x0f) / 2) + (d & 0xf0))
+                                }
+                                EnemyBlit::Filter => {
+                                    crate::mod_sprites::blit(&mut surf, x, y, img, |_, v| filter | (v & 0x0f))
+                                }
+                                EnemyBlit::Normal => crate::mod_sprites::blit(&mut surf, x, y, img, |_, v| v),
+                            }
+                            continue;
+                        }
+                        if mods.covers(sheet, idx) {
+                            continue;
+                        }
+                    }
+                    let Some(name) = enemy_sheet_name(sheet) else { continue };
+                    let Some(data) = a.sheet(&name) else { continue };
+                    match mode {
+                        EnemyBlit::Darken => surf.blit_sprite2_darken(x, y, data, idx),
+                        EnemyBlit::Filter => surf.blit_sprite2_filter(x, y, data, idx, filter),
+                        EnemyBlit::Normal => surf.blit_sprite2(x, y, data, idx),
+                    }
                 }
             }
-        }
+        });
     });
     px.copy_from_slice(&surf.pixels);
 }
@@ -1418,12 +1443,33 @@ fn draw_enemy_shots(surf: &mut Surface, a: &mut tyrian_render::Assets, sim: View
 /// In Modern style the hollow ring ending a fire explosion is not drawn:
 /// the Modern explosions throw embers instead (`modern_explosions`).
 fn draw_explosions(surf: &mut Surface, a: &mut tyrian_render::Assets, sim: View) {
+    let palette0 = crate::mod_sprites::level_palette(a);
     let Some(sheet) = a.sheet("newsh6.shp") else { return };
     // explosion_update.c: blit_sprite2_blend if explosionTransparent, otherwise blit_sprite2.
     let blend = tyrian_sim::world::pt_explosion_transparent(sim.world().processor_type);
     let embers = crate::fx_render::FX.with(|f| f.borrow().modern_explosions_on());
     for &(x, y, sprite) in &sim.world().render.drawn_explosions {
         if embers && crate::modern_explosions::ring_phase_frame(sprite) {
+            continue;
+        }
+        // Explosion image given by a mod (explosion_update.c, explosion_overrides).
+        // `sprite` is the sheet image, explosions[].sprite + 1; the mods name
+        // their images by explosions[].sprite (data/sprite_manifest.json).
+        let replaced = crate::mod_sprites::MOD_SPRITES.with(|m| {
+            let mut mods = m.borrow_mut();
+            mods.ensure_indexed(&palette0);
+            let Some(img) = (sprite as u32).checked_sub(1).and_then(|s| mods.explosion(s)) else { return false };
+            if blend {
+                // blit_sprite2_blend: brightness averaged with the pixel under it.
+                crate::mod_sprites::blit(surf, x as i32, y as i32, img, |d, v| {
+                    (((v & 0x0f) + (d & 0x0f)) / 2) | (v & 0xf0)
+                });
+            } else {
+                crate::mod_sprites::blit(surf, x as i32, y as i32, img, |_, v| v);
+            }
+            true
+        });
+        if replaced {
             continue;
         }
         if blend {

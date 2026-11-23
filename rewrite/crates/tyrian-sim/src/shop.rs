@@ -324,6 +324,16 @@ impl ShopSession {
         Self::with_always_available(t, items, cash, items_available, destinations, &AlwaysAvailable::default())
     }
 
+    /// `player[0].weapon_mode` on entering the shop: the C keeps the mode of the
+    /// level that just ended (`game_menu.c:JE_itemScreen` never resets it on
+    /// entry, only when the rear gun list is browsed). A mode the mounted rear
+    /// weapon does not have falls back to 1, like the "/" key.
+    pub fn set_weapon_mode(&mut self, t: &Tables, mode: u8) {
+        let rear = self.items.weapon[1].id.0 as usize;
+        let modes = t.ports[rear.min(crate::tables::PORT_NUM)].opnum;
+        self.weapon_mode = if mode >= 1 && mode <= modes { mode } else { 1 };
+    }
+
     /// Like `new`, with the injection of the mods' `always_available` items
     /// after the owned item and before the sort (`INJECT_AVAIL`): an item
     /// already present is not doubled, a full list (10) ignores the surplus.

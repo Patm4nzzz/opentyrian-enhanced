@@ -17,7 +17,7 @@ use std::time::Instant;
 use anyhow::Result;
 use clap::Parser;
 use serde::Serialize;
-use tyrian_robustness::{install_panic_hook, play, Catalogue, GameOutcome};
+use tyrian_robustness::{install_panic_hook, play_fx, Catalogue, GameOutcome};
 
 #[derive(Parser)]
 #[command(about = "Seeded random games on tyrian-sim: panics, non-reproducibility, invariants")]
@@ -46,6 +46,10 @@ struct Args {
     /// Equipment drawn over 0..=255 per field, including values outside the tables.
     #[arg(long)]
     wild_loadout: bool,
+    /// Player effects on (freeze frames, Modern explosions, effect events): the paths that
+    /// only the player's game takes.
+    #[arg(long)]
+    player_fx: bool,
     /// JSON report (defects and statistics).
     #[arg(long)]
     json: Option<PathBuf>,
@@ -57,6 +61,7 @@ struct Report {
     first_id: u64,
     max_ticks: u64,
     wild_loadout: bool,
+    player_fx: bool,
     ticks_per_pass: u64,
     ticks_total: u64,
     levels_ended: u64,
@@ -67,7 +72,7 @@ struct Report {
     per_level_games: BTreeMap<String, u64>,
 }
 
-fn run_pass(ids: &[u64], cat: &Catalogue, max_ticks: u64, wild: bool, threads: usize) -> Vec<GameOutcome> {
+fn run_pass(ids: &[u64], cat: &Catalogue, max_ticks: u64, wild: bool, fx: bool, threads: usize) -> Vec<GameOutcome> {
     let next = AtomicUsize::new(0);
     let mut results: Vec<Option<GameOutcome>> = vec![None; ids.len()];
     let slots: Vec<std::sync::Mutex<&mut Option<GameOutcome>>> =
@@ -79,7 +84,7 @@ fn run_pass(ids: &[u64], cat: &Catalogue, max_ticks: u64, wild: bool, threads: u
                 if i >= ids.len() {
                     break;
                 }
-                let o = play(ids[i], cat, max_ticks, wild);
+                let o = play_fx(ids[i], cat, max_ticks, wild, fx);
                 **slots[i].lock().unwrap() = Some(o);
             });
         }
@@ -99,8 +104,8 @@ fn main() -> Result<()> {
     };
 
     if let Some(id) = args.only {
-        let a = play(id, &cat, args.max_ticks, args.wild_loadout);
-        let b = play(id, &cat, args.max_ticks, args.wild_loadout);
+        let a = play_fx(id, &cat, args.max_ticks, args.wild_loadout, args.player_fx);
+        let b = play_fx(id, &cat, args.max_ticks, args.wild_loadout, args.player_fx);
         println!("{}", serde_json::to_string_pretty(&a)?);
         println!("reproducible: {}", if a == b { "yes" } else { "NO" });
         let bad = a.panic.is_some() || a.invariant.is_some() || a != b;
@@ -116,11 +121,11 @@ fn main() -> Result<()> {
         args.max_ticks,
         threads
     );
-    let pass1 = run_pass(&ids, &cat, args.max_ticks, args.wild_loadout, threads);
+    let pass1 = run_pass(&ids, &cat, args.max_ticks, args.wild_loadout, args.player_fx, threads);
     // Pass 2: reverse order and different number of threads, so that each
     // game is replayed in a different execution context.
     let rev: Vec<u64> = ids.iter().rev().copied().collect();
-    let mut pass2 = run_pass(&rev, &cat, args.max_ticks, args.wild_loadout, (threads / 2).max(1));
+    let mut pass2 = run_pass(&rev, &cat, args.max_ticks, args.wild_loadout, args.player_fx, (threads / 2).max(1));
     pass2.reverse();
     let seconds = t0.elapsed().as_secs_f64();
 
@@ -129,6 +134,7 @@ fn main() -> Result<()> {
         first_id: args.first,
         max_ticks: args.max_ticks,
         wild_loadout: args.wild_loadout,
+        player_fx: args.player_fx,
         ticks_per_pass: pass1.iter().map(|o| o.ticks).sum(),
         ticks_total: pass1.iter().chain(pass2.iter()).map(|o| o.ticks).sum(),
         levels_ended: pass1.iter().filter(|o| o.level_ended).count() as u64,

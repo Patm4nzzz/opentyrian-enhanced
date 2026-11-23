@@ -3,7 +3,7 @@
 //! `Sim::new` (level.rs, player.rs) before the indices were bounded.
 
 use std::path::Path;
-use tyrian_robustness::{play, Catalogue};
+use tyrian_robustness::{play, play_fx, Catalogue};
 
 /// `None` if the game data is not in the tree (same rule as
 /// `tyrian-golden/tests/parity.rs`).
@@ -27,5 +27,19 @@ fn random_games_do_not_panic_and_replay_identically() {
             let b = play(id, &cat, 600, wild);
             assert_eq!(a, b, "game {id} (wild={wild}) not reproducible");
         }
+    }
+}
+
+/// Same games with the player's effects on (freeze frames, Modern explosions, effect
+/// events): the golden masters never take these paths. Longer games, so that enemies die.
+#[test]
+fn random_games_with_player_effects_do_not_panic_and_replay_identically() {
+    let Some(cat) = catalogue() else { return };
+    for id in 0..12 {
+        let a = play_fx(id, &cat, 2500, false, true);
+        assert!(a.panic.is_none(), "game {id}: {:?}", a.panic);
+        assert!(a.invariant.is_none(), "game {id}: {:?}", a.invariant);
+        let b = play_fx(id, &cat, 2500, false, true);
+        assert_eq!(a, b, "game {id} not reproducible with player effects");
     }
 }

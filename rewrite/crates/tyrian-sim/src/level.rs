@@ -104,6 +104,16 @@ impl World {
                 items1.sidekick_level = c.players[1].sidekick_level;
                 items1.sidekick_series = c.players[1].sidekick_series;
             }
+        } else if m.two_player && !m.galaga {
+            // Two-player game: player 2 keeps the sidekick series and level won in the
+            // previous level. The C sets them once, at the start of the game
+            // (mainint.c:JE_initPlayerData: 101, series 0), never between two levels;
+            // reset here, picking up the same sidekick again never upgraded it.
+            // A carry without them (level 0: first level, older captures) changes nothing.
+            if let Some(c) = setup.carry_over.filter(|c| c.players[1].sidekick_level != 0) {
+                items1.sidekick_level = c.players[1].sidekick_level;
+                items1.sidekick_series = c.players[1].sidekick_series;
+            }
         }
 
         // tyrian2.c:JE_main — difficulty: episode 5 removes one notch, floor EASY.
@@ -140,6 +150,13 @@ impl World {
             for (p, c) in players.iter_mut().zip(carry.players) {
                 p.x_friction_ticks = c.x_friction_ticks;
                 p.y_friction_ticks = c.y_friction_ticks;
+                // Rear weapon mode kept from the shop or the previous level
+                // (docs/divergences.md, entry 68); a mode the mounted weapon does
+                // not have falls back to 1 on the first frame (player.rs, like
+                // player_movement.c:77).
+                if c.weapon_mode != 0 {
+                    p.weapon_mode = c.weapon_mode as u32;
+                }
             }
         }
         if m.loadout2.is_some() {

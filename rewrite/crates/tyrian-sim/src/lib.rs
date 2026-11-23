@@ -212,6 +212,12 @@ pub struct PlayerCarry {
     /// at the start of the run (`endless.c:849`), not at each wave.
     pub sidekick_level: u8,
     pub sidekick_series: u8,
+    /// `player[].weapon_mode` (rear weapon mode, 1 or 2): the C sets it to 1 at
+    /// the start of a game (`mainint.c:JE_initPlayerData`) and never at the
+    /// start of a level, so the mode chosen in the shop ("/" in the rear gun
+    /// list) or during a level is still the one of the next level. 0: not
+    /// carried (first level, older captures), the level starts in mode 1.
+    pub weapon_mode: u8,
 }
 
 /// C state that passes from one level to the next (campaign, Endless waves, demo):
@@ -235,6 +241,7 @@ impl LevelCarry {
                 y_friction_ticks: p[i].y_friction_ticks,
                 sidekick_level: p[i].items.sidekick_level,
                 sidekick_series: p[i].items.sidekick_series,
+                weapon_mode: p[i].weapon_mode.min(255) as u8,
             }),
             special_fire_held: sim.world().special_weapon.fire_button_held,
         }
@@ -242,8 +249,9 @@ impl LevelCarry {
 
     /// Order of the Godot bridge (`TyrianSim.campaign_carry`): friction x, y of
     /// player 1, then of player 2, then the held special shot (0 or 1), then level and
-    /// sidekick series of player 2.
-    pub fn to_values(&self) -> [i32; 7] {
+    /// sidekick series of player 2, then the rear weapon mode of player 1 and of
+    /// player 2.
+    pub fn to_values(&self) -> [i32; 9] {
         let [a, b] = self.players;
         [
             a.x_friction_ticks as i32,
@@ -253,6 +261,8 @@ impl LevelCarry {
             self.special_fire_held as i32,
             b.sidekick_level as i32,
             b.sidekick_series as i32,
+            a.weapon_mode as i32,
+            b.weapon_mode as i32,
         ]
     }
 
@@ -266,6 +276,8 @@ impl LevelCarry {
                 // Values 5 and 6: player 2 only (older captures: 0).
                 sidekick_level: if i == 1 { v.get(5).map_or(0, |&x| x.clamp(0, 255) as u8) } else { 0 },
                 sidekick_series: if i == 1 { v.get(6).map_or(0, |&x| x.clamp(0, 255) as u8) } else { 0 },
+                // Values 7 and 8: rear weapon mode of each player (older captures: 0).
+                weapon_mode: v.get(7 + i).map_or(0, |&x| x.clamp(0, 255) as u8),
             }),
             special_fire_held: v.get(4).is_some_and(|&f| f != 0),
         })
