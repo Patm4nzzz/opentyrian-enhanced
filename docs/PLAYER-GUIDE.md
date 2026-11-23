@@ -10,7 +10,7 @@ version, whose `README.md` describes different keys and options.
 
 ### Downloads
 
-Each release (current: [v1.0-rc1](https://github.com/Patm4nzzz/opentyrian-enhanced/releases/tag/v1.0-rc1))
+Each release (current: [v1.0-rc2](https://github.com/Patm4nzzz/opentyrian-enhanced/releases/tag/v1.0-rc2))
 offers five files; the version is part of each name:
 
 | File | Size (v1.0-rc1) | Content |
@@ -53,7 +53,7 @@ it again.
 ### Linux and Steam Deck
 
 1. Extract `OpenTyrian2000-Enhanced-<version>-linux-x86_64.tar.gz` (or its `-lite` variant), for example:
-   `tar -xzf OpenTyrian2000-Enhanced-v1.0-rc1-linux-x86_64.tar.gz`
+   `tar -xzf OpenTyrian2000-Enhanced-v1.0-rc2-linux-x86_64.tar.gz`
 2. Run `./OpenTyrian2000-Enhanced.x86_64` from the `OpenTyrian2000-Enhanced` folder.
    If the file is not executable: `chmod +x OpenTyrian2000-Enhanced.x86_64`.
 

@@ -81,16 +81,16 @@ Pas encore modifiables par mod : les cartes des niveaux (tuiles), la musique, l
 
 ## ⬇️ Télécharger
 
-> **[v1.0-rc1](https://github.com/Patm4nzzz/opentyrian-enhanced/releases/tag/v1.0-rc1)**, la première version, est une version candidate : tout le jeu se joue du début à la fin. Essayez-la et dites-nous ce que vous y trouvez ([notes de version](docs/release-notes-v1.0-rc1.md), en anglais).
+> **[v1.0-rc2](https://github.com/Patm4nzzz/opentyrian-enhanced/releases/tag/v1.0-rc2)**, la deuxième version candidate, corrige les bugs signalés sur la v1.0-rc1 : tout le jeu se joue du début à la fin. Essayez-la et dites-nous ce que vous y trouvez ([notes de version](docs/release-notes-v1.0-rc2.md), en anglais).
 
 | Téléchargement | Taille | |
 |---|---:|---|
-| `OpenTyrian2000-Enhanced-v1.0-rc1-windows-x86_64.zip` | 704,0 Mo | Windows, complet (avec les graphismes HD (IA)) |
-| `OpenTyrian2000-Enhanced-v1.0-rc1-linux-x86_64.tar.gz` | 683,4 Mo | Linux / Steam Deck, complet |
-| `OpenTyrian2000-Enhanced-v1.0-rc1-macos-universal.zip` | 727,3 Mo | macOS (Intel et Apple Silicon), complet, expérimental |
-| `OpenTyrian2000-Enhanced-v1.0-rc1-windows-x86_64-lite.zip` | 197,3 Mo | Windows, léger (sans les graphismes HD (IA)) |
-| `OpenTyrian2000-Enhanced-v1.0-rc1-linux-x86_64-lite.tar.gz` | 185,6 Mo | Linux / Steam Deck, léger |
-| `OpenTyrian2000-Enhanced-v1.0-rc1-hd-pack.zip` | 506,5 Mo | Graphismes HD (IA) pour un téléchargement léger, Windows ou Linux |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-windows-x86_64.zip` | 704,0 Mo | Windows, complet (avec les graphismes HD (IA)) |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-linux-x86_64.tar.gz` | 683,4 Mo | Linux / Steam Deck, complet |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-macos-universal.zip` | 727,3 Mo | macOS (Intel et Apple Silicon), complet, expérimental |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-windows-x86_64-lite.zip` | 197,3 Mo | Windows, léger (sans les graphismes HD (IA)) |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-linux-x86_64-lite.tar.gz` | 185,6 Mo | Linux / Steam Deck, léger |
+| `OpenTyrian2000-Enhanced-v1.0-rc2-hd-pack.zip` | 506,5 Mo | Graphismes HD (IA) pour un téléchargement léger, Windows ou Linux |
 
 - **Windows** — extrayez le `.zip`, ouvrez le dossier `OpenTyrian2000-Enhanced` et lancez `OpenTyrian2000-Enhanced.exe`. Si Windows affiche « Windows a protégé votre ordinateur », cliquez sur **Informations complémentaires → Exécuter quand même** ; l'empreinte SHA-256 de chaque archive figure dans `SHA256SUMS.txt`.
 - **Linux / Steam Deck** — extrayez le `.tar.gz` et lancez `./OpenTyrian2000-Enhanced.x86_64`. Sur Steam Deck, ajoutez le jeu à Steam comme jeu non-Steam pour que son profil de manette s'applique ([guide Steam Deck](https://tyrian-enhanced.com/fr/steam-deck/)).

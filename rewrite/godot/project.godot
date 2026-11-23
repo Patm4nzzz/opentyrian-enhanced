@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="OpenTyrian2000 Enhanced"
-config/version="v1.0-rc1"
+config/version="v1.0-rc2"
 config/icon="res://icon/tyrian2000-128.png"
 config/use_custom_user_dir.macos=true
 config/custom_user_dir_name="OpenTyrian2000 Enhanced"

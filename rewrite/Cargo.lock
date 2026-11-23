@@ -419,7 +419,7 @@ dependencies = [
 
 [[package]]
 name = "tyrian-dodge-bot"
-version = "1.0.0-rc.1"
+version = "1.0.0-rc.2"
 dependencies = [
  "anyhow",
  "clap",
@@ -431,7 +431,7 @@ dependencies = [
 
 [[package]]
 name = "tyrian-formats"
-version = "1.0.0-rc.1"
+version = "1.0.0-rc.2"
 dependencies = [
  "serde",
  "serde_json",
@@ -439,7 +439,7 @@ dependencies = [
 
 [[package]]
 name = "tyrian-godot"
-version = "1.0.0-rc.1"
+version = "1.0.0-rc.2"
 dependencies = [
  "godot",
  "midly",
@@ -454,7 +454,7 @@ dependencies = [
 
 [[package]]
 name = "tyrian-golden"
-version = "1.0.0-rc.1"
+version = "1.0.0-rc.2"
 dependencies = [
  "anyhow",
  "clap",
@@ -466,7 +466,7 @@ dependencies = [
 
 [[package]]
 name = "tyrian-import"
-version = "1.0.0-rc.1"
+version = "1.0.0-rc.2"
 dependencies = [
  "anyhow",
  "clap",
@@ -478,7 +478,7 @@ dependencies = [
 
 [[package]]
 name = "tyrian-mods"
-version = "1.0.0-rc.1"
+version = "1.0.0-rc.2"
 dependencies = [
  "png",
  "tyrian-formats",
@@ -488,14 +488,14 @@ dependencies = [
 
 [[package]]
 name = "tyrian-render"
-version = "1.0.0-rc.1"
+version = "1.0.0-rc.2"
 dependencies = [
  "tyrian-formats",
 ]
 
 [[package]]
 name = "tyrian-robustness"
-version = "1.0.0-rc.1"
+version = "1.0.0-rc.2"
 dependencies = [
  "anyhow",
  "clap",
@@ -507,7 +507,7 @@ dependencies = [
 
 [[package]]
 name = "tyrian-sim"
-version = "1.0.0-rc.1"
+version = "1.0.0-rc.2"
 dependencies = [
  "tyrian-formats",
 ]

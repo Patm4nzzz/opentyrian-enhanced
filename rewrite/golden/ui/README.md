@@ -29,9 +29,19 @@ every version change alters those frames. After a version bump (or an
 intentional UI change), capture with `ui_regression.sh godot OUT golden/ui`
 and rewrite the affected files with `visual_diff.py seqhash OUT/<sequence>`
 (shop-1 and shop-2 keep their C prefix and are not rewritten this way).
-Last regeneration: v1.0-rc1 (2026-10-20), which also took in the
+Last regeneration: v1.0-rc2 (2026-11-23), version label only: the 21
+sequences were captured twice on the same build, with the v1.0-rc1 label
+(identical to the references, apart from the machine-dependent Display row
+of the Graphics menu) then with the v1.0-rc2 label, and only the ranks that
+differ between the two captures were rewritten (1,607 ranks in 19 files).
+The regeneration before it, v1.0-rc1 (2026-10-20), also took in the
 intentional UI changes of 2026-10-10 to 2026-10-12 (quit box colors, mouse
 pointer hidden during fades, pause and Graphics menu rows).
+
+Machine-dependent frames: the Display row of the Graphics menu lists the
+screens of the machine. The `graphics` reference was captured with one
+screen (Xvfb); on a PC with several screens, 6 ranks of that sequence
+differ (the row reads "Display 2").
 
 New-game sequences (`new-game`, `difficulty`, `timed-battle`,
 `lord`: title_screen.c:newGame, menus.c:gameplaySelect, episodeSelect,
