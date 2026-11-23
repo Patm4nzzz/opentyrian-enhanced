@@ -10,6 +10,8 @@ func before() -> void:
 	EndlessSession.stop()
 	Game.modes = PackedInt32Array()
 	TyrianControls.install()
+	# No button inherited from the suite that ran before in the same process.
+	TyrianMouse.reset()
 
 
 func after() -> void:

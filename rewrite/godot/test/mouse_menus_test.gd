@@ -16,15 +16,17 @@ func before() -> void:
 func after() -> void:
 	Music.release_streams()
 	Sfx.release_streams()
-	TyrianMouse.inactive = true
+	TyrianMouse.reset()
 
 
+# reset() and not only "inactive": a button left down by a test kept the cube
+# text of the next suite scrolling (all suites run in one process in CI).
 func after_test() -> void:
 	for child in Effects.game_viewport.get_children():
 		child.queue_free()
 		Effects.game_viewport.remove_child(child)
 	await get_tree().process_frame
-	TyrianMouse.inactive = true
+	TyrianMouse.reset()
 
 
 # ---------------------------------------------------------------------------

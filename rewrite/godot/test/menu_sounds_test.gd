@@ -19,6 +19,9 @@ func after() -> void:
 func before_test() -> void:
 	DirAccess.remove_absolute(ProjectSettings.globalize_path(SetupScreen.SETTINGS_PATH))
 	SetupScreen.reset_settings()
+	# Setup opens on its first row: no row left by a suite that came back from
+	# Keybindings, Mods or the Jukebox without reopening Setup.
+	SetupScreen.entry_row = 0
 	TyrianMouse.inactive = true
 
 
